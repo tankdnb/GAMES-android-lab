@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The sixth real research batch is now completed and documented end-to-end.
-- The lab now has 12 researched repositories recorded:
+- The seventh real research batch is now completed and documented end-to-end.
+- The lab now has 13 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -21,6 +21,7 @@
   - `TobseF/Candy-Crush-Clone` - `accepted`
   - `AntonioNoack/RemsEngine` - `accepted`
   - `minigdx/tiny` - `accepted`
+  - `curioustorvald/Terrarum` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -59,6 +60,10 @@
 - Completed `BATCH-2026-05-10-F` as a compact engine/tooling pass for `minigdx/tiny`.
 - Added durable `Tiny Game Engine` findings for state-preserving Lua reload, ordered resource bootstrapping, LDtk-to-Lua bridging, palette-index rendering, built-in debugger/export tooling, JSON-backed saves, and engine-integrated procedural audio generation.
 - Recorded another distinct Gradle discovery limitation: `minigdx/tiny` bootstrapped Gradle successfully, but `.\gradlew.bat help --no-daemon` still failed because the environment exposed only a Java runtime without a full JDK/compiler.
+- Completed `BATCH-2026-05-10-G` as a modular engine+game pass for `curioustorvald/Terrarum`.
+- Added durable `Terrarum` findings for GL-thread-safe module/resource loading, metadata-driven mods, PRTree-backed actor queries, RGB+UV tiled lighting, layered Float16 rendering, weather-linked global lighting, graph-based wire simulation, and staged procedural world generation.
+- Verified that `Terrarum` does not expose a standard Gradle or Maven root build; the inspected revision points instead to IntelliJ module files, JDK 17+, GraalVM JS setup, and `buildapp/Makefile` packaging scripts.
+- Cleaned the transient `Terrarum` clone from `research/worktrees/` after documenting the results and revalidated that the directory again contains only `.gitkeep`.
 - Reworked `README.md` to describe the repository as a public research lab, with current status, workflow, and quick links.
 - Added root `CONTRIBUTING.md` for public research contributions.
 - Added root `.gitattributes` and expanded `.gitignore` for cleaner GitHub publication.
@@ -79,6 +84,7 @@
 - `TobseF/Candy-Crush-Clone` is a strong small reference, but its narrow scope means it should not be treated as evidence for persistence, networking, or large Android packaging practices.
 - `AntonioNoack/RemsEngine` has strong architectural value, but its desktop/editor-first orientation and nonstandard build surface lower its direct Android transfer and reproducibility.
 - `minigdx/tiny` is valuable as a tooling/runtime reference, but it has no verified Android target and keeps gameplay code Lua-first rather than Kotlin-first.
+- `curioustorvald/Terrarum` has strong subsystem value, but it remains GPL-licensed, desktop/OpenGL-first, and harder to reproduce than a normal Gradle-based repository.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
@@ -88,4 +94,5 @@
 - If a future follow-up is needed for `Unciv`, target map generation or server internals as a scoped revisit instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `RemsEngine`, scope it to one subsystem such as export, render graph tooling, or the separate Android fork rather than reopening the whole workspace at once.
 - If a future follow-up is needed for `minigdx/tiny`, focus it on the debugger/editor protocol or on later revisions that add a clearer Android or mobile export path.
+- If a future follow-up is needed for `Terrarum`, scope it to one subsystem such as the module/content pipeline, light-weather rendering, or the world generator instead of reopening the entire workspace at once.
 - Keep the new rule in force: after each completed batch, prepare the durable outputs and push them to GitHub.

@@ -17,6 +17,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `main.kt` and `GameFlow` show a compact DI-composed match-3 runtime driven by typed events and animation-completion sequencing.
 - [remsengine](../findings/antonionoack-remsengine.md) - `EngineBase`, `WindowManagement`, `RemsEngine`, and `OfficialExtensions` show an editor-first engine lifecycle with extension-loaded modules and split window/render loops.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `GameEngine`, `GameResourceProcessor`, `GameResourceCollector`, and `GameScript` show a fixed-step KMP runtime with ordered resource bootstrapping, state-preserving Lua hot reload, and script-to-script transitions.
+- [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `App`, `CommonResourcePool`, `ModMgr`, `IngameInstance`, and `GameUpdateGovernor` show background module bootstrapping with explicit GL-thread handoff, PRTree-backed actor queries, and fixed-step update governance.
 
 ## Rendering And Graphics
 
@@ -28,6 +29,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `GameFieldRenderer` and `TileAnimator` keep a mirrored tile-image grid synchronized with command-driven board animation.
 - [remsengine](../findings/antonionoack-remsengine.md) - `RenderGraph` and `WindowManagement` show graph-driven rendering plus explicit multi-window OpenGL orchestration and idle pacing.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `DefaultVirtualFrameBuffer` and `SprLib` show a palette-index 2D framebuffer with texture batching, stencil modes, cached readback, and runtime sprite-sheet mutation.
+- [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `IngameRenderer`, `LightmapRenderer`, `WeatherMixer`, `WorldCamera`, and `AssembledSpriteAnimation` show multi-FBO 2D compositing, RGB+UV tiled lighting, weather-driven sky rendering, wraparound camera sampling, and equipment-aware skeletal sprite assembly.
 
 ## Gameplay Systems
 
@@ -37,6 +39,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `GameMechanics`, `Level`, `LevelCheck`, and `Scoring` separate board rules, scripted reserve tiles, goals, and combo scoring in a reusable puzzle-game shape.
 - [remsengine](../findings/antonionoack-remsengine.md) - `Entity`, `Systems`, and the sample games under `test/src/me/anno/games/` show how gameplay scenarios are built on top of a scene hierarchy plus runtime systems bridge.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `MapLib` turns LDtk levels, layers, flags, and custom fields into Lua-facing runtime data, while `TinyLib` plus boot/game scripts provide a lightweight multi-script scene flow.
+- [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `WorldSimulator` and `worldgenerator/*` show localized environmental simulation, graph-based wire propagation, and staged terrain/cave/aquifer/ore/biome/tree generation with versioned parameters.
 
 ## Input And Controls
 
@@ -69,6 +72,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `SoundMachine` and `JukeBox` keep sound effects and looping background music as separate small services.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `SoundManager`, `VirtualSoundBoard`, and `MusicGenerator` keep synthesis, loop-friendly music generation, and RMS-aware multi-track mixing inside the engine instead of delegating everything to external assets.
+- [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `SpatialAudioMixer` and `App.audioMixer` show explicit surround-mix matrices, panning-law helpers, and a dedicated high-priority audio thread with live mixer reload support.
 
 ## AI And Behavior
 
@@ -101,6 +105,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `RulesetCache`, `Ruleset`, and `RulesetValidator` treat mods as a validated JSON content pipeline with base rulesets, extension merges, removals, and fallback fills.
 - [remsengine](../findings/antonionoack-remsengine.md) - `OfficialExtensions`, `FileReference`, `CacheSection`, and `ExportMenu` show how to organize asset-heavy editor/runtime tooling through extension modules, virtual file references, and preset-driven exporters.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `CommonVirtualFileSystem`, `RunCommand`, `ExportCommand`, `tiny-web-editor`, and the annotation processors show a unified hot-reload/edit/debug/export toolchain around the same runtime.
+- [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `ModMgr` and `CommonResourcePool` show a metadata-first mod/content pipeline for blocks, items, fluids, audio, weather, retextures, locales, IMEs, and crafting with explicit GL-thread realization.
 
 ## Android Platform Integration
 
@@ -123,6 +128,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `WorldScreen`, `Unique`, `GameInfo.updateCivilizationState`, and `PathingMap` show GL-thread deferral, regex-result caching, once-per-civ recomputation, and reusable multi-turn path caches.
 - [remsengine](../findings/antonionoack-remsengine.md) - `WindowManagement` idle throttling plus `CacheSection` expiry/update logic are useful references for keeping editor-heavy runtimes responsive without overspending CPU.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `DefaultVirtualFrameBuffer` uses clip/camera culling and cached readback, while `GameEngine` and the built-in profiler hooks keep live iteration performance visible.
+- [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `WorldSimulator` merges overlapping update regions, `IngameRenderer` throttles light recalculation, and `LightmapRenderer` reuses fixed overscanned arrays instead of reallocating per frame.
 
 ## Build, Release, And Testing
 

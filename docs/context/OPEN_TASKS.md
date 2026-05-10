@@ -12,6 +12,7 @@
 - If `Unciv` needs a future follow-up, scope it narrowly to map generation, server internals, or another single subsystem instead of repeating a full heavy batch.
 - If `RemsEngine` needs a future follow-up, target a single subsystem such as export, render graph tooling, or Android-adjacent porting details.
 - If `minigdx/tiny` needs a future follow-up, scope it to tooling internals such as the debugger/web editor protocol or later mobile-target work rather than reopening the whole repository blindly.
+- If `Terrarum` needs a future follow-up, target one subsystem such as module loading, world generation, or the light/weather pipeline rather than reopening the full workspace.
 - When a batch is finished, ensure findings, registry updates, catalog cards, cleanup, commit, and GitHub push are all completed in the same work cycle.
 
 ## Deferred
