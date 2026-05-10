@@ -14,6 +14,7 @@
   - `libktx/ktx` - `accepted`
   - `utopia-rise/godot-kotlin-jvm` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
+- The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - The folder is now initialized as a local git repository.
@@ -36,6 +37,7 @@
 - Added root `CONTRIBUTING.md` for public research contributions.
 - Added root `.gitattributes` and expanded `.gitignore` for cleaner GitHub publication.
 - Renamed the local default branch from `master` to `main`.
+- Clarified in public docs and project memory that notes and catalog cards must be written as future reference material.
 
 ## Known Risks
 

@@ -16,6 +16,7 @@ This repository is maintained as a research lab for Android-relevant game develo
 - Reuse the existing catalog, research, and memory files instead of inventing parallel systems.
 - Document meaningful work so the repository remains resumable.
 - Make a local git commit after each completed work unit.
+- Write research outputs so they are referenceable later by other sessions, design notes, or implementation tasks.
 
 ## Research Contribution Workflow
 
@@ -36,6 +37,7 @@ This repository is maintained as a research lab for Android-relevant game develo
 - If build validation is skipped or times out, document that explicitly.
 - Use the normalized category and tag rules from `catalog/CATEGORY_SCHEMA.md`.
 - Record rejected or reference-only repositories too, so they are not reselected later.
+- Make each accepted note and card self-contained enough to be cited later as an idea source.
 
 ## Safety Rules
 

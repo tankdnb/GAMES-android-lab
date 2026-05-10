@@ -13,6 +13,7 @@
 - Run GitHub repository research in batches of no more than 4 new repositories at a time.
 - Every collected project must have a dedicated entry with structured metadata.
 - Each entry should explain what the project is, what ideas or implementations are reusable, and why it is interesting for the lab.
+- Each entry should be written so it can serve as a future reference for implementation and design work, not only as a one-time research note.
 - Prefer verified facts from the source repository over assumptions.
 - If a project is not Android-native but contains ideas relevant to Android game development, document that explicitly.
 - Clone transient research repositories only into `research/worktrees/` and clean them after findings are documented.

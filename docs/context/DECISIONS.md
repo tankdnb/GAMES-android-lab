@@ -95,3 +95,9 @@
 - Status: accepted
 - Why: public GitHub visitors need a clean entry point without reading internal memory files first.
 - Implication: root docs should explain repository purpose, contribution flow, and research workflow, while deeper operational memory remains under `docs/context/`.
+
+## 2026-05-10 - Treat the repository as a referenceable library of game-development ideas
+
+- Status: accepted
+- Why: the repository is meant to be cited later during design and implementation work, not only used as an internal research scratchpad.
+- Implication: research notes, catalog cards, and public docs should preserve enough distilled evidence and context to be referenced without reopening the full external repository.

@@ -8,12 +8,13 @@ The primary focus is Android game work in Kotlin. The catalog may also include p
 
 ## Repository Goal
 
-Build a practical reference library that explains, for each collected project:
+Build a practical reference library of ideas and implementations that explains, for each collected project:
 
 - what the project is
 - why it is interesting
 - which technical ideas it demonstrates
 - how its solutions could be reused in Android game development
+- where the evidence lives so the repository can be cited later in future work
 
 ## What Must Be Documented Per Project
 
@@ -26,6 +27,7 @@ Build a practical reference library that explains, for each collected project:
 - notable technical implementations
 - license
 - repository activity or maintenance status when verifiable
+- enough distilled context that the entry can be referenced later without repeating the original research pass
 
 ## Current Verified State
 

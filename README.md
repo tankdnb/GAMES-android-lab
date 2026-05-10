@@ -2,13 +2,14 @@
 
 `GAMES Android Lab` is a public research repository for collecting, studying, and systematizing game projects that are useful for Android game development, with a primary focus on Kotlin.
 
-The repository is not just a bookmark list. Its goal is to build a reusable technical knowledge base that records:
+The repository is not just a bookmark list. Its goal is to build a reusable, referenceable library of ideas and implementations that records:
 
 - what each project is
 - which ideas and implementations are worth reusing
 - which engine, framework, or rendering stack it uses
 - how relevant it is to Android game production
 - which technical decisions deserve future reuse or comparison
+- where the supporting evidence lives so the repository can be cited later from design notes, task discussions, or new game projects
 
 ## Current Status
 
@@ -34,6 +35,7 @@ Each collected project should have:
 - technical metadata
 - a summary of reusable ideas
 - links to the original repository and supporting evidence
+- enough context to be referenced later without reopening the whole external repository
 
 Use the template in `catalog/templates/project-entry-template.md` for consistency.
 
@@ -80,6 +82,7 @@ The canonical runbook is [research/RESEARCH_PLAN.md](research/RESEARCH_PLAN.md).
 - Treat external repositories as untrusted code and prefer static-first analysis.
 - Document every meaningful session so the repository remains resumable.
 - Make a local git commit after each completed work unit.
+- Write notes and catalog cards so they work as future reference material, not only as session output.
 
 ## Selection Criteria
 
