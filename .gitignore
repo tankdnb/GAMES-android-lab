@@ -1,0 +1,6 @@
+/research/worktrees/*
+!/research/worktrees/.gitkeep
+/research/cache/*
+!/research/cache/.gitkeep
+/research/tmp/*
+!/research/tmp/.gitkeep
