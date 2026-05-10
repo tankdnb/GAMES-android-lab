@@ -24,6 +24,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `App`, `CommonResourcePool`, `ModMgr`, `IngameInstance`, and `GameUpdateGovernor` show background module bootstrapping with explicit GL-thread handoff, PRTree-backed actor queries, and fixed-step update governance.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `ClientImplementation`, `IngameClientImplementation`, `TickingThread`, `WorldImplementation`, and `AutoRebuildingProperty` show a split render/simulation runtime, 60 TPS logic loop, player-near chunk ticking, and task-driven rebuilds for expensive derived world data.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `WorldConfigurationExt`, `EntityFactory`, `EntityBlueprint`, `MessagePassingSystem`, and `GameStateManager` show a ready-made ECS gameplay shell with blueprint-driven entity composition, decoupled message events, and YAML-backed bootstrap state.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `Game`, `GameNode`, `Engine`, `GameWrapper`, and `ScriptExecutorSystem` show a compact multiplatform engine lifecycle with staged bootstrap, queued ECS mutations, framebuffer graph assembly, nested storyboard screens, and coroutine-backed gameplay scripts.
 
 ## Rendering And Graphics
 
@@ -42,6 +43,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Tilemap`, `GameScene`, and `Game` show visible-range tile VBO updates, buffered touch-aware scene rendering, and layer-split terrain/water/UI composition.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `GameWorld` shows a fully Compose-driven sprite scene with `Image`/`Canvas` layering, animated radial shield gradients, and Coil GIF explosions instead of a separate GL renderer.
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `GameBoard`, `GameDrawScope`, and `GameResourceImpl` show ID-mapped Compose `Canvas` rendering with host-provided draw hooks above and below engine-owned objects.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FrameBuffer`, `TextureFrameBuffer`, `RenderStage`, `QuadRenderStage`, and `ModelComponentRenderStage` show a dependency-aware framebuffer graph, reusable fullscreen post-process stage, shader-parameter abstraction, per-draw lighting uniforms, and transparent back-to-front sorting.
 
 ## Gameplay Systems
 
@@ -57,6 +59,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `SpawnerSystem`, `WorldChunkSystem`, and `WorldMapData.loadNewChunksAndEntities` show blueprint-driven entity spawning, camera-quadrant chunk activation, and reusable platformer-world streaming patterns.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `RegularLevel`, `LevelDigger`, `Mob`, `Pressure`, and `Generator` show weighted digger-based dungeon generation, data-backed mob state machines, stress mechanics, and controlled loot economy.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `Stage`, `StageController`, `EnemyFactory`, `LasersController`, `LevelOneBoss`, and `LevelTwoBoss` show typed wave scripting, break-before-advance flow, formation-based spawns, and small but reusable boss-pattern design.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `EntityFactoryDelegate`, `GraphSceneLoader`, `ParticleConfiguration`, and `Storyboard` show scene-to-ECS import, runtime sprite UV generation, emitter DSL flow, and nested screen/game transitions inside one engine shell.
 
 ## Input And Controls
 
@@ -72,6 +75,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PlayerInputSystem`, `GameEventManager`, and `GameHUD` show an abstract action-input layer shared across keyboard and touchpad/button controls.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Game` and `Touchscreen` show buffered Android `MotionEvent` handling and centralized multi-touch translation into engine touch signals.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `MovementButtons`, `ShipController`, and the lifecycle/game-status wiring show hold-to-move touch controls and pause-aware input flow for a Compose-native Android action game.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `TouchManager`, `LwjglInput`, `AndroidInputHandler`, and `FillViewportStrategy` show a shared virtual touch/key model, desktop mouse-to-touch emulation, and aspect-safe coordinate conversion across Android, JVM, and web.
 
 ## UI, HUD, And Menus
 
@@ -86,6 +90,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `GameHUD`, `GameScreen`, and `Screen` show a touch-first mobile HUD, portrait-driven stats overlay, and dialog-controlled simulation pause without splitting the runtime into separate UI and gameplay loops.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `GameScene`, `WndHero`, and `WndJournal` show layered in-game UI composition, tabbed hero sheets, and depth-aware journal/catalog flows.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `GameScreen`, `StatusIndicator`, `GamePauseDialog`, and the navigation flow show a Compose HUD/world split with a dialog-route pause overlay instead of a second activity or fragment shell.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `Game.createDebugRenderStage()`, `ImGuiRenderStage`, `BoundingBoxRenderStage`, and the text-component helpers show built-in debug overlay and sprite-font text capabilities instead of leaving them as game-local utilities.
 
 ## Physics And Collision
 
@@ -96,6 +101,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PhysicSystem`, `PhysicContactListener`, `EcsUtils`, and `AttackSystem` show fixed-step Box2D with interpolation, selective non-blocking collision pairs, multi-fixture character bodies, and damage-emitter hitboxes.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `ShipController` and `LasersController` show lightweight Rect/circle overlap collisions, shield-envelope switching, and controller-owned projectile cleanup without a dedicated physics engine.
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `RoundObject`, `Boundary`, `InitialConditionsChecker`, `Vector2D`, and `GameEngineImpl.checkForCollisions()` show analytical kinematics plus circle-circle and circle-boundary restitution handling inside a very small Compose-native physics runtime.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `AABBCollisionResolver`, `SATCollisionResolver`, and `SATCollisionResolverTest` show both cheap axis-aligned overlap checks and a rotated-box SAT path with bounding-sphere short-circuiting and test coverage.
 
 ## Audio
 
@@ -104,6 +110,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `SpatialAudioMixer` and `App.audioMixer` show explicit surround-mix matrices, panning-law helpers, and a dedicated high-priority audio thread with live mixer reload support.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `SoundSystem` keeps playback position in ECS state so pause, resume, and snapshot-related world control can coordinate with audio.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `AudioPlayer` ties ExoPlayer playback and remembered position to `GameStatus`, giving a compact pause/resume music pattern for Compose games.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - Android and JVM `PlatformFileHandler` implementations show a small cross-platform sound abstraction over `SoundPool` on Android and MP3 decode/playback on desktop.
 
 ## AI And Behavior
 
@@ -124,6 +131,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `SaveSystem` and `MapManager` show a compact progress-save model based on current map, surviving Tiled object IDs, player checkpoint/tutorial state, and current stats/abilities rather than a full serialized world snapshot.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Bundle`, `Dungeon`, `GamesInProgress`, `HeroPerk`, and `QuickSlot` show JSON/GZIP object persistence, split game-vs-level saves, multi-slot previews/backups, and placeholder-friendly inventory state.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `rememberGameState`, `StageController.saver`, and the pervasive `rememberSaveable` usage show configuration-safe transient runtime state without needing a full disk-save system.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FileHandlerCommon` keeps typed asset caches, delayed `onLoad` mapping, and loading-progress reporting centralized so content consumers do not reopen files or duplicate decode work.
 
 ## Networking And Multiplayer
 
@@ -148,6 +156,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `LoadingScreen`, `MapManager`, and the multi-module Gradle setup show a shared-asset pipeline across Android/Desktop/Web plus Tiled-authored content layers mapped directly into runtime entities.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Database`, `RegularLevel`, and the split `core`/`SPD-classes` modules show a gameplay data layer where mob balance, loot, resistances, and some generation inputs are table-driven rather than purely hard-coded.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `.github/workflows/android-ci.yml` plus the controller-focused unit-test tree show a lightweight but intentional workflow where timing helpers, stage logic, formations, boosters, and object controllers are validated separately from UI rendering.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FileHandlerCommon`, `GraphSceneLoader`, `EntityFactoryDelegate`, and the build workflow show a coherent pipeline from typed asset loading to scene import, runtime sprite setup, and KMP engine CI validation.
 
 ## Android Platform Integration
 
@@ -164,6 +173,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `core/build.gradle`, `Game`, and `Touchscreen` show a direct Android app target with custom GL shell and touch-first control plumbing rather than a desktop-first port.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `app/build.gradle`, `AndroidManifest.xml`, and `MainActivity` show a direct portrait Android Compose app with immersive system-bar handling, dialog-based pause flow, and no cross-platform abstraction layer.
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `app/build.gradle`, `MainActivity`, and `MainViewModel` show a reusable engine library embedded into a normal Compose Android app rather than into an engine-owned activity shell.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `MiniGdxActivity`, `MiniGdxSurfaceView`, Android `PlatformContextCommon`, and Android `PlatformFileHandler` show a direct Android engine shell around `GLSurfaceView`, `SoundPool`, viewport scaling, and shared KMP game code.
 
 ## Performance And Memory
 
@@ -180,6 +190,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `Pool`, `PoolableComponent`, `SnapshotSerializerSystem`, and `GridMoveSystem` show leak-accounted pooling, snapshot-buffer cleanup, GC-conscious component reuse, and stepped movement that reduces tile-collision tunneling.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PhysicSystem`, `EcsUtils`, `DefaultAudioService`, and `MapManager` show fixed physics cadence with interpolation, pooled Ashley entities/components, per-frame sound deduplication, and map caching instead of keeping the whole world live at once.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Tilemap`, `Actor`, `GameScene`, and `GamesInProgress` show partial tile-buffer updates, wait-for-animation turn scheduling, layered incremental map refresh, and split save-slot files/backups instead of one heavy snapshot.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `TouchManager` pools internal input events, `FrameBuffer` reuses predeclared render targets, and the collision path short-circuits SAT checks with a radius test before doing axis projections.
 
 ## Build, Release, And Testing
 
@@ -194,3 +205,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `build.gradle`, `core/build.gradle`, `SPD-classes/build.gradle`, and the wrapper properties show an older Android Gradle surface around Kotlin `1.5.20`, AGP `4.0.1`, and Gradle `6.6.1`; `gradlew help` still timed out in the lab and no real automated test tree was found.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `build.gradle`, `app/build.gradle`, the JDK 17 CI workflow, and the unit-test tree show a direct Android Compose build with targeted controller/scheduler tests, but even lightweight Gradle discovery currently needs Java `11+` because the resolved Android Gradle Plugin `8.13.1` cannot configure on the Java `8` lab environment.
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `compose-game/build.gradle`, `app/build.gradle`, `jitpack.yml`, and `ExampleUnitTest.kt` show a JDK 17 Android library/sample setup with publication intent, but only placeholder tests and a missing referenced Jitpack prepare script; even lightweight Gradle discovery still needs a full JDK in this lab.
+- [minigdx-minigdx](../findings/minigdx-minigdx.md) - `build.gradle.kts`, `gradle/libs.versions.toml`, `.github/workflows/build.yml`, and the `commonTest` tree show a direct KMP+Android build surface with meaningful engine tests, but even `gradlew help` currently fails in the lab because Gradle cannot find a Java compiler and upstream CI expected JDK 11.

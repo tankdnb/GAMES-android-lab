@@ -23,6 +23,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Tiny Game Engine](projects/minigdx-tiny.md) - Lua-first KMP 2D engine with state-preserving hot reload, built-in web editor/debugger/export tooling, LDtk integration, and palette-index rendering.
 - [Terrarum](projects/curioustorvald-terrarum.md) - libGDX-based engine-and-game workspace with modular content loading, RGB+UV tiled lighting, staged world generation, region-based simulation, and a substantial weather/render pipeline.
 - [Chunk Stories](projects/hugobros3-chunkstories.md) - voxel engine-and-game stack with layered mod loading, backend-neutral rendergraphs, asynchronous chunk meshing and occlusion work, and server-side mod redistribution support.
+- [miniGDX](projects/minigdx-minigdx.md) - Kotlin Multiplatform engine/runtime with direct Android adapters, staged framebuffer-driven rendering, scene-to-ECS import, coroutine-backed scripts, and targeted engine/input/collision tests.
 
 ## rendering-demo
 

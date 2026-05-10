@@ -23,6 +23,7 @@ Add every investigated repository here, including rejected ones, so the project 
 | `egoal/darkest-pixel-dungeon` | `android-game` | `accepted` | `BATCH-2026-05-10-K` | `static-review + gradle-discovery-attempt-timeout` | `604d16a2b3e39c39e7f26c3a09e7b377584fc6c8` | `115` | `2025-04-30` | `2026-05-10` | [note](../findings/egoal-darkest-pixel-dungeon.md) | [card](../../catalog/projects/egoal-darkest-pixel-dungeon.md) | `refreshed shortlist + gh repo view verification` |
 | `mariodujic/Neon` | `android-game` | `accepted` | `BATCH-2026-05-10-L` | `static-review + gradle-help-failed-java8-needs-java11` | `bb633bc8cad5ad6dc0d8e787d0c3241f63adb3c2` | `81` | `2025-11-22` | `2026-05-10` | [note](../findings/mariodujic-neon.md) | [card](../../catalog/projects/mariodujic-neon.md) | `refreshed shortlist + gh repo view verification` |
 | `vgupta98/compose-game` | `engine-framework` | `accepted` | `BATCH-2026-05-11-A` | `static-review + gradle-help-failed-no-jdk` | `bb548e2eb911337c11da53094c3ce6e2ccad45c4` | `43` | `2024-07-26` | `2026-05-11` | [note](../findings/vgupta98-compose-game.md) | [card](../../catalog/projects/vgupta98-compose-game.md) | `refreshed shortlist + gh repo view verification` |
+| `minigdx/minigdx` | `engine-framework` | `accepted` | `BATCH-2026-05-11-B` | `static-review + gradle-help-failed-no-jdk` | `494b3929176b773dac5226a601e4f26dbcbb3cbe` | `178` | `2022-10-10` | `2026-05-11` | [note](../findings/minigdx-minigdx.md) | [card](../../catalog/projects/minigdx-minigdx.md) | `refreshed shortlist + gh repo view verification` |
 
 ## Status Legend
 
