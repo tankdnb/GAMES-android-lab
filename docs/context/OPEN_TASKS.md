@@ -3,9 +3,10 @@
 ## Active
 
 - Fill `research/registry/CANDIDATE_QUEUE.md` with the first batch of up to 4 unresearched Kotlin game or game-engine repositories.
+- Create the first batch note in `research/batches/`.
 - Run the first research batch and create the first findings notes in `research/findings/`.
-- Validate the scoring rubric, category index, and research note template against real repositories and adjust only if repeated gaps appear.
-- Promote accepted repositories into `catalog/projects/` and `catalog/index.md`.
+- Validate the scoring rubric, category schema, code-analysis guide, and research note template against real repositories and adjust only if repeated gaps appear.
+- Promote accepted repositories into `catalog/projects/`, `catalog/index.md`, and `catalog/CATEGORY_INDEX.md`.
 
 ## Next Recommended
 

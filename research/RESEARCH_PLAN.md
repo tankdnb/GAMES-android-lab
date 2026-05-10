@@ -20,6 +20,7 @@ Repositories from other stacks may still be researched only if their Android ada
 - Research no more than 4 new repositories at a time.
 - Each batch must contain only repositories that are not already listed in `research/registry/RESEARCHED_REPOS.md`.
 - Before cloning anything, record the shortlist in `research/registry/CANDIDATE_QUEUE.md`.
+- Create a durable batch note in `research/batches/` before or during the batch.
 
 ## Hard Filters
 
@@ -100,6 +101,19 @@ Score each candidate before moving it into the active batch.
 
 Prefer the highest-scoring repositories, but do not use score alone. Keep variety in each batch so the lab learns from different project types.
 
+## Queue Data Standard
+
+For each shortlisted repository, record:
+
+- repository name
+- repository type
+- fit score
+- popularity score
+- activity score
+- research-yield score
+- short reason for selection
+- source query or discovery source
+
 ## Active Batch Composition
 
 When possible, keep each batch balanced:
@@ -118,22 +132,20 @@ For each selected repository:
 1. Clone into `research/worktrees/<owner>__<repo>/`.
 2. Record repository URL, selection date, visible popularity/activity signals, and inspected commit hash.
 3. Identify the engine, rendering stack, build system, and platform target.
-4. Inspect the code for reusable patterns:
-   - engine/core loop
-   - rendering and graphics
-   - scene or world organization
-   - entity/component architecture
-   - input handling
-   - UI and HUD
-   - physics and collision
-   - audio
-   - save/load and persistence
-   - AI or behavior logic
-   - networking
-   - tooling, editors, or content pipeline
-   - Android integration
-   - performance and memory techniques
+4. Follow `research/CODE_ANALYSIS_GUIDE.md` for static review, optional build validation, and usefulness assessment.
 5. Write a durable note in `research/findings/` using the template in `research/templates/RESEARCH_NOTE_TEMPLATE.md`.
+
+## Batch Outputs
+
+Each finished batch should produce:
+
+- 1 batch note in `research/batches/`
+- up to 4 repository findings notes in `research/findings/`
+- queue updates in `research/registry/CANDIDATE_QUEUE.md`
+- researched history updates in `research/registry/RESEARCHED_REPOS.md`
+- category takeaway links in `research/registry/CATEGORY_INDEX.md`
+- accepted catalog cards in `catalog/projects/`
+- accepted project links in `catalog/index.md` and `catalog/CATEGORY_INDEX.md`
 
 ## Required Research Output
 
@@ -142,7 +154,7 @@ A repository only counts as researched when all of the following are done:
 - a durable note exists in `research/findings/`
 - the repository is added to `research/registry/RESEARCHED_REPOS.md`
 - category takeaways are linked in `research/registry/CATEGORY_INDEX.md`
-- if worth keeping in the lab, a normalized project card is added under `catalog/projects/` and `catalog/index.md` is updated
+- if worth keeping in the lab, a normalized project card is added under `catalog/projects/`, `catalog/index.md` is updated, and `catalog/CATEGORY_INDEX.md` is updated
 
 ## Cleanup Rule
 
@@ -162,3 +174,5 @@ Use `research/scripts/cleanup-research.ps1` for cleanup.
 - Distinguish between verified findings from the codebase and inferences based on repository metadata.
 - Avoid filling the queue with long backlogs. Keep the active batch small and the backlog focused.
 - If a repository cannot be built locally, that does not block research, but the limitation must be documented.
+- Treat external repositories as untrusted code and prefer static-first analysis.
+- Use `catalog/CATEGORY_SCHEMA.md` for accepted project categories and tags instead of inventing ad hoc labels.

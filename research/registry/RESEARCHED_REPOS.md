@@ -2,9 +2,9 @@
 
 Add every investigated repository here, including rejected ones, so the project does not repeat the same work later.
 
-| Repository | Type | Status | Batch | Stars At Selection | Last Pushed At Selection | Researched On | Findings | Source |
-|---|---|---|---|---|---|---|---|---|
-| _TBD_ |  |  |  |  |  |  |  |  |
+| Repository | Type | Status | Batch | Build Mode | Investigated Commit | Stars At Selection | Last Pushed At Selection | Researched On | Findings | Catalog Card | Source |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| _TBD_ |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Status Legend
 

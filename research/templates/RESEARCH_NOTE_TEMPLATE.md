@@ -5,6 +5,7 @@
 - Repository:
 - Source URL:
 - Owner:
+- Batch ID:
 - Type:
 - License:
 - Selection date:
@@ -12,6 +13,8 @@
 - Stars at selection:
 - Investigated commit:
 - Research status:
+- Build mode:
+- Catalog card:
 
 ## Why This Repository Was Selected
 
@@ -24,6 +27,7 @@
 - Rendering stack:
 - Android target:
 - Build system:
+- Repository layout summary:
 - Key modules reviewed:
 
 ## Build And Runtime Notes
@@ -31,6 +35,16 @@
 - Was the project built or only inspected statically?
 - Important environment notes:
 - Known setup limitations:
+
+## Usefulness Assessment
+
+- Reuse potential:
+- Android transfer:
+- Implementation depth:
+- Code clarity:
+- Novelty:
+- Overall verdict:
+- Why:
 
 ## Interesting Findings
 
@@ -66,6 +80,10 @@
 
 - Which ideas should be considered for future Android game work?
 
+## Evidence Summary
+
+- Most important file paths and the subsystem each one represents.
+
 ## Risks Or Limits
 
 - What makes reuse harder?
@@ -73,5 +91,6 @@
 ## Catalog Decision
 
 - Keep in main catalog:
-- Category tags:
+- Primary category:
+- Focus tags:
 - Follow-up needed:

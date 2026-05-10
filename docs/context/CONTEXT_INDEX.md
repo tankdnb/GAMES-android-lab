@@ -11,7 +11,9 @@ Assume `AGENTS.md` has already routed you here. Then read:
 3. `docs/context/HANDOFF.md`
 4. `docs/context/DECISIONS.md`
 5. `research/RESEARCH_PLAN.md` if the task involves GitHub scouting or repository analysis
-6. Latest note in `docs/context/sessions/` if additional local context is needed
+6. `research/CODE_ANALYSIS_GUIDE.md` if the task involves evaluating cloned repositories
+7. `catalog/CATEGORY_SCHEMA.md` if accepted projects need categorization
+8. Latest note in `docs/context/sessions/` if additional local context is needed
 
 ## Canonical Memory Files
 
@@ -21,6 +23,8 @@ Assume `AGENTS.md` has already routed you here. Then read:
 - `docs/context/DECISIONS.md`: durable process and repository decisions
 - `docs/context/sessions/SESSION_TEMPLATE.md`: template for short session notes
 - `research/RESEARCH_PLAN.md`: canonical runbook for scouting and studying external repositories
+- `research/CODE_ANALYSIS_GUIDE.md`: canonical method for static review, optional execution, and usefulness assessment
+- `catalog/CATEGORY_SCHEMA.md`: normalized category and tag rules for accepted projects
 
 ## Compatibility Notes
 

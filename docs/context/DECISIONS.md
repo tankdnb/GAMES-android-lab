@@ -53,3 +53,21 @@
 - Status: accepted
 - Why: raw research notes are operational and detailed, while catalog cards should stay normalized and easier to scan.
 - Implication: accepted repositories get a detailed note in `research/findings/` and a normalized card in `catalog/projects/`.
+
+## 2026-05-10 - Use a normalized category schema for accepted catalog entries
+
+- Status: accepted
+- Why: free-form categories would quickly drift and make the catalog inconsistent.
+- Implication: accepted projects must use `catalog/CATEGORY_SCHEMA.md` and be linked in `catalog/CATEGORY_INDEX.md`.
+
+## 2026-05-10 - Keep one durable note per research batch
+
+- Status: accepted
+- Why: repository-level notes are not enough to explain how a batch was discovered, balanced, and judged.
+- Implication: each scouting and research cycle should create a batch note in `research/batches/`.
+
+## 2026-05-10 - Analyze external repositories with a static-first code review workflow
+
+- Status: accepted
+- Why: the lab needs consistent, evidence-based findings while minimizing risk from arbitrary third-party code execution.
+- Implication: cloned repositories should be inspected through `research/CODE_ANALYSIS_GUIDE.md`, with build or runtime execution treated as optional and explicitly documented.

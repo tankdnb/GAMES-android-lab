@@ -36,7 +36,9 @@
 - Start with `docs/context/CONTEXT_INDEX.md`.
 - Canonical file-backed memory lives in `docs/context/`.
 - Use `research/RESEARCH_PLAN.md` as the runbook for GitHub scouting and repository analysis.
+- Use `research/CODE_ANALYSIS_GUIDE.md` when inspecting cloned repositories.
 - Check `research/registry/CANDIDATE_QUEUE.md` and `research/registry/RESEARCHED_REPOS.md` before selecting new repositories.
+- Use `catalog/CATEGORY_SCHEMA.md` when assigning accepted projects to categories and tags.
 - Update `docs/context/HANDOFF.md` after meaningful sessions.
 - Update `docs/context/OPEN_TASKS.md` when active priorities change.
 - Record durable repository or workflow decisions in `docs/context/DECISIONS.md`.
@@ -52,5 +54,7 @@
 - `docs/context/OPEN_TASKS.md`: active work queue
 - `docs/context/DECISIONS.md`: durable decisions
 - `catalog/index.md`: high-level list of collected projects
+- `catalog/CATEGORY_SCHEMA.md`: normalized category rules
+- `catalog/CATEGORY_INDEX.md`: accepted projects grouped by category
 - `catalog/templates/project-entry-template.md`: standard entry template
 - `research/`: scouting, temporary clones, findings, and research registries

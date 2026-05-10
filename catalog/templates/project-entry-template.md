@@ -16,12 +16,13 @@ Briefly describe what the project is and what kind of game or technology it impl
 
 ## Technical Profile
 
+- Primary category:
+- Focus tags:
 - Engine / framework:
 - Rendering approach:
 - Main language(s):
 - Android target:
 - Build system:
-- Category tags:
 
 ## Why It Matters
 

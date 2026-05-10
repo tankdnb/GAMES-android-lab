@@ -2,6 +2,8 @@
 
 Use this file to group reusable findings across multiple repositories.
 
+This is not the accepted-project catalog. For accepted project cards grouped by normalized catalog categories, use `catalog/CATEGORY_INDEX.md`.
+
 ## Engine Architecture And Core Loop
 
 - Add links to findings that describe engine structure, game loop design, scene management, or ECS-like organization.

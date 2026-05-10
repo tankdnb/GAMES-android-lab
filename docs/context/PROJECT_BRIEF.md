@@ -37,6 +37,8 @@ Build a practical reference library that explains, for each collected project:
 
 - `AGENTS.md`
 - `README.md`
+- `catalog/CATEGORY_SCHEMA.md`
+- `catalog/CATEGORY_INDEX.md`
 - `catalog/index.md`
 - `catalog/projects/`
 - `catalog/templates/project-entry-template.md`
@@ -56,5 +58,7 @@ Projects are especially valuable when they:
 
 - Discovery and code analysis happen under `research/`.
 - New repositories are researched in batches of up to 4.
+- Each batch gets its own note under `research/batches/`.
 - Temporary clones live in `research/worktrees/` and are cleaned after findings are preserved.
-- Durable outputs are the findings notes, researched registry, category index, and catalog cards for accepted repositories.
+- Durable outputs are the batch notes, findings notes, researched registry, category indexes, and catalog cards for accepted repositories.
+- Accepted projects use the normalized category rules in `catalog/CATEGORY_SCHEMA.md`.

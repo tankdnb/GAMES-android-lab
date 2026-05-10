@@ -42,6 +42,8 @@ Repository discovery and code investigation happen in `research/`.
 ## Repository Layout
 
 - `catalog/index.md` - overview table of collected projects
+- `catalog/CATEGORY_SCHEMA.md` - normalized categories and focus tags
+- `catalog/CATEGORY_INDEX.md` - accepted projects grouped by category
 - `catalog/projects/` - normalized per-project catalog cards
 - `catalog/templates/project-entry-template.md` - template for project entries
 - `docs/context/CONTEXT_INDEX.md` - entry point for internal project memory

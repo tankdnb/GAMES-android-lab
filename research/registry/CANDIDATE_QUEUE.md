@@ -6,17 +6,17 @@ Use this file to manage the shortlist before repositories are cloned.
 
 Hard limit: no more than 4 new repositories at a time.
 
-| Batch | Repository | Type | Score | Stars | Last Pushed | Why Selected | Status | Source |
-|---|---|---|---|---|---|---|---|---|
-| _TBD_ |  |  |  |  |  |  |  |  |
+| Batch | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Selected | Status | Source |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| _TBD_ |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Backlog Candidates
 
 Keep this short. Move only the strongest candidates here.
 
-| Repository | Type | Score | Stars | Last Pushed | Why It Might Matter | Source |
-|---|---|---|---|---|---|---|
-| _TBD_ |  |  |  |  |  |  |
+| Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| _TBD_ |  |  |  |  |  |  |  |  |  |
 
 ## Status Legend
 
