@@ -31,7 +31,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 
 ## gameplay-systems
 
-- Add accepted repositories whose main value is gameplay logic or simulation systems here.
+- [Ore Infinium](projects/sreich-ore-infinium.md) - Terraria-inspired Kotlin/LibGDX sandbox prototype with fixed-step ECS client/server worlds, viewport-based entity replication, multithreaded worldgen, fluid/light simulation, and inventory-driven generator devices.
 
 ## tooling-pipeline
 

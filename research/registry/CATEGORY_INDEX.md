@@ -25,6 +25,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `ClientImplementation`, `IngameClientImplementation`, `TickingThread`, `WorldImplementation`, and `AutoRebuildingProperty` show a split render/simulation runtime, 60 TPS logic loop, player-near chunk ticking, and task-driven rebuilds for expensive derived world data.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `WorldConfigurationExt`, `EntityFactory`, `EntityBlueprint`, `MessagePassingSystem`, and `GameStateManager` show a ready-made ECS gameplay shell with blueprint-driven entity composition, decoupled message events, and YAML-backed bootstrap state.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `Game`, `GameNode`, `Engine`, `GameWrapper`, and `ScriptExecutorSystem` show a compact multiplatform engine lifecycle with staged bootstrap, queued ECS mutations, framebuffer graph assembly, nested storyboard screens, and coroutine-backed gameplay scripts.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `OreWorld`, `GameLoopSystemInvocationStrategy`, `OreServer`, `PlayerSystem`, and `ServerNetworkEntitySystem` show split client/server ECS assembly, fixed-step logic vs render processing, loaded-viewport block streaming, and quadtree-diff entity replication.
 
 ## Rendering And Graphics
 
@@ -44,6 +45,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `GameWorld` shows a fully Compose-driven sprite scene with `Image`/`Canvas` layering, animated radial shield gradients, and Coil GIF explosions instead of a separate GL renderer.
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `GameBoard`, `GameDrawScope`, and `GameResourceImpl` show ID-mapped Compose `Canvas` rendering with host-provided draw hooks above and below engine-owned objects.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FrameBuffer`, `TextureFrameBuffer`, `RenderStage`, `QuadRenderStage`, and `ModelComponentRenderStage` show a dependency-aware framebuffer graph, reusable fullscreen post-process stage, shader-parameter abstraction, per-draw lighting uniforms, and transparent back-to-front sorting.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `TileRenderSystem` and `TileLightingSystem` show camera-limited auto-tiled block rendering, separate tile/lightmap framebuffers, shader-based lightmap blending, and depth-limited sunlight/device flood fill.
 
 ## Gameplay Systems
 
@@ -60,6 +62,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `RegularLevel`, `LevelDigger`, `Mob`, `Pressure`, and `Generator` show weighted digger-based dungeon generation, data-backed mob state machines, stress mechanics, and controlled loot economy.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `Stage`, `StageController`, `EnemyFactory`, `LasersController`, `LevelOneBoss`, and `LevelTwoBoss` show typed wave scripting, break-before-advance flow, formation-based spawns, and small but reusable boss-pattern design.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `EntityFactoryDelegate`, `GraphSceneLoader`, `ParticleConfiguration`, and `Storyboard` show scene-to-ECS import, runtime sprite UV generation, emitter DSL flow, and nested screen/game transitions inside one engine shell.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `WorldGenerator`, `OreEntityFactory`, `ServerPowerSystem`, and `LiquidSimulationSystem` show threaded Joise terrain generation, lake/volcano post-passes, placeable device/item composition, inventory-backed generator fuel flow, and cell-based liquid equalization.
 
 ## Input And Controls
 
@@ -91,6 +94,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `GameScene`, `WndHero`, and `WndJournal` show layered in-game UI composition, tabbed hero sheets, and depth-aware journal/catalog flows.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `GameScreen`, `StatusIndicator`, `GamePauseDialog`, and the navigation flow show a Compose HUD/world split with a dialog-route pause overlay instead of a second activity or fragment shell.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `Game.createDebugRenderStage()`, `ImGuiRenderStage`, `BoundingBoxRenderStage`, and the text-component helpers show built-in debug overlay and sprite-font text capabilities instead of leaving them as game-local utilities.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `OreClient`, `InventoryView`, `HotbarInventoryView`, and `GeneratorControlPanelView` show a VisUI/Scene2D shell with drag-and-drop item movement, hotbar selection, chat/HUD layering, and device-specific fuel controls.
 
 ## Physics And Collision
 
@@ -102,6 +106,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `ShipController` and `LasersController` show lightweight Rect/circle overlap collisions, shield-envelope switching, and controller-owned projectile cleanup without a dedicated physics engine.
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `RoundObject`, `Boundary`, `InitialConditionsChecker`, `Vector2D`, and `GameEngineImpl.checkForCollisions()` show analytical kinematics plus circle-circle and circle-boundary restitution handling inside a very small Compose-native physics runtime.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `AABBCollisionResolver`, `SATCollisionResolver`, and `SATCollisionResolverTest` show both cheap axis-aligned overlap checks and a rotated-box SAT path with bounding-sphere short-circuiting and test coverage.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `MovementSystem` shows velocity-Verlet-style movement, separate entity/block collision resolution, one-block stair stepping, and reused dropped-item physics inside a tile sandbox.
 
 ## Audio
 
@@ -132,6 +137,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Bundle`, `Dungeon`, `GamesInProgress`, `HeroPerk`, and `QuickSlot` show JSON/GZIP object persistence, split game-vs-level saves, multi-slot previews/backups, and placeholder-friendly inventory state.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `rememberGameState`, `StageController.saver`, and the pervasive `rememberSaveable` usage show configuration-safe transient runtime state without needing a full disk-save system.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FileHandlerCommon` keeps typed asset caches, delayed `onLoad` mapping, and loading-progress reporting centralized so content consumers do not reopen files or duplicate decode work.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `WorldIO` shows a protobuf-oriented tile-world save format for block type, wall type, flags, and light arrays, even though load is still stubbed and save coverage is incomplete.
 
 ## Networking And Multiplayer
 
@@ -139,6 +145,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `NetService` exposes reusable typed TCP/UDP helpers and download tasks as engine services.
 - [unciv](../findings/yairm210-unciv.md) - `Multiplayer`, `MultiplayerServer`, `ChatWebSocket`, and `ApiV2` show a hybrid local-preview plus remote-authority multiplayer stack with throttled refresh and reconnecting WebSockets.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `LoadedContentTranslator`, `ConnectionsManager`, and `ServerModsProvider` show content-id compatibility checks, server metadata handshakes, and redistributable mod packaging, even though the current remote runtime path is unfinished on the inspected branch.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `Network`, `ServerNetworkSystem`, `ClientNetworkSystem`, and `ServerNetworkEntitySystem` show block-region snapshots, sparse block deltas, batched entity spawn/destroy, inventory sync, and bidirectional network-id/local-id mapping for ECS entities.
 
 ## Tooling And Content Pipeline
 
@@ -157,6 +164,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Database`, `RegularLevel`, and the split `core`/`SPD-classes` modules show a gameplay data layer where mob balance, loot, resistances, and some generation inputs are table-driven rather than purely hard-coded.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `.github/workflows/android-ci.yml` plus the controller-focused unit-test tree show a lightweight but intentional workflow where timing helpers, stage logic, formations, boosters, and object controllers are validated separately from UI rendering.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FileHandlerCommon`, `GraphSceneLoader`, `EntityFactoryDelegate`, and the build workflow show a coherent pipeline from typed asset loading to scene import, runtime sprite setup, and KMP engine CI validation.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `build.gradle`, `core/build.gradle`, `.gitmodules`, and the texture-packing/protobuf tasks show an older but coherent pipeline around asset submodules, atlas packing, protobuf world data, and Artemis weaving.
 
 ## Android Platform Integration
 
@@ -191,6 +199,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PhysicSystem`, `EcsUtils`, `DefaultAudioService`, and `MapManager` show fixed physics cadence with interpolation, pooled Ashley entities/components, per-frame sound deduplication, and map caching instead of keeping the whole world live at once.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Tilemap`, `Actor`, `GameScene`, and `GamesInProgress` show partial tile-buffer updates, wait-for-animation turn scheduling, layered incremental map refresh, and split save-slot files/backups instead of one heavy snapshot.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `TouchManager` pools internal input events, `FrameBuffer` reuses predeclared render targets, and the collision path short-circuits SAT checks with a radius test before doing axis projections.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `GameLoopSystemInvocationStrategy`, `SpatialSystem`, `TileRenderSystem`, and `LiquidSimulationSystem` show fixed-step logic accumulation, quadtree visibility culling, camera-limited tile iteration, and dirty-region fluid resync instead of full-world updates every frame.
 
 ## Build, Release, And Testing
 
@@ -206,3 +215,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `build.gradle`, `app/build.gradle`, the JDK 17 CI workflow, and the unit-test tree show a direct Android Compose build with targeted controller/scheduler tests, but even lightweight Gradle discovery currently needs Java `11+` because the resolved Android Gradle Plugin `8.13.1` cannot configure on the Java `8` lab environment.
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `compose-game/build.gradle`, `app/build.gradle`, `jitpack.yml`, and `ExampleUnitTest.kt` show a JDK 17 Android library/sample setup with publication intent, but only placeholder tests and a missing referenced Jitpack prepare script; even lightweight Gradle discovery still needs a full JDK in this lab.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `build.gradle.kts`, `gradle/libs.versions.toml`, `.github/workflows/build.yml`, and the `commonTest` tree show a direct KMP+Android build surface with meaningful engine tests, but even `gradlew help` currently fails in the lab because Gradle cannot find a Java compiler and upstream CI expected JDK 11.
+- [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `build.gradle`, `core/build.gradle`, `.travis.yml`, and `core/test/*` show a Java-8-era Gradle/Travis surface with partial tests, but `gradlew help` now fails during legacy Bintray dependency resolution rather than on the JVM itself.

@@ -24,6 +24,7 @@ Add every investigated repository here, including rejected ones, so the project 
 | `mariodujic/Neon` | `android-game` | `accepted` | `BATCH-2026-05-10-L` | `static-review + gradle-help-failed-java8-needs-java11` | `bb633bc8cad5ad6dc0d8e787d0c3241f63adb3c2` | `81` | `2025-11-22` | `2026-05-10` | [note](../findings/mariodujic-neon.md) | [card](../../catalog/projects/mariodujic-neon.md) | `refreshed shortlist + gh repo view verification` |
 | `vgupta98/compose-game` | `engine-framework` | `accepted` | `BATCH-2026-05-11-A` | `static-review + gradle-help-failed-no-jdk` | `bb548e2eb911337c11da53094c3ce6e2ccad45c4` | `43` | `2024-07-26` | `2026-05-11` | [note](../findings/vgupta98-compose-game.md) | [card](../../catalog/projects/vgupta98-compose-game.md) | `refreshed shortlist + gh repo view verification` |
 | `minigdx/minigdx` | `engine-framework` | `accepted` | `BATCH-2026-05-11-B` | `static-review + gradle-help-failed-no-jdk` | `494b3929176b773dac5226a601e4f26dbcbb3cbe` | `178` | `2022-10-10` | `2026-05-11` | [note](../findings/minigdx-minigdx.md) | [card](../../catalog/projects/minigdx-minigdx.md) | `refreshed shortlist + gh repo view verification` |
+| `sreich/ore-infinium` | `gameplay-systems` | `accepted` | `BATCH-2026-05-11-C` | `static-review + gradle-help-failed-legacy-bintray-repos` | `44167c43ff5328f1721ab258d9721bbc8187a1ef` | `190` | `2022-07-17` | `2026-05-11` | [note](../findings/sreich-ore-infinium.md) | [card](../../catalog/projects/sreich-ore-infinium.md) | `refreshed shortlist + gh repo view verification` |
 
 ## Status Legend
 
