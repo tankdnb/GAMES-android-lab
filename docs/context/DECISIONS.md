@@ -71,3 +71,15 @@
 - Status: accepted
 - Why: the lab needs consistent, evidence-based findings while minimizing risk from arbitrary third-party code execution.
 - Implication: cloned repositories should be inspected through `research/CODE_ANALYSIS_GUIDE.md`, with build or runtime execution treated as optional and explicitly documented.
+
+## 2026-05-10 - Treat Gradle discovery timeout as a valid documented research outcome
+
+- Status: accepted
+- Why: the first real batch showed that third-party Kotlin game repositories can still be highly valuable even when a lightweight `gradlew help` attempt times out.
+- Implication: `Build Mode` must record the exact level of validation, and research may continue from static evidence instead of forcing full build success.
+
+## 2026-05-10 - Put oversized repositories into dedicated heavy-repo batches
+
+- Status: accepted
+- Why: `yairm210/Unciv` had strong research value but proved too large for a lightweight first rehearsal batch.
+- Implication: footprint should be checked early, and very large repositories should be isolated from balanced mixed batches.

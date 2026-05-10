@@ -4,11 +4,11 @@ Use this file to group accepted catalog entries by their normalized categories.
 
 ## android-game
 
-- Add accepted Android game project cards here.
+- [Antimine - Minesweeper](projects/lucasnlm-antimine-android.md) - Android puzzle game with LibGDX rendering, no-guess generation fallback, and deep multi-form-factor support.
 
 ## engine-framework
 
-- Add accepted engine and framework cards here.
+- [KorGE](projects/korlibs-korge.md) - Kotlin multiplatform engine with scene routing, Android host-view embedding, and frame-aware coroutine scheduling.
 
 ## rendering-demo
 
@@ -24,8 +24,8 @@ Use this file to group accepted catalog entries by their normalized categories.
 
 ## library-sdk
 
-- Add accepted reusable libraries or SDKs here.
+- [KTX](projects/libktx-ktx.md) - Kotlin-first libGDX SDK with coroutine dispatchers, async asset storage, Scene2D DSLs, and AI helpers.
 
 ## reference-only
 
-- Add technically useful but secondary-reference cards here.
+- [Godot Kotlin/JVM](projects/utopia-rise-godot-kotlin-jvm.md) - strong reference for Kotlin-to-engine runtime integration, build tooling, and Android export packaging, but less direct for native Android game reuse.
