@@ -15,6 +15,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `EngineService` is a strong reference for a service-oriented engine lifecycle.
 - [unciv](../findings/yairm210-unciv.md) - `UncivGame` and `WorldScreen` show how to split heavy loading and turn-resolution work across background threads and the GL thread in a large Android game.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `main.kt` and `GameFlow` show a compact DI-composed match-3 runtime driven by typed events and animation-completion sequencing.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `Main`, `LoadingScreen`, `Screen`, and `GameEventManager` show a shared LibGDX runtime with framebuffer-based screen transitions, centralized system assembly, dialog-aware ECS pausing, and a small event bus for input, maps, and gameplay.
 - [remsengine](../findings/antonionoack-remsengine.md) - `EngineBase`, `WindowManagement`, `RemsEngine`, and `OfficialExtensions` show an editor-first engine lifecycle with extension-loaded modules and split window/render loops.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `GameEngine`, `GameResourceProcessor`, `GameResourceCollector`, and `GameScript` show a fixed-step KMP runtime with ordered resource bootstrapping, state-preserving Lua hot reload, and script-to-script transitions.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `App`, `CommonResourcePool`, `ModMgr`, `IngameInstance`, and `GameUpdateGovernor` show background module bootstrapping with explicit GL-thread handoff, PRTree-backed actor queries, and fixed-step update governance.
@@ -34,6 +35,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `IngameRenderer`, `LightmapRenderer`, `WeatherMixer`, `WorldCamera`, and `AssembledSpriteAnimation` show multi-FBO 2D compositing, RGB+UV tiled lighting, weather-driven sky rendering, wraparound camera sampling, and equipment-aware skeletal sprite assembly.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `GraphicsEngineImplementation`, `GraphicsBackendsEnum`, `deffered_world_render_graph`, `BuiltInRendergraphs`, `TaskCreateChunkMesh`, and `TaskComputeChunkOcclusion` show backend-neutral pass graphs, Vulkan/OpenGL fallback, async chunk meshing with AO/light packing, and precomputed chunk-face visibility.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `ObjectRenderSystem`, `LevelMapRenderSystem`, and `CameraSystem` show ECS-owned sprite/text/tile rendering, visible-window chunk-aware map drawing, and camera-driven parallax updates without storing heavyweight KorGE view objects inside components.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `RenderSystem`, `Main`, `GameScreen`, and `MapManager` show sorted ECS sprite rendering around Tiled layers, map/screen crossfades via framebuffers, Tiled-property parallax, and ambient/sun-light coordination through Box2D Lights.
 
 ## Gameplay Systems
 
@@ -41,6 +43,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - the minigame registry and compact per-game state holders are useful for multi-mode or multi-game products.
 - [unciv](../findings/yairm210-unciv.md) - `GameStarter`, `GameInfo.nextTurn`, and the built-in simulation harness show a full-scale turn-based gameplay pipeline with generation, save-state restoration, and multi-actor turn processing.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `GameMechanics`, `Level`, `LevelCheck`, and `Scoring` separate board rules, scripted reserve tiles, goals, and combo scoring in a reusable puzzle-game shape.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `EcsUtils`, `PlayerCollisionSystem`, `GameScreen`, and `TutorialSystem` show action-adventure progression through portal-linked maps, savepoints, stat-granting items, one-time tutorials, and gameplay-driven trigger events.
 - [remsengine](../findings/antonionoack-remsengine.md) - `Entity`, `Systems`, and the sample games under `test/src/me/anno/games/` show how gameplay scenarios are built on top of a scene hierarchy plus runtime systems bridge.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `MapLib` turns LDtk levels, layers, flags, and custom fields into Lua-facing runtime data, while `TinyLib` plus boot/game scripts provide a lightweight multi-script scene flow.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `WorldSimulator` and `worldgenerator/*` show localized environmental simulation, graph-based wire propagation, and staged terrain/cave/aquifer/ore/biome/tree generation with versioned parameters.
@@ -58,6 +61,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [remsengine](../findings/antonionoack-remsengine.md) - `JVMExtension` keeps controller polling and JVM-only input/platform glue inside an extension layer instead of polluting core runtime code.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `LwjglInput`, `TouchManager`, and `GameOptions` normalize desktop input into virtual touch/key state and even support debugger-driven remote key injection.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `TouchInputSystem` shows entity-bounded touch routing with optional continuous touch and coordinate forwarding, although it is marked unused on the inspected revision.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PlayerInputSystem`, `GameEventManager`, and `GameHUD` show an abstract action-input layer shared across keyboard and touchpad/button controls.
 
 ## UI, HUD, And Menus
 
@@ -69,6 +73,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `ScoringRenderer` and `LevelCheckRenderer` show lightweight puzzle HUD patterns for floating feedback, remaining moves, and tile objectives.
 - [remsengine](../findings/antonionoack-remsengine.md) - `PanelListY`, `UI.md`, `RemsEngine`, and `ExportMenu` show Android-inspired weighted layouts reused for editor, inspector, and export tooling surfaces.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `IngameUI` keeps HUD overlays, selection state, and debug widgets trait-driven, while exposing hot-reload and rendergraph refresh actions directly in the running client.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `GameHUD`, `GameScreen`, and `Screen` show a touch-first mobile HUD, portrait-driven stats overlay, and dialog-controlled simulation pause without splitting the runtime into separate UI and gameplay loops.
 
 ## Physics And Collision
 
@@ -76,6 +81,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `PhysicsWorld` centralizes world stepping, collision handlers, sensors, and body lifecycle.
 - [remsengine](../findings/antonionoack-remsengine.md) - `BulletPhysics` and `BulletMod` show how a large optional physics subsystem can stay modular while integrating deeply with ECS entities and constraints.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `GridMoveSystem`, `PlatformerCollisionResolver`, and `PlatformerGravitySystem` show stepped tile/grid platformer movement, edge-snap collision resolution, and grounded-state-controlled gravity.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PhysicSystem`, `PhysicContactListener`, `EcsUtils`, and `AttackSystem` show fixed-step Box2D with interpolation, selective non-blocking collision pairs, multi-fixture character bodies, and damage-emitter hitboxes.
 
 ## Audio
 
@@ -99,6 +105,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `GameInfo.setTransients`, `UncivFiles`, and the ruleset merge path separate durable serialized state from reconstructed runtime caches, previews, and mod compatibility repair.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `FloppyLib` converts Lua tables into JSON-backed per-game storage with circular-reference detection, while `_tiny.json` keeps game resource declarations explicit and small.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `SnapshotSerializer`, `SnapshotSerializerSystem`, `Pool`, and `PoolableComponent` show JSON-backed world snapshots, rewind buffers, polymorphic Korge-type serialization, and pooled data-only component lifecycles.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `SaveSystem` and `MapManager` show a compact progress-save model based on current map, surviving Tiled object IDs, player checkpoint/tutorial state, and current stats/abilities rather than a full serialized world snapshot.
 
 ## Networking And Multiplayer
 
@@ -120,6 +127,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `ModMgr` and `CommonResourcePool` show a metadata-first mod/content pipeline for blocks, items, fluids, audio, weather, retextures, locales, IMEs, and crafting with explicit GL-thread realization.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `GameContentStore`, `ModsManagerImplementation`, and `DefaultPluginManager` show a layered asset filesystem, embedded-jar classloading, mod-bundled plugins, and ordered registry reloads across blocks, items, entities, packets, generators, models, and localization.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `AssetStore`, `WorldMapData`, and `AssetReload` show common-vs-cluster asset lifetimes, asynchronous chunk activation, and the beginnings of a JVM-side live asset watcher flow.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `LoadingScreen`, `MapManager`, and the multi-module Gradle setup show a shared-asset pipeline across Android/Desktop/Web plus Tiled-authored content layers mapped directly into runtime entities.
 
 ## Android Platform Integration
 
@@ -132,6 +140,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - the KorGE target matrix in `build.gradle.kts` shows a compact path to Android delivery from a `commonMain` game codebase.
 - [remsengine](../findings/antonionoack-remsengine.md) - `UI.md` and `PanelListY` show Android-inspired UI layout assumptions, but the engine itself remains JVM-first and should be treated as an architectural rather than turnkey Android reference.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - the root `build.gradle.kts` enables `targetAndroid()`, while the pooling and serialization design explicitly accounts for tighter Android/JVM memory constraints than many desktop-first Kotlin engine samples do.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `android/build.gradle` plus `GameHUD` show a direct Android LibGDX app target with touch-native controls while still reusing the same gameplay core on desktop and web.
 
 ## Performance And Memory
 
@@ -146,6 +155,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `WorldSimulator` merges overlapping update regions, `IngameRenderer` throttles light recalculation, and `LightmapRenderer` reuses fixed overscanned arrays instead of reallocating per frame.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `WorkerThreadPool`, `AutoRebuildingProperty`, `TaskCreateChunkMesh`, and `WorldMasterImplementation.tick()` show task rescheduling, async derived-data rebuilds, neighbor-aware chunk meshing, and near-player simulation throttling.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `Pool`, `PoolableComponent`, `SnapshotSerializerSystem`, and `GridMoveSystem` show leak-accounted pooling, snapshot-buffer cleanup, GC-conscious component reuse, and stepped movement that reduces tile-collision tunneling.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PhysicSystem`, `EcsUtils`, `DefaultAudioService`, and `MapManager` show fixed physics cadence with interpolation, pooled Ashley entities/components, per-frame sound deduplication, and map caching instead of keeping the whole world live at once.
 
 ## Build, Release, And Testing
 
@@ -156,3 +166,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-tiny](../findings/minigdx-tiny.md) - the Gradle monorepo, embedded web debugger/export artifacts, and `commonTest` coverage across scripts, input, sound, and config make it a strong workflow reference even though a full build still needs a JDK.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `gradlew help` shows a readable Gradle monorepo surface, but `buildAll --dry-run` fails in the standalone clone because the expected external `api` publication tasks are unavailable.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `commonTest` covers snapshot rewind, tween serialization, and pool cleanup, but even lightweight Gradle discovery currently needs Java `21+` because the inspected KorGE plugin chain no longer supports the Java `8` environment used by this lab.
+- [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - the project has Android/Desktop/Web modules and some trigger tests, but even `gradlew help` and `:core:test --dry-run` currently require Java `11+` because the inspected Android Gradle Plugin `8.5.2` cannot configure on the Java `8` environment used by this lab.

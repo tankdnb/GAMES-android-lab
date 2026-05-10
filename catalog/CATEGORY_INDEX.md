@@ -8,6 +8,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Super Retro Mega Wars](projects/retrowars-retrowars.md) - Android multiplayer minigame collection with a shared game shell, declarative soft controls, and explicit LAN/public server support.
 - [Unciv](projects/yairm210-unciv.md) - large-scale Android/Desktop 4X strategy game with threaded turn resolution, ruleset-driven modding, integrated multiplayer, and explicit Android platform glue.
 - [Candy Crush Clone](projects/tobsef-candy-crush-clone.md) - compact KorGE match-3 sample with typed-event game flow, renderer/model separation, reserve-driven tile feeds, and strong board-mechanics tests.
+- [Quilly's Adventure](projects/quillraven-quilly-s-adventure.md) - LibGDX adventure/platformer with Tiled-authored ECS content, fixed-step Box2D interpolation, touch HUD abstraction, portal-based map transitions, compact save progression, and a pooled trigger DSL.
 
 ## engine-framework
 

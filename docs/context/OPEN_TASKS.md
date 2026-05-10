@@ -9,7 +9,8 @@
 
 ## Next Recommended
 
-- Prefer fresh queue refreshes over carrying stale backlog rows; shortlist one or two newer Kotlin game/game-engine repositories with good architecture depth and reasonable Android transfer value, and treat `Quillraven/Quilly-s-Adventure` as a fallback rather than a forced next pick.
+- Prefer fresh queue refreshes over carrying stale backlog rows; shortlist one or two newer Kotlin game/game-engine repositories with good architecture depth and reasonable Android transfer value, and keep `sreich/ore-infinium` only as a later systems-heavy backlog candidate rather than a default next pick.
+- If `Quilly-s-Adventure` needs a future follow-up, verify `:core:test` and target builds in a Java `11+` environment, or isolate one subsystem such as the trigger DSL or Tiled-to-ECS map flow instead of reopening the whole repository broadly.
 - If `chunkstories` needs a future follow-up, scope it narrowly to the rendergraph/shader path, the mod/plugin loader, or the content-translator and mod-sync path rather than reopening the whole repository.
 - If `Unciv` needs a future follow-up, scope it narrowly to map generation, server internals, or another single subsystem instead of repeating a full heavy batch.
 - If `RemsEngine` needs a future follow-up, target a single subsystem such as export, render graph tooling, or Android-adjacent porting details.

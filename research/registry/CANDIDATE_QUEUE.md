@@ -23,6 +23,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-10-G` | `curioustorvald/Terrarum` | `engine-framework` | `3` | `1` | `3` | `3` | `15` | `2026-04-27` | Fresh modular Kotlin engine+game stack with libGDX, side-scrolling tilemap focus, lighting, fluids, skeletal sprites, and built-in mod support; chosen over `chunkstories` for stronger current Android-transfer potential | `done` | `gh search repos "game engine" --language Kotlin --archived=false --sort updated` |
 | `BATCH-2026-05-10-H` | `Hugobros3/chunkstories` | `engine-framework` | `2` | `2` | `2` | `3` | `223` | `2025-04-21` | Large Kotlin voxel engine/game stack with client/server split, mods, and reusable rendering/runtime architecture; chosen over fresher low-signal options because it still offers the strongest current research yield among unresearched backlog candidates | `done` | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
 | `BATCH-2026-05-10-I` | `korlibs/korge-fleks` | `engine-framework` | `3` | `1` | `3` | `3` | `19` | `2026-05-10` | Fresh MIT-licensed KorGE + Fleks platformer framework with direct relevance to Kotlin game architecture, ECS composition, and reusable 2D runtime patterns | `done` | `gh search repos \"game engine\" --language Kotlin --archived=false --sort updated` |
+| `BATCH-2026-05-10-J` | `Quillraven/Quilly-s-Adventure` | `android-game` | `3` | `1` | `1` | `3` | `98` | `2024-10-26` | Gameplay-heavy LibGDX + LibKTX + Box2D + Ashley sample with direct value for reusable Android-friendly architecture, controls, physics, and scene-flow patterns | `done` | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
 
 ## Backlog Candidates
 
@@ -30,7 +31,7 @@ Keep this short. Move only the strongest candidates here.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `Quillraven/Quilly-s-Adventure` | `android-game` | `3` | `1` | `1` | `3` | `98` | `2024-10-26` | LibGDX + LibKTX + Box2D + Ashley adventure sample with likely reusable gameplay and physics patterns if the lab wants a gameplay-heavy contrast next | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
+| `sreich/ore-infinium` | `android-game` | `2` | `2` | `0` | `3` | `190` | `2022-07-17` | Terraria-inspired LibGDX sandbox with multiplayer, Artemis ECS, networking, and open-world systems; stronger as a later deep systems pass than as the freshest next batch | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
 
 ## Status Legend
 
