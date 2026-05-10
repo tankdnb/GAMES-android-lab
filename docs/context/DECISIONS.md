@@ -83,3 +83,15 @@
 - Status: accepted
 - Why: `yairm210/Unciv` had strong research value but proved too large for a lightweight first rehearsal batch.
 - Implication: footprint should be checked early, and very large repositories should be isolated from balanced mixed batches.
+
+## 2026-05-10 - Use `main` as the default branch for public publication
+
+- Status: accepted
+- Why: the repository is being prepared for public GitHub publication and should use the modern default branch name.
+- Implication: future public pushes should target `main`, and new remote defaults should align with it.
+
+## 2026-05-10 - Keep public-facing repository workflow in root `README.md` and `CONTRIBUTING.md`
+
+- Status: accepted
+- Why: public GitHub visitors need a clean entry point without reading internal memory files first.
+- Implication: root docs should explain repository purpose, contribution flow, and research workflow, while deeper operational memory remains under `docs/context/`.

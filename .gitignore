@@ -4,3 +4,14 @@
 !/research/cache/.gitkeep
 /research/tmp/*
 !/research/tmp/.gitkeep
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local logs and scratch artifacts
+*.log
+*.tmp

@@ -1,14 +1,22 @@
 # GAMES Android Lab
 
-`GAMES Android Lab` is a research repository for collecting and systematizing interesting game projects that can be useful for Android game development, with an emphasis on Kotlin-based work.
+`GAMES Android Lab` is a public research repository for collecting, studying, and systematizing game projects that are useful for Android game development, with a primary focus on Kotlin.
 
-The purpose of the repository is not only to save links, but to build a reusable knowledge base:
+The repository is not just a bookmark list. Its goal is to build a reusable technical knowledge base that records:
 
-- what each project is about
-- which ideas are worth reusing
-- which engine, framework, or rendering approach it uses
-- how relevant it is for Android development
-- which technical implementations are noteworthy
+- what each project is
+- which ideas and implementations are worth reusing
+- which engine, framework, or rendering stack it uses
+- how relevant it is to Android game production
+- which technical decisions deserve future reuse or comparison
+
+## Current Status
+
+- Research workflow is implemented and documented.
+- The first real GitHub research batch is completed.
+- Current researched set:
+  - `accepted`: `lucasnlm/antimine-android`, `korlibs/korge`, `libktx/ktx`
+  - `reference-only`: `utopia-rise/godot-kotlin-jvm`
 
 ## What Goes Into The Catalog
 
@@ -21,23 +29,37 @@ The purpose of the repository is not only to save links, but to build a reusable
 
 Each collected project should have:
 
-- a dedicated card or note
-- a short explanation of the project
+- a durable research note
+- a normalized catalog card when the repository is worth keeping
 - technical metadata
 - a summary of reusable ideas
-- links to the original repository and related materials
+- links to the original repository and supporting evidence
 
 Use the template in `catalog/templates/project-entry-template.md` for consistency.
 
 ## Research Workflow
 
-Repository discovery and code investigation happen in `research/`.
+Repository discovery and code investigation happen under `research/`.
 
-- shortlist no more than 4 new Kotlin game or game-engine repositories per batch
-- clone them into `research/worktrees/`
-- inspect code and extract reusable ideas
-- write durable findings before deleting temporary clones
-- track researched repositories so the next batch continues from new material
+1. Shortlist no more than 4 new repositories per batch.
+2. Record the active shortlist in `research/registry/CANDIDATE_QUEUE.md`.
+3. Create a batch note in `research/batches/`.
+4. Clone temporary worktrees into `research/worktrees/`.
+5. Review repositories with the static-first method from `research/CODE_ANALYSIS_GUIDE.md`.
+6. Write durable findings in `research/findings/`.
+7. Promote accepted repositories into `catalog/projects/`, `catalog/index.md`, and `catalog/CATEGORY_INDEX.md`.
+8. Clean temporary research artifacts after the batch.
+
+The canonical runbook is [research/RESEARCH_PLAN.md](research/RESEARCH_PLAN.md).
+
+## Quick Links
+
+- [Catalog index](catalog/index.md)
+- [Catalog category index](catalog/CATEGORY_INDEX.md)
+- [Research plan](research/RESEARCH_PLAN.md)
+- [Code analysis guide](research/CODE_ANALYSIS_GUIDE.md)
+- [Candidate queue](research/registry/CANDIDATE_QUEUE.md)
+- [Researched repository registry](research/registry/RESEARCHED_REPOS.md)
 
 ## Repository Layout
 
@@ -50,6 +72,15 @@ Repository discovery and code investigation happen in `research/`.
 - `docs/context/PROJECT_BRIEF.md` - durable description of the lab and its goals
 - `research/` - research workspace, findings, queue, and cleanup tooling
 
+## Operating Rules
+
+- Research only repositories that are not already recorded in `research/registry/RESEARCHED_REPOS.md`.
+- Keep each research batch small enough to document thoroughly.
+- Distinguish verified code findings from metadata-level inference.
+- Treat external repositories as untrusted code and prefer static-first analysis.
+- Document every meaningful session so the repository remains resumable.
+- Make a local git commit after each completed work unit.
+
 ## Selection Criteria
 
 Projects are especially valuable when they:
@@ -59,3 +90,7 @@ Projects are especially valuable when they:
 - demonstrate interesting gameplay systems or rendering approaches
 - contain reusable technical patterns
 - are well-structured and documented
+
+## Contributing
+
+Contribution guidelines for new research batches, catalog updates, and documentation changes live in [CONTRIBUTING.md](CONTRIBUTING.md).

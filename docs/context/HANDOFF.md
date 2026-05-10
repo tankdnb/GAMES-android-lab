@@ -13,6 +13,8 @@
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
   - `utopia-rise/godot-kotlin-jvm` - `reference-only`
+- Public-facing root documentation has been tightened for GitHub publication.
+- Local default branch is now `main`.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - The folder is now initialized as a local git repository.
 
@@ -30,6 +32,10 @@
 - Populated `research/registry/RESEARCHED_REPOS.md` and `research/registry/CATEGORY_INDEX.md` with the first verified research outputs.
 - Added normalized catalog cards for the first 4 researched repositories under `catalog/projects/`.
 - Cleaned transient research clones from `research/worktrees/` after documenting the findings.
+- Reworked `README.md` to describe the repository as a public research lab, with current status, workflow, and quick links.
+- Added root `CONTRIBUTING.md` for public research contributions.
+- Added root `.gitattributes` and expanded `.gitignore` for cleaner GitHub publication.
+- Renamed the local default branch from `master` to `main`.
 
 ## Known Risks
 
@@ -37,10 +43,11 @@
 - Build validation remains selective; two `gradlew help` discovery attempts timed out, and no runtime execution was used in the first batch.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
+- Root repository license has not been selected yet, so public publication would still ship without an explicit reuse license.
+- No GitHub remote is configured yet.
 
 ## Recommended Next Steps
 
-- Start the next batch with at most 4 new repositories and record it in `research/registry/CANDIDATE_QUEUE.md` and `research/batches/`.
-- Decide whether the next pass should stay lightweight or become a dedicated heavy-repo batch for `yairm210/Unciv`.
-- Keep `littlektframework/littlekt` in consideration for the next balanced engine/framework slot.
-- Revisit accepted projects only when the lab needs deeper subsystem extraction, not by default.
+- Choose the root repository license before the first public push.
+- Create the public GitHub repository, add `origin`, and push branch `main`.
+- After publication, continue with the next research batch using the existing queue and batch workflow.

@@ -29,8 +29,13 @@ Build a practical reference library that explains, for each collected project:
 
 ## Current Verified State
 
-- The repository now contains documentation, catalog scaffolding, and a dedicated research workflow scaffold.
-- No verified external project entries have been added yet.
+- The repository now contains documentation, catalog structure, and an exercised research workflow.
+- The first completed GitHub research batch is documented under `research/batches/BATCH-2026-05-10-A.md`.
+- Four researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- Four public-facing catalog cards are present under `catalog/projects/`.
+- Public-facing repository guidance now lives in root `README.md` and `CONTRIBUTING.md`.
+- Local repository hygiene now includes root `.gitattributes`, expanded `.gitignore`, and default branch `main`.
+- Temporary research worktrees are cleaned after each completed batch.
 - The workspace is initialized as a local git repository.
 
 ## Important Paths
