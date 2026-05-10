@@ -25,6 +25,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-10-I` | `korlibs/korge-fleks` | `engine-framework` | `3` | `1` | `3` | `3` | `19` | `2026-05-10` | Fresh MIT-licensed KorGE + Fleks platformer framework with direct relevance to Kotlin game architecture, ECS composition, and reusable 2D runtime patterns | `done` | `gh search repos \"game engine\" --language Kotlin --archived=false --sort updated` |
 | `BATCH-2026-05-10-J` | `Quillraven/Quilly-s-Adventure` | `android-game` | `3` | `1` | `1` | `3` | `98` | `2024-10-26` | Gameplay-heavy LibGDX + LibKTX + Box2D + Ashley sample with direct value for reusable Android-friendly architecture, controls, physics, and scene-flow patterns | `done` | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
 | `BATCH-2026-05-10-K` | `egoal/darkest-pixel-dungeon` | `android-game` | `3` | `1` | `2` | `3` | `115` | `2025-04-30` | Direct Android roguelike with custom touch/runtime shell, procedural dungeon generation, split save-slot persistence, and dense gameplay-system value despite legacy tooling and GPL reuse limits | `done` | `refreshed shortlist + gh repo view verification` |
+| `BATCH-2026-05-10-L` | `mariodujic/Neon` | `android-game` | `3` | `1` | `2` | `2` | `81` | `2025-11-22` | Direct Android Compose shooter with controller-owned game state, touch controls, stage scripting, boss patterns, and a real unit-test surface on a permissive license | `done` | `refreshed shortlist + gh repo view verification` |
 
 ## Backlog Candidates
 

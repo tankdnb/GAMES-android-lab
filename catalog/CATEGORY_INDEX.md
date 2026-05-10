@@ -10,6 +10,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Candy Crush Clone](projects/tobsef-candy-crush-clone.md) - compact KorGE match-3 sample with typed-event game flow, renderer/model separation, reserve-driven tile feeds, and strong board-mechanics tests.
 - [Quilly's Adventure](projects/quillraven-quilly-s-adventure.md) - LibGDX adventure/platformer with Tiled-authored ECS content, fixed-step Box2D interpolation, touch HUD abstraction, portal-based map transitions, compact save progression, and a pooled trigger DSL.
 - [Darkest Pixel Dungeon](projects/egoal-darkest-pixel-dungeon.md) - Android roguelike with a custom `Noosa` runtime, buffered touch input, digger-based dungeon generation, split game/level saves, and data-backed mob AI/content tables.
+- [Neon](projects/mariodujic-neon.md) - Android Compose shoot-em-up with controller-owned gameplay state, `tinker`-scheduled loops, hold-to-move touch input, stage scripting, boss patterns, and focused runtime tests.
 
 ## engine-framework
 

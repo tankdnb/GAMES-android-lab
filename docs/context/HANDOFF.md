@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eleventh real research batch is now completed and documented end-to-end.
-- The lab now has 17 researched repositories recorded:
+- The twelfth real research batch is now completed and documented end-to-end.
+- The lab now has 18 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -26,6 +26,7 @@
   - `korlibs/korge-fleks` - `accepted`
   - `Quillraven/Quilly-s-Adventure` - `accepted`
   - `egoal/darkest-pixel-dungeon` - `accepted`
+  - `mariodujic/Neon` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -94,10 +95,14 @@
 - Added durable `Darkest Pixel Dungeon` findings for buffered Android touch/runtime handling, time-scheduled actor flow, data-backed mob state, digger-based dungeon generation, split save-slot persistence, and layered mobile UI windows.
 - Verified that `cmd /c gradlew.bat help --no-daemon` still times out in the current lab environment for the inspected `darkest-pixel-dungeon` revision, so the repository remains documented as `static-review + gradle-discovery-attempt-timeout` rather than as a confirmed build failure.
 - Cleaned the transient `darkest-pixel-dungeon` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-05-10-L` as a Compose-native Android shooter pass for `mariodujic/Neon`.
+- Added durable `Neon` findings for controller-composed game state, the `tinker` micro-scheduler, stage scripting with `StageBreak`, hold-to-move touch controls, boss patterns, and lightweight unit-test coverage.
+- Verified that both `cmd /c gradlew.bat help --no-daemon` and `cmd /c gradlew.bat :app:testDebugUnitTest --dry-run --no-daemon` currently fail in this environment because the inspected Android Gradle Plugin `8.13.1` requires Java `11+`, while the lab machine still exposes Java `8`.
+- Cleaned the transient `Neon` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 11 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 12 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, another failed because Android Gradle Plugin `8.5.2` now requires Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -112,6 +117,7 @@
 - `korlibs/korge-fleks` is one of the more Android-relevant engine references now in the lab, but its current build floor requires Java `21+`, its asset hot-reload path is only partially implemented, and some systems such as `TouchInputSystem` or `PlatformerGroundSystem` are not fully active on the inspected revision.
 - `Quillraven/Quilly-s-Adventure` is one of the stronger direct Android gameplay references now in the lab, but its verified automated test surface is narrow and the repository should be treated as an adventure/platformer architecture sample rather than a general-purpose engine reference.
 - `egoal/darkest-pixel-dungeon` is one of the more direct Android gameplay references in the lab, but it is GPL-licensed, built on older Android targets/tooling, and effectively untested by automated test suites in the inspected snapshot.
+- `mariodujic/Neon` is a useful direct Android Compose gameplay reference, but it remains a small-game sample whose controller loop drives frequent Compose state updates; it should be treated as a compact pattern source rather than as a proven high-scale performance baseline.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
@@ -127,5 +133,6 @@
 - If a future follow-up is needed for `Quilly-s-Adventure`, focus it on one subsystem such as the Tiled-to-ECS map flow or trigger DSL, or rerun build verification in a Java `11+` environment instead of reopening the whole repository broadly.
 - If a future follow-up is needed for `korge-fleks`, focus it on one subsystem such as snapshot/pooling architecture, chunk streaming, or the partially implemented hot-reload path, ideally in a Java `21+` environment.
 - If a future follow-up is needed for `Darkest Pixel Dungeon`, focus it on one subsystem such as the actor scheduler, procedural dungeon pipeline, or split save-slot architecture instead of reopening the whole repository broadly.
+- If a future follow-up is needed for `Neon`, focus it on one subsystem such as the `tinker` loop, stage progression, or controller-based collision/powerup flow, or rerun the test surface in a Java `11+` or `17` environment.
 - If the minute-based automation proves too aggressive in practice, update or pause `games-android-lab-research` rather than duplicating it with another automation.
 - Keep the new rule in force: after each completed batch, prepare the durable outputs and push them to GitHub.
