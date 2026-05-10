@@ -19,6 +19,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `GameEngine`, `GameResourceProcessor`, `GameResourceCollector`, and `GameScript` show a fixed-step KMP runtime with ordered resource bootstrapping, state-preserving Lua hot reload, and script-to-script transitions.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `App`, `CommonResourcePool`, `ModMgr`, `IngameInstance`, and `GameUpdateGovernor` show background module bootstrapping with explicit GL-thread handoff, PRTree-backed actor queries, and fixed-step update governance.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `ClientImplementation`, `IngameClientImplementation`, `TickingThread`, `WorldImplementation`, and `AutoRebuildingProperty` show a split render/simulation runtime, 60 TPS logic loop, player-near chunk ticking, and task-driven rebuilds for expensive derived world data.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `WorldConfigurationExt`, `EntityFactory`, `EntityBlueprint`, `MessagePassingSystem`, and `GameStateManager` show a ready-made ECS gameplay shell with blueprint-driven entity composition, decoupled message events, and YAML-backed bootstrap state.
 
 ## Rendering And Graphics
 
@@ -32,6 +33,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `DefaultVirtualFrameBuffer` and `SprLib` show a palette-index 2D framebuffer with texture batching, stencil modes, cached readback, and runtime sprite-sheet mutation.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `IngameRenderer`, `LightmapRenderer`, `WeatherMixer`, `WorldCamera`, and `AssembledSpriteAnimation` show multi-FBO 2D compositing, RGB+UV tiled lighting, weather-driven sky rendering, wraparound camera sampling, and equipment-aware skeletal sprite assembly.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `GraphicsEngineImplementation`, `GraphicsBackendsEnum`, `deffered_world_render_graph`, `BuiltInRendergraphs`, `TaskCreateChunkMesh`, and `TaskComputeChunkOcclusion` show backend-neutral pass graphs, Vulkan/OpenGL fallback, async chunk meshing with AO/light packing, and precomputed chunk-face visibility.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `ObjectRenderSystem`, `LevelMapRenderSystem`, and `CameraSystem` show ECS-owned sprite/text/tile rendering, visible-window chunk-aware map drawing, and camera-driven parallax updates without storing heavyweight KorGE view objects inside components.
 
 ## Gameplay Systems
 
@@ -43,6 +45,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `MapLib` turns LDtk levels, layers, flags, and custom fields into Lua-facing runtime data, while `TinyLib` plus boot/game scripts provide a lightweight multi-script scene flow.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `WorldSimulator` and `worldgenerator/*` show localized environmental simulation, graph-based wire propagation, and staged terrain/cave/aquifer/ore/biome/tree generation with versioned parameters.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `ChunkImplementation`, `WorldImplementation`, `WorldMasterImplementation.tick()`, and `TaskGenerateWorldSlice` show chunk-local world state, cadence-based near-player physics work, and staged wave-based slice generation.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `SpawnerSystem`, `WorldChunkSystem`, and `WorldMapData.loadNewChunksAndEntities` show blueprint-driven entity spawning, camera-quadrant chunk activation, and reusable platformer-world streaming patterns.
 
 ## Input And Controls
 
@@ -54,6 +57,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `DragListener` and `MoveTileObserver` translate raw drags into adjacent grid-cell swap commands before gameplay logic runs.
 - [remsengine](../findings/antonionoack-remsengine.md) - `JVMExtension` keeps controller polling and JVM-only input/platform glue inside an extension layer instead of polluting core runtime code.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `LwjglInput`, `TouchManager`, and `GameOptions` normalize desktop input into virtual touch/key state and even support debugger-driven remote key injection.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `TouchInputSystem` shows entity-bounded touch routing with optional continuous touch and coordinate forwarding, although it is marked unused on the inspected revision.
 
 ## UI, HUD, And Menus
 
@@ -71,12 +75,14 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - separate collision and physics managers show a compact plugin-friendly simulation shape.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `PhysicsWorld` centralizes world stepping, collision handlers, sensors, and body lifecycle.
 - [remsengine](../findings/antonionoack-remsengine.md) - `BulletPhysics` and `BulletMod` show how a large optional physics subsystem can stay modular while integrating deeply with ECS entities and constraints.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `GridMoveSystem`, `PlatformerCollisionResolver`, and `PlatformerGravitySystem` show stepped tile/grid platformer movement, edge-snap collision resolution, and grounded-state-controlled gravity.
 
 ## Audio
 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `SoundMachine` and `JukeBox` keep sound effects and looping background music as separate small services.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `SoundManager`, `VirtualSoundBoard`, and `MusicGenerator` keep synthesis, loop-friendly music generation, and RMS-aware multi-track mixing inside the engine instead of delegating everything to external assets.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `SpatialAudioMixer` and `App.audioMixer` show explicit surround-mix matrices, panning-law helpers, and a dedicated high-priority audio thread with live mixer reload support.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `SoundSystem` keeps playback position in ECS state so pause, resume, and snapshot-related world control can coordinate with audio.
 
 ## AI And Behavior
 
@@ -92,6 +98,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `SaveLoadService` packages persistence as pluggable handlers rather than hardwired scene logic.
 - [unciv](../findings/yairm210-unciv.md) - `GameInfo.setTransients`, `UncivFiles`, and the ruleset merge path separate durable serialized state from reconstructed runtime caches, previews, and mod compatibility repair.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `FloppyLib` converts Lua tables into JSON-backed per-game storage with circular-reference detection, while `_tiny.json` keeps game resource declarations explicit and small.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `SnapshotSerializer`, `SnapshotSerializerSystem`, `Pool`, and `PoolableComponent` show JSON-backed world snapshots, rewind buffers, polymorphic Korge-type serialization, and pooled data-only component lifecycles.
 
 ## Networking And Multiplayer
 
@@ -112,6 +119,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `CommonVirtualFileSystem`, `RunCommand`, `ExportCommand`, `tiny-web-editor`, and the annotation processors show a unified hot-reload/edit/debug/export toolchain around the same runtime.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `ModMgr` and `CommonResourcePool` show a metadata-first mod/content pipeline for blocks, items, fluids, audio, weather, retextures, locales, IMEs, and crafting with explicit GL-thread realization.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `GameContentStore`, `ModsManagerImplementation`, and `DefaultPluginManager` show a layered asset filesystem, embedded-jar classloading, mod-bundled plugins, and ordered registry reloads across blocks, items, entities, packets, generators, models, and localization.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `AssetStore`, `WorldMapData`, and `AssetReload` show common-vs-cluster asset lifetimes, asynchronous chunk activation, and the beginnings of a JVM-side live asset watcher flow.
 
 ## Android Platform Integration
 
@@ -123,6 +131,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `AndroidLauncher`, `AndroidGame`, `AndroidDisplay`, and `AndroidSaverLoader` show deep-link handling, SAF saves, background multiplayer workers, immersive-mode control, and external-mod bridging.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - the KorGE target matrix in `build.gradle.kts` shows a compact path to Android delivery from a `commonMain` game codebase.
 - [remsengine](../findings/antonionoack-remsengine.md) - `UI.md` and `PanelListY` show Android-inspired UI layout assumptions, but the engine itself remains JVM-first and should be treated as an architectural rather than turnkey Android reference.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - the root `build.gradle.kts` enables `targetAndroid()`, while the pooling and serialization design explicitly accounts for tighter Android/JVM memory constraints than many desktop-first Kotlin engine samples do.
 
 ## Performance And Memory
 
@@ -136,6 +145,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `DefaultVirtualFrameBuffer` uses clip/camera culling and cached readback, while `GameEngine` and the built-in profiler hooks keep live iteration performance visible.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `WorldSimulator` merges overlapping update regions, `IngameRenderer` throttles light recalculation, and `LightmapRenderer` reuses fixed overscanned arrays instead of reallocating per frame.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `WorkerThreadPool`, `AutoRebuildingProperty`, `TaskCreateChunkMesh`, and `WorldMasterImplementation.tick()` show task rescheduling, async derived-data rebuilds, neighbor-aware chunk meshing, and near-player simulation throttling.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `Pool`, `PoolableComponent`, `SnapshotSerializerSystem`, and `GridMoveSystem` show leak-accounted pooling, snapshot-buffer cleanup, GC-conscious component reuse, and stepped movement that reduces tile-collision tunneling.
 
 ## Build, Release, And Testing
 
@@ -145,3 +155,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [remsengine](../findings/antonionoack-remsengine.md) - the absence of a root Gradle/Maven build plus the huge `test/src/` sample surface make this repo a strong reading reference but a weaker reproducibility reference.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - the Gradle monorepo, embedded web debugger/export artifacts, and `commonTest` coverage across scripts, input, sound, and config make it a strong workflow reference even though a full build still needs a JDK.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `gradlew help` shows a readable Gradle monorepo surface, but `buildAll --dry-run` fails in the standalone clone because the expected external `api` publication tasks are unavailable.
+- [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `commonTest` covers snapshot rewind, tween serialization, and pool cleanup, but even lightweight Gradle discovery currently needs Java `21+` because the inspected KorGE plugin chain no longer supports the Java `8` environment used by this lab.

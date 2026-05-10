@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eighth real research batch is now completed and documented end-to-end.
-- The lab now has 14 researched repositories recorded:
+- The ninth real research batch is now completed and documented end-to-end.
+- The lab now has 15 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -23,6 +23,7 @@
   - `minigdx/tiny` - `accepted`
   - `curioustorvald/Terrarum` - `accepted`
   - `Hugobros3/chunkstories` - `accepted`
+  - `korlibs/korge-fleks` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -79,11 +80,15 @@
 - Clarified in public docs and project memory that notes and catalog cards must be written as future reference material.
 - Created the public GitHub repository and pushed branch `main` to `origin`.
 - Recorded the rule that completed research batches should be prepared and pushed to GitHub.
+- Completed `BATCH-2026-05-10-I` as a compact Android-relevant KorGE + Fleks gameplay-framework pass for `korlibs/korge-fleks`.
+- Added durable `Korge-fleks` findings for blueprint-driven ECS composition, snapshot rewind/save architecture, pooled serializable components, camera-relative chunk streaming, ECS render systems, and stepped platformer collision.
+- Verified that both `.\gradlew.bat help --no-daemon` and `.\gradlew.bat :korge-fleks:commonTest --dry-run --no-daemon` currently fail in this environment because the inspected KorGE plugin chain now requires Java `21+`, while the lab machine still exposes Java `8`.
+- Cleaned the transient `korge-fleks` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 8 completed batches, but the scoring rubric and category usage may still need minor tuning.
-- Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, and runtime execution is still intentionally uncommon.
+- The workflow has now been validated across 9 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
 - `AlmasB/FXGL` was kept as `reference-only` because the reviewed runtime path is JavaFX-first and only indirectly aligned with Android.
@@ -94,6 +99,7 @@
 - `minigdx/tiny` is valuable as a tooling/runtime reference, but it has no verified Android target and keeps gameplay code Lua-first rather than Kotlin-first.
 - `curioustorvald/Terrarum` has strong subsystem value, but it remains GPL-licensed, desktop/OpenGL-first, and harder to reproduce than a normal Gradle-based repository.
 - `Hugobros3/chunkstories` has strong subsystem value, but the inspected `master` branch is explicitly heavy WIP, GLFW/LWJGL desktop-first, and not self-contained for a full build because the external `api` / core pieces are missing from the research clone.
+- `korlibs/korge-fleks` is one of the more Android-relevant engine references now in the lab, but its current build floor requires Java `21+`, its asset hot-reload path is only partially implemented, and some systems such as `TouchInputSystem` or `PlatformerGroundSystem` are not fully active on the inspected revision.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
@@ -106,5 +112,6 @@
 - If a future follow-up is needed for `minigdx/tiny`, focus it on the debugger/editor protocol or on later revisions that add a clearer Android or mobile export path.
 - If a future follow-up is needed for `Terrarum`, scope it to one subsystem such as the module/content pipeline, light-weather rendering, or the world generator instead of reopening the entire workspace at once.
 - If a future follow-up is needed for `chunkstories`, focus it on one subsystem such as the rendergraph/shader pipeline, the mod/plugin loader, or the content-translator and mod-sync path instead of reopening the full repository.
+- If a future follow-up is needed for `korge-fleks`, focus it on one subsystem such as snapshot/pooling architecture, chunk streaming, or the partially implemented hot-reload path, ideally in a Java `21+` environment.
 - If the minute-based automation proves too aggressive in practice, update or pause `games-android-lab-research` rather than duplicating it with another automation.
 - Keep the new rule in force: after each completed batch, prepare the durable outputs and push them to GitHub.
