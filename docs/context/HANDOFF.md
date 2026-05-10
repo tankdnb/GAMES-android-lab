@@ -16,6 +16,8 @@
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
+- Public GitHub repository exists at `https://github.com/tankdnb/GAMES-android-lab`.
+- `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - The folder is now initialized as a local git repository.
 
@@ -38,6 +40,8 @@
 - Added root `.gitattributes` and expanded `.gitignore` for cleaner GitHub publication.
 - Renamed the local default branch from `master` to `main`.
 - Clarified in public docs and project memory that notes and catalog cards must be written as future reference material.
+- Created the public GitHub repository and pushed branch `main` to `origin`.
+- Recorded the rule that completed research batches should be prepared and pushed to GitHub.
 
 ## Known Risks
 
@@ -45,11 +49,10 @@
 - Build validation remains selective; two `gradlew help` discovery attempts timed out, and no runtime execution was used in the first batch.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
-- Root repository license has not been selected yet, so public publication would still ship without an explicit reuse license.
-- No GitHub remote is configured yet.
+- Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
-- Choose the root repository license before the first public push.
-- Create the public GitHub repository, add `origin`, and push branch `main`.
-- After publication, continue with the next research batch using the existing queue and batch workflow.
+- Choose the root repository license so public reuse terms are explicit.
+- Start the next research batch using the existing queue and batch workflow.
+- Keep the new rule in force: after each completed batch, prepare the durable outputs and push them to GitHub.

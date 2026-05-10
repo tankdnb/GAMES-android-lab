@@ -37,6 +37,8 @@ Build a practical reference library of ideas and implementations that explains, 
 - Four public-facing catalog cards are present under `catalog/projects/`.
 - Public-facing repository guidance now lives in root `README.md` and `CONTRIBUTING.md`.
 - Local repository hygiene now includes root `.gitattributes`, expanded `.gitignore`, and default branch `main`.
+- Public GitHub repository now exists at `https://github.com/tankdnb/GAMES-android-lab`.
+- `origin` is configured and `main` is published.
 - Temporary research worktrees are cleaned after each completed batch.
 - The workspace is initialized as a local git repository.
 
