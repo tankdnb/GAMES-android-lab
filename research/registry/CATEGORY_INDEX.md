@@ -18,6 +18,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `Main`, `LoadingScreen`, `Screen`, and `GameEventManager` show a shared LibGDX runtime with framebuffer-based screen transitions, centralized system assembly, dialog-aware ECS pausing, and a small event bus for input, maps, and gameplay.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Game`, `Actor`, `InterlevelScene`, and `GameScene` show a custom Android/GL runtime with buffered touch dispatch, time-scheduled actors, background interlevel loading, and layered scene composition.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `MainActivity`, `GameScreen`, `rememberGameState`, `StageController`, and `tinker` show a Compose-native Android game shell assembled from controllers and timed jobs rather than from a custom surface runtime.
+- [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `GameEngine`, `GameEngineImpl`, and `GameFactory` show a Compose-hosted micro-engine whose loop is driven by `Animatable` time and whose objects are re-derived analytically from `lastCollisionTime`.
 - [remsengine](../findings/antonionoack-remsengine.md) - `EngineBase`, `WindowManagement`, `RemsEngine`, and `OfficialExtensions` show an editor-first engine lifecycle with extension-loaded modules and split window/render loops.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `GameEngine`, `GameResourceProcessor`, `GameResourceCollector`, and `GameScript` show a fixed-step KMP runtime with ordered resource bootstrapping, state-preserving Lua hot reload, and script-to-script transitions.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `App`, `CommonResourcePool`, `ModMgr`, `IngameInstance`, and `GameUpdateGovernor` show background module bootstrapping with explicit GL-thread handoff, PRTree-backed actor queries, and fixed-step update governance.
@@ -40,6 +41,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `RenderSystem`, `Main`, `GameScreen`, and `MapManager` show sorted ECS sprite rendering around Tiled layers, map/screen crossfades via framebuffers, Tiled-property parallax, and ambient/sun-light coordination through Box2D Lights.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Tilemap`, `GameScene`, and `Game` show visible-range tile VBO updates, buffered touch-aware scene rendering, and layer-split terrain/water/UI composition.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `GameWorld` shows a fully Compose-driven sprite scene with `Image`/`Canvas` layering, animated radial shield gradients, and Coil GIF explosions instead of a separate GL renderer.
+- [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `GameBoard`, `GameDrawScope`, and `GameResourceImpl` show ID-mapped Compose `Canvas` rendering with host-provided draw hooks above and below engine-owned objects.
 
 ## Gameplay Systems
 
@@ -93,6 +95,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `GridMoveSystem`, `PlatformerCollisionResolver`, and `PlatformerGravitySystem` show stepped tile/grid platformer movement, edge-snap collision resolution, and grounded-state-controlled gravity.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PhysicSystem`, `PhysicContactListener`, `EcsUtils`, and `AttackSystem` show fixed-step Box2D with interpolation, selective non-blocking collision pairs, multi-fixture character bodies, and damage-emitter hitboxes.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `ShipController` and `LasersController` show lightweight Rect/circle overlap collisions, shield-envelope switching, and controller-owned projectile cleanup without a dedicated physics engine.
+- [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `RoundObject`, `Boundary`, `InitialConditionsChecker`, `Vector2D`, and `GameEngineImpl.checkForCollisions()` show analytical kinematics plus circle-circle and circle-boundary restitution handling inside a very small Compose-native physics runtime.
 
 ## Audio
 
@@ -160,6 +163,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `android/build.gradle` plus `GameHUD` show a direct Android LibGDX app target with touch-native controls while still reusing the same gameplay core on desktop and web.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `core/build.gradle`, `Game`, and `Touchscreen` show a direct Android app target with custom GL shell and touch-first control plumbing rather than a desktop-first port.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `app/build.gradle`, `AndroidManifest.xml`, and `MainActivity` show a direct portrait Android Compose app with immersive system-bar handling, dialog-based pause flow, and no cross-platform abstraction layer.
+- [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `app/build.gradle`, `MainActivity`, and `MainViewModel` show a reusable engine library embedded into a normal Compose Android app rather than into an engine-owned activity shell.
 
 ## Performance And Memory
 
@@ -189,3 +193,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - the project has Android/Desktop/Web modules and some trigger tests, but even `gradlew help` and `:core:test --dry-run` currently require Java `11+` because the inspected Android Gradle Plugin `8.5.2` cannot configure on the Java `8` environment used by this lab.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `build.gradle`, `core/build.gradle`, `SPD-classes/build.gradle`, and the wrapper properties show an older Android Gradle surface around Kotlin `1.5.20`, AGP `4.0.1`, and Gradle `6.6.1`; `gradlew help` still timed out in the lab and no real automated test tree was found.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `build.gradle`, `app/build.gradle`, the JDK 17 CI workflow, and the unit-test tree show a direct Android Compose build with targeted controller/scheduler tests, but even lightweight Gradle discovery currently needs Java `11+` because the resolved Android Gradle Plugin `8.13.1` cannot configure on the Java `8` lab environment.
+- [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `compose-game/build.gradle`, `app/build.gradle`, `jitpack.yml`, and `ExampleUnitTest.kt` show a JDK 17 Android library/sample setup with publication intent, but only placeholder tests and a missing referenced Jitpack prepare script; even lightweight Gradle discovery still needs a full JDK in this lab.

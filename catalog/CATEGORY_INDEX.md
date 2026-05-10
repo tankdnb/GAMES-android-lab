@@ -18,6 +18,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [LittleKt](projects/littlektframework-littlekt.md) - WebGPU-first Kotlin framework with a callback-driven runtime context, async asset preparation, and signal-based input mapping.
 - [Kubriko](projects/pandulapeter-kubriko.md) - Compose Multiplatform engine with manager/plugin architecture, viewport-aware pointer handling, and modular physics/debug tooling.
 - [Korge-fleks](projects/korlibs-korge-fleks.md) - KorGE + Fleks gameplay framework with data-driven blueprints, pooled serializable ECS components, rewindable snapshots, chunk-scoped asset loading, and stepped platformer collisions.
+- [Compose Game Engine](projects/vgupta98-compose-game.md) - small Jetpack Compose 2D micro-engine with an `Animatable`-driven loop, analytical collision-time kinematics, ID-mapped Canvas rendering, and library-style Android embedding.
 - [RemsEngine](projects/antonionoack-remsengine.md) - large Kotlin engine/editor workspace with extension-loaded modules, graph-driven rendering, unified file abstractions, and deep tooling architecture.
 - [Tiny Game Engine](projects/minigdx-tiny.md) - Lua-first KMP 2D engine with state-preserving hot reload, built-in web editor/debugger/export tooling, LDtk integration, and palette-index rendering.
 - [Terrarum](projects/curioustorvald-terrarum.md) - libGDX-based engine-and-game workspace with modular content loading, RGB+UV tiled lighting, staged world generation, region-based simulation, and a substantial weather/render pipeline.
