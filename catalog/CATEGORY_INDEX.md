@@ -15,6 +15,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [LittleKt](projects/littlektframework-littlekt.md) - WebGPU-first Kotlin framework with a callback-driven runtime context, async asset preparation, and signal-based input mapping.
 - [Kubriko](projects/pandulapeter-kubriko.md) - Compose Multiplatform engine with manager/plugin architecture, viewport-aware pointer handling, and modular physics/debug tooling.
 - [RemsEngine](projects/antonionoack-remsengine.md) - large Kotlin engine/editor workspace with extension-loaded modules, graph-driven rendering, unified file abstractions, and deep tooling architecture.
+- [Tiny Game Engine](projects/minigdx-tiny.md) - Lua-first KMP 2D engine with state-preserving hot reload, built-in web editor/debugger/export tooling, LDtk integration, and palette-index rendering.
 
 ## rendering-demo
 

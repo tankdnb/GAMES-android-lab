@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The fifth real research batch is now completed and documented end-to-end.
-- The lab now has 11 researched repositories recorded:
+- The sixth real research batch is now completed and documented end-to-end.
+- The lab now has 12 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -20,6 +20,7 @@
   - `yairm210/Unciv` - `accepted`
   - `TobseF/Candy-Crush-Clone` - `accepted`
   - `AntonioNoack/RemsEngine` - `accepted`
+  - `minigdx/tiny` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -55,6 +56,9 @@
 - Completed `BATCH-2026-05-10-E` as a wildcard engine pass for `AntonioNoack/RemsEngine`.
 - Added durable `RemsEngine` findings for extension-loaded modules, editor-first shell composition, split window/render loops, file abstraction, async cache design, Bullet integration, and Android-inspired UI layout patterns.
 - Verified that `RemsEngine` does not expose a standard root Gradle or Maven build surface; the repository was documented as an IntelliJ-module workspace and static-reading reference instead of a reproducible build reference.
+- Completed `BATCH-2026-05-10-F` as a compact engine/tooling pass for `minigdx/tiny`.
+- Added durable `Tiny Game Engine` findings for state-preserving Lua reload, ordered resource bootstrapping, LDtk-to-Lua bridging, palette-index rendering, built-in debugger/export tooling, JSON-backed saves, and engine-integrated procedural audio generation.
+- Recorded another distinct Gradle discovery limitation: `minigdx/tiny` bootstrapped Gradle successfully, but `.\gradlew.bat help --no-daemon` still failed because the environment exposed only a Java runtime without a full JDK/compiler.
 - Reworked `README.md` to describe the repository as a public research lab, with current status, workflow, and quick links.
 - Added root `CONTRIBUTING.md` for public research contributions.
 - Added root `.gitattributes` and expanded `.gitignore` for cleaner GitHub publication.
@@ -65,8 +69,8 @@
 
 ## Known Risks
 
-- The workflow has now been validated across 3 completed batches, but the scoring rubric and category usage may still need minor tuning.
-- Build validation remains selective; 5 lightweight `gradlew help` discovery attempts across completed batches have timed out, 1 additional discovery attempt failed because the environment lacked a JDK, and runtime execution is still intentionally uncommon.
+- The workflow has now been validated across 6 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
 - `AlmasB/FXGL` was kept as `reference-only` because the reviewed runtime path is JavaFX-first and only indirectly aligned with Android.
@@ -74,12 +78,14 @@
 - `yairm210/Unciv` is so large that a later follow-up may still be useful for map-generation and server internals beyond the hotspot review completed here.
 - `TobseF/Candy-Crush-Clone` is a strong small reference, but its narrow scope means it should not be treated as evidence for persistence, networking, or large Android packaging practices.
 - `AntonioNoack/RemsEngine` has strong architectural value, but its desktop/editor-first orientation and nonstandard build surface lower its direct Android transfer and reproducibility.
+- `minigdx/tiny` is valuable as a tooling/runtime reference, but it has no verified Android target and keeps gameplay code Lua-first rather than Kotlin-first.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Refresh the queue and prepare the next lightweight batch from backlog candidates plus newly searched repositories.
+- Refresh the queue and prepare the next lightweight batch from `Hugobros3/chunkstories` plus newly searched repositories with stronger direct Android signal if available.
 - If a future follow-up is needed for `Unciv`, target map generation or server internals as a scoped revisit instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `RemsEngine`, scope it to one subsystem such as export, render graph tooling, or the separate Android fork rather than reopening the whole workspace at once.
+- If a future follow-up is needed for `minigdx/tiny`, focus it on the debugger/editor protocol or on later revisions that add a clearer Android or mobile export path.
 - Keep the new rule in force: after each completed batch, prepare the durable outputs and push them to GitHub.

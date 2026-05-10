@@ -16,6 +16,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `UncivGame` and `WorldScreen` show how to split heavy loading and turn-resolution work across background threads and the GL thread in a large Android game.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `main.kt` and `GameFlow` show a compact DI-composed match-3 runtime driven by typed events and animation-completion sequencing.
 - [remsengine](../findings/antonionoack-remsengine.md) - `EngineBase`, `WindowManagement`, `RemsEngine`, and `OfficialExtensions` show an editor-first engine lifecycle with extension-loaded modules and split window/render loops.
+- [minigdx-tiny](../findings/minigdx-tiny.md) - `GameEngine`, `GameResourceProcessor`, `GameResourceCollector`, and `GameScript` show a fixed-step KMP runtime with ordered resource bootstrapping, state-preserving Lua hot reload, and script-to-script transitions.
 
 ## Rendering And Graphics
 
@@ -26,6 +27,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `GameViewport` reserves HUD space inside the game viewport instead of assuming full-screen world rendering.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `GameFieldRenderer` and `TileAnimator` keep a mirrored tile-image grid synchronized with command-driven board animation.
 - [remsengine](../findings/antonionoack-remsengine.md) - `RenderGraph` and `WindowManagement` show graph-driven rendering plus explicit multi-window OpenGL orchestration and idle pacing.
+- [minigdx-tiny](../findings/minigdx-tiny.md) - `DefaultVirtualFrameBuffer` and `SprLib` show a palette-index 2D framebuffer with texture batching, stencil modes, cached readback, and runtime sprite-sheet mutation.
 
 ## Gameplay Systems
 
@@ -34,6 +36,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `GameStarter`, `GameInfo.nextTurn`, and the built-in simulation harness show a full-scale turn-based gameplay pipeline with generation, save-state restoration, and multi-actor turn processing.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `GameMechanics`, `Level`, `LevelCheck`, and `Scoring` separate board rules, scripted reserve tiles, goals, and combo scoring in a reusable puzzle-game shape.
 - [remsengine](../findings/antonionoack-remsengine.md) - `Entity`, `Systems`, and the sample games under `test/src/me/anno/games/` show how gameplay scenarios are built on top of a scene hierarchy plus runtime systems bridge.
+- [minigdx-tiny](../findings/minigdx-tiny.md) - `MapLib` turns LDtk levels, layers, flags, and custom fields into Lua-facing runtime data, while `TinyLib` plus boot/game scripts provide a lightweight multi-script scene flow.
 
 ## Input And Controls
 
@@ -44,6 +47,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `Input`, `VirtualInput`, and `InputCapture` provide centralized bindings, touch overlays, and replayable input sequences.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `DragListener` and `MoveTileObserver` translate raw drags into adjacent grid-cell swap commands before gameplay logic runs.
 - [remsengine](../findings/antonionoack-remsengine.md) - `JVMExtension` keeps controller polling and JVM-only input/platform glue inside an extension layer instead of polluting core runtime code.
+- [minigdx-tiny](../findings/minigdx-tiny.md) - `LwjglInput`, `TouchManager`, and `GameOptions` normalize desktop input into virtual touch/key state and even support debugger-driven remote key injection.
 
 ## UI, HUD, And Menus
 
@@ -64,6 +68,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 ## Audio
 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `SoundMachine` and `JukeBox` keep sound effects and looping background music as separate small services.
+- [minigdx-tiny](../findings/minigdx-tiny.md) - `SoundManager`, `VirtualSoundBoard`, and `MusicGenerator` keep synthesis, loop-friendly music generation, and RMS-aware multi-track mixing inside the engine instead of delegating everything to external assets.
 
 ## AI And Behavior
 
@@ -78,6 +83,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `SerializationManagerImpl` uses typed metadata registration for actor save/load.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `SaveLoadService` packages persistence as pluggable handlers rather than hardwired scene logic.
 - [unciv](../findings/yairm210-unciv.md) - `GameInfo.setTransients`, `UncivFiles`, and the ruleset merge path separate durable serialized state from reconstructed runtime caches, previews, and mod compatibility repair.
+- [minigdx-tiny](../findings/minigdx-tiny.md) - `FloppyLib` converts Lua tables into JSON-backed per-game storage with circular-reference detection, while `_tiny.json` keeps game resource declarations explicit and small.
 
 ## Networking And Multiplayer
 
@@ -94,6 +100,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - the debug-menu manager is a strong example of keeping live inspection tooling separate from gameplay logic.
 - [unciv](../findings/yairm210-unciv.md) - `RulesetCache`, `Ruleset`, and `RulesetValidator` treat mods as a validated JSON content pipeline with base rulesets, extension merges, removals, and fallback fills.
 - [remsengine](../findings/antonionoack-remsengine.md) - `OfficialExtensions`, `FileReference`, `CacheSection`, and `ExportMenu` show how to organize asset-heavy editor/runtime tooling through extension modules, virtual file references, and preset-driven exporters.
+- [minigdx-tiny](../findings/minigdx-tiny.md) - `CommonVirtualFileSystem`, `RunCommand`, `ExportCommand`, `tiny-web-editor`, and the annotation processors show a unified hot-reload/edit/debug/export toolchain around the same runtime.
 
 ## Android Platform Integration
 
@@ -115,6 +122,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `Entity` supports reusable entities and explicit update disabling for lower overhead.
 - [unciv](../findings/yairm210-unciv.md) - `WorldScreen`, `Unique`, `GameInfo.updateCivilizationState`, and `PathingMap` show GL-thread deferral, regex-result caching, once-per-civ recomputation, and reusable multi-turn path caches.
 - [remsengine](../findings/antonionoack-remsengine.md) - `WindowManagement` idle throttling plus `CacheSection` expiry/update logic are useful references for keeping editor-heavy runtimes responsive without overspending CPU.
+- [minigdx-tiny](../findings/minigdx-tiny.md) - `DefaultVirtualFrameBuffer` uses clip/camera culling and cached readback, while `GameEngine` and the built-in profiler hooks keep live iteration performance visible.
 
 ## Build, Release, And Testing
 
@@ -122,3 +130,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [almasb-fxgl](../findings/almasb-fxgl.md) - the split Maven module layout keeps core runtime, IO, and sample applications separated for publication and maintenance.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `commonTest` coverage over board rules and coordinate mapping makes this sample stronger than a typical toy repository.
 - [remsengine](../findings/antonionoack-remsengine.md) - the absence of a root Gradle/Maven build plus the huge `test/src/` sample surface make this repo a strong reading reference but a weaker reproducibility reference.
+- [minigdx-tiny](../findings/minigdx-tiny.md) - the Gradle monorepo, embedded web debugger/export artifacts, and `commonTest` coverage across scripts, input, sound, and config make it a strong workflow reference even though a full build still needs a JDK.
