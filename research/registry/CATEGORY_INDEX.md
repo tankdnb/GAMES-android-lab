@@ -16,6 +16,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `UncivGame` and `WorldScreen` show how to split heavy loading and turn-resolution work across background threads and the GL thread in a large Android game.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `main.kt` and `GameFlow` show a compact DI-composed match-3 runtime driven by typed events and animation-completion sequencing.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `Main`, `LoadingScreen`, `Screen`, and `GameEventManager` show a shared LibGDX runtime with framebuffer-based screen transitions, centralized system assembly, dialog-aware ECS pausing, and a small event bus for input, maps, and gameplay.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Game`, `Actor`, `InterlevelScene`, and `GameScene` show a custom Android/GL runtime with buffered touch dispatch, time-scheduled actors, background interlevel loading, and layered scene composition.
 - [remsengine](../findings/antonionoack-remsengine.md) - `EngineBase`, `WindowManagement`, `RemsEngine`, and `OfficialExtensions` show an editor-first engine lifecycle with extension-loaded modules and split window/render loops.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `GameEngine`, `GameResourceProcessor`, `GameResourceCollector`, and `GameScript` show a fixed-step KMP runtime with ordered resource bootstrapping, state-preserving Lua hot reload, and script-to-script transitions.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `App`, `CommonResourcePool`, `ModMgr`, `IngameInstance`, and `GameUpdateGovernor` show background module bootstrapping with explicit GL-thread handoff, PRTree-backed actor queries, and fixed-step update governance.
@@ -36,6 +37,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `GraphicsEngineImplementation`, `GraphicsBackendsEnum`, `deffered_world_render_graph`, `BuiltInRendergraphs`, `TaskCreateChunkMesh`, and `TaskComputeChunkOcclusion` show backend-neutral pass graphs, Vulkan/OpenGL fallback, async chunk meshing with AO/light packing, and precomputed chunk-face visibility.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `ObjectRenderSystem`, `LevelMapRenderSystem`, and `CameraSystem` show ECS-owned sprite/text/tile rendering, visible-window chunk-aware map drawing, and camera-driven parallax updates without storing heavyweight KorGE view objects inside components.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `RenderSystem`, `Main`, `GameScreen`, and `MapManager` show sorted ECS sprite rendering around Tiled layers, map/screen crossfades via framebuffers, Tiled-property parallax, and ambient/sun-light coordination through Box2D Lights.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Tilemap`, `GameScene`, and `Game` show visible-range tile VBO updates, buffered touch-aware scene rendering, and layer-split terrain/water/UI composition.
 
 ## Gameplay Systems
 
@@ -49,6 +51,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `WorldSimulator` and `worldgenerator/*` show localized environmental simulation, graph-based wire propagation, and staged terrain/cave/aquifer/ore/biome/tree generation with versioned parameters.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `ChunkImplementation`, `WorldImplementation`, `WorldMasterImplementation.tick()`, and `TaskGenerateWorldSlice` show chunk-local world state, cadence-based near-player physics work, and staged wave-based slice generation.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `SpawnerSystem`, `WorldChunkSystem`, and `WorldMapData.loadNewChunksAndEntities` show blueprint-driven entity spawning, camera-quadrant chunk activation, and reusable platformer-world streaming patterns.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `RegularLevel`, `LevelDigger`, `Mob`, `Pressure`, and `Generator` show weighted digger-based dungeon generation, data-backed mob state machines, stress mechanics, and controlled loot economy.
 
 ## Input And Controls
 
@@ -62,6 +65,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `LwjglInput`, `TouchManager`, and `GameOptions` normalize desktop input into virtual touch/key state and even support debugger-driven remote key injection.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `TouchInputSystem` shows entity-bounded touch routing with optional continuous touch and coordinate forwarding, although it is marked unused on the inspected revision.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PlayerInputSystem`, `GameEventManager`, and `GameHUD` show an abstract action-input layer shared across keyboard and touchpad/button controls.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Game` and `Touchscreen` show buffered Android `MotionEvent` handling and centralized multi-touch translation into engine touch signals.
 
 ## UI, HUD, And Menus
 
@@ -74,6 +78,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [remsengine](../findings/antonionoack-remsengine.md) - `PanelListY`, `UI.md`, `RemsEngine`, and `ExportMenu` show Android-inspired weighted layouts reused for editor, inspector, and export tooling surfaces.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `IngameUI` keeps HUD overlays, selection state, and debug widgets trait-driven, while exposing hot-reload and rendergraph refresh actions directly in the running client.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `GameHUD`, `GameScreen`, and `Screen` show a touch-first mobile HUD, portrait-driven stats overlay, and dialog-controlled simulation pause without splitting the runtime into separate UI and gameplay loops.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `GameScene`, `WndHero`, and `WndJournal` show layered in-game UI composition, tabbed hero sheets, and depth-aware journal/catalog flows.
 
 ## Physics And Collision
 
@@ -94,6 +99,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 - [ktx](../findings/libktx-ktx.md) - the behavior-tree DSL shows a clean Kotlin wrapper for AI task composition.
 - [unciv](../findings/yairm210-unciv.md) - `WorkerAutomation`, `ConstructionAutomation`, and `BarbarianAutomation` show staged scoring-based automation with road planning, tile simulation, and explicit fallback ladders.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Actor`, `Mob`, and `Database` show a time-based scheduler plus serializable mob AI modes and data-backed resistances, abilities, and loot tables.
 
 ## Persistence And Data
 
@@ -106,6 +112,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `FloppyLib` converts Lua tables into JSON-backed per-game storage with circular-reference detection, while `_tiny.json` keeps game resource declarations explicit and small.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `SnapshotSerializer`, `SnapshotSerializerSystem`, `Pool`, and `PoolableComponent` show JSON-backed world snapshots, rewind buffers, polymorphic Korge-type serialization, and pooled data-only component lifecycles.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `SaveSystem` and `MapManager` show a compact progress-save model based on current map, surviving Tiled object IDs, player checkpoint/tutorial state, and current stats/abilities rather than a full serialized world snapshot.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Bundle`, `Dungeon`, `GamesInProgress`, `HeroPerk`, and `QuickSlot` show JSON/GZIP object persistence, split game-vs-level saves, multi-slot previews/backups, and placeholder-friendly inventory state.
 
 ## Networking And Multiplayer
 
@@ -128,6 +135,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `GameContentStore`, `ModsManagerImplementation`, and `DefaultPluginManager` show a layered asset filesystem, embedded-jar classloading, mod-bundled plugins, and ordered registry reloads across blocks, items, entities, packets, generators, models, and localization.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `AssetStore`, `WorldMapData`, and `AssetReload` show common-vs-cluster asset lifetimes, asynchronous chunk activation, and the beginnings of a JVM-side live asset watcher flow.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `LoadingScreen`, `MapManager`, and the multi-module Gradle setup show a shared-asset pipeline across Android/Desktop/Web plus Tiled-authored content layers mapped directly into runtime entities.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Database`, `RegularLevel`, and the split `core`/`SPD-classes` modules show a gameplay data layer where mob balance, loot, resistances, and some generation inputs are table-driven rather than purely hard-coded.
 
 ## Android Platform Integration
 
@@ -141,6 +149,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [remsengine](../findings/antonionoack-remsengine.md) - `UI.md` and `PanelListY` show Android-inspired UI layout assumptions, but the engine itself remains JVM-first and should be treated as an architectural rather than turnkey Android reference.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - the root `build.gradle.kts` enables `targetAndroid()`, while the pooling and serialization design explicitly accounts for tighter Android/JVM memory constraints than many desktop-first Kotlin engine samples do.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `android/build.gradle` plus `GameHUD` show a direct Android LibGDX app target with touch-native controls while still reusing the same gameplay core on desktop and web.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `core/build.gradle`, `Game`, and `Touchscreen` show a direct Android app target with custom GL shell and touch-first control plumbing rather than a desktop-first port.
 
 ## Performance And Memory
 
@@ -156,6 +165,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `WorkerThreadPool`, `AutoRebuildingProperty`, `TaskCreateChunkMesh`, and `WorldMasterImplementation.tick()` show task rescheduling, async derived-data rebuilds, neighbor-aware chunk meshing, and near-player simulation throttling.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `Pool`, `PoolableComponent`, `SnapshotSerializerSystem`, and `GridMoveSystem` show leak-accounted pooling, snapshot-buffer cleanup, GC-conscious component reuse, and stepped movement that reduces tile-collision tunneling.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PhysicSystem`, `EcsUtils`, `DefaultAudioService`, and `MapManager` show fixed physics cadence with interpolation, pooled Ashley entities/components, per-frame sound deduplication, and map caching instead of keeping the whole world live at once.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Tilemap`, `Actor`, `GameScene`, and `GamesInProgress` show partial tile-buffer updates, wait-for-animation turn scheduling, layered incremental map refresh, and split save-slot files/backups instead of one heavy snapshot.
 
 ## Build, Release, And Testing
 
@@ -167,3 +177,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `gradlew help` shows a readable Gradle monorepo surface, but `buildAll --dry-run` fails in the standalone clone because the expected external `api` publication tasks are unavailable.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `commonTest` covers snapshot rewind, tween serialization, and pool cleanup, but even lightweight Gradle discovery currently needs Java `21+` because the inspected KorGE plugin chain no longer supports the Java `8` environment used by this lab.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - the project has Android/Desktop/Web modules and some trigger tests, but even `gradlew help` and `:core:test --dry-run` currently require Java `11+` because the inspected Android Gradle Plugin `8.5.2` cannot configure on the Java `8` environment used by this lab.
+- [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `build.gradle`, `core/build.gradle`, `SPD-classes/build.gradle`, and the wrapper properties show an older Android Gradle surface around Kotlin `1.5.20`, AGP `4.0.1`, and Gradle `6.6.1`; `gradlew help` still timed out in the lab and no real automated test tree was found.

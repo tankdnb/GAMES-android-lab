@@ -9,6 +9,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Unciv](projects/yairm210-unciv.md) - large-scale Android/Desktop 4X strategy game with threaded turn resolution, ruleset-driven modding, integrated multiplayer, and explicit Android platform glue.
 - [Candy Crush Clone](projects/tobsef-candy-crush-clone.md) - compact KorGE match-3 sample with typed-event game flow, renderer/model separation, reserve-driven tile feeds, and strong board-mechanics tests.
 - [Quilly's Adventure](projects/quillraven-quilly-s-adventure.md) - LibGDX adventure/platformer with Tiled-authored ECS content, fixed-step Box2D interpolation, touch HUD abstraction, portal-based map transitions, compact save progression, and a pooled trigger DSL.
+- [Darkest Pixel Dungeon](projects/egoal-darkest-pixel-dungeon.md) - Android roguelike with a custom `Noosa` runtime, buffered touch input, digger-based dungeon generation, split game/level saves, and data-backed mob AI/content tables.
 
 ## engine-framework
 
