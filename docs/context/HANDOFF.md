@@ -28,6 +28,7 @@
 - Public GitHub repository exists at `https://github.com/tankdnb/GAMES-android-lab`.
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
+- A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
@@ -64,6 +65,7 @@
 - Added durable `Terrarum` findings for GL-thread-safe module/resource loading, metadata-driven mods, PRTree-backed actor queries, RGB+UV tiled lighting, layered Float16 rendering, weather-linked global lighting, graph-based wire simulation, and staged procedural world generation.
 - Verified that `Terrarum` does not expose a standard Gradle or Maven root build; the inspected revision points instead to IntelliJ module files, JDK 17+, GraalVM JS setup, and `buildapp/Makefile` packaging scripts.
 - Cleaned the transient `Terrarum` clone from `research/worktrees/` after documenting the results and revalidated that the directory again contains only `.gitkeep`.
+- Created and activated heartbeat automation `games-android-lab-research` to continue repository research every minute in the current thread using the established documentation, registry, cleanup, commit, and push workflow.
 - Reworked `README.md` to describe the repository as a public research lab, with current status, workflow, and quick links.
 - Added root `CONTRIBUTING.md` for public research contributions.
 - Added root `.gitattributes` and expanded `.gitignore` for cleaner GitHub publication.
@@ -85,6 +87,7 @@
 - `AntonioNoack/RemsEngine` has strong architectural value, but its desktop/editor-first orientation and nonstandard build surface lower its direct Android transfer and reproducibility.
 - `minigdx/tiny` is valuable as a tooling/runtime reference, but it has no verified Android target and keeps gameplay code Lua-first rather than Kotlin-first.
 - `curioustorvald/Terrarum` has strong subsystem value, but it remains GPL-licensed, desktop/OpenGL-first, and harder to reproduce than a normal Gradle-based repository.
+- The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
@@ -95,4 +98,5 @@
 - If a future follow-up is needed for `RemsEngine`, scope it to one subsystem such as export, render graph tooling, or the separate Android fork rather than reopening the whole workspace at once.
 - If a future follow-up is needed for `minigdx/tiny`, focus it on the debugger/editor protocol or on later revisions that add a clearer Android or mobile export path.
 - If a future follow-up is needed for `Terrarum`, scope it to one subsystem such as the module/content pipeline, light-weather rendering, or the world generator instead of reopening the entire workspace at once.
+- If the minute-based automation proves too aggressive in practice, update or pause `games-android-lab-research` rather than duplicating it with another automation.
 - Keep the new rule in force: after each completed batch, prepare the durable outputs and push them to GitHub.

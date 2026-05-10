@@ -5,6 +5,7 @@
 - Choose the root repository license for the already-public GitHub repository.
 - Prepare the next lightweight batch from `Hugobros3/chunkstories` and fresh GitHub search results.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
+- A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 
 ## Next Recommended
 
