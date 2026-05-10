@@ -26,6 +26,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `WorldConfigurationExt`, `EntityFactory`, `EntityBlueprint`, `MessagePassingSystem`, and `GameStateManager` show a ready-made ECS gameplay shell with blueprint-driven entity composition, decoupled message events, and YAML-backed bootstrap state.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `Game`, `GameNode`, `Engine`, `GameWrapper`, and `ScriptExecutorSystem` show a compact multiplatform engine lifecycle with staged bootstrap, queued ECS mutations, framebuffer graph assembly, nested storyboard screens, and coroutine-backed gameplay scripts.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `OreWorld`, `GameLoopSystemInvocationStrategy`, `OreServer`, `PlayerSystem`, and `ServerNetworkEntitySystem` show split client/server ECS assembly, fixed-step logic vs render processing, loaded-viewport block streaming, and quadtree-diff entity replication.
+- [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Entity`, `ECS`, `Project`, `Loader`, `EntityLoader`, and `SceneInstance` show a hybrid entity-tree runtime with descriptor-driven metadata, async loader orchestration, deferred scene start, and prefab-like scene instancing.
 
 ## Rendering And Graphics
 
@@ -46,6 +47,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `GameBoard`, `GameDrawScope`, and `GameResourceImpl` show ID-mapped Compose `Canvas` rendering with host-provided draw hooks above and below engine-owned objects.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FrameBuffer`, `TextureFrameBuffer`, `RenderStage`, `QuadRenderStage`, and `ModelComponentRenderStage` show a dependency-aware framebuffer graph, reusable fullscreen post-process stage, shader-parameter abstraction, per-draw lighting uniforms, and transparent back-to-front sorting.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `TileRenderSystem` and `TileLightingSystem` show camera-limited auto-tiled block rendering, separate tile/lightmap framebuffers, shader-based lightmap blending, and depth-limited sunlight/device flood fill.
+- [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Scene`, `PBRShader`, `PBRNode`, `GBufferOutputNode`, `IBLMapBaker`, and `ForwardRenderingPipeline` show scene-wide uniform-buffer updates, node-based PBR/deferred shader generation, in-engine IBL baking, and framebuffer-swapped post-processing.
 
 ## Gameplay Systems
 
@@ -79,6 +81,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Game` and `Touchscreen` show buffered Android `MotionEvent` handling and centralized multi-touch translation into engine touch signals.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `MovementButtons`, `ShipController`, and the lifecycle/game-status wiring show hold-to-move touch controls and pause-aware input flow for a Compose-native Android action game.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `TouchManager`, `LwjglInput`, `AndroidInputHandler`, and `FillViewportStrategy` show a shared virtual touch/key model, desktop mouse-to-touch emulation, and aspect-safe coordinate conversion across Android, JVM, and web.
+- [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `AndroidApp`, `AndroidTouch`, `AndroidMouse`, `KeyboardHandler`, and `MouseHandler` show a thin input-bridge pattern that maps Android events into shared engine listeners instead of baking gameplay directly into platform code.
 
 ## UI, HUD, And Menus
 
@@ -107,6 +110,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `RoundObject`, `Boundary`, `InitialConditionsChecker`, `Vector2D`, and `GameEngineImpl.checkForCollisions()` show analytical kinematics plus circle-circle and circle-boundary restitution handling inside a very small Compose-native physics runtime.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `AABBCollisionResolver`, `SATCollisionResolver`, and `SATCollisionResolverTest` show both cheap axis-aligned overlap checks and a rotated-box SAT path with bounding-sphere short-circuiting and test coverage.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `MovementSystem` shows velocity-Verlet-style movement, separate entity/block collision resolution, one-block stair stepping, and reused dropped-item physics inside a tile sandbox.
+- [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `RigidBodyPhysicsWorld` shows ODE-backed rigid bodies, descriptor-registered shape metadata, fixed-step stepping, and explicit begin/update/end contact dispatch inside the same engine component model.
 
 ## Audio
 
@@ -165,6 +169,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `.github/workflows/android-ci.yml` plus the controller-focused unit-test tree show a lightweight but intentional workflow where timing helpers, stage logic, formations, boosters, and object controllers are validated separately from UI rendering.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FileHandlerCommon`, `GraphSceneLoader`, `EntityFactoryDelegate`, and the build workflow show a coherent pipeline from typed asset loading to scene import, runtime sprite setup, and KMP engine CI validation.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `build.gradle`, `core/build.gradle`, `.gitmodules`, and the texture-packing/protobuf tasks show an older but coherent pipeline around asset submodules, atlas packing, protobuf world data, and Artemis weaving.
+- [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `GLTF`, `GLTFSettings`, `EntityLoader`, the descriptor registry in `ECS`, and `thelema-studio` show a pipeline where import settings, serialized components, scene instances, and an editor shell are all built around the same runtime data model.
 
 ## Android Platform Integration
 
@@ -182,6 +187,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `app/build.gradle`, `AndroidManifest.xml`, and `MainActivity` show a direct portrait Android Compose app with immersive system-bar handling, dialog-based pause flow, and no cross-platform abstraction layer.
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `app/build.gradle`, `MainActivity`, and `MainViewModel` show a reusable engine library embedded into a normal Compose Android app rather than into an engine-owned activity shell.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `MiniGdxActivity`, `MiniGdxSurfaceView`, Android `PlatformContextCommon`, and Android `PlatformFileHandler` show a direct Android engine shell around `GLSurfaceView`, `SoundPool`, viewport scaling, and shared KMP game code.
+- [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `AndroidApp`, `AndroidFS`, `AndroidAudio`, `AndroidImageLoader`, and the root Android target show a direct `GLSurfaceView`-based Android shell with platform services kept thin around a shared KMP engine core.
 
 ## Performance And Memory
 
@@ -200,6 +206,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Tilemap`, `Actor`, `GameScene`, and `GamesInProgress` show partial tile-buffer updates, wait-for-animation turn scheduling, layered incremental map refresh, and split save-slot files/backups instead of one heavy snapshot.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `TouchManager` pools internal input events, `FrameBuffer` reuses predeclared render targets, and the collision path short-circuits SAT checks with a radius test before doing axis projections.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `GameLoopSystemInvocationStrategy`, `SpatialSystem`, `TileRenderSystem`, and `LiquidSimulationSystem` show fixed-step logic accumulation, quadtree visibility culling, camera-limited tile iteration, and dirty-region fluid resync instead of full-world updates every frame.
+- [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Scene`, `ForwardRenderingPipeline`, and `GLTF` show scene-frustum culling, effect chaining through reusable framebuffers, and GL-thread work queues that keep heavy asset setup out of the main parsing path.
 
 ## Build, Release, And Testing
 
@@ -216,3 +223,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vgupta98-compose-game](../findings/vgupta98-compose-game.md) - `compose-game/build.gradle`, `app/build.gradle`, `jitpack.yml`, and `ExampleUnitTest.kt` show a JDK 17 Android library/sample setup with publication intent, but only placeholder tests and a missing referenced Jitpack prepare script; even lightweight Gradle discovery still needs a full JDK in this lab.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `build.gradle.kts`, `gradle/libs.versions.toml`, `.github/workflows/build.yml`, and the `commonTest` tree show a direct KMP+Android build surface with meaningful engine tests, but even `gradlew help` currently fails in the lab because Gradle cannot find a Java compiler and upstream CI expected JDK 11.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `build.gradle`, `core/build.gradle`, `.travis.yml`, and `core/test/*` show a Java-8-era Gradle/Travis surface with partial tests, but `gradlew help` now fails during legacy Bintray dependency resolution rather than on the JVM itself.
+- [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `build.gradle.kts`, `settings.gradle.kts`, `gradle/wrapper/gradle-wrapper.properties`, `buildSrc/src/main/kotlin/versions.kt`, and the tiny `commonTest` tree show a real KMP+Android engine build surface, but even `gradlew help` currently fails in the lab because `buildSrc` Kotlin compilation needs a full JDK rather than the available Java `8` JRE.

@@ -24,6 +24,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Terrarum](projects/curioustorvald-terrarum.md) - libGDX-based engine-and-game workspace with modular content loading, RGB+UV tiled lighting, staged world generation, region-based simulation, and a substantial weather/render pipeline.
 - [Chunk Stories](projects/hugobros3-chunkstories.md) - voxel engine-and-game stack with layered mod loading, backend-neutral rendergraphs, asynchronous chunk meshing and occlusion work, and server-side mod redistribution support.
 - [miniGDX](projects/minigdx-minigdx.md) - Kotlin Multiplatform engine/runtime with direct Android adapters, staged framebuffer-driven rendering, scene-to-ECS import, coroutine-backed scripts, and targeted engine/input/collision tests.
+- [Thelema Engine](projects/zeganstyl-thelema-engine.md) - Kotlin Multiplatform 3D engine with descriptor-driven entity metadata, scene instancing, shader-node PBR, glTF loading, Android platform adapters, ODE physics, and a separate studio/editor surface.
 
 ## rendering-demo
 

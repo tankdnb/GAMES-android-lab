@@ -29,6 +29,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-11-A` | `vgupta98/compose-game` | `engine-framework` | `3` | `1` | `1` | `2` | `43` | `2024-07-26` | Direct Android Compose micro-engine/library with reusable loop, collision, rendering, and library-embedding patterns on a permissive license | `done` | `refreshed shortlist + gh repo view verification` |
 | `BATCH-2026-05-11-B` | `minigdx/minigdx` | `engine-framework` | `2` | `2` | `0` | `2` | `178` | `2022-10-10` | Minimalist Kotlin Multiplatform framework with stronger ecosystem signal than the remaining stale backlog and clear reuse potential around runtime/input/rendering abstractions, especially as a companion reference to the already researched `tiny` engine from the same ecosystem | `done` | `refreshed shortlist + gh repo view verification` |
 | `BATCH-2026-05-11-C` | `sreich/ore-infinium` | `gameplay-systems` | `2` | `2` | `0` | `3` | `190` | `2022-07-17` | Terraria-inspired LibGDX sandbox with Kotlin gameplay code, ECS, networking, and open-world systems; chosen as the strongest remaining systems-heavy candidate with permissive licensing and better ecosystem signal than the stale engine-only backlog | `done` | `refreshed shortlist + gh repo view verification` |
+| `BATCH-2026-05-11-D` | `zeganstyl/thelema-engine` | `engine-framework` | `3` | `1` | `0` | `2` | `83` | `2022-12-21` | Kotlin/libGDX-derived 3D engine with cross-platform graphics ambitions, Apache-2.0 licensing, and the strongest remaining rendering/engine-architecture yield among not-yet-researched backlog candidates | `done` | `refreshed shortlist + gh repo view verification` |
 
 ## Backlog Candidates
 
@@ -36,7 +37,6 @@ Keep this short. Move only the strongest candidates here.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `zeganstyl/thelema-engine` | `engine-framework` | `3` | `1` | `0` | `2` | `83` | `2022-12-21` | Kotlin/libGDX-derived 3D engine with cross-platform graphics ambitions; useful later when the lab wants a denser 3D/rendering-oriented reference | `refreshed shortlist + gh repo view verification` |
 | `kotcity/kotcity` | `gameplay-systems` | `2` | `2` | `0` | `3` | `488` | `2021-08-23` | City-simulator codebase with stronger systems/simulation potential than most remaining Kotlin game samples, but older and less Android-directed than the near-term framework backlog | `refreshed shortlist + gh repo view verification` |
 | `wajahatkarim3/DinoCompose` | `android-game` | `3` | `2` | `0` | `1` | `285` | `2022-01-09` | Direct Android Jetpack Compose game sample with decent visibility, but likely narrower research yield than the remaining engine/framework backlog | `refreshed shortlist + gh repo view verification` |
 

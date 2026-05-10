@@ -9,13 +9,14 @@
 
 ## Next Recommended
 
-- Fresh activity-sorted Android-game results are still mostly zero-signal; unless better candidates appear on the next refresh, prefer `zeganstyl/thelema-engine` as the next stronger backlog and keep `kotcity/kotcity` plus `wajahatkarim3/DinoCompose` as secondary alternatives.
+- Fresh activity-sorted Android-game results are still mostly zero-signal; unless better candidates appear on the next refresh, prefer `kotcity/kotcity` as the next stronger backlog and keep `wajahatkarim3/DinoCompose` as the secondary lightweight Android sample.
 - If `Quilly-s-Adventure` needs a future follow-up, verify `:core:test` and target builds in a Java `11+` environment, or isolate one subsystem such as the trigger DSL or Tiled-to-ECS map flow instead of reopening the whole repository broadly.
 - If `Darkest Pixel Dungeon` needs a future follow-up, isolate one subsystem such as the actor scheduler, procedural dungeon pipeline, or split save-slot architecture rather than reopening the whole repository broadly.
 - If `Neon` needs a future follow-up, isolate one subsystem such as the `tinker` scheduler, stage progression, or controller-based collision/powerup flow, or rerun the unit-test surface in a Java `11+` or `17` environment.
 - If `compose-game` needs a future follow-up, isolate one subsystem such as the analytical collision math or the render/API seam around the `GameEngineImpl` downcast, or rerun the build/publication path in a Java `17` JDK environment.
 - If `minigdx/minigdx` needs a future follow-up, isolate one subsystem such as the Android multitouch adapter or the coroutine script helpers, or rerun build/test verification in a Java `11` environment.
 - If `sreich/ore-infinium` needs a future follow-up, isolate server-authoritative movement/prediction, world save/load completion, or device/power-graph behavior instead of reopening the full sandbox broadly.
+- If `zeganstyl/thelema-engine` needs a future follow-up, isolate the glTF loader pipeline, shader-node authoring flow, Android input/runtime shell, or build verification in a real JDK `11+` environment instead of reopening the full engine broadly.
 - If `chunkstories` needs a future follow-up, scope it narrowly to the rendergraph/shader path, the mod/plugin loader, or the content-translator and mod-sync path rather than reopening the whole repository.
 - If `Unciv` needs a future follow-up, scope it narrowly to map generation, server internals, or another single subsystem instead of repeating a full heavy batch.
 - If `RemsEngine` needs a future follow-up, target a single subsystem such as export, render graph tooling, or Android-adjacent porting details.
