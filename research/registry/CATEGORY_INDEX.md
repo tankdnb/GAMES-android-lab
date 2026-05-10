@@ -18,6 +18,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [remsengine](../findings/antonionoack-remsengine.md) - `EngineBase`, `WindowManagement`, `RemsEngine`, and `OfficialExtensions` show an editor-first engine lifecycle with extension-loaded modules and split window/render loops.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `GameEngine`, `GameResourceProcessor`, `GameResourceCollector`, and `GameScript` show a fixed-step KMP runtime with ordered resource bootstrapping, state-preserving Lua hot reload, and script-to-script transitions.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `App`, `CommonResourcePool`, `ModMgr`, `IngameInstance`, and `GameUpdateGovernor` show background module bootstrapping with explicit GL-thread handoff, PRTree-backed actor queries, and fixed-step update governance.
+- [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `ClientImplementation`, `IngameClientImplementation`, `TickingThread`, `WorldImplementation`, and `AutoRebuildingProperty` show a split render/simulation runtime, 60 TPS logic loop, player-near chunk ticking, and task-driven rebuilds for expensive derived world data.
 
 ## Rendering And Graphics
 
@@ -30,6 +31,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [remsengine](../findings/antonionoack-remsengine.md) - `RenderGraph` and `WindowManagement` show graph-driven rendering plus explicit multi-window OpenGL orchestration and idle pacing.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `DefaultVirtualFrameBuffer` and `SprLib` show a palette-index 2D framebuffer with texture batching, stencil modes, cached readback, and runtime sprite-sheet mutation.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `IngameRenderer`, `LightmapRenderer`, `WeatherMixer`, `WorldCamera`, and `AssembledSpriteAnimation` show multi-FBO 2D compositing, RGB+UV tiled lighting, weather-driven sky rendering, wraparound camera sampling, and equipment-aware skeletal sprite assembly.
+- [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `GraphicsEngineImplementation`, `GraphicsBackendsEnum`, `deffered_world_render_graph`, `BuiltInRendergraphs`, `TaskCreateChunkMesh`, and `TaskComputeChunkOcclusion` show backend-neutral pass graphs, Vulkan/OpenGL fallback, async chunk meshing with AO/light packing, and precomputed chunk-face visibility.
 
 ## Gameplay Systems
 
@@ -40,6 +42,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [remsengine](../findings/antonionoack-remsengine.md) - `Entity`, `Systems`, and the sample games under `test/src/me/anno/games/` show how gameplay scenarios are built on top of a scene hierarchy plus runtime systems bridge.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `MapLib` turns LDtk levels, layers, flags, and custom fields into Lua-facing runtime data, while `TinyLib` plus boot/game scripts provide a lightweight multi-script scene flow.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `WorldSimulator` and `worldgenerator/*` show localized environmental simulation, graph-based wire propagation, and staged terrain/cave/aquifer/ore/biome/tree generation with versioned parameters.
+- [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `ChunkImplementation`, `WorldImplementation`, `WorldMasterImplementation.tick()`, and `TaskGenerateWorldSlice` show chunk-local world state, cadence-based near-player physics work, and staged wave-based slice generation.
 
 ## Input And Controls
 
@@ -61,6 +64,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `WorldScreen` is a strong reference for composing a map-heavy HUD around chat, minimap, diplomacy, notifications, and tile/unit panels without a static layout.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `ScoringRenderer` and `LevelCheckRenderer` show lightweight puzzle HUD patterns for floating feedback, remaining moves, and tile objectives.
 - [remsengine](../findings/antonionoack-remsengine.md) - `PanelListY`, `UI.md`, `RemsEngine`, and `ExportMenu` show Android-inspired weighted layouts reused for editor, inspector, and export tooling surfaces.
+- [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `IngameUI` keeps HUD overlays, selection state, and debug widgets trait-driven, while exposing hot-reload and rendergraph refresh actions directly in the running client.
 
 ## Physics And Collision
 
@@ -94,6 +98,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - client/server rooms, versioned DTOs, and public-server discovery are all first-class parts of the product shell.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `NetService` exposes reusable typed TCP/UDP helpers and download tasks as engine services.
 - [unciv](../findings/yairm210-unciv.md) - `Multiplayer`, `MultiplayerServer`, `ChatWebSocket`, and `ApiV2` show a hybrid local-preview plus remote-authority multiplayer stack with throttled refresh and reconnecting WebSockets.
+- [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `LoadedContentTranslator`, `ConnectionsManager`, and `ServerModsProvider` show content-id compatibility checks, server metadata handshakes, and redistributable mod packaging, even though the current remote runtime path is unfinished on the inspected branch.
 
 ## Tooling And Content Pipeline
 
@@ -106,6 +111,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [remsengine](../findings/antonionoack-remsengine.md) - `OfficialExtensions`, `FileReference`, `CacheSection`, and `ExportMenu` show how to organize asset-heavy editor/runtime tooling through extension modules, virtual file references, and preset-driven exporters.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `CommonVirtualFileSystem`, `RunCommand`, `ExportCommand`, `tiny-web-editor`, and the annotation processors show a unified hot-reload/edit/debug/export toolchain around the same runtime.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `ModMgr` and `CommonResourcePool` show a metadata-first mod/content pipeline for blocks, items, fluids, audio, weather, retextures, locales, IMEs, and crafting with explicit GL-thread realization.
+- [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `GameContentStore`, `ModsManagerImplementation`, and `DefaultPluginManager` show a layered asset filesystem, embedded-jar classloading, mod-bundled plugins, and ordered registry reloads across blocks, items, entities, packets, generators, models, and localization.
 
 ## Android Platform Integration
 
@@ -129,6 +135,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [remsengine](../findings/antonionoack-remsengine.md) - `WindowManagement` idle throttling plus `CacheSection` expiry/update logic are useful references for keeping editor-heavy runtimes responsive without overspending CPU.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `DefaultVirtualFrameBuffer` uses clip/camera culling and cached readback, while `GameEngine` and the built-in profiler hooks keep live iteration performance visible.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `WorldSimulator` merges overlapping update regions, `IngameRenderer` throttles light recalculation, and `LightmapRenderer` reuses fixed overscanned arrays instead of reallocating per frame.
+- [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `WorkerThreadPool`, `AutoRebuildingProperty`, `TaskCreateChunkMesh`, and `WorldMasterImplementation.tick()` show task rescheduling, async derived-data rebuilds, neighbor-aware chunk meshing, and near-player simulation throttling.
 
 ## Build, Release, And Testing
 
@@ -137,3 +144,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `commonTest` coverage over board rules and coordinate mapping makes this sample stronger than a typical toy repository.
 - [remsengine](../findings/antonionoack-remsengine.md) - the absence of a root Gradle/Maven build plus the huge `test/src/` sample surface make this repo a strong reading reference but a weaker reproducibility reference.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - the Gradle monorepo, embedded web debugger/export artifacts, and `commonTest` coverage across scripts, input, sound, and config make it a strong workflow reference even though a full build still needs a JDK.
+- [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `gradlew help` shows a readable Gradle monorepo surface, but `buildAll --dry-run` fails in the standalone clone because the expected external `api` publication tasks are unavailable.

@@ -3,13 +3,14 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Prepare the next lightweight batch from `Hugobros3/chunkstories` and fresh GitHub search results.
+- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 
 ## Next Recommended
 
-- Prefer `Hugobros3/chunkstories` as the next backlog candidate, then refresh the search space for one or two newer Kotlin game/game-engine repositories that are not yet in the registries.
+- Prefer fresh queue refreshes over carrying stale backlog rows; shortlist one or two newer Kotlin game/game-engine repositories with good architecture depth and reasonable Android transfer value.
+- If `chunkstories` needs a future follow-up, scope it narrowly to the rendergraph/shader path, the mod/plugin loader, or the content-translator and mod-sync path rather than reopening the whole repository.
 - If `Unciv` needs a future follow-up, scope it narrowly to map generation, server internals, or another single subsystem instead of repeating a full heavy batch.
 - If `RemsEngine` needs a future follow-up, target a single subsystem such as export, render graph tooling, or Android-adjacent porting details.
 - If `minigdx/tiny` needs a future follow-up, scope it to tooling internals such as the debugger/web editor protocol or later mobile-target work rather than reopening the whole repository blindly.

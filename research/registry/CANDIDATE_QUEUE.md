@@ -21,14 +21,13 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-10-E` | `AntonioNoack/RemsEngine` | `engine-framework` | `3` | `1` | `3` | `3` | `39` | `2026-05-10` | Fresh Kotlin engine wildcard with broad rendering, editor, cache, physics, and export surface; selected after rejecting stale popularity-biased alternatives | `done` | `gh search repos "game engine" --language Kotlin --archived=false --sort updated` |
 | `BATCH-2026-05-10-F` | `minigdx/tiny` | `engine-framework` | `2` | `1` | `3` | `2` | `155` | `2026-03-29` | Fresh Kotlin engine/runtime candidate with Lua scripting, hot reload, and lightweight architecture that may transfer into Android-friendly tooling and iteration workflows | `done` | `gh search repos --language Kotlin --topic game-engine --archived=false --sort stars` |
 | `BATCH-2026-05-10-G` | `curioustorvald/Terrarum` | `engine-framework` | `3` | `1` | `3` | `3` | `15` | `2026-04-27` | Fresh modular Kotlin engine+game stack with libGDX, side-scrolling tilemap focus, lighting, fluids, skeletal sprites, and built-in mod support; chosen over `chunkstories` for stronger current Android-transfer potential | `done` | `gh search repos "game engine" --language Kotlin --archived=false --sort updated` |
+| `BATCH-2026-05-10-H` | `Hugobros3/chunkstories` | `engine-framework` | `2` | `2` | `2` | `3` | `223` | `2025-04-21` | Large Kotlin voxel engine/game stack with client/server split, mods, and reusable rendering/runtime architecture; chosen over fresher low-signal options because it still offers the strongest current research yield among unresearched backlog candidates | `done` | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
 
 ## Backlog Candidates
 
 Keep this short. Move only the strongest candidates here.
 
-| Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
-|---|---|---|---|---|---|---|---|---|---|
-| `Hugobros3/chunkstories` | `engine-framework` | `2` | `2` | `2` | `3` | `223` | `2025-04-21` | Modding-heavy voxel engine/game stack with rendergraph and hot-reload claims; good future candidate if the lab wants a deeper desktop-to-Android transfer reference | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
+No standing backlog candidate is preserved here right now. Refresh GitHub search before the next batch instead of carrying stale shortlist rows forward.
 
 ## Status Legend
 

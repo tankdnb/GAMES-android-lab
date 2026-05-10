@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The seventh real research batch is now completed and documented end-to-end.
-- The lab now has 13 researched repositories recorded:
+- The eighth real research batch is now completed and documented end-to-end.
+- The lab now has 14 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -22,6 +22,7 @@
   - `AntonioNoack/RemsEngine` - `accepted`
   - `minigdx/tiny` - `accepted`
   - `curioustorvald/Terrarum` - `accepted`
+  - `Hugobros3/chunkstories` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -65,6 +66,11 @@
 - Added durable `Terrarum` findings for GL-thread-safe module/resource loading, metadata-driven mods, PRTree-backed actor queries, RGB+UV tiled lighting, layered Float16 rendering, weather-linked global lighting, graph-based wire simulation, and staged procedural world generation.
 - Verified that `Terrarum` does not expose a standard Gradle or Maven root build; the inspected revision points instead to IntelliJ module files, JDK 17+, GraalVM JS setup, and `buildapp/Makefile` packaging scripts.
 - Cleaned the transient `Terrarum` clone from `research/worktrees/` after documenting the results and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-05-10-H` as a single-repository voxel-engine pass for `Hugobros3/chunkstories`.
+- Added durable `Chunk Stories` findings for mod-layered asset loading, mod-bundled plugin discovery, backend-neutral rendergraph declarations, Vulkan/OpenGL fallback, async chunk meshing with AO/light packing, chunk-side occlusion flood fill, and server-side mod redistribution.
+- Verified that `.\gradlew.bat help --no-daemon` works in the inspected clone, but `.\gradlew.bat buildAll --dry-run --no-daemon` fails because the standalone clone lacks the expected `:api:publishToMavenLocal` task while `.gitmodules` and the README still point to separate external `chunkstories-api` / `chunkstories-core` pieces.
+- Recorded that the inspected `chunkstories` `master` branch is explicitly heavy WIP, with unfinished remote-content and multiplayer code paths that lower runtime confidence while still leaving strong subsystem reference value.
+- Cleaned the transient `chunkstories` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 - Created and activated heartbeat automation `games-android-lab-research` to continue repository research every minute in the current thread using the established documentation, registry, cleanup, commit, and push workflow.
 - Reworked `README.md` to describe the repository as a public research lab, with current status, workflow, and quick links.
 - Added root `CONTRIBUTING.md` for public research contributions.
@@ -76,7 +82,7 @@
 
 ## Known Risks
 
-- The workflow has now been validated across 6 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 8 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -87,16 +93,18 @@
 - `AntonioNoack/RemsEngine` has strong architectural value, but its desktop/editor-first orientation and nonstandard build surface lower its direct Android transfer and reproducibility.
 - `minigdx/tiny` is valuable as a tooling/runtime reference, but it has no verified Android target and keeps gameplay code Lua-first rather than Kotlin-first.
 - `curioustorvald/Terrarum` has strong subsystem value, but it remains GPL-licensed, desktop/OpenGL-first, and harder to reproduce than a normal Gradle-based repository.
+- `Hugobros3/chunkstories` has strong subsystem value, but the inspected `master` branch is explicitly heavy WIP, GLFW/LWJGL desktop-first, and not self-contained for a full build because the external `api` / core pieces are missing from the research clone.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Refresh the queue and prepare the next lightweight batch from `Hugobros3/chunkstories` plus newly searched repositories with stronger direct Android signal if available.
+- Refresh the queue from fresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or engine repositories with a better balance of Android signal, freshness, and subsystem yield.
 - If a future follow-up is needed for `Unciv`, target map generation or server internals as a scoped revisit instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `RemsEngine`, scope it to one subsystem such as export, render graph tooling, or the separate Android fork rather than reopening the whole workspace at once.
 - If a future follow-up is needed for `minigdx/tiny`, focus it on the debugger/editor protocol or on later revisions that add a clearer Android or mobile export path.
 - If a future follow-up is needed for `Terrarum`, scope it to one subsystem such as the module/content pipeline, light-weather rendering, or the world generator instead of reopening the entire workspace at once.
+- If a future follow-up is needed for `chunkstories`, focus it on one subsystem such as the rendergraph/shader pipeline, the mod/plugin loader, or the content-translator and mod-sync path instead of reopening the full repository.
 - If the minute-based automation proves too aggressive in practice, update or pause `games-android-lab-research` rather than duplicating it with another automation.
 - Keep the new rule in force: after each completed batch, prepare the durable outputs and push them to GitHub.
