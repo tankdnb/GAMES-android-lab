@@ -9,6 +9,7 @@
 - Research note: [research/findings/minigdx-tiny.md](../../research/findings/minigdx-tiny.md)
 - Investigated commit: `4d40cb5aa3ae8e53f90d3823dd812965090455f9`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-03-29`.
 
 ## Short Description
 

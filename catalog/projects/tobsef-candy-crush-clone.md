@@ -9,6 +9,7 @@
 - Research note: [research/findings/tobsef-candy-crush-clone.md](../../research/findings/tobsef-candy-crush-clone.md)
 - Investigated commit: `842c751c83f2578dd055597be1da601c4dd48de4`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2025-10-15`.
 
 ## Short Description
 

@@ -9,6 +9,7 @@
 - Research note: [research/findings/retrowars-retrowars.md](../../research/findings/retrowars-retrowars.md)
 - Investigated commit: `766e1376b745604d0350344cc194e87642263737`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2025-10-24`.
 
 ## Short Description
 

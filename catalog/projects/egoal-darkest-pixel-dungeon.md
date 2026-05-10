@@ -9,6 +9,7 @@
 - Research note: [research/findings/egoal-darkest-pixel-dungeon.md](../../research/findings/egoal-darkest-pixel-dungeon.md)
 - Investigated commit: `604d16a2b3e39c39e7f26c3a09e7b377584fc6c8`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2025-04-30`.
 
 ## Short Description
 

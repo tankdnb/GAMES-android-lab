@@ -9,6 +9,7 @@
 - Research note: [research/findings/quillraven-quilly-s-adventure.md](../../research/findings/quillraven-quilly-s-adventure.md)
 - Investigated commit: `a477151a7e5e29d680ea00d771d8f175bd2d6b7d`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2024-10-26`.
 
 ## Short Description
 

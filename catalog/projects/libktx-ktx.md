@@ -9,6 +9,7 @@
 - Research note: [research/findings/libktx-ktx.md](../../research/findings/libktx-ktx.md)
 - Investigated commit: `0f28adef8191a15a3c4f453a97fe15524fb3c8fd`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2025-06-28`.
 
 ## Short Description
 

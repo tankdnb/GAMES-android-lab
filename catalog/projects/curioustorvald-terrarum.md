@@ -9,6 +9,7 @@
 - Research note: [research/findings/curioustorvald-terrarum.md](../../research/findings/curioustorvald-terrarum.md)
 - Investigated commit: `b547914865615ef104b3e3af16ab9fe6880a714d`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-04-27`.
 
 ## Short Description
 

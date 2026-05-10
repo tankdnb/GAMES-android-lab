@@ -9,6 +9,7 @@
 - Research note: [research/findings/korlibs-korge-fleks.md](../../research/findings/korlibs-korge-fleks.md)
 - Investigated commit: `ce31c5548475fed4cba17192f0ad3cf449757e45`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-05-10`.
 
 ## Short Description
 

@@ -4,7 +4,7 @@
 
 - Reviewed the completed `Neon` batch after publication and fixed the documentation drift found during review.
 - Synced `README.md` and `docs/context/PROJECT_BRIEF.md` with the real repository state after 12 completed batches and 18 recorded repositories.
-- Updated the catalog entry template and the `Neon` catalog card so repository activity or maintenance status is now explicit when verifiable.
+- Updated the catalog entry template and backfilled the existing catalog cards so repository activity or maintenance status is now explicit when verifiable.
 
 ## Verified State
 

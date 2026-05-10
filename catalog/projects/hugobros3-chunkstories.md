@@ -9,6 +9,7 @@
 - Research note: [research/findings/hugobros3-chunkstories.md](../../research/findings/hugobros3-chunkstories.md)
 - Investigated commit: `4450708feca935997647877d0e41c900fc6cae3b`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2025-04-21`.
 
 ## Short Description
 

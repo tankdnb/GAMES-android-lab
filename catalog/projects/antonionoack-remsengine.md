@@ -9,6 +9,7 @@
 - Research note: [research/findings/antonionoack-remsengine.md](../../research/findings/antonionoack-remsengine.md)
 - Investigated commit: `7e5449b300e213ae223e71d542a4306d2f5c85f4`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-05-10`.
 
 ## Short Description
 

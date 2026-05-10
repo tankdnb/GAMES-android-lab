@@ -9,6 +9,7 @@
 - Research note: [research/findings/pandulapeter-kubriko.md](../../research/findings/pandulapeter-kubriko.md)
 - Investigated commit: `c78e2ced9b72226dd01105873673e0812f0bfea3`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-04-29`.
 
 ## Short Description
 

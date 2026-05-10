@@ -9,6 +9,7 @@
 - Research note: [research/findings/lucasnlm-antimine-android.md](../../research/findings/lucasnlm-antimine-android.md)
 - Investigated commit: `86400370a7b7bd8e27ccc6520065c6b68d64b8f2`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2025-08-02`.
 
 ## Short Description
 

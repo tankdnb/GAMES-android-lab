@@ -100,7 +100,7 @@
 - Verified that both `cmd /c gradlew.bat help --no-daemon` and `cmd /c gradlew.bat :app:testDebugUnitTest --dry-run --no-daemon` currently fail in this environment because the inspected Android Gradle Plugin `8.13.1` requires Java `11+`, while the lab machine still exposes Java `8`.
 - Cleaned the transient `Neon` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 - Reviewed the `Neon` batch outputs and fixed stale public/internal snapshot text in `README.md` and `docs/context/PROJECT_BRIEF.md` so the repository now consistently reports the current 12-batch / 18-repository state.
-- Updated `catalog/templates/project-entry-template.md` and the `Neon` catalog card so project entries explicitly record repository activity or maintenance status when it is verifiable.
+- Updated `catalog/templates/project-entry-template.md` and backfilled the existing catalog cards so project entries explicitly record repository activity or maintenance status when it is verifiable.
 
 ## Known Risks
 

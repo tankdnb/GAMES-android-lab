@@ -9,6 +9,7 @@
 - Research note: [research/findings/almasb-fxgl.md](../../research/findings/almasb-fxgl.md)
 - Investigated commit: `f418525e0079c4dd2ae0baaed63a03beadc9e2e8`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-04-10`.
 
 ## Short Description
 

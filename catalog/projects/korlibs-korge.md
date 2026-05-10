@@ -9,6 +9,7 @@
 - Research note: [research/findings/korlibs-korge.md](../../research/findings/korlibs-korge.md)
 - Investigated commit: `42a995a0564191fa4b8bda5537abb304672bdda8`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-05-08`.
 
 ## Short Description
 

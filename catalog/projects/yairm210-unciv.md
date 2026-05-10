@@ -9,6 +9,7 @@
 - Research note: [research/findings/yairm210-unciv.md](../../research/findings/yairm210-unciv.md)
 - Investigated commit: `13d9e09006c34eb907c9b8d8964a86b3ebe50701`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-05-10`.
 
 ## Short Description
 

@@ -9,6 +9,7 @@
 - Research note: [research/findings/utopia-rise-godot-kotlin-jvm.md](../../research/findings/utopia-rise-godot-kotlin-jvm.md)
 - Investigated commit: `36081a7598b221899049467b49d6c3b019b42494`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-05-08`.
 
 ## Short Description
 

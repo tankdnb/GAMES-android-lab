@@ -9,6 +9,7 @@
 - Research note: [research/findings/littlektframework-littlekt.md](../../research/findings/littlektframework-littlekt.md)
 - Investigated commit: `169ae1bbbbbeba2e544b38bf4448380274ef48c0`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: last push recorded at selection on `2026-01-17`.
 
 ## Short Description
 
