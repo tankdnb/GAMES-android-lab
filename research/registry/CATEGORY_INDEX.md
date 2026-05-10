@@ -14,6 +14,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `RetrowarsGame`, `GameScreen`, and `Games` show a shared shell for several minigames.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `EngineService` is a strong reference for a service-oriented engine lifecycle.
 - [unciv](../findings/yairm210-unciv.md) - `UncivGame` and `WorldScreen` show how to split heavy loading and turn-resolution work across background threads and the GL thread in a large Android game.
+- [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `main.kt` and `GameFlow` show a compact DI-composed match-3 runtime driven by typed events and animation-completion sequencing.
 
 ## Rendering And Graphics
 
@@ -22,12 +23,14 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [littlektframework-littlekt](../findings/littlektframework-littlekt.md) - WebGPU backend setup and `MutableTextureAtlas` show a clean render boundary plus runtime atlas generation.
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `InternalViewport` and `ActorManagerImpl` tie rendering to Compose sizing, scaling, and visible-actor filtering.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `GameViewport` reserves HUD space inside the game viewport instead of assuming full-screen world rendering.
+- [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `GameFieldRenderer` and `TileAnimator` keep a mirrored tile-image grid synchronized with command-driven board animation.
 
 ## Gameplay Systems
 
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - no-guess generation, solver-backed validation, and board sizing logic are directly reusable gameplay-system patterns.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - the minigame registry and compact per-game state holders are useful for multi-mode or multi-game products.
 - [unciv](../findings/yairm210-unciv.md) - `GameStarter`, `GameInfo.nextTurn`, and the built-in simulation harness show a full-scale turn-based gameplay pipeline with generation, save-state restoration, and multi-actor turn processing.
+- [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `GameMechanics`, `Level`, `LevelCheck`, and `Scoring` separate board rules, scripted reserve tiles, goals, and combo scoring in a reusable puzzle-game shape.
 
 ## Input And Controls
 
@@ -36,6 +39,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `PointerInputManagerImpl` normalizes embedded viewport coordinates and dispatches drag/zoom/pointer callbacks.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `SoftController` shows declarative on-screen controller layouts with optional gesture-only modes.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `Input`, `VirtualInput`, and `InputCapture` provide centralized bindings, touch overlays, and replayable input sequences.
+- [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `DragListener` and `MoveTileObserver` translate raw drags into adjacent grid-cell swap commands before gameplay logic runs.
 
 ## UI, HUD, And Menus
 
@@ -44,6 +48,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `DebugMenuManager` treats debug overlays as a first-class manager instead of gameplay-specific debug code.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `MultiplayerLobbyScreen` shows a state-driven Scene2D lobby that safely stages cross-thread UI changes.
 - [unciv](../findings/yairm210-unciv.md) - `WorldScreen` is a strong reference for composing a map-heavy HUD around chat, minimap, diplomacy, notifications, and tile/unit panels without a static layout.
+- [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `ScoringRenderer` and `LevelCheckRenderer` show lightweight puzzle HUD patterns for floating feedback, remaining moves, and tile objectives.
 
 ## Physics And Collision
 
@@ -52,7 +57,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Audio
 
-- No audio-specific findings were captured in this batch.
+- [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `SoundMachine` and `JukeBox` keep sound effects and looping background music as separate small services.
 
 ## AI And Behavior
 
@@ -91,6 +96,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `KubrikoViewport` and `InternalViewport` show how to embed a game runtime directly inside Compose-based Android UI.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `AndroidPlatform` isolates share intents, multicast locks, and IP handling behind a platform boundary.
 - [unciv](../findings/yairm210-unciv.md) - `AndroidLauncher`, `AndroidGame`, `AndroidDisplay`, and `AndroidSaverLoader` show deep-link handling, SAF saves, background multiplayer workers, immersive-mode control, and external-mod bridging.
+- [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - the KorGE target matrix in `build.gradle.kts` shows a compact path to Android delivery from a `commonMain` game codebase.
 
 ## Performance And Memory
 
@@ -105,3 +111,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 - [godot-kotlin-jvm](../findings/utopia-rise-godot-kotlin-jvm.md) - the Gradle plugin, tooling model builder, harness tests, and Android dex task show a mature integration/build surface.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - the split Maven module layout keeps core runtime, IO, and sample applications separated for publication and maintenance.
+- [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `commonTest` coverage over board rules and coordinate mapping makes this sample stronger than a typical toy repository.

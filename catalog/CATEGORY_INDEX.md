@@ -7,6 +7,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Antimine - Minesweeper](projects/lucasnlm-antimine-android.md) - Android puzzle game with LibGDX rendering, no-guess generation fallback, and deep multi-form-factor support.
 - [Super Retro Mega Wars](projects/retrowars-retrowars.md) - Android multiplayer minigame collection with a shared game shell, declarative soft controls, and explicit LAN/public server support.
 - [Unciv](projects/yairm210-unciv.md) - large-scale Android/Desktop 4X strategy game with threaded turn resolution, ruleset-driven modding, integrated multiplayer, and explicit Android platform glue.
+- [Candy Crush Clone](projects/tobsef-candy-crush-clone.md) - compact KorGE match-3 sample with typed-event game flow, renderer/model separation, reserve-driven tile feeds, and strong board-mechanics tests.
 
 ## engine-framework
 
