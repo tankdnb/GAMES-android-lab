@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The fourth real research batch is now completed and documented end-to-end.
-- The lab now has 10 researched repositories recorded:
+- The fifth real research batch is now completed and documented end-to-end.
+- The lab now has 11 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -19,6 +19,7 @@
   - `AlmasB/FXGL` - `reference-only`
   - `yairm210/Unciv` - `accepted`
   - `TobseF/Candy-Crush-Clone` - `accepted`
+  - `AntonioNoack/RemsEngine` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -51,6 +52,9 @@
 - Completed `BATCH-2026-05-10-D` as a lightweight single-repo pass for `TobseF/Candy-Crush-Clone`.
 - Added durable `Candy Crush Clone` findings for event-driven match-3 flow, renderer/model separation, reserve-based tile feeds, HUD feedback, and `commonTest` board-mechanics coverage.
 - Recorded a distinct Gradle discovery failure shape for `Candy-Crush-Clone`: wrapper bootstrapped, but `.\gradlew.bat help --no-daemon` failed because no Java compiler or JDK was available in the environment.
+- Completed `BATCH-2026-05-10-E` as a wildcard engine pass for `AntonioNoack/RemsEngine`.
+- Added durable `RemsEngine` findings for extension-loaded modules, editor-first shell composition, split window/render loops, file abstraction, async cache design, Bullet integration, and Android-inspired UI layout patterns.
+- Verified that `RemsEngine` does not expose a standard root Gradle or Maven build surface; the repository was documented as an IntelliJ-module workspace and static-reading reference instead of a reproducible build reference.
 - Reworked `README.md` to describe the repository as a public research lab, with current status, workflow, and quick links.
 - Added root `CONTRIBUTING.md` for public research contributions.
 - Added root `.gitattributes` and expanded `.gitignore` for cleaner GitHub publication.
@@ -69,6 +73,7 @@
 - `littlektframework/littlekt` is valuable architecturally, but direct Android support is still in progress on the inspected branch.
 - `yairm210/Unciv` is so large that a later follow-up may still be useful for map-generation and server internals beyond the hotspot review completed here.
 - `TobseF/Candy-Crush-Clone` is a strong small reference, but its narrow scope means it should not be treated as evidence for persistence, networking, or large Android packaging practices.
+- `AntonioNoack/RemsEngine` has strong architectural value, but its desktop/editor-first orientation and nonstandard build surface lower its direct Android transfer and reproducibility.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
@@ -76,4 +81,5 @@
 - Choose the root repository license so public reuse terms are explicit.
 - Refresh the queue and prepare the next lightweight batch from backlog candidates plus newly searched repositories.
 - If a future follow-up is needed for `Unciv`, target map generation or server internals as a scoped revisit instead of reopening the whole repository blindly.
+- If a future follow-up is needed for `RemsEngine`, scope it to one subsystem such as export, render graph tooling, or the separate Android fork rather than reopening the whole workspace at once.
 - Keep the new rule in force: after each completed batch, prepare the durable outputs and push them to GitHub.

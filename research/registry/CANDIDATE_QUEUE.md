@@ -18,6 +18,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-10-B` | `AlmasB/FXGL` | `engine-framework` | `2` | `3` | `3` | `3` | `4802` | `2026-04-10` | High-signal engine with Kotlin-primary codebase and strong architectural value, included despite broader JavaFX scope because of maturity and ecosystem relevance | `done` | `gh search repos --language Kotlin --topic game-engine --archived=false --sort stars` |
 | `BATCH-2026-05-10-C` | `yairm210/Unciv` | `android-game` | `3` | `3` | `3` | `3` | `10353` | `2026-05-10` | Extremely high-value Kotlin strategy game with direct Android and desktop relevance, promoted into a dedicated heavy-repo batch because its footprint is too large for a mixed pass | `done` | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
 | `BATCH-2026-05-10-D` | `TobseF/Candy-Crush-Clone` | `android-game` | `3` | `1` | `2` | `2` | `155` | `2025-10-15` | Direct Android/KorGE game sample with separated game logic, tests, and documented architecture; selected as a lightweight contrast to the heavier `Unciv` batch | `done` | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
+| `BATCH-2026-05-10-E` | `AntonioNoack/RemsEngine` | `engine-framework` | `3` | `1` | `3` | `3` | `39` | `2026-05-10` | Fresh Kotlin engine wildcard with broad rendering, editor, cache, physics, and export surface; selected after rejecting stale popularity-biased alternatives | `done` | `gh search repos "game engine" --language Kotlin --archived=false --sort updated` |
 
 ## Backlog Candidates
 
@@ -25,8 +26,8 @@ Keep this short. Move only the strongest candidates here.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `AntonioNoack/RemsEngine` | `engine-framework` | `3` | `1` | `3` | `2` | `39` | `2026-05-10` | Very active niche Kotlin engine that may justify a later wildcard batch focused on low-star but fresh engine experiments | `gh search repos "game engine" --language Kotlin --archived=false --sort updated` |
 | `Hugobros3/chunkstories` | `engine-framework` | `2` | `2` | `2` | `3` | `223` | `2025-04-21` | Modding-heavy voxel engine/game stack with rendergraph and hot-reload claims; good future candidate if the lab wants a deeper desktop-to-Android transfer reference | `gh search repos --language Kotlin --topic game --archived=false --sort stars` |
+| `minigdx/tiny` | `engine-framework` | `2` | `1` | `3` | `2` | `155` | `2026-03-29` | Active Kotlin multiplatform engine with Lua scripting, hot reload, and small-game ergonomics; useful later if the lab wants a compact scripting-runtime reference | `gh search repos --language Kotlin --topic game-engine --archived=false --sort stars` |
 
 ## Status Legend
 

@@ -14,6 +14,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [KorGE](projects/korlibs-korge.md) - Kotlin multiplatform engine with scene routing, Android host-view embedding, and frame-aware coroutine scheduling.
 - [LittleKt](projects/littlektframework-littlekt.md) - WebGPU-first Kotlin framework with a callback-driven runtime context, async asset preparation, and signal-based input mapping.
 - [Kubriko](projects/pandulapeter-kubriko.md) - Compose Multiplatform engine with manager/plugin architecture, viewport-aware pointer handling, and modular physics/debug tooling.
+- [RemsEngine](projects/antonionoack-remsengine.md) - large Kotlin engine/editor workspace with extension-loaded modules, graph-driven rendering, unified file abstractions, and deep tooling architecture.
 
 ## rendering-demo
 

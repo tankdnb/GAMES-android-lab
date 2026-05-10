@@ -15,6 +15,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `EngineService` is a strong reference for a service-oriented engine lifecycle.
 - [unciv](../findings/yairm210-unciv.md) - `UncivGame` and `WorldScreen` show how to split heavy loading and turn-resolution work across background threads and the GL thread in a large Android game.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `main.kt` and `GameFlow` show a compact DI-composed match-3 runtime driven by typed events and animation-completion sequencing.
+- [remsengine](../findings/antonionoack-remsengine.md) - `EngineBase`, `WindowManagement`, `RemsEngine`, and `OfficialExtensions` show an editor-first engine lifecycle with extension-loaded modules and split window/render loops.
 
 ## Rendering And Graphics
 
@@ -24,6 +25,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `InternalViewport` and `ActorManagerImpl` tie rendering to Compose sizing, scaling, and visible-actor filtering.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `GameViewport` reserves HUD space inside the game viewport instead of assuming full-screen world rendering.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `GameFieldRenderer` and `TileAnimator` keep a mirrored tile-image grid synchronized with command-driven board animation.
+- [remsengine](../findings/antonionoack-remsengine.md) - `RenderGraph` and `WindowManagement` show graph-driven rendering plus explicit multi-window OpenGL orchestration and idle pacing.
 
 ## Gameplay Systems
 
@@ -31,6 +33,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - the minigame registry and compact per-game state holders are useful for multi-mode or multi-game products.
 - [unciv](../findings/yairm210-unciv.md) - `GameStarter`, `GameInfo.nextTurn`, and the built-in simulation harness show a full-scale turn-based gameplay pipeline with generation, save-state restoration, and multi-actor turn processing.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `GameMechanics`, `Level`, `LevelCheck`, and `Scoring` separate board rules, scripted reserve tiles, goals, and combo scoring in a reusable puzzle-game shape.
+- [remsengine](../findings/antonionoack-remsengine.md) - `Entity`, `Systems`, and the sample games under `test/src/me/anno/games/` show how gameplay scenarios are built on top of a scene hierarchy plus runtime systems bridge.
 
 ## Input And Controls
 
@@ -40,6 +43,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `SoftController` shows declarative on-screen controller layouts with optional gesture-only modes.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `Input`, `VirtualInput`, and `InputCapture` provide centralized bindings, touch overlays, and replayable input sequences.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `DragListener` and `MoveTileObserver` translate raw drags into adjacent grid-cell swap commands before gameplay logic runs.
+- [remsengine](../findings/antonionoack-remsengine.md) - `JVMExtension` keeps controller polling and JVM-only input/platform glue inside an extension layer instead of polluting core runtime code.
 
 ## UI, HUD, And Menus
 
@@ -49,11 +53,13 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `MultiplayerLobbyScreen` shows a state-driven Scene2D lobby that safely stages cross-thread UI changes.
 - [unciv](../findings/yairm210-unciv.md) - `WorldScreen` is a strong reference for composing a map-heavy HUD around chat, minimap, diplomacy, notifications, and tile/unit panels without a static layout.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `ScoringRenderer` and `LevelCheckRenderer` show lightweight puzzle HUD patterns for floating feedback, remaining moves, and tile objectives.
+- [remsengine](../findings/antonionoack-remsengine.md) - `PanelListY`, `UI.md`, `RemsEngine`, and `ExportMenu` show Android-inspired weighted layouts reused for editor, inspector, and export tooling surfaces.
 
 ## Physics And Collision
 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - separate collision and physics managers show a compact plugin-friendly simulation shape.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `PhysicsWorld` centralizes world stepping, collision handlers, sensors, and body lifecycle.
+- [remsengine](../findings/antonionoack-remsengine.md) - `BulletPhysics` and `BulletMod` show how a large optional physics subsystem can stay modular while integrating deeply with ECS entities and constraints.
 
 ## Audio
 
@@ -87,6 +93,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [littlektframework-littlekt](../findings/littlektframework-littlekt.md) - runtime atlas generation is a useful content-pipeline fallback when a prebuilt atlas is not enough.
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - the debug-menu manager is a strong example of keeping live inspection tooling separate from gameplay logic.
 - [unciv](../findings/yairm210-unciv.md) - `RulesetCache`, `Ruleset`, and `RulesetValidator` treat mods as a validated JSON content pipeline with base rulesets, extension merges, removals, and fallback fills.
+- [remsengine](../findings/antonionoack-remsengine.md) - `OfficialExtensions`, `FileReference`, `CacheSection`, and `ExportMenu` show how to organize asset-heavy editor/runtime tooling through extension modules, virtual file references, and preset-driven exporters.
 
 ## Android Platform Integration
 
@@ -97,6 +104,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `AndroidPlatform` isolates share intents, multicast locks, and IP handling behind a platform boundary.
 - [unciv](../findings/yairm210-unciv.md) - `AndroidLauncher`, `AndroidGame`, `AndroidDisplay`, and `AndroidSaverLoader` show deep-link handling, SAF saves, background multiplayer workers, immersive-mode control, and external-mod bridging.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - the KorGE target matrix in `build.gradle.kts` shows a compact path to Android delivery from a `commonMain` game codebase.
+- [remsengine](../findings/antonionoack-remsengine.md) - `UI.md` and `PanelListY` show Android-inspired UI layout assumptions, but the engine itself remains JVM-first and should be treated as an architectural rather than turnkey Android reference.
 
 ## Performance And Memory
 
@@ -106,9 +114,11 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `ActorManagerImpl` can avoid updating far-away actors and re-evaluates visibility through flows.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `Entity` supports reusable entities and explicit update disabling for lower overhead.
 - [unciv](../findings/yairm210-unciv.md) - `WorldScreen`, `Unique`, `GameInfo.updateCivilizationState`, and `PathingMap` show GL-thread deferral, regex-result caching, once-per-civ recomputation, and reusable multi-turn path caches.
+- [remsengine](../findings/antonionoack-remsengine.md) - `WindowManagement` idle throttling plus `CacheSection` expiry/update logic are useful references for keeping editor-heavy runtimes responsive without overspending CPU.
 
 ## Build, Release, And Testing
 
 - [godot-kotlin-jvm](../findings/utopia-rise-godot-kotlin-jvm.md) - the Gradle plugin, tooling model builder, harness tests, and Android dex task show a mature integration/build surface.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - the split Maven module layout keeps core runtime, IO, and sample applications separated for publication and maintenance.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `commonTest` coverage over board rules and coordinate mapping makes this sample stronger than a typical toy repository.
+- [remsengine](../findings/antonionoack-remsengine.md) - the absence of a root Gradle/Maven build plus the huge `test/src/` sample surface make this repo a strong reading reference but a weaker reproducibility reference.

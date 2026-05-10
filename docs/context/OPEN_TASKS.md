@@ -8,8 +8,9 @@
 
 ## Next Recommended
 
-- Prefer backlog candidates such as `AntonioNoack/RemsEngine` and `Hugobros3/chunkstories`, plus one or two newly searched repositories that are not yet in the registries.
+- Prefer backlog candidates such as `Hugobros3/chunkstories` and `minigdx/tiny`, plus one or two newly searched repositories that are not yet in the registries.
 - If `Unciv` needs a future follow-up, scope it narrowly to map generation, server internals, or another single subsystem instead of repeating a full heavy batch.
+- If `RemsEngine` needs a future follow-up, target a single subsystem such as export, render graph tooling, or Android-adjacent porting details.
 - When a batch is finished, ensure findings, registry updates, catalog cards, cleanup, commit, and GitHub push are all completed in the same work cycle.
 
 ## Deferred
