@@ -166,6 +166,15 @@ After finishing a batch:
 
 Use `research/scripts/cleanup-research.ps1` for cleanup.
 
+## Publication Rule
+
+After a batch is fully documented:
+
+- make sure the durable research outputs are in publishable shape
+- update the public catalog and registries consistently
+- commit the completed work locally
+- push the prepared batch outputs to GitHub
+
 ## Additional Operating Conditions
 
 - Never re-research a repository without first checking whether an earlier note already exists.

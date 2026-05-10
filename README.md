@@ -83,6 +83,7 @@ The canonical runbook is [research/RESEARCH_PLAN.md](research/RESEARCH_PLAN.md).
 - Document every meaningful session so the repository remains resumable.
 - Make a local git commit after each completed work unit.
 - Write notes and catalog cards so they work as future reference material, not only as session output.
+- After each completed research batch, prepare the durable outputs for public consumption and push them to GitHub.
 
 ## Selection Criteria
 

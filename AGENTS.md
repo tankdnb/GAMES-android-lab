@@ -19,6 +19,7 @@
 - Clone transient research repositories only into `research/worktrees/` and clean them after findings are documented.
 - Distill reusable context into memory files; do not store raw chat transcripts there.
 - Make a local git commit after each completed work unit once this workspace is initialized as a git repository.
+- After completed research work, prepare the resulting durable outputs and push them to GitHub.
 
 ## Required Metadata Per Project
 

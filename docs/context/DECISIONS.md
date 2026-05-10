@@ -101,3 +101,9 @@
 - Status: accepted
 - Why: the repository is meant to be cited later during design and implementation work, not only used as an internal research scratchpad.
 - Implication: research notes, catalog cards, and public docs should preserve enough distilled evidence and context to be referenced without reopening the full external repository.
+
+## 2026-05-10 - Push completed research batches to GitHub after preparation
+
+- Status: accepted
+- Why: finished research should become publicly available as part of the repository's normal operating cycle, not remain only in local history.
+- Implication: after each completed research batch, the durable outputs should be cleaned up, prepared for public readability, committed locally, and pushed to GitHub.

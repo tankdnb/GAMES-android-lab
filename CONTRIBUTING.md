@@ -17,6 +17,7 @@ This repository is maintained as a research lab for Android-relevant game develo
 - Document meaningful work so the repository remains resumable.
 - Make a local git commit after each completed work unit.
 - Write research outputs so they are referenceable later by other sessions, design notes, or implementation tasks.
+- After completed research work, prepare the resulting notes and catalog updates for publication and push them to GitHub.
 
 ## Research Contribution Workflow
 
@@ -29,6 +30,7 @@ This repository is maintained as a research lab for Android-relevant game develo
 7. Write durable findings in `research/findings/`.
 8. If a repository is worth keeping, add or update its card under `catalog/projects/` and update `catalog/index.md` plus `catalog/CATEGORY_INDEX.md`.
 9. Run `research/scripts/cleanup-research.ps1` after the batch.
+10. Commit the completed batch work locally and push the prepared public updates to GitHub.
 
 ## Research Standards
 
