@@ -9,6 +9,7 @@
 - Research note: [research/findings/mariodujic-neon.md](../../research/findings/mariodujic-neon.md)
 - Investigated commit: `bb633bc8cad5ad6dc0d8e787d0c3241f63adb3c2`
 - Last verified: `2026-05-10`
+- Activity / maintenance status: recently active at selection; the repository last pushed on `2025-11-22`, and `.github/workflows/android-ci.yml` shows an active JDK `17` CI test workflow.
 
 ## Short Description
 

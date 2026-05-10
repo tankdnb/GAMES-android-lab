@@ -9,6 +9,7 @@
 - Research note:
 - Investigated commit:
 - Last verified:
+- Activity / maintenance status:
 
 ## Short Description
 
@@ -49,7 +50,7 @@ Briefly describe what the project is and what kind of game or technology it impl
 
 ## Risks / Limitations
 
-- Missing maintenance
+- Low or unclear maintenance status
 - Narrow platform support
 - Outdated dependencies
 - Unclear license

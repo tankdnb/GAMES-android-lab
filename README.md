@@ -14,10 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- The first real GitHub research batch is completed.
-- Current researched set:
-  - `accepted`: `lucasnlm/antimine-android`, `korlibs/korge`, `libktx/ktx`
-  - `reference-only`: `utopia-rise/godot-kotlin-jvm`
+- As of `2026-05-10`, `12` real GitHub research batches are completed end-to-end.
+- `18` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- Current registry split:
+  - `accepted`: `16`
+  - `reference-only`: `2`
+  - `partial`: `0`
+  - `rejected`: `0`
+- The latest accepted addition is `mariodujic/Neon`.
+- Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
 
