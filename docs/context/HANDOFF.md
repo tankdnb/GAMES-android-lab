@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The twenty-second real research batch is now completed and documented end-to-end.
-- The lab now has 28 researched repositories recorded:
+- The twenty-third real research batch is now completed and documented end-to-end.
+- The lab now has 29 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -37,6 +37,7 @@
   - `AlinaStepanova/SeaBattle` - `accepted`
   - `NiklasJohansen/PulseEngine` - `accepted`
   - `hyeons-lab/prism` - `accepted`
+  - `meikpiep/gauguin` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -161,13 +162,18 @@
 - Added durable `prism` findings for subsystem-owned ticking, a PBR/HDR WebGPU renderer, CPU-generated IBL, progressive glTF texture upload, Compose `StateFlow` stores, and Android Vulkan surface integration.
 - Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `prism` wrapper, but both `cmd /c gradlew.bat help --no-daemon` and `cmd /c gradlew.bat :prism-demo-core:jvmTest --dry-run --no-daemon` time out in the lab while the repository also depends on `mavenLocal()`-published `wgpu4k 0.2.0-SNAPSHOT` artifacts and JDK `25` / `21+` toolchains.
 - Recorded an additional upstream caveat for `prism`: the README explicitly describes the repository as an experiment being "vibe-coded with Claude", so even accepted patterns should be treated as promising references rather than as production-ready proof.
-- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-second batch.
+- Completed `BATCH-2026-05-11-K` as a focused Android puzzle-systems pass for `meikpiep/gauguin`.
+- Added durable `Gauguin` findings for persisted next-grid prefetching, pseudo-preview fallback, dual uniqueness-preserving generators, human-solver difficulty calibration, versioned save migration, and a strong screenshot/integration/benchmark verification surface.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `gauguin` wrapper, but `cmd /c gradlew.bat help --no-daemon` fails in the lab because Gradle `9.3.1` already requires JVM `17+` while the machine still exposes Java `8`; the checked-in modules and CI also expect JDK `21`.
+- Recorded an additional upstream caveat for `gauguin`: despite its strong Android/product quality, the repository is GPL-licensed and its deepest generator/solver logic is specialized to arithmetic cage puzzles.
+- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-third batch.
 - Cleaned the transient `prism` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 - Reduced the verified carry-over backlog in `research/registry/CANDIDATE_QUEUE.md` to `yamin8000/Dooz`.
+- Cleaned the transient `gauguin` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 21 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 23 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -193,13 +199,15 @@
 - `AlinaStepanova/SeaBattle` is a useful direct Android-native reference, but it is small in scope, has low ecosystem signal, currently needs Java `11+` even for lightweight Gradle discovery while CI is pinned to Java `17`, and still has no explicit license metadata for direct code reuse.
 - `NiklasJohansen/PulseEngine` is a useful compact engine reference, but it is desktop/LWJGL-first, has very low ecosystem signal, currently requires JDK `23` for real compile/benchmark tasks, exposes no normal `src/test` tree, and explicitly describes itself as a hobby/non-production-ready engine.
 - `hyeons-lab/prism` is a strong Android-relevant engine reference, but it is still extremely low-signal in stars, explicitly AI-experimental, build-fragile because it depends on `mavenLocal()` snapshot `wgpu4k` artifacts plus JDK `25` / `21+`, and its ECS/runtime layers should be treated as promising architecture rather than as proven production guidance.
+- `meikpiep/gauguin` is one of the stronger direct Android puzzle references in the lab, but it is GPL-licensed, currently build-blocked in the lab by Gradle/JDK `17+` and toolchain `21` requirements, and its most complex generator/solver logic is specialized to arithmetic cage puzzles rather than broad game genres.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The refreshed shortlist is still thin even after closing `prism`; start the next batch from fresh broader searches, but keep `yamin8000/Dooz` as the strongest carry-over candidate from the latest pass.
+- The refreshed shortlist is still thin even after closing `gauguin`; start the next batch from fresh broader searches, but keep `yamin8000/Dooz` as the strongest carry-over candidate from the latest pass.
+- If a future follow-up is needed for `gauguin`, rerun build/screenshot/benchmark discovery in a real JDK `21` Android environment or isolate the preview/next-grid pipeline, the human-solver difficulty ladder, or the save-migration model instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `prism`, rerun Gradle discovery in a JDK `25` + prepared-`mavenLocal` environment or isolate the WebGPU renderer, progressive glTF path, or Android/Compose surface lifecycle instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `PulseEngine`, rerun compile/JMH discovery in a real JDK `23` environment or isolate one subsystem such as the retained UI/editor shell, networking stack, or surface-based rendering pipeline instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `fredboy/cavedroid`, focus it on wrapped-world seam handling, the hybrid save pipeline, or build/test verification in a real JDK `17+` environment instead of reopening the whole repository blindly.

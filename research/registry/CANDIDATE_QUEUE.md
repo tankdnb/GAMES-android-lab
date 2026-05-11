@@ -36,6 +36,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-11-H` | `AlinaStepanova/SeaBattle` | `android-game` | `3` | `1` | `2` | `2` | `12` | `2025-07-20` | Direct Android custom `View`/`Canvas` game with Kotlin, coroutines, CI, and unit tests; chosen to broaden the lab's Android-native rendering references beyond LibGDX and Compose despite unclear license metadata | `done` | `fresh broader shortlist + gh repo view verification` |
 | `BATCH-2026-05-11-I` | `NiklasJohansen/PulseEngine` | `engine-framework` | `3` | `1` | `3` | `2` | `8` | `2026-05-04` | Fresh MIT-licensed 2D Kotlin engine with clearer runtime/architecture research value than the current low-signal alternatives and better batch diversity after several Android-game-focused passes | `done` | `refreshed shortlist + exact repo verification + alternative comparison` |
 | `BATCH-2026-05-11-J` | `hyeons-lab/prism` | `engine-framework` | `3` | `0` | `3` | `3` | `1` | `2026-05-09` | Fresh Apache-2.0 Kotlin Multiplatform 3D/WebGPU engine with Android demo, Compose integration, tests, and a much richer architecture surface than the more popular but narrower current backlog alternatives | `done` | `broader refreshed shortlist + exact repo verification + alternative comparison` |
+| `BATCH-2026-05-11-K` | `meikpiep/gauguin` | `android-game` | `3` | `2` | `3` | `3` | `197` | `2026-05-08` | Direct Android Kotlin puzzle game with stronger expected subsystem yield than the backlog `Dooz` sample thanks to its split app/core/generator/solver modules, fresher activity, and healthier ecosystem signal than the current zero-star engine noise | `done` | `broader refreshed shortlist + exact repo verification + alternative comparison` |
 
 ## Backlog Candidates
 
@@ -43,7 +44,7 @@ Keep this short. Move only the strongest candidates here.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `yamin8000/Dooz` | `android-game` | `3` | `2` | `3` | `1` | `103` | `2026-05-10` | Fresh Android Compose tic-tac-toe sample with much stronger popularity than most current noise, but narrower expected research yield than the selected engine candidate. | `refreshed shortlist + alternative comparison` |
+| `yamin8000/Dooz` | `android-game` | `3` | `2` | `3` | `1` | `103` | `2026-05-10` | Fresh Android Compose tic-tac-toe sample with much stronger popularity than most current noise, but narrower expected research yield than the stronger recently selected `gauguin` batch. | `refreshed shortlist + alternative comparison` |
 
 ## Status Legend
 

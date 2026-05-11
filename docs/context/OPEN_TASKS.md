@@ -9,7 +9,8 @@
 
 ## Next Recommended
 
-- The refreshed shortlist is still thin even after closing `hyeons-lab/prism`; rebuild it from broader Kotlin game/game-engine query families before starting the next batch, but keep `yamin8000/Dooz` in view.
+- The refreshed shortlist is still thin even after closing `meikpiep/gauguin`; rebuild it from broader Kotlin game/game-engine query families before starting the next batch, but keep `yamin8000/Dooz` in view.
+- If `meikpiep/gauguin` needs a future follow-up, isolate the preview/next-grid pipeline, the human-solver difficulty ladder, or the save-migration model, ideally in a real JDK `21` Android environment instead of reopening the whole repository broadly.
 - If `hyeons-lab/prism` needs a future follow-up, rerun Gradle discovery in a JDK `25` + prepared-`mavenLocal` environment, or isolate one subsystem such as the WebGPU renderer, progressive glTF pipeline, or Android/Compose surface lifecycle instead of reopening the whole repository broadly.
 - If `NiklasJohansen/PulseEngine` needs a future follow-up, rerun compile/JMH discovery in a real JDK `23` environment or isolate one subsystem such as the retained UI/editor shell, networking stack, or surface-based rendering pipeline instead of reopening the whole repository broadly.
 - If `fredboy/cavedroid` needs a future follow-up, isolate wrapped-world seam handling, the save pipeline, or build/test verification in a Java `17+` environment instead of reopening the whole repository broadly.
