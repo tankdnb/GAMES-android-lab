@@ -35,6 +35,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `Engine`, `GameLoop`, `World`, `RenderSystem`, and `createGltfDemoScene()` show a modular KMP runtime that can tick from external frame schedulers, drive rendering through a normal ECS system, and stage progressive scene setup without a separate demo-only architecture.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `Game`, `GameLifecycle`, `GridCalculationService`, and `MainViewModel` show a direct Android puzzle runtime with flow-projected state, persisted next-grid prefetching, and a background generation loop hidden behind a simple app shell.
 - [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `GameViewModel`, `Action`, `ViewState`, and `MainActivity` show a compact Compose-native game shell where a reducer-like `ViewModel`, transient status states, and a `LaunchedEffect` tick loop replace a separate engine thread for a small Android game.
+- [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `FortyFive`, `Timeline`, `GameController`, and `GameDirector` show a libGDX card-game shell with explicit screen transitions, a reusable sequencing DSL, and clean separation between encounter setup and turn-resolution flow.
 
 ## Rendering And Graphics
 
@@ -64,6 +65,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `WgpuRenderer` and `IblGenerator` show an explicit WebGPU PBR stack with scene/object/material/environment bind groups, HDR-to-tone-map routing, CPU-generated IBL textures, and cache-backed per-draw/per-material GPU resource management.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `GridUI`, `GridCellUI`, and `KeyPadLayoutCalculator` show a strong Android-native puzzle rendering stack with adaptive cell sizing, layered cage/cell/text drawing, preview ribbons, and responsive keypad layouts for dense number-entry boards.
 - [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `GameScreen`, `GameBody`, `LedNumber`, and `AppIcon` show a fully Compose-rendered board/HUD shell with a single `Canvas` for the matrix, LED-style overlays, custom handheld chrome, and reusable preview-generated visual assets.
+- [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `RenderPipeline`, `BetterShader`, and `Revolver` show ping-pong framebuffer post-processing, reusable shader-uniform binding, and a radial-slot combat UI built around animated card ownership rather than a simple list/grid.
 
 ## Gameplay Systems
 
@@ -87,6 +89,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `BattleField`, `Ship`, and `ShotManager` show readable Battleship placement rules, killed-ship neighbor marking, and a remaining-ship-aware opponent targeting state machine built without a heavyweight AI layer.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `SceneManagerImpl`, `PhysicsSystem`, and `Testbed` show scene/entity-system composition, fixed-step physics integrated into the same service model, and a runtime where tools and gameplay can share one shell.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `GridCalculatorFactory`, `RandomCageGridCalculator`, `MergingCageGridCalculator`, `HumanSolver`, and `HumanSolverStrategies` show dual uniqueness-preserving generators, solver-backed difficulty targeting, and a weighted ladder of human-style tactics for rating arithmetic-cage puzzles.
+- [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `Card`, `Effect`, `PassiveEffect`, `Enemy`, `EnemyBrain`, `cards.onj`, `encounter_definitions.onj`, and `SeededMapGenerator` show a rich trigger/predicate card system, mixed scripted/probabilistic enemy AI, weighted encounter assignment, and seeded node-map progression.
 - [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `Spirit`, `generateSpiritReverse`, `GameViewModel.updateBricks()`, and the scoring/level logic show pure tetromino transforms, shuffled full-piece reserve generation, a before/clearing/cleared board triple for animations, and compact line/score progression rules.
 
 ## Input And Controls
@@ -183,6 +186,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `SaveDataRepositoryImpl` combines block dictionaries, custom run-length encoding, GZIP map/biome files, ProtoBuf controller/meta snapshots, and save-slot screenshots into a strong compact sandbox-save reference.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `DataImpl` keeps JSON/BSON save-load, async persistence, and operation metrics separate from gameplay code, while `AssetManagerImpl` coordinates staged load/unload/reload work around the live runtime.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `SaveGame`, `CurrentGameSaver`, `SavedGamesService`, and `ApplicationPreferencesMigrations` show versioned JSON save migration, autosave-plus-snapshot saves, background startup migration, and explicit preference upgrades for evolving Android puzzle apps.
+- [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `SaveState` and `MapManager` show schema-checked ONJ savefiles, default-file fallback, run-vs-permanent progression separation, invalid-map regeneration fallback, and explicit map-position persistence.
 
 ## Networking And Multiplayer
 
@@ -218,6 +222,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `AssetManagerImpl`, `FileWatcher`, `SceneEditor`, and the `src/jmh/kotlin/benchmarks/*` suite show staged hot reload, editor-as-runtime-service tooling, and intentional microbenchmarking of low-level engine primitives.
 - [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `GltfLoader`, `GlbReader`, `AssetManager`, and the root/demo build scripts show a pipeline built around progressive glTF loading, delayed texture upload, native-buffer byte-range reuse, and a shared downloaded demo asset consumed by multiple platform shells.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `docs/calculating-difficulties.md`, `difficulty-ratings.yml`, `fastlane/metadata/android/*`, and the benchmark/screenshot setup show a project where difficulty calibration, store metadata, performance measurement, and visual regression are treated as first-class tooling rather than as ad hoc extras.
+- [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `ScreenBuilder`, `ResourceManager`, `technical_design.md`, `project_setup_and_build.md`, and the ONJ config files show a content/UI pipeline built around templates, styles, named actors, asset borrowing, shader declarations, and an external ONJ dependency rather than a monolithic code-only UI.
 
 ## Android Platform Integration
 
@@ -258,6 +263,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - `Pool`, `PoolableComponent`, `SnapshotSerializerSystem`, and `GridMoveSystem` show leak-accounted pooling, snapshot-buffer cleanup, GC-conscious component reuse, and stepped movement that reduces tile-collision tunneling.
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `PhysicSystem`, `EcsUtils`, `DefaultAudioService`, and `MapManager` show fixed physics cadence with interpolation, pooled Ashley entities/components, per-frame sound deduplication, and map caching instead of keeping the whole world live at once.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Tilemap`, `Actor`, `GameScene`, and `GamesInProgress` show partial tile-buffer updates, wait-for-animation turn scheduling, layered incremental map refresh, and split save-slot files/backups instead of one heavy snapshot.
+- [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `ResourceManager` shows explicit borrow/get/giveBack lifetimes, trimming of prepared-but-unused assets, and shutdown leak reporting that is directly relevant to memory-sensitive libGDX or Android game code.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `TouchManager` pools internal input events, `FrameBuffer` reuses predeclared render targets, and the collision path short-circuits SAT checks with a radius test before doing axis projections.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `GameLoopSystemInvocationStrategy`, `SpatialSystem`, `TileRenderSystem`, and `LiquidSimulationSystem` show fixed-step logic accumulation, quadtree visibility culling, camera-limited tile iteration, and dirty-region fluid resync instead of full-world updates every frame.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Scene`, `ForwardRenderingPipeline`, and `GLTF` show scene-frustum culling, effect chaining through reusable framebuffers, and GL-thread work queues that keep heavy asset setup out of the main parsing path.

@@ -3,13 +3,14 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories; the only current carry-over backlog candidate is `yamin8000/Dooz`, but prefer a fresh shortlist before locking it in.
+- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories; `yamin8000/Dooz` remains the only verified carry-over backlog candidate, but prefer a fresh shortlist before locking it in.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 
 ## Next Recommended
 
-- The refreshed shortlist is still thin even after closing `vitaviva/compose-tetris`; rebuild it from broader Kotlin game/game-engine query families before starting the next batch, but keep `yamin8000/Dooz` in view.
+- The refreshed shortlist is still thin even after closing `blueUserRed/forty-five`; rebuild it from broader Kotlin game/game-engine query families before starting the next batch, but keep `yamin8000/Dooz` in view.
+- If `blueUserRed/forty-five` needs a future follow-up, isolate the `Timeline` orchestration layer, the ONJ screen/content pipeline, or the seeded map/encounter flow, ideally in an environment prepared with the external `Onj` checkout and manual assets instead of reopening the full project broadly.
 - If `vitaviva/compose-tetris` needs a future follow-up, verify the tick-speed behavior in a real device/emulator run, isolate the held-button input repeat pattern, or extract the reducer-style `ViewModel` plus Compose `Canvas` board flow instead of reopening the whole repository broadly.
 - If `meikpiep/gauguin` needs a future follow-up, isolate the preview/next-grid pipeline, the human-solver difficulty ladder, or the save-migration model, ideally in a real JDK `21` Android environment instead of reopening the whole repository broadly.
 - If `hyeons-lab/prism` needs a future follow-up, rerun Gradle discovery in a JDK `25` + prepared-`mavenLocal` environment, or isolate one subsystem such as the WebGPU renderer, progressive glTF pipeline, or Android/Compose surface lifecycle instead of reopening the whole repository broadly.
