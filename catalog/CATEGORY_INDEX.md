@@ -17,6 +17,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Compose Tetris](projects/vitaviva-compose-tetris.md) - Android Jetpack Compose Tetris sample with a reducer-like `ViewModel`, Compose `Canvas` board rendering, held-button auto-repeat controls, shuffled tetromino reserve generation, and compact line-clear animation states.
 - [Minesweeper-JC](projects/jayasuryat-minesweeper-j-compose.md) - Android Compose Minesweeper sample with safe-first-click generation, a modular engine/UI split, zoomable board handling, resumable difficulty slots, and persisted quick-toggle/settings flow.
 - [Braincup](projects/simonschubert-braincup.md) - Kotlin Multiplatform brain-training mini-game collection with a shared Compose shell, daily-session progression, Android audio/haptic seams, custom Mini Chess/logic generators, screenshot automation, and broad Android/Desktop/Web packaging.
+- [Dooz](projects/yamin8000-dooz.md) - Android Jetpack Compose tic-tac-toe sample with controller-owned game state, heuristic AI difficulty, DataStore-backed settings, RTL-aware text handling, and a real F-Droid-ready product shell.
 
 ## engine-framework
 

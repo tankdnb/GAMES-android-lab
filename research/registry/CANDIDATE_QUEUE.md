@@ -41,6 +41,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-11-M` | `blueUserRed/forty-five` | `gameplay-systems` | `2` | `2` | `3` | `3` | `63` | `2026-05-06` | Fresh Kotlin/libGDX deckbuilder with technical design docs, a large gameplay-heavy `core` module, and broader expected systems yield than the narrower direct-Android backlog `Dooz` candidate | `done` | `fresh broader shortlist + exact repo verification + alternative comparison` |
 | `BATCH-2026-05-11-N` | `jayasuryat/minesweeper-j-compose` | `android-game` | `3` | `2` | `1` | `3` | `98` | `2024-07-12` | Direct Android Compose puzzle game with modular `engine`/`ui` split, permissive Apache-2.0 license, and stronger expected subsystem yield than the fresher but narrower `Dooz` backlog candidate | `done` | `fresh broader shortlist + exact repo verification + alternative comparison` |
 | `BATCH-2026-05-11-O` | `SimonSchubert/Braincup` | `android-game` | `2` | `2` | `3` | `3` | `173` | `2026-05-08` | Active Apache-2.0 Kotlin Multiplatform brain-training app composed of multiple small games, with richer expected architecture and product-flow yield than the narrower direct-Android backlog candidates | `done` | `fresh broader shortlist + exact repo verification + alternative comparison` |
+| `BATCH-2026-05-11-P` | `yamin8000/Dooz` | `android-game` | `3` | `2` | `3` | `1` | `103` | `2026-05-10` | Fresh Android Jetpack Compose tic-tac-toe sample with the strongest current mix of ecosystem signal, recency, and direct Android relevance among the remaining viable backlog candidates | `done` | `refreshed shortlist + exact repo verification + alternative comparison` |
 
 ## Backlog Candidates
 
@@ -48,7 +49,6 @@ Keep this short. Move only the strongest candidates here.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `yamin8000/Dooz` | `android-game` | `3` | `2` | `3` | `1` | `103` | `2026-05-10` | Fresh Android Compose tic-tac-toe sample with much stronger popularity than most current noise, but narrower expected research yield than the stronger recently selected `gauguin` batch. | `refreshed shortlist + alternative comparison` |
 
 ## Status Legend
 

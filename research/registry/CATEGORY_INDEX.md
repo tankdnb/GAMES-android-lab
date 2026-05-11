@@ -38,6 +38,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `FortyFive`, `Timeline`, `GameController`, and `GameDirector` show a libGDX card-game shell with explicit screen transitions, a reusable sequencing DSL, and clean separation between encounter setup and turn-resolution flow.
 - [jayasuryat-minesweeper-j-compose](../findings/jayasuryat-minesweeper-j-compose.md) - `GameController`, `ActionListener`, `GameViewModel`, and the navigation shell show a Compose-native Android puzzle runtime with deferred first-click generation, action/event engine boundaries, resumable-by-difficulty state, and separate difficulty/settings/game screens.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `App`, `GameController`, `Game`, and `GameUiState` show a shared Compose-native multi-game shell where one controller, metadata-driven game descriptors, and immutable per-mode UI-state snapshots support a whole mini-game product.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameState`, `rememberHomeState`, `GameLogic`, and `GameAi` show a compact Compose-native Android board-game shell where one remembered controller owns runtime state, settings hydration, AI turns, and undo flow without a separate engine layer.
 
 ## Rendering And Graphics
 
@@ -70,6 +71,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `RenderPipeline`, `BetterShader`, and `Revolver` show ping-pong framebuffer post-processing, reusable shader-uniform binding, and a radial-slot combat UI built around animated card ownership rather than a simple list/grid.
 - [jayasuryat-minesweeper-j-compose](../findings/jayasuryat-minesweeper-j-compose.md) - `ZoomableContent`, `Minefield`, and the Compose presentation shell show a direct Android board renderer with clamped pinch-zoom/pan, saveable viewport state, and board transforms handled through `graphicsLayer` rather than a separate GL runtime.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `GameScreen`, `AppNavHost`, and the per-game `GameUiState` models show a Compose-first rendering shell where several very different mini-games share one UI/navigation stack without introducing a custom GL renderer.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameBoard`, `PlayerCard`, `Texts`, and the theme layer show a fully Compose-rendered board/HUD shell with screen-width-derived grid sizing, animated dice/player cards, and RTL-aware typography for localized casual-game UI.
 
 ## Gameplay Systems
 
@@ -97,6 +99,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `Spirit`, `generateSpiritReverse`, `GameViewModel.updateBricks()`, and the scoring/level logic show pure tetromino transforms, shuffled full-piece reserve generation, a before/clearing/cleared board triple for animations, and compact line/score progression rules.
 - [jayasuryat-minesweeper-j-compose](../findings/jayasuryat-minesweeper-j-compose.md) - `MineGridGenerator`, `CellRevealer`, `ValueCellRevealer`, `ValueNeighbourCalculator`, and `GameEndRevealer` show safe-first-click mine placement, recursive empty-cell expansion, chorded neighbour solving, and radial reveal ordering for game-over/game-complete states.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `MiniSudokuGame`, `SlidingPuzzleGame`, `VisualMemoryGame`, `GhostGridGame`, `OrbitTrackerGame`, `MiniChessGame`, and `UserStorage` show a compact catalog of reusable mini-game rules, coroutine-driven phase changes, local daily-session progression, and a deeper custom tactics subsystem than most app-like puzzle products expose.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `SimpleGameLogic`, `SimpleGameAi`, `FirstPlayerPolicy`, and `GameConstants` show a compact turn-based board-game rule set with configurable `3..7` boards, PvP/PvC modes, dice-based first-player selection, and readable heuristic AI priorities.
 
 ## Input And Controls
 
@@ -122,6 +125,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `GameButton` and `MainActivity` show held-button auto-repeat through `pointerInteropFilter` plus coroutine `ticker`, an explicit separate rotate button, and a touch-first arcade control scheme that maps `Up` to hard drop.
 - [jayasuryat-minesweeper-j-compose](../findings/jayasuryat-minesweeper-j-compose.md) - `ActionListener` and `ZoomableContent` show a touch-board input model with a reveal-vs-flag quick toggle, long-press support, value-cell chording, and multi-touch suppression during pinch gestures.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `GameScreen`, `MainMenuScreen`, and the shared answer handlers show touch-first Compose game flow, mode-specific answer widgets, and a useful pattern where input stays game-specific but progression/navigation stay centralized.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameBoard` and `GameScreen` show a minimal mobile board-game input flow with human-only tap gating, simple PvC undo compensation, and bottom-bar action ownership instead of a heavier gesture or controller layer.
 
 ## UI, HUD, And Menus
 
@@ -145,6 +149,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `UiElement`, `DockingPanel`, and `SceneEditor` show a retained UI tree with dirty-layout propagation, popup/clipping passes, and editor-grade docking/outliner/inspector panels built from the same engine UI primitives.
 - [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `EngineStore`, `DemoStore`, and `PrismView.android` show a small MVI/StateFlow bridge around the engine so Compose can own FPS, surface size, and demo-control state without mutating rendering internals directly.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `App`, `AppNavHost`, `MainMenuScreen`, `FinishScreen`, `ScoreboardScreen`, `AchievementsScreen`, and the session-completion flow show how a Compose-native mini-game product can keep menus, progression, and gameplay screens in one coherent shell.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `Settings.kt`, `PlayerCard`, `GameInfoCard`, `About.kt`, and `PersianText` show a clean small-game shell with tabbed settings, animated status cards, Material3 styling, and locale-aware text direction/font switching for mixed-language UI.
 
 ## Physics And Collision
 
@@ -171,6 +176,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `AudioPlayer` ties ExoPlayer playback and remembered position to `GameStatus`, giving a compact pause/resume music pattern for Compose games.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - Android and JVM `PlatformFileHandler` implementations show a small cross-platform sound abstraction over `SoundPool` on Android and MP3 decode/playback on desktop.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `AudioPlayer`, `AudioPlayer.android`, and `App` show a tidy `expect`/`actual` audio seam where shared route/lifecycle state controls menu-vs-game looping tracks without leaking platform media APIs into gameplay logic.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameState` shows a very small Android-game audio approach where short move and dice sounds are triggered directly from gameplay-state transitions instead of through a dedicated audio service layer.
 
 ## AI And Behavior
 
@@ -178,6 +184,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `WorkerAutomation`, `ConstructionAutomation`, and `BarbarianAutomation` show staged scoring-based automation with road planning, tile simulation, and explicit fallback ladders.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Actor`, `Mob`, and `Database` show a time-based scheduler plus serializable mob AI modes and data-backed resistances, abilities, and loot tables.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `MiniChessGame`, `ChessAi`, and `ScenarioGenerator` show a compact custom tactics subsystem with weighted scenario generation, alpha-beta search, difficulty-to-reward mapping, and real tests around legality and mate/stalemate behavior.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `SimpleGameAi` is a useful lightweight example of heuristic board-game AI where hard mode uses explicit win/block/fork priorities and medium mode mixes hard and random play for a softer casual-game curve.
 
 ## Persistence And Data
 
@@ -201,6 +208,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `SaveState` and `MapManager` show schema-checked ONJ savefiles, default-file fallback, run-vs-permanent progression separation, invalid-map regeneration fallback, and explicit map-position persistence.
 - [jayasuryat-minesweeper-j-compose](../findings/jayasuryat-minesweeper-j-compose.md) - `GameDataPersister`, `GridWriteMapperImpl`, `GridReadMapperImpl`, `GameDataSourceImpl`, and `DataStore` show difficulty-keyed save slots, full-grid snapshot serialization, SQLDelight-backed persistence, and preference-backed toggle/sound/vibration state wrapped in a KMM data layer.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `UserStorage` shows a strong small-product persistence layer around highscores, time-vs-points score normalization, XP leveling, medal and streak achievements, daily-session state, and audio/difficulty preferences on top of `multiplatform-settings`.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `DataStoreHelper`, `App.settings`, and `SettingsState` show a compact preference-backed storage seam where theme, feedback toggles, game rules, and player customization persist through one DataStore owner.
 
 ## Networking And Multiplayer
 
@@ -264,6 +272,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `MainActivity`, `StatusBarUtil`, `SoundUtil`, and `android.yml` show a thin single-activity Android Compose shell with lifecycle-driven pause/resume, transparent-status-bar setup, preloaded `SoundPool` effects, and JDK11 GitHub Actions APK assembly.
 - [jayasuryat-minesweeper-j-compose](../findings/jayasuryat-minesweeper-j-compose.md) - `MinesweeperApp`, `MainActivity`, `Minesweeper.kt`, and the `data` module show a direct Android Compose shell with Koin DI, transparent system-bar handling, animated route transitions, and a small KMM persistence/preferences layer shared beyond the app module.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `AndroidApp`, `MainActivity`, `AudioPlayer.android`, and `HapticFeedback.android` show a thin Android shell with dynamic colors, splash and edge-to-edge setup, in-app review prompting, and platform audio/haptic implementations wrapped around a shared KMP game product.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `MainActivity`, `AndroidManifest.xml`, `App`, and the F-Droid/fastlane surface show a thin single-activity Android Compose shell with DataStore wiring, vibration permission, dynamic-color-ready theming, and real release/distribution metadata around a board-game app.
 
 ## Performance And Memory
 
@@ -319,3 +328,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `build.gradle`, `app/build.gradle`, `gradle-wrapper.properties`, and `.github/workflows/android.yml` show an older but coherent Android Compose build surface pinned to AGP `7.1.2`, Kotlin `1.6.10`, Gradle `7.3-rc-1`, and JDK `11`; however the checked-in test tree is still only the default template and local `gradlew help` fails in the lab because AGP requires Java `11+` while the machine still exposes Java `8`.
 - [jayasuryat-minesweeper-j-compose](../findings/jayasuryat-minesweeper-j-compose.md) - `build.gradle.kts`, `app/build.gradle.kts`, `data/build.gradle.kts`, `gradle-wrapper.properties`, and `minesweeper-engine-debug/test/GridGeneratorTest.kt` show a modular Android/KMM build surface around AGP `7.4.2`, Kotlin `1.8.10`, SQLDelight `1.5.5`, and Gradle `7.5`; however local `gradlew help` currently fails in the lab because the Java `8` runtime has no JDK tools and the visible test surface is only a debug-side generator probe.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `composeApp/build.gradle.kts`, `androidApp/build.gradle.kts`, `StoreScreenshotTest.kt`, and the GitHub workflows show a modern KMP build surface with Android/iOS/desktop/WASM targets, Paparazzi screenshot regression, and wide release automation; however local `gradlew help` currently fails in the lab because the inspected Gradle `9.4.1` build now expects JVM `17+` while the machine still exposes Java `8`.
+- [yamin8000-dooz](../findings/yamin8000-dooz.md) - `build.gradle.kts`, `app/build.gradle.kts`, `.github/workflows/android.yml`, and `fastlane/metadata/android/en-US/` show a direct Android Compose build/release surface pinned to AGP `8.13.0`, Kotlin `2.3.21`, Gradle `9.0.0`, and JDK `17`; however no automated test tree was found and local `gradlew help` in the lab fails immediately because Gradle now requires Java `17+`.

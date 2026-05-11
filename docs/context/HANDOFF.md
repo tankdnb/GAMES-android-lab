@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The twenty-seventh real research batch is now completed and documented end-to-end.
-- The lab now has 33 researched repositories recorded:
+- The twenty-eighth real research batch is now completed and documented end-to-end.
+- The lab now has 34 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -42,6 +42,7 @@
   - `blueUserRed/forty-five` - `accepted`
   - `jayasuryat/minesweeper-j-compose` - `accepted`
   - `SimonSchubert/Braincup` - `accepted`
+  - `yamin8000/Dooz` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -197,10 +198,16 @@
 - Recorded additional upstream caveats for `Braincup`: it is more of a mini-game product-shell reference than a reusable engine baseline, `GameController` is already fairly branch-heavy, and automated testing is strongest in Mini Chess plus screenshot coverage rather than across every game mode.
 - Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-seventh batch.
 - Cleaned the transient `Braincup` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-05-11-P` as a focused Android board-game and Compose-product-shell pass for `yamin8000/Dooz`.
+- Added durable `Dooz` findings for controller-owned game state, heuristic AI, DataStore-backed settings, and explicit RTL/Persian Compose UI handling.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `Dooz` wrapper under Java `8`, but `cmd /c gradlew.bat help --no-daemon` fails immediately because Gradle `9.0.0` now expects JVM `17+`; the checked-in GitHub Actions workflow also pins JDK `17`.
+- Recorded additional upstream caveats for `Dooz`: the repository is narrow, GPL-3.0 licensed, exposes no automated tests, and still has stale fastlane metadata claiming `9x9` boards while the current code and README cap the board at `7x7`.
+- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-eighth batch.
+- Cleaned the transient `Dooz` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 26 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 28 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -231,14 +238,16 @@
 - `blueUserRed/forty-five` is a strong gameplay-systems reference, but it is GPL-licensed, desktop-only, non-self-contained for a full build because it requires an external `Onj` checkout and manual asset setup, and it exposes no visible automated tests.
 - `jayasuryat/minesweeper-j-compose` is a strong direct Android puzzle reference, but it is built on an older Compose/AGP stack, exposes almost no real automated tests, and local Gradle discovery in the lab is currently blocked by the missing JDK tools on the Java `8` machine.
 - `SimonSchubert/Braincup` is a strong direct Android/KMP product reference, but it should be treated as a mini-game shell and progression/packaging reference more than as an engine baseline, its shared controller is already somewhat branch-heavy, and local Gradle discovery now needs JVM `17+`.
+- `yamin8000/Dooz` is a useful direct Android board-game reference, but it is intentionally narrow, GPL-3.0 licensed, completely untested by automation in the inspected snapshot, and still has a stale metadata mismatch around the maximum supported board size.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The refreshed shortlist is still thin even after closing `Braincup`; start the next batch from fresh broader searches, but keep `yamin8000/Dooz` as the strongest carry-over candidate from the latest pass.
+- The previous carry-over backlog is now exhausted after closing `Dooz`; start the next batch from fresh broader Kotlin game/game-engine searches instead of assuming an existing queued candidate.
 - If a future follow-up is needed for `Braincup`, rerun Gradle discovery in a full JDK `17+` environment or isolate the Mini Chess subsystem, the daily-session progression layer, or the screenshot/release pipeline instead of reopening the whole repository blindly.
+- If a future follow-up is needed for `Dooz`, rerun validation on a real device or emulator, or isolate the heuristic AI, the DataStore-backed settings shell, or the RTL/localized Compose text pattern instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `minesweeper-j-compose`, rerun Gradle discovery in a full JDK `11+` Android environment or isolate the safe-first-click generator, the zoomable Compose board shell, or the save/resume snapshot pipeline instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `forty-five`, rerun build verification only in an environment prepared with the external `Onj` checkout plus packed textures and copied `large_assets`, or isolate the `Timeline`, ONJ screen/content pipeline, or seeded map/encounter subsystems instead of reopening the full repository blindly.
 - If a future follow-up is needed for `compose-tetris`, verify the level-speed/tick loop on a real device or emulator, isolate the held-button repeat control pattern, or extract the reducer-style `ViewModel` plus `Canvas` board shell instead of reopening the whole repository blindly.

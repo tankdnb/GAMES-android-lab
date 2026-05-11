@@ -3,13 +3,14 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories; `yamin8000/Dooz` remains the strongest verified carry-over backlog candidate after closing `SimonSchubert/Braincup`, but prefer a fresh shortlist before locking it in.
+- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories; the previous carry-over backlog is now exhausted after closing `yamin8000/Dooz`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 
 ## Next Recommended
 
-- The refreshed shortlist is still thin even after closing `SimonSchubert/Braincup`; rebuild it from broader Kotlin game/game-engine query families before starting the next batch, but keep `yamin8000/Dooz` in view.
+- Rebuild the shortlist from broader Kotlin game/game-engine query families before starting the next batch; the previous carry-over candidate has now been consumed by the completed `Dooz` batch.
+- If `yamin8000/Dooz` needs a future follow-up, isolate the heuristic AI, the DataStore-backed rules/settings shell, or the RTL/localized Compose text pattern, ideally with a real device/emulator run instead of reopening the full project broadly.
 - If `SimonSchubert/Braincup` needs a future follow-up, isolate the Mini Chess subsystem, the session/progression layer, or the screenshot/release pipeline, ideally in a full JDK `17+` environment instead of reopening the full project broadly.
 - If `jayasuryat/minesweeper-j-compose` needs a future follow-up, isolate the safe-first-click generator, the zoomable Compose board shell, or the save/resume snapshot pipeline, ideally in a full JDK `11+` Android environment instead of reopening the full project broadly.
 - If `blueUserRed/forty-five` needs a future follow-up, isolate the `Timeline` orchestration layer, the ONJ screen/content pipeline, or the seeded map/encounter flow, ideally in an environment prepared with the external `Onj` checkout and manual assets instead of reopening the full project broadly.
