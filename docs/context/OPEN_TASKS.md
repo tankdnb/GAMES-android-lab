@@ -3,13 +3,17 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories; the previous carry-over backlog is now exhausted after closing `yamin8000/Dooz`.
+- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, currently led by `CescFe/numpairs`, `sgalluz/k2d`, and `Efimj/GameOfLife`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 
 ## Next Recommended
 
-- Rebuild the shortlist from broader Kotlin game/game-engine query families before starting the next batch; the previous carry-over candidate has now been consumed by the completed `Dooz` batch.
+- Prefer the current verified backlog before running another broad search:
+  - `CescFe/numpairs`
+  - `sgalluz/k2d`
+  - `Efimj/GameOfLife`
+- If `atillaturkmen/piano-tiles` needs a future follow-up, isolate the `SurfaceView` thread lifecycle, the device-height speed-normalization rule, or the queued-tile touch-hit-testing flow instead of reopening the full project broadly.
 - If `yamin8000/Dooz` needs a future follow-up, isolate the heuristic AI, the DataStore-backed rules/settings shell, or the RTL/localized Compose text pattern, ideally with a real device/emulator run instead of reopening the full project broadly.
 - If `SimonSchubert/Braincup` needs a future follow-up, isolate the Mini Chess subsystem, the session/progression layer, or the screenshot/release pipeline, ideally in a full JDK `17+` environment instead of reopening the full project broadly.
 - If `jayasuryat/minesweeper-j-compose` needs a future follow-up, isolate the safe-first-click generator, the zoomable Compose board shell, or the save/resume snapshot pipeline, ideally in a full JDK `11+` Android environment instead of reopening the full project broadly.
