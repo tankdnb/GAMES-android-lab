@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The twenty-fifth real research batch is now completed and documented end-to-end.
-- The lab now has 31 researched repositories recorded:
+- The twenty-sixth real research batch is now completed and documented end-to-end.
+- The lab now has 32 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -40,6 +40,7 @@
   - `meikpiep/gauguin` - `accepted`
   - `vitaviva/compose-tetris` - `accepted`
   - `blueUserRed/forty-five` - `accepted`
+  - `jayasuryat/minesweeper-j-compose` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -183,10 +184,16 @@
 - Recorded additional upstream caveats for `forty-five`: GPL-3.0 licensing, desktop-only runtime focus, no visible automated tests, `jcenter()` usage, and an explicitly outdated but still useful technical-design document.
 - Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-fifth batch.
 - Cleaned the transient `forty-five` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-05-11-N` as a focused Android puzzle pass for `jayasuryat/minesweeper-j-compose`.
+- Added durable `Minesweeper-JC` findings for safe-first-click generation, the action/event split between engine and UI orchestration, zoomable large-board handling, resumable-by-difficulty save slots, and shared preference-backed settings/feedback flow.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `minesweeper-j-compose` wrapper under Java `8`, but `cmd /c gradlew.bat help --no-daemon` fails at `:buildSrc:compileKotlin` because the lab machine still exposes a Java `8` runtime without JDK tools.
+- Recorded additional upstream caveats for `minesweeper-j-compose`: older Gradle/AGP tooling, effectively no real automated tests beyond a debug-side generator probe, and a multiplatform scope limited mostly to the `data` layer rather than the gameplay/UI runtime.
+- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-sixth batch.
+- Cleaned the transient `minesweeper-j-compose` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 25 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 26 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -215,13 +222,15 @@
 - `meikpiep/gauguin` is one of the stronger direct Android puzzle references in the lab, but it is GPL-licensed, currently build-blocked in the lab by Gradle/JDK `17+` and toolchain `21` requirements, and its most complex generator/solver logic is specialized to arithmetic cage puzzles rather than broad game genres.
 - `vitaviva/compose-tetris` is a useful direct Android Compose gameplay reference, but it is stale, built on older Compose/AGP tooling with `jcenter()`, has only template tests, and likely contains a stale-level tick-speed bug in its constant-key `LaunchedEffect(Unit)` loop.
 - `blueUserRed/forty-five` is a strong gameplay-systems reference, but it is GPL-licensed, desktop-only, non-self-contained for a full build because it requires an external `Onj` checkout and manual asset setup, and it exposes no visible automated tests.
+- `jayasuryat/minesweeper-j-compose` is a strong direct Android puzzle reference, but it is built on an older Compose/AGP stack, exposes almost no real automated tests, and local Gradle discovery in the lab is currently blocked by the missing JDK tools on the Java `8` machine.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The refreshed shortlist is still thin even after closing `forty-five`; start the next batch from fresh broader searches, but keep `yamin8000/Dooz` as the strongest carry-over candidate from the latest pass.
+- The refreshed shortlist is still thin even after closing `minesweeper-j-compose`; start the next batch from fresh broader searches, but keep `yamin8000/Dooz` as the strongest carry-over candidate from the latest pass.
+- If a future follow-up is needed for `minesweeper-j-compose`, rerun Gradle discovery in a full JDK `11+` Android environment or isolate the safe-first-click generator, the zoomable Compose board shell, or the save/resume snapshot pipeline instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `forty-five`, rerun build verification only in an environment prepared with the external `Onj` checkout plus packed textures and copied `large_assets`, or isolate the `Timeline`, ONJ screen/content pipeline, or seeded map/encounter subsystems instead of reopening the full repository blindly.
 - If a future follow-up is needed for `compose-tetris`, verify the level-speed/tick loop on a real device or emulator, isolate the held-button repeat control pattern, or extract the reducer-style `ViewModel` plus `Canvas` board shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `gauguin`, rerun build/screenshot/benchmark discovery in a real JDK `21` Android environment or isolate the preview/next-grid pipeline, the human-solver difficulty ladder, or the save-migration model instead of reopening the whole repository blindly.
