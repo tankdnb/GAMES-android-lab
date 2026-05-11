@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The twenty-ninth real research batch is now completed and documented end-to-end.
-- The lab now has 35 researched repositories recorded:
+- The thirtieth real research batch is now completed and documented end-to-end.
+- The lab now has 36 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -44,6 +44,7 @@
   - `SimonSchubert/Braincup` - `accepted`
   - `yamin8000/Dooz` - `accepted`
   - `atillaturkmen/piano-tiles` - `reference-only`
+  - `CescFe/numpairs` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -212,6 +213,12 @@
 - Refreshed `research/registry/CANDIDATE_QUEUE.md` so the next short backlog is now led by `CescFe/numpairs`, `sgalluz/k2d`, and `Efimj/GameOfLife` instead of an empty carry-over queue.
 - Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-ninth batch.
 - Cleaned the transient `piano-tiles` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-05-11-R` as a focused Android puzzle-product and documentation-architecture pass for `CescFe/numpairs`.
+- Added durable `NumPairs` findings for ADR-backed domain modeling, stable strip-entry identity, editable-run strip reordering, layered completion states, accessible Compose editing flows, and a strong unit plus instrumented UI test surface.
+- Verified that `cmd /c gradlew.bat --version` and `cmd /c gradlew.bat help --no-daemon` both succeed for the inspected `numpairs` clone because the build honors `gradle/gradle-daemon-jvm.properties` and forks a Java `21` daemon; `cmd /c gradlew.bat :app:testDebugUnitTest --dry-run --no-daemon` then fails because no Android SDK is configured in the lab.
+- Recorded additional upstream caveats for `numpairs`: the repository still has near-zero public signal, its puzzle content is currently seed-based rather than progression-heavy, and local Android task validation in the lab still needs a configured SDK.
+- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the thirtieth batch.
+- Cleaned the transient `numpairs` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
@@ -248,13 +255,15 @@
 - `SimonSchubert/Braincup` is a strong direct Android/KMP product reference, but it should be treated as a mini-game shell and progression/packaging reference more than as an engine baseline, its shared controller is already somewhat branch-heavy, and local Gradle discovery now needs JVM `17+`.
 - `yamin8000/Dooz` is a useful direct Android board-game reference, but it is intentionally narrow, GPL-3.0 licensed, completely untested by automation in the inspected snapshot, and still has a stale metadata mismatch around the maximum supported board size.
 - `atillaturkmen/piano-tiles` is a useful direct Android `SurfaceView` comparison sample, but it is intentionally narrow, GPL-3.0 licensed, completely untested by automation, logs every frame from `Tile.update()`, and keeps a render thread alive forever because `GameThread` never exits after `running` is disabled.
+- `CescFe/numpairs` is one of the stronger direct Android puzzle-product references in the lab, but it still has almost no public ecosystem signal, its content surface is currently seed-based rather than progression-heavy, and local Android task validation in the lab still needs a configured Android SDK.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The current short carry-over backlog is now `CescFe/numpairs`, `sgalluz/k2d`, and `Efimj/GameOfLife`; start from those verified candidates before doing another broad refresh.
+- The current short carry-over backlog is now `sgalluz/k2d` and `Efimj/GameOfLife`; start from those verified candidates before doing another broad refresh.
+- If a future follow-up is needed for `numpairs`, rerun Android tasks in an SDK-ready environment or isolate the stable strip-entry identity model, the layered completion-state validator, or the accessibility-tested Compose editing flow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `piano-tiles`, focus on the `SurfaceView` thread lifecycle, the device-height speed-normalization rule, or the queued-tile touch-hit-testing flow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Braincup`, rerun Gradle discovery in a full JDK `17+` environment or isolate the Mini Chess subsystem, the daily-session progression layer, or the screenshot/release pipeline instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Dooz`, rerun validation on a real device or emulator, or isolate the heuristic AI, the DataStore-backed settings shell, or the RTL/localized Compose text pattern instead of reopening the whole repository blindly.

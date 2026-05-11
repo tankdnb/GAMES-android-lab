@@ -40,6 +40,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `App`, `GameController`, `Game`, and `GameUiState` show a shared Compose-native multi-game shell where one controller, metadata-driven game descriptors, and immutable per-mode UI-state snapshots support a whole mini-game product.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameState`, `rememberHomeState`, `GameLogic`, and `GameAi` show a compact Compose-native Android board-game shell where one remembered controller owns runtime state, settings hydration, AI turns, and undo flow without a separate engine layer.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameActivity`, `GameThread`, `GameView`, and `Tile` show a minimal Android `SurfaceView` rhythm-game shell with device-height speed normalization, a fixed-FPS loop, and a useful cautionary example around thread shutdown.
+- [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameViewModel`, `GamePresentationState`, `GameUiStateFactory`, and the ADR/doc set show a direct Android puzzle shell where immutable domain state, transient modal/overlay state, and derived Compose UI snapshots stay explicitly separated.
 
 ## Rendering And Graphics
 
@@ -74,6 +75,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `GameScreen`, `AppNavHost`, and the per-game `GameUiState` models show a Compose-first rendering shell where several very different mini-games share one UI/navigation stack without introducing a custom GL renderer.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameBoard`, `PlayerCard`, `Texts`, and the theme layer show a fully Compose-rendered board/HUD shell with screen-width-derived grid sizing, animated dice/player cards, and RTL-aware typography for localized casual-game UI.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView` and `Tile` show a compact `Canvas`-on-`SurfaceView` renderer where quarter-screen lane geometry, rect-based notes, and a reversed-speed red miss animation keep the visual stack extremely small.
+- [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameScreen`, `GameScreenLayout`, `GameScreenDialogs`, `GameScreenFeedback`, and `PuzzleTile` show a Compose-first puzzle surface with chip/board rendering, anchored operator selection, bottom-sheet operand picking, and accessibility-aware feedback states without a custom render thread.
 
 ## Gameplay Systems
 
@@ -103,6 +105,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `MiniSudokuGame`, `SlidingPuzzleGame`, `VisualMemoryGame`, `GhostGridGame`, `OrbitTrackerGame`, `MiniChessGame`, and `UserStorage` show a compact catalog of reusable mini-game rules, coroutine-driven phase changes, local daily-session progression, and a deeper custom tactics subsystem than most app-like puzzle products expose.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `SimpleGameLogic`, `SimpleGameAi`, `FirstPlayerPolicy`, and `GameConstants` show a compact turn-based board-game rule set with configurable `3..7` boards, PvP/PvC modes, dice-based first-player selection, and readable heuristic AI priorities.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView`, `Tile`, and `HighScoresFragment` show a very small arcade ruleset with no-same-lane spawning, optional gradual speed escalation, and separate high-score buckets keyed by the selected starting speed.
+- [cescfe-numpairs](../findings/cescfe-numpairs.md) - `Puzzle`, `PuzzleValidation`, `Strip`, `OperandSelection`, and `InitialPuzzle` show a compact arithmetic puzzle model with stable strip-entry identity, editable-run reordering, operator-specific usage caps, and cross-tile sum/product pairing validation.
 
 ## Input And Controls
 
@@ -130,6 +133,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `GameScreen`, `MainMenuScreen`, and the shared answer handlers show touch-first Compose game flow, mode-specific answer widgets, and a useful pattern where input stays game-specific but progression/navigation stay centralized.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameBoard` and `GameScreen` show a minimal mobile board-game input flow with human-only tap gating, simple PvC undo compensation, and bottom-bar action ownership instead of a heavier gesture or controller layer.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView` and `Tile` show raw pointer-down rhythm input, forgiving horizontal hitboxes, CopyOnWrite snapshotting before touch evaluation, and immediate wrong-lane punishment based on active tile bands.
+- [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameViewModel`, `GameScreenDialogs`, and `docs/ui-behavior.md` show a mobile-first puzzle input model where taps directly open strip-entry dialogs, anchored operator popups, or bottom-sheet operand selectors without any prior strip-selection mode.
 
 ## UI, HUD, And Menus
 
@@ -155,6 +159,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `App`, `AppNavHost`, `MainMenuScreen`, `FinishScreen`, `ScoreboardScreen`, `AchievementsScreen`, and the session-completion flow show how a Compose-native mini-game product can keep menus, progression, and gameplay screens in one coherent shell.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `Settings.kt`, `PlayerCard`, `GameInfoCard`, `About.kt`, and `PersianText` show a clean small-game shell with tabbed settings, animated status cards, Material3 styling, and locale-aware text direction/font switching for mixed-language UI.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `MainFragment`, `MainActivity`, `HighScoresFragment`, `navigation.xml`, and `centered_image.xml` show a tiny but complete shell with pre-game runtime options, a drawer-locked high-score screen, and a replay overlay kept outside the `SurfaceView`.
+- [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameScreenSemantics`, `GameScreenFeedback`, `GameScreenAccessibilityTest`, and `docs/ui-behavior.md` show a small but disciplined product shell where accessibility descriptions, invalid-state messaging, success overlays, and modal behavior are treated as first-class UI requirements.
 
 ## Physics And Collision
 
@@ -280,6 +285,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [jayasuryat-minesweeper-j-compose](../findings/jayasuryat-minesweeper-j-compose.md) - `MinesweeperApp`, `MainActivity`, `Minesweeper.kt`, and the `data` module show a direct Android Compose shell with Koin DI, transparent system-bar handling, animated route transitions, and a small KMM persistence/preferences layer shared beyond the app module.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `AndroidApp`, `MainActivity`, `AudioPlayer.android`, and `HapticFeedback.android` show a thin Android shell with dynamic colors, splash and edge-to-edge setup, in-app review prompting, and platform audio/haptic implementations wrapped around a shared KMP game product.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `MainActivity`, `AndroidManifest.xml`, `App`, and the F-Droid/fastlane surface show a thin single-activity Android Compose shell with DataStore wiring, vibration permission, dynamic-color-ready theming, and real release/distribution metadata around a board-game app.
+- [cescfe-numpairs](../findings/cescfe-numpairs.md) - `MainActivity`, `AndroidManifest.xml`, `AppNavigation`, `app/build.gradle.kts`, and the CI workflow show a direct single-activity Android Compose app with modern SDK targets, lifecycle/view-model wiring, and an explicit JDK21 plus Android 36.1 validation path.
 
 ## Performance And Memory
 
@@ -337,3 +343,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `composeApp/build.gradle.kts`, `androidApp/build.gradle.kts`, `StoreScreenshotTest.kt`, and the GitHub workflows show a modern KMP build surface with Android/iOS/desktop/WASM targets, Paparazzi screenshot regression, and wide release automation; however local `gradlew help` currently fails in the lab because the inspected Gradle `9.4.1` build now expects JVM `17+` while the machine still exposes Java `8`.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `build.gradle.kts`, `app/build.gradle.kts`, `.github/workflows/android.yml`, and `fastlane/metadata/android/en-US/` show a direct Android Compose build/release surface pinned to AGP `8.13.0`, Kotlin `2.3.21`, Gradle `9.0.0`, and JDK `17`; however no automated test tree was found and local `gradlew help` in the lab fails immediately because Gradle now requires Java `17+`.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `build.gradle`, `app/build.gradle`, and `gradle-wrapper.properties` show a direct Android Groovy DSL build surface pinned to AGP `8.9.1`, Kotlin `1.8.22`, Gradle `8.11.1`, and Java/Kotlin target `17`; however no test directories are checked in and local `gradlew help` currently fails because the AGP classpath already needs Java `11+` while the lab machine still exposes Java `8`.
+- [cescfe-numpairs](../findings/cescfe-numpairs.md) - `app/build.gradle.kts`, `gradle/libs.versions.toml`, `gradle/gradle-daemon-jvm.properties`, `.github/workflows/validate-android.yml`, and the `src/test` plus `src/androidTest` trees show a notably mature Android build surface with JDK21 daemon configuration, modern SDK targets, meaningful unit/UI tests, and CI that reaches formatting, lint, unit tests, and APK assembly; local dry-run validation in the lab currently stops only because no Android SDK is configured.

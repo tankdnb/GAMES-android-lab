@@ -18,6 +18,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Minesweeper-JC](projects/jayasuryat-minesweeper-j-compose.md) - Android Compose Minesweeper sample with safe-first-click generation, a modular engine/UI split, zoomable board handling, resumable difficulty slots, and persisted quick-toggle/settings flow.
 - [Braincup](projects/simonschubert-braincup.md) - Kotlin Multiplatform brain-training mini-game collection with a shared Compose shell, daily-session progression, Android audio/haptic seams, custom Mini Chess/logic generators, screenshot automation, and broad Android/Desktop/Web packaging.
 - [Dooz](projects/yamin8000-dooz.md) - Android Jetpack Compose tic-tac-toe sample with controller-owned game state, heuristic AI difficulty, DataStore-backed settings, RTL-aware text handling, and a real F-Droid-ready product shell.
+- [NumPairs](projects/cescfe-numpairs.md) - Android arithmetic puzzle game with ADR-backed domain modeling, stable strip-entry identity, editable-run strip reordering, layered puzzle-completion states, accessible Compose editing flows, and a serious unit/UI test surface.
 
 ## engine-framework
 

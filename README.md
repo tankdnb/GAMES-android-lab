@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-05-11`, `29` real GitHub research batches are completed end-to-end.
-- `35` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-05-11`, `30` real GitHub research batches are completed end-to-end.
+- `36` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `31`
+  - `accepted`: `32`
   - `reference-only`: `4`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `atillaturkmen/piano-tiles` as a `reference-only` Android `SurfaceView` rhythm-game comparison sample.
-- The latest accepted addition is `yamin8000/Dooz`.
+- The latest researched addition is `CescFe/numpairs` as an `accepted` Android arithmetic-puzzle product and architecture reference.
+- The latest accepted addition is `CescFe/numpairs`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
