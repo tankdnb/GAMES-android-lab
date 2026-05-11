@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eighteenth real research batch is now completed and documented end-to-end.
-- The lab now has 24 researched repositories recorded:
+- The nineteenth real research batch is now completed and documented end-to-end.
+- The lab now has 25 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -33,6 +33,7 @@
   - `zeganstyl/thelema-engine` - `accepted`
   - `kotcity/kotcity` - `accepted`
   - `wajahatkarim3/DinoCompose` - `reference-only`
+  - `fredboy/cavedroid` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -138,6 +139,12 @@
 - Verified that both `cmd /c gradlew.bat help --no-daemon` and `cmd /c gradlew.bat :app:testDebugUnitTest --dry-run --no-daemon` currently fail in the lab because the inspected Android Gradle Plugin `7.0.2` requires Java `11`, while the machine still exposes Java `8`.
 - Cleaned the transient `DinoCompose` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 - Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the eighteenth batch.
+- Completed `BATCH-2026-05-11-G` as a direct-Android sandbox pass for `fredboy/cavedroid`.
+- Added durable `CaveDroid` findings for per-session Dagger assembly, timer-driven world-logic tasks, seam-safe wrapped-world rendering/physics, layered terrain+cave+ore generation, hybrid RLE+ProtoBuf saves, touch cursor/joystick controls, and tested onboarding/edge-wrap helpers.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `cavedroid` wrapper, but `cmd /c gradlew.bat help --no-daemon` fails in the lab because Gradle `9.0.0` now requires Java `17+`, while the machine still exposes Java `8`.
+- Recorded an additional upstream build caveat for `cavedroid`: the README warns that Windows desktop builds need asset-symlink tweaks even after the JDK floor is satisfied.
+- Cleaned the transient `cavedroid` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Left a short verified backlog in `research/registry/CANDIDATE_QUEUE.md` for `AlinaStepanova/SeaBattle` and `NiklasJohansen/PulseEngine`.
 
 ## Known Risks
 
@@ -163,13 +170,15 @@
 - `zeganstyl/thelema-engine` is one of the stronger 3D engine references in the lab, but it is stale, depends on an older Gradle/Kotlin/AGP stack, has only a tiny verified automated test surface, appears to skip its intended opaque front-to-back sort optimization, and likely needs extra work for robust multitouch-heavy Android gameplay.
 - `kotcity/kotcity` is a strong simulator/systems reference, but it is stale, pre-alpha, desktop JavaFX/TornadoFX-first, effectively requires Java `11+`, and should be treated as a city-simulation architecture reference rather than as a direct Android runtime model.
 - `wajahatkarim3/DinoCompose` is a useful direct Android Compose prototype reference, but it is stale, narrow, built on legacy repositories/tooling, effectively untested, and mutates gameplay state directly during composition, so it should be treated as a comparison sample rather than as a primary architecture baseline.
+- `fredboy/cavedroid` is one of the stronger direct Android gameplay references in the lab, but it still has low ecosystem signal by stars, currently requires Java `17+` even for lightweight Gradle discovery, and upstream Windows desktop builds depend on asset-symlink handling.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Fresh activity-sorted Android-game results still look weak even after closing `DinoCompose`, so the next batch should start from a fresh shortlist across broader Kotlin game and game-engine query families instead of reusing stale backlog assumptions.
+- The refreshed shortlist still gets thin quickly even after closing `cavedroid`; start the next batch from fresh broader searches, but keep `AlinaStepanova/SeaBattle` and `NiklasJohansen/PulseEngine` as the strongest carry-over candidates from the latest pass.
+- If a future follow-up is needed for `fredboy/cavedroid`, focus it on wrapped-world seam handling, the hybrid save pipeline, or build/test verification in a real JDK `17+` environment instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Unciv`, target map generation or server internals as a scoped revisit instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `RemsEngine`, scope it to one subsystem such as export, render graph tooling, or the separate Android fork rather than reopening the whole workspace at once.
 - If a future follow-up is needed for `minigdx/tiny`, focus it on the debugger/editor protocol or on later revisions that add a clearer Android or mobile export path.

@@ -29,6 +29,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `OreWorld`, `GameLoopSystemInvocationStrategy`, `OreServer`, `PlayerSystem`, and `ServerNetworkEntitySystem` show split client/server ECS assembly, fixed-step logic vs render processing, loaded-viewport block streaming, and quadtree-diff entity replication.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Entity`, `ECS`, `Project`, `Loader`, `EntityLoader`, and `SceneInstance` show a hybrid entity-tree runtime with descriptor-driven metadata, async loader orchestration, deferred scene start, and prefab-like scene instancing.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityMap`, `GameFrame`, and the hourly/daily automata pipeline show a layered city-simulation runtime with decoupled render/sim timers, spatial indexing, and staged economy/growth/environment updates.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `StartGameConfig`, `GameScreen`, `GameProc`, and `GameWorld` show per-session Dagger assembly, timer-driven world-logic tasks, a wrapped-world runtime, and fixed-step Box2D/clock/weather ownership.
 
 ## Rendering And Graphics
 
@@ -52,6 +53,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `TileRenderSystem` and `TileLightingSystem` show camera-limited auto-tiled block rendering, separate tile/lightmap framebuffers, shader-based lightmap blending, and depth-limited sunlight/device flood fill.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Scene`, `PBRShader`, `PBRNode`, `GBufferOutputNode`, `IBLMapBaker`, and `ForwardRenderingPipeline` show scene-wide uniform-buffer updates, node-based PBR/deferred shader generation, in-engine IBL baking, and framebuffer-swapped post-processing.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityRenderer`, `TrafficAnimationRenderer`, `GameFrame`, and the map-layer renderers show a practical JavaFX multi-canvas city view with heatmaps, route highlighting, alert overlays, and sprite-based buildings.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameRenderer`, `BlocksRenderer`, `BackgroundBlocksRenderer`, and `WorldEdgeMirror` show dual world/HUD cameras, chunk framebuffer caching, layered tile/background shading, seam-safe lighting updates, and wrapped-edge mirror helpers.
 
 ## Gameplay Systems
 
@@ -71,6 +73,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `EntityFactoryDelegate`, `GraphSceneLoader`, `ParticleConfiguration`, and `Storyboard` show scene-to-ECS import, runtime sprite UV generation, emitter DSL flow, and nested screen/game transitions inside one engine shell.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `WorldGenerator`, `OreEntityFactory`, `ServerPowerSystem`, and `LiquidSimulationSystem` show threaded Joise terrain generation, lake/volcano post-passes, placeable device/item composition, inventory-backed generator fuel flow, and cell-based liquid equalization.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `ContactFulfiller`, `ResourceFinder`, `Pathfinder`, `Constructor`, `Upgrader`, `PowerCoverageUpdater`, and `DesirabilityUpdater` show contract-driven logistics, road/rail routing, desirability-led zoning growth, upgrades, and simple utility-network propagation inside one city-simulator loop.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWorldGenerator`, `GameWorldBlocksLogicControllerTask`, `GameWorldFluidsLogicControllerTask`, and `GameWorldMobSpawnControllerTask` show layered sandbox worldgen, dirty-chunk block logic, nearby-only fluid simulation, and day/night chunk-based mob spawning.
 
 ## Input And Controls
 
@@ -89,6 +92,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [wajahatkarim3-dinocompose](../findings/wajahatkarim3-dinocompose.md) - `DinoGameScene` and `ShowBoundsSwitchView` show a full-screen tap-to-jump/replay input surface plus an in-game debug toggle for collision bounds.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `TouchManager`, `LwjglInput`, `AndroidInputHandler`, and `FillViewportStrategy` show a shared virtual touch/key model, desktop mouse-to-touch emulation, and aspect-safe coordinate conversion across Android, JVM, and web.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `AndroidApp`, `AndroidTouch`, `AndroidMouse`, `KeyboardHandler`, and `MouseHandler` show a thin input-bridge pattern that maps Android events into shared engine listeners instead of baking gameplay directly into platform code.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `JoystickInputHandler` and `TouchControlsRenderer` show a touch sandbox-control model with explicit walk/cursor modes, short-release jump/fly gestures, hotbar exclusion, and HUD buttons drawn only when no window is open.
 
 ## UI, HUD, And Menus
 
@@ -106,6 +110,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [wajahatkarim3-dinocompose](../findings/wajahatkarim3-dinocompose.md) - `HighScoreTextViews`, `GameOverTextView`, and `drawBoundingBox` show a tiny score HUD, replay affordance, and runtime hitbox overlay that can be toggled without a separate debug screen.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `Game.createDebugRenderStage()`, `ImGuiRenderStage`, `BoundingBoxRenderStage`, and the text-component helpers show built-in debug overlay and sprite-font text capabilities instead of leaving them as game-local utilities.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `OreClient`, `InventoryView`, `HotbarInventoryView`, and `GeneratorControlPanelView` show a VisUI/Scene2D shell with drag-and-drop item movement, hotbar selection, chat/HUD layering, and device-specific fuel controls.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWindowsManager`, `AbstractInventoryWindow`, `WindowsRenderer`, and `OnboardingController` show centralized inventory-window state, multi-touch-aware stack manipulation, typed window rendering, and tested onboarding flows that differ between touch and keyboard.
 
 ## Physics And Collision
 
@@ -120,6 +125,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `AABBCollisionResolver`, `SATCollisionResolver`, and `SATCollisionResolverTest` show both cheap axis-aligned overlap checks and a rotated-box SAT path with bounding-sphere short-circuiting and test coverage.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `MovementSystem` shows velocity-Verlet-style movement, separate entity/block collision resolution, one-block stair stepping, and reused dropped-item physics inside a tile sandbox.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `RigidBodyPhysicsWorld` shows ODE-backed rigid bodies, descriptor-registered shape metadata, fixed-step stepping, and explicit begin/update/end contact dispatch inside the same engine component model.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `ChunkedGameWorldSolidBlockBodiesManagerImpl`, `GameWorld`, and `WorldEdgeMirrorTest` show chunk-clustered `ChainShape` colliders, seam-mirrored static bodies for wrapped worlds, and explicit tests around edge-clamping predicates.
 
 ## Audio
 
@@ -152,6 +158,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FileHandlerCommon` keeps typed asset caches, delayed `onLoad` mapping, and loading-progress reporting centralized so content consumers do not reopen files or duplicate decode work.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `WorldIO` shows a protobuf-oriented tile-world save format for block type, wall type, flags, and light arrays, even though load is still stubbed and save coverage is incomplete.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityFileAdapter`, `AssetManager`, and `MapGenerator` show GZIP-compressed JSON city saves with contract reconstruction, JSON-defined building content, and simplex-based terrain/resource generation.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `SaveDataRepositoryImpl` combines block dictionaries, custom run-length encoding, GZIP map/biome files, ProtoBuf controller/meta snapshots, and save-slot screenshots into a strong compact sandbox-save reference.
 
 ## Networking And Multiplayer
 
@@ -181,6 +188,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FileHandlerCommon`, `GraphSceneLoader`, `EntityFactoryDelegate`, and the build workflow show a coherent pipeline from typed asset loading to scene import, runtime sprite setup, and KMP engine CI validation.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `build.gradle`, `core/build.gradle`, `.gitmodules`, and the texture-packing/protobuf tasks show an older but coherent pipeline around asset submodules, atlas packing, protobuf world data, and Artemis weaving.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `GLTF`, `GLTFSettings`, `EntityLoader`, the descriptor registry in `ECS`, and `thelema-studio` show a pipeline where import settings, serialized components, scene instances, and an editor shell are all built around the same runtime data model.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `android/build.gradle.kts` and `desktop/build.gradle.kts` show a relatively mature small-game pipeline with Android flavor gating, native extraction, notices/attribution generation, ProGuard shrinking, signed JAR creation, and `construo` packaging.
 
 ## Android Platform Integration
 
@@ -200,6 +208,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [wajahatkarim3-dinocompose](../findings/wajahatkarim3-dinocompose.md) - `app/build.gradle`, `AndroidManifest.xml`, `MainActivity`, and `Theme.kt` show a direct single-activity Compose Android app with no separate engine surface and with game colors adapting to system light/dark theme.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `MiniGdxActivity`, `MiniGdxSurfaceView`, Android `PlatformContextCommon`, and Android `PlatformFileHandler` show a direct Android engine shell around `GLSurfaceView`, `SoundPool`, viewport scaling, and shared KMP game code.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `AndroidApp`, `AndroidFS`, `AndroidAudio`, `AndroidImageLoader`, and the root Android target show a direct `GLSurfaceView`-based Android shell with platform services kept thin around a shared KMP engine core.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `AndroidLauncher`, `AndroidManifest.xml`, and `android/build.gradle.kts` show a thin immersive `AndroidApplication` shell, touch-first landscape delivery, `foss` vs `store` variants, and Android-specific preferences/data-directory wiring around a shared LibGDX core.
 
 ## Performance And Memory
 
@@ -220,6 +229,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `GameLoopSystemInvocationStrategy`, `SpatialSystem`, `TileRenderSystem`, and `LiquidSimulationSystem` show fixed-step logic accumulation, quadtree visibility culling, camera-limited tile iteration, and dirty-region fluid resync instead of full-world updates every frame.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Scene`, `ForwardRenderingPipeline`, and `GLTF` show scene-frustum culling, effect chaining through reusable framebuffers, and GL-thread work queues that keep heavy asset setup out of the main parsing path.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityMap` combines an `RTree` spatial index with memoized building lookups, while `TrafficCalculator` and the overlay canvases keep heavy city-state queries and diagnostics derived from shared route data instead of duplicating simulation.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWorld`, `GameWorldFluidsLogicControllerTask`, `GameWorldBlocksLogicControllerTask`, and the chunk/framebuffer renderers show nearby-only simulation, fixed-step physics, dirty-chunk updates, and cached tile rendering aimed at keeping a mutable sandbox world tractable on mobile hardware.
 
 ## Build, Release, And Testing
 
@@ -239,3 +249,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `build.gradle`, `core/build.gradle`, `.travis.yml`, and `core/test/*` show a Java-8-era Gradle/Travis surface with partial tests, but `gradlew help` now fails during legacy Bintray dependency resolution rather than on the JVM itself.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `build.gradle.kts`, `settings.gradle.kts`, `gradle/wrapper/gradle-wrapper.properties`, `buildSrc/src/main/kotlin/versions.kt`, and the tiny `commonTest` tree show a real KMP+Android engine build surface, but even `gradlew help` currently fails in the lab because `buildSrc` Kotlin compilation needs a full JDK rather than the available Java `8` JRE.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `build.gradle`, the Gradle wrapper, and `src/test/kotlin/*` show a real JVM application build with meaningful pathfinding/economy/save tests, but lightweight discovery still fails in the lab because the JavaFX plugin and Kotlin target require Java `11+` while the machine remains on Java `8`.
+- [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - the Gradle `9.0.0` wrapper, Java `17` toolchain, `android/build.gradle.kts`, `desktop/build.gradle.kts`, and the focused `WorldEdgeMirrorTest` / `OnboardingControllerTest` files show a modern multi-target build surface with some meaningful subsystem tests, even though the current lab machine still cannot pass `gradlew help` beyond the JVM floor.

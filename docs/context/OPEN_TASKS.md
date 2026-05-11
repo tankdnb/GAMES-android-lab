@@ -3,13 +3,14 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories.
+- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories; the strongest carry-over candidates from the latest pass are `AlinaStepanova/SeaBattle` and `NiklasJohansen/PulseEngine`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 
 ## Next Recommended
 
-- Fresh activity-sorted Android-game results are still mostly low-signal even after closing `DinoCompose`; rebuild the shortlist from broader Kotlin game/game-engine query families before starting the next batch.
+- The refreshed shortlist still thins quickly after `fredboy/cavedroid`; rebuild the shortlist from broader Kotlin game/game-engine query families before starting the next batch, but keep `AlinaStepanova/SeaBattle` and `NiklasJohansen/PulseEngine` in view.
+- If `fredboy/cavedroid` needs a future follow-up, isolate wrapped-world seam handling, the save pipeline, or build/test verification in a Java `17+` environment instead of reopening the whole repository broadly.
 - If `wajahatkarim3/DinoCompose` needs a future follow-up, isolate the path-based vector rendering or the composition-time loop replacement in a Java `11+` environment instead of reopening the whole sample broadly.
 - If `Quilly-s-Adventure` needs a future follow-up, verify `:core:test` and target builds in a Java `11+` environment, or isolate one subsystem such as the trigger DSL or Tiled-to-ECS map flow instead of reopening the whole repository broadly.
 - If `Darkest Pixel Dungeon` needs a future follow-up, isolate one subsystem such as the actor scheduler, procedural dungeon pipeline, or split save-slot architecture rather than reopening the whole repository broadly.

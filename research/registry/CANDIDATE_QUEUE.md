@@ -32,6 +32,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-11-D` | `zeganstyl/thelema-engine` | `engine-framework` | `3` | `1` | `0` | `2` | `83` | `2022-12-21` | Kotlin/libGDX-derived 3D engine with cross-platform graphics ambitions, Apache-2.0 licensing, and the strongest remaining rendering/engine-architecture yield among not-yet-researched backlog candidates | `done` | `refreshed shortlist + gh repo view verification` |
 | `BATCH-2026-05-11-E` | `kotcity/kotcity` | `gameplay-systems` | `2` | `2` | `0` | `3` | `488` | `2021-08-23` | Kotlin city-simulator with stronger systems/economy/simulation potential than the remaining backlog and better ecosystem signal than fresh zero-signal Android-game noise | `done` | `refreshed shortlist + gh repo view verification` |
 | `BATCH-2026-05-11-F` | `wajahatkarim3/DinoCompose` | `android-game` | `3` | `2` | `0` | `1` | `285` | `2022-01-09` | Direct Android Jetpack Compose game sample with better ecosystem signal than the fresh low-signal queue and enough gameplay/UI interest to justify a compact Android-focused pass | `done` | `refreshed shortlist + gh repo view verification` |
+| `BATCH-2026-05-11-G` | `fredboy/cavedroid` | `android-game` | `3` | `1` | `3` | `3` | `13` | `2026-05-08` | Direct Android/Desktop Kotlin sandbox game with LibGDX, MIT license, fresh maintenance, and a better chance of yielding transferable world/systems/runtime patterns than the low-signal alternatives in the refreshed queue | `done` | `broad refreshed shortlist + gh repo view verification` |
 
 ## Backlog Candidates
 
@@ -39,6 +40,8 @@ Keep this short. Move only the strongest candidates here.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
+| `AlinaStepanova/SeaBattle` | `android-game` | `3` | `1` | `2` | `2` | `12` | `2025-07-20` | Direct Android custom `View`/`Canvas` game with Kotlin, coroutines, CI, and unit tests; useful as a non-LibGDX/non-Compose mobile rendering reference, but license metadata is still missing. | `refreshed shortlist + gh repo view verification` |
+| `NiklasJohansen/PulseEngine` | `engine-framework` | `3` | `1` | `3` | `2` | `8` | `2026-05-04` | Fresh MIT-licensed 2D engine wildcard with better current activity than most remaining candidates and likely value around compact runtime architecture. | `refreshed shortlist + gh repo view verification` |
 
 ## Status Legend
 
