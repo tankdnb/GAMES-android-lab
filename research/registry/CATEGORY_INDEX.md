@@ -27,6 +27,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `Game`, `GameNode`, `Engine`, `GameWrapper`, and `ScriptExecutorSystem` show a compact multiplatform engine lifecycle with staged bootstrap, queued ECS mutations, framebuffer graph assembly, nested storyboard screens, and coroutine-backed gameplay scripts.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `OreWorld`, `GameLoopSystemInvocationStrategy`, `OreServer`, `PlayerSystem`, and `ServerNetworkEntitySystem` show split client/server ECS assembly, fixed-step logic vs render processing, loaded-viewport block streaming, and quadtree-diff entity replication.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Entity`, `ECS`, `Project`, `Loader`, `EntityLoader`, and `SceneInstance` show a hybrid entity-tree runtime with descriptor-driven metadata, async loader orchestration, deferred scene start, and prefab-like scene instancing.
+- [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityMap`, `GameFrame`, and the hourly/daily automata pipeline show a layered city-simulation runtime with decoupled render/sim timers, spatial indexing, and staged economy/growth/environment updates.
 
 ## Rendering And Graphics
 
@@ -48,6 +49,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FrameBuffer`, `TextureFrameBuffer`, `RenderStage`, `QuadRenderStage`, and `ModelComponentRenderStage` show a dependency-aware framebuffer graph, reusable fullscreen post-process stage, shader-parameter abstraction, per-draw lighting uniforms, and transparent back-to-front sorting.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `TileRenderSystem` and `TileLightingSystem` show camera-limited auto-tiled block rendering, separate tile/lightmap framebuffers, shader-based lightmap blending, and depth-limited sunlight/device flood fill.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Scene`, `PBRShader`, `PBRNode`, `GBufferOutputNode`, `IBLMapBaker`, and `ForwardRenderingPipeline` show scene-wide uniform-buffer updates, node-based PBR/deferred shader generation, in-engine IBL baking, and framebuffer-swapped post-processing.
+- [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityRenderer`, `TrafficAnimationRenderer`, `GameFrame`, and the map-layer renderers show a practical JavaFX multi-canvas city view with heatmaps, route highlighting, alert overlays, and sprite-based buildings.
 
 ## Gameplay Systems
 
@@ -65,6 +67,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `Stage`, `StageController`, `EnemyFactory`, `LasersController`, `LevelOneBoss`, and `LevelTwoBoss` show typed wave scripting, break-before-advance flow, formation-based spawns, and small but reusable boss-pattern design.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `EntityFactoryDelegate`, `GraphSceneLoader`, `ParticleConfiguration`, and `Storyboard` show scene-to-ECS import, runtime sprite UV generation, emitter DSL flow, and nested screen/game transitions inside one engine shell.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `WorldGenerator`, `OreEntityFactory`, `ServerPowerSystem`, and `LiquidSimulationSystem` show threaded Joise terrain generation, lake/volcano post-passes, placeable device/item composition, inventory-backed generator fuel flow, and cell-based liquid equalization.
+- [kotcity-kotcity](../findings/kotcity-kotcity.md) - `ContactFulfiller`, `ResourceFinder`, `Pathfinder`, `Constructor`, `Upgrader`, `PowerCoverageUpdater`, and `DesirabilityUpdater` show contract-driven logistics, road/rail routing, desirability-led zoning growth, upgrades, and simple utility-network propagation inside one city-simulator loop.
 
 ## Input And Controls
 
@@ -142,6 +145,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `rememberGameState`, `StageController.saver`, and the pervasive `rememberSaveable` usage show configuration-safe transient runtime state without needing a full disk-save system.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `FileHandlerCommon` keeps typed asset caches, delayed `onLoad` mapping, and loading-progress reporting centralized so content consumers do not reopen files or duplicate decode work.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `WorldIO` shows a protobuf-oriented tile-world save format for block type, wall type, flags, and light arrays, even though load is still stubbed and save coverage is incomplete.
+- [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityFileAdapter`, `AssetManager`, and `MapGenerator` show GZIP-compressed JSON city saves with contract reconstruction, JSON-defined building content, and simplex-based terrain/resource generation.
 
 ## Networking And Multiplayer
 
@@ -207,6 +211,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `TouchManager` pools internal input events, `FrameBuffer` reuses predeclared render targets, and the collision path short-circuits SAT checks with a radius test before doing axis projections.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `GameLoopSystemInvocationStrategy`, `SpatialSystem`, `TileRenderSystem`, and `LiquidSimulationSystem` show fixed-step logic accumulation, quadtree visibility culling, camera-limited tile iteration, and dirty-region fluid resync instead of full-world updates every frame.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Scene`, `ForwardRenderingPipeline`, and `GLTF` show scene-frustum culling, effect chaining through reusable framebuffers, and GL-thread work queues that keep heavy asset setup out of the main parsing path.
+- [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityMap` combines an `RTree` spatial index with memoized building lookups, while `TrafficCalculator` and the overlay canvases keep heavy city-state queries and diagnostics derived from shared route data instead of duplicating simulation.
 
 ## Build, Release, And Testing
 
@@ -224,3 +229,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `build.gradle.kts`, `gradle/libs.versions.toml`, `.github/workflows/build.yml`, and the `commonTest` tree show a direct KMP+Android build surface with meaningful engine tests, but even `gradlew help` currently fails in the lab because Gradle cannot find a Java compiler and upstream CI expected JDK 11.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `build.gradle`, `core/build.gradle`, `.travis.yml`, and `core/test/*` show a Java-8-era Gradle/Travis surface with partial tests, but `gradlew help` now fails during legacy Bintray dependency resolution rather than on the JVM itself.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `build.gradle.kts`, `settings.gradle.kts`, `gradle/wrapper/gradle-wrapper.properties`, `buildSrc/src/main/kotlin/versions.kt`, and the tiny `commonTest` tree show a real KMP+Android engine build surface, but even `gradlew help` currently fails in the lab because `buildSrc` Kotlin compilation needs a full JDK rather than the available Java `8` JRE.
+- [kotcity-kotcity](../findings/kotcity-kotcity.md) - `build.gradle`, the Gradle wrapper, and `src/test/kotlin/*` show a real JVM application build with meaningful pathfinding/economy/save tests, but lightweight discovery still fails in the lab because the JavaFX plugin and Kotlin target require Java `11+` while the machine remains on Java `8`.

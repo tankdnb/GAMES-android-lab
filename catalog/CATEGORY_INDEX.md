@@ -33,6 +33,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 ## gameplay-systems
 
 - [Ore Infinium](projects/sreich-ore-infinium.md) - Terraria-inspired Kotlin/LibGDX sandbox prototype with fixed-step ECS client/server worlds, viewport-based entity replication, multithreaded worldgen, fluid/light simulation, and inventory-driven generator devices.
+- [KotCity](projects/kotcity-kotcity.md) - pre-alpha Kotlin city simulator with layered city state, contract-driven logistics, traffic-aware road/rail routing, desirability-led growth, power-grid automata, and map-inspection overlays.
 
 ## tooling-pipeline
 
