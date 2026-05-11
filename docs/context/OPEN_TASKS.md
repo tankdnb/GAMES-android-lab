@@ -3,13 +3,14 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories; the strongest carry-over candidate from the latest pass is `NiklasJohansen/PulseEngine`.
+- Refresh GitHub search results and prepare the next lightweight batch from not-yet-researched Kotlin game or game-engine repositories; the only current carry-over backlog candidate is `yamin8000/Dooz`, but prefer a fresh shortlist before locking it in.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 
 ## Next Recommended
 
-- The refreshed shortlist is still thin even after closing `AlinaStepanova/SeaBattle`; rebuild it from broader Kotlin game/game-engine query families before starting the next batch, but keep `NiklasJohansen/PulseEngine` in view.
+- The refreshed shortlist is still thin even after closing `NiklasJohansen/PulseEngine`; rebuild it from broader Kotlin game/game-engine query families before starting the next batch, but keep `yamin8000/Dooz` in view.
+- If `NiklasJohansen/PulseEngine` needs a future follow-up, rerun compile/JMH discovery in a real JDK `23` environment or isolate one subsystem such as the retained UI/editor shell, networking stack, or surface-based rendering pipeline instead of reopening the whole repository broadly.
 - If `fredboy/cavedroid` needs a future follow-up, isolate wrapped-world seam handling, the save pipeline, or build/test verification in a Java `17+` environment instead of reopening the whole repository broadly.
 - If `AlinaStepanova/SeaBattle` needs a future follow-up, isolate direct Android `Canvas` rendering patterns, `ShotManager` targeting logic, or rerun build/test discovery in a Java `17` environment instead of reopening the whole repository broadly.
 - If `wajahatkarim3/DinoCompose` needs a future follow-up, isolate the path-based vector rendering or the composition-time loop replacement in a Java `11+` environment instead of reopening the whole sample broadly.

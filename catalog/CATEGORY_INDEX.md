@@ -27,6 +27,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Chunk Stories](projects/hugobros3-chunkstories.md) - voxel engine-and-game stack with layered mod loading, backend-neutral rendergraphs, asynchronous chunk meshing and occlusion work, and server-side mod redistribution support.
 - [miniGDX](projects/minigdx-minigdx.md) - Kotlin Multiplatform engine/runtime with direct Android adapters, staged framebuffer-driven rendering, scene-to-ECS import, coroutine-backed scripts, and targeted engine/input/collision tests.
 - [Thelema Engine](projects/zeganstyl-thelema-engine.md) - Kotlin Multiplatform 3D engine with descriptor-driven entity metadata, scene instancing, shader-node PBR, glTF loading, Android platform adapters, ODE physics, and a separate studio/editor surface.
+- [PulseEngine](projects/niklasjohansen-pulseengine.md) - compact Kotlin LWJGL engine with service-driven multithreaded frame phases, named render surfaces, retained UI, a dockable scene editor, typed networking, and staged asset hot reload.
 
 ## rendering-demo
 

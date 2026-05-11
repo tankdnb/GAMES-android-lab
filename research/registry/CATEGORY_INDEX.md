@@ -31,6 +31,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityMap`, `GameFrame`, and the hourly/daily automata pipeline show a layered city-simulation runtime with decoupled render/sim timers, spatial indexing, and staged economy/growth/environment updates.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `StartGameConfig`, `GameScreen`, `GameProc`, and `GameWorld` show per-session Dagger assembly, timer-driven world-logic tasks, a wrapped-world runtime, and fixed-step Box2D/clock/weather ownership.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `MainActivity`, `MainViewModel`, `BattleField`, and `ShotManager` show a lightweight Android-only game shell where `LiveData` observers, a `ViewModel`, two mirrored board models, and coroutine-delayed turns replace the need for a heavier engine loop.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `PulseEngineImpl`, `SceneManagerImpl`, `ServiceManagerImpl`, and `Testbed` show a compact service-driven engine with explicit multithreaded frame phases, async scene transitions, and editor/CLI/metrics services mounted into the same runtime.
 
 ## Rendering And Graphics
 
@@ -56,6 +57,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityRenderer`, `TrafficAnimationRenderer`, `GameFrame`, and the map-layer renderers show a practical JavaFX multi-canvas city view with heatmaps, route highlighting, alert overlays, and sprite-based buildings.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameRenderer`, `BlocksRenderer`, `BackgroundBlocksRenderer`, and `WorldEdgeMirror` show dual world/HUD cameras, chunk framebuffer caching, layered tile/background shading, seam-safe lighting updates, and wrapped-edge mirror helpers.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `SquareView`, `ComputerSquareView`, and `PersonSquareView` show reusable Android `Canvas` grid primitives, board-specific overlay rendering, and a clean custom-view split for hidden-vs-visible board states.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `GraphicsImpl`, `SurfaceImpl`, `EntityRenderer`, and `GlobalIlluminationSystem` show named surfaces, pass injection, post-processing composition, and a surprisingly ambitious multi-pass 2D lighting/GI pipeline inside a compact LWJGL engine.
 
 ## Gameplay Systems
 
@@ -77,6 +79,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `ContactFulfiller`, `ResourceFinder`, `Pathfinder`, `Constructor`, `Upgrader`, `PowerCoverageUpdater`, and `DesirabilityUpdater` show contract-driven logistics, road/rail routing, desirability-led zoning growth, upgrades, and simple utility-network propagation inside one city-simulator loop.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWorldGenerator`, `GameWorldBlocksLogicControllerTask`, `GameWorldFluidsLogicControllerTask`, and `GameWorldMobSpawnControllerTask` show layered sandbox worldgen, dirty-chunk block logic, nearby-only fluid simulation, and day/night chunk-based mob spawning.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `BattleField`, `Ship`, and `ShotManager` show readable Battleship placement rules, killed-ship neighbor marking, and a remaining-ship-aware opponent targeting state machine built without a heavyweight AI layer.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `SceneManagerImpl`, `PhysicsSystem`, and `Testbed` show scene/entity-system composition, fixed-step physics integrated into the same service model, and a runtime where tools and gameplay can share one shell.
 
 ## Input And Controls
 
@@ -97,6 +100,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `AndroidApp`, `AndroidTouch`, `AndroidMouse`, `KeyboardHandler`, and `MouseHandler` show a thin input-bridge pattern that maps Android events into shared engine listeners instead of baking gameplay directly into platform code.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `JoystickInputHandler` and `TouchControlsRenderer` show a touch sandbox-control model with explicit walk/cursor modes, short-release jump/fly gestures, hotbar exclusion, and HUD buttons drawn only when no window is open.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `ComputerSquareView` and `MainViewModel` show direct touch-to-grid conversion, selection highlighting, and a safer two-step fire-confirmation flow for Android board games.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `InputImpl` shows a compact engine-owned input service for keyboard, text, mouse, scroll, cursor mode/type, clipboard, gamepads, and focus-stack hover/click routing.
 
 ## UI, HUD, And Menus
 
@@ -116,6 +120,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `OreClient`, `InventoryView`, `HotbarInventoryView`, and `GeneratorControlPanelView` show a VisUI/Scene2D shell with drag-and-drop item movement, hotbar selection, chat/HUD layering, and device-specific fuel controls.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWindowsManager`, `AbstractInventoryWindow`, `WindowsRenderer`, and `OnboardingController` show centralized inventory-window state, multi-touch-aware stack manipulation, typed window rendering, and tested onboarding flows that differ between touch and keyboard.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `MainActivity`, the popup-menu flow, locale-limited resources, and the separate `layout` / `layout-land` boards show a compact Android-native HUD shell with edge-to-edge handling, non-game actions, and orientation-aware board UI rather than an engine-owned overlay layer.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `UiElement`, `DockingPanel`, and `SceneEditor` show a retained UI tree with dirty-layout propagation, popup/clipping passes, and editor-grade docking/outliner/inspector panels built from the same engine UI primitives.
 
 ## Physics And Collision
 
@@ -131,6 +136,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `MovementSystem` shows velocity-Verlet-style movement, separate entity/block collision resolution, one-block stair stepping, and reused dropped-item physics inside a tile sandbox.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `RigidBodyPhysicsWorld` shows ODE-backed rigid bodies, descriptor-registered shape metadata, fixed-step stepping, and explicit begin/update/end contact dispatch inside the same engine component model.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `ChunkedGameWorldSolidBlockBodiesManagerImpl`, `GameWorld`, and `WorldEdgeMirrorTest` show chunk-clustered `ChainShape` colliders, seam-mirrored static bodies for wrapped worlds, and explicit tests around edge-clamping predicates.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `PhysicsSystem` and `ContactSolver` show fixed-step entity physics, mouse-picking/debug hooks, and custom polygon/point/circle/line resolution with friction, restitution, and rotational response.
 
 ## Audio
 
@@ -164,6 +170,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `WorldIO` shows a protobuf-oriented tile-world save format for block type, wall type, flags, and light arrays, even though load is still stubbed and save coverage is incomplete.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityFileAdapter`, `AssetManager`, and `MapGenerator` show GZIP-compressed JSON city saves with contract reconstruction, JSON-defined building content, and simplex-based terrain/resource generation.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `SaveDataRepositoryImpl` combines block dictionaries, custom run-length encoding, GZIP map/biome files, ProtoBuf controller/meta snapshots, and save-slot screenshots into a strong compact sandbox-save reference.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `DataImpl` keeps JSON/BSON save-load, async persistence, and operation metrics separate from gameplay code, while `AssetManagerImpl` coordinates staged load/unload/reload work around the live runtime.
 
 ## Networking And Multiplayer
 
@@ -172,6 +179,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [unciv](../findings/yairm210-unciv.md) - `Multiplayer`, `MultiplayerServer`, `ChatWebSocket`, and `ApiV2` show a hybrid local-preview plus remote-authority multiplayer stack with throttled refresh and reconnecting WebSockets.
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `LoadedContentTranslator`, `ConnectionsManager`, and `ServerModsProvider` show content-id compatibility checks, server metadata handshakes, and redistributable mod packaging, even though the current remote runtime path is unfinished on the inspected branch.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `Network`, `ServerNetworkSystem`, `ClientNetworkSystem`, and `ServerNetworkEntitySystem` show block-region snapshots, sparse block deltas, batched entity spawn/destroy, inventory sync, and bidirectional network-id/local-id mapping for ECS entities.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `NetworkClientImpl`, `NetworkServerImpl`, and `NetworkCodec` show typed TCP/UDP channels, Kryo-based sealed-type registration, UDP handshake validation, ping tracking, queue backpressure handling, and per-channel traffic metrics.
 
 ## Tooling And Content Pipeline
 
@@ -195,6 +203,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `GLTF`, `GLTFSettings`, `EntityLoader`, the descriptor registry in `ECS`, and `thelema-studio` show a pipeline where import settings, serialized components, scene instances, and an editor shell are all built around the same runtime data model.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `android/build.gradle.kts` and `desktop/build.gradle.kts` show a relatively mature small-game pipeline with Android flavor gating, native extraction, notices/attribution generation, ProGuard shrinking, signed JAR creation, and `construo` packaging.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - the root/app Gradle files plus `.github/workflows/android_build.yml` show a modern single-app Android build surface with Java `17` CI, release shrinking, `DataBinding`/`ViewBinding`, and focused unit/instrumentation coverage, even though local discovery still fails on the lab's Java `8` machine.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `AssetManagerImpl`, `FileWatcher`, `SceneEditor`, and the `src/jmh/kotlin/benchmarks/*` suite show staged hot reload, editor-as-runtime-service tooling, and intentional microbenchmarking of low-level engine primitives.
 
 ## Android Platform Integration
 
@@ -237,6 +246,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Scene`, `ForwardRenderingPipeline`, and `GLTF` show scene-frustum culling, effect chaining through reusable framebuffers, and GL-thread work queues that keep heavy asset setup out of the main parsing path.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityMap` combines an `RTree` spatial index with memoized building lookups, while `TrafficCalculator` and the overlay canvases keep heavy city-state queries and diagnostics derived from shared route data instead of duplicating simulation.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWorld`, `GameWorldFluidsLogicControllerTask`, `GameWorldBlocksLogicControllerTask`, and the chunk/framebuffer renderers show nearby-only simulation, fixed-step physics, dirty-chunk updates, and cached tile rendering aimed at keeping a mutable sandbox world tractable on mobile hardware.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `PulseEngineImpl`, `ServiceManagerImpl`, and the flat-buffer benchmarks show a runtime that explicitly measures per-service costs, splits work across threads, and benchmarks custom data structures instead of assuming default object layouts are fast enough.
 
 ## Build, Release, And Testing
 
@@ -258,3 +268,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `build.gradle`, the Gradle wrapper, and `src/test/kotlin/*` show a real JVM application build with meaningful pathfinding/economy/save tests, but lightweight discovery still fails in the lab because the JavaFX plugin and Kotlin target require Java `11+` while the machine remains on Java `8`.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - the Gradle `9.0.0` wrapper, Java `17` toolchain, `android/build.gradle.kts`, `desktop/build.gradle.kts`, and the focused `WorldEdgeMirrorTest` / `OnboardingControllerTest` files show a modern multi-target build surface with some meaningful subsystem tests, even though the current lab machine still cannot pass `gradlew help` beyond the JVM floor.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `build.gradle`, `app/build.gradle`, `.github/workflows/android_build.yml`, `ShotManagerTest.kt`, `BaseBattleFieldTest.kt`, and `MainActivityStartTest.kt` show a modern Android app build with real CI and targeted gameplay/UI tests, even though local Gradle discovery now needs Java `11+` and CI is pinned to Java `17`.
+- [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `build.gradle.kts`, `.github/workflows/build-and-publish.yml`, and the `src/jmh` tree show a clean Gradle/JMH build surface where `gradlew help` works in the lab, but actual compile/benchmark tasks currently need JDK `23` and no normal `src/test` suite was found.

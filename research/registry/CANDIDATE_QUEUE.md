@@ -34,6 +34,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-11-F` | `wajahatkarim3/DinoCompose` | `android-game` | `3` | `2` | `0` | `1` | `285` | `2022-01-09` | Direct Android Jetpack Compose game sample with better ecosystem signal than the fresh low-signal queue and enough gameplay/UI interest to justify a compact Android-focused pass | `done` | `refreshed shortlist + gh repo view verification` |
 | `BATCH-2026-05-11-G` | `fredboy/cavedroid` | `android-game` | `3` | `1` | `3` | `3` | `13` | `2026-05-08` | Direct Android/Desktop Kotlin sandbox game with LibGDX, MIT license, fresh maintenance, and a better chance of yielding transferable world/systems/runtime patterns than the low-signal alternatives in the refreshed queue | `done` | `broad refreshed shortlist + gh repo view verification` |
 | `BATCH-2026-05-11-H` | `AlinaStepanova/SeaBattle` | `android-game` | `3` | `1` | `2` | `2` | `12` | `2025-07-20` | Direct Android custom `View`/`Canvas` game with Kotlin, coroutines, CI, and unit tests; chosen to broaden the lab's Android-native rendering references beyond LibGDX and Compose despite unclear license metadata | `done` | `fresh broader shortlist + gh repo view verification` |
+| `BATCH-2026-05-11-I` | `NiklasJohansen/PulseEngine` | `engine-framework` | `3` | `1` | `3` | `2` | `8` | `2026-05-04` | Fresh MIT-licensed 2D Kotlin engine with clearer runtime/architecture research value than the current low-signal alternatives and better batch diversity after several Android-game-focused passes | `done` | `refreshed shortlist + exact repo verification + alternative comparison` |
 
 ## Backlog Candidates
 
@@ -41,7 +42,7 @@ Keep this short. Move only the strongest candidates here.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `NiklasJohansen/PulseEngine` | `engine-framework` | `3` | `1` | `3` | `2` | `8` | `2026-05-04` | Fresh MIT-licensed 2D engine wildcard with better current activity than most remaining candidates and likely value around compact runtime architecture. | `refreshed shortlist + gh repo view verification` |
+| `yamin8000/Dooz` | `android-game` | `3` | `2` | `3` | `1` | `103` | `2026-05-10` | Fresh Android Compose tic-tac-toe sample with much stronger popularity than most current noise, but narrower expected research yield than the selected engine candidate. | `refreshed shortlist + alternative comparison` |
 
 ## Status Legend
 
