@@ -30,6 +30,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Entity`, `ECS`, `Project`, `Loader`, `EntityLoader`, and `SceneInstance` show a hybrid entity-tree runtime with descriptor-driven metadata, async loader orchestration, deferred scene start, and prefab-like scene instancing.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityMap`, `GameFrame`, and the hourly/daily automata pipeline show a layered city-simulation runtime with decoupled render/sim timers, spatial indexing, and staged economy/growth/environment updates.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `StartGameConfig`, `GameScreen`, `GameProc`, and `GameWorld` show per-session Dagger assembly, timer-driven world-logic tasks, a wrapped-world runtime, and fixed-step Box2D/clock/weather ownership.
+- [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `MainActivity`, `MainViewModel`, `BattleField`, and `ShotManager` show a lightweight Android-only game shell where `LiveData` observers, a `ViewModel`, two mirrored board models, and coroutine-delayed turns replace the need for a heavier engine loop.
 
 ## Rendering And Graphics
 
@@ -54,6 +55,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `Scene`, `PBRShader`, `PBRNode`, `GBufferOutputNode`, `IBLMapBaker`, and `ForwardRenderingPipeline` show scene-wide uniform-buffer updates, node-based PBR/deferred shader generation, in-engine IBL baking, and framebuffer-swapped post-processing.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityRenderer`, `TrafficAnimationRenderer`, `GameFrame`, and the map-layer renderers show a practical JavaFX multi-canvas city view with heatmaps, route highlighting, alert overlays, and sprite-based buildings.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameRenderer`, `BlocksRenderer`, `BackgroundBlocksRenderer`, and `WorldEdgeMirror` show dual world/HUD cameras, chunk framebuffer caching, layered tile/background shading, seam-safe lighting updates, and wrapped-edge mirror helpers.
+- [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `SquareView`, `ComputerSquareView`, and `PersonSquareView` show reusable Android `Canvas` grid primitives, board-specific overlay rendering, and a clean custom-view split for hidden-vs-visible board states.
 
 ## Gameplay Systems
 
@@ -74,6 +76,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `WorldGenerator`, `OreEntityFactory`, `ServerPowerSystem`, and `LiquidSimulationSystem` show threaded Joise terrain generation, lake/volcano post-passes, placeable device/item composition, inventory-backed generator fuel flow, and cell-based liquid equalization.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `ContactFulfiller`, `ResourceFinder`, `Pathfinder`, `Constructor`, `Upgrader`, `PowerCoverageUpdater`, and `DesirabilityUpdater` show contract-driven logistics, road/rail routing, desirability-led zoning growth, upgrades, and simple utility-network propagation inside one city-simulator loop.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWorldGenerator`, `GameWorldBlocksLogicControllerTask`, `GameWorldFluidsLogicControllerTask`, and `GameWorldMobSpawnControllerTask` show layered sandbox worldgen, dirty-chunk block logic, nearby-only fluid simulation, and day/night chunk-based mob spawning.
+- [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `BattleField`, `Ship`, and `ShotManager` show readable Battleship placement rules, killed-ship neighbor marking, and a remaining-ship-aware opponent targeting state machine built without a heavyweight AI layer.
 
 ## Input And Controls
 
@@ -93,6 +96,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `TouchManager`, `LwjglInput`, `AndroidInputHandler`, and `FillViewportStrategy` show a shared virtual touch/key model, desktop mouse-to-touch emulation, and aspect-safe coordinate conversion across Android, JVM, and web.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `AndroidApp`, `AndroidTouch`, `AndroidMouse`, `KeyboardHandler`, and `MouseHandler` show a thin input-bridge pattern that maps Android events into shared engine listeners instead of baking gameplay directly into platform code.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `JoystickInputHandler` and `TouchControlsRenderer` show a touch sandbox-control model with explicit walk/cursor modes, short-release jump/fly gestures, hotbar exclusion, and HUD buttons drawn only when no window is open.
+- [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `ComputerSquareView` and `MainViewModel` show direct touch-to-grid conversion, selection highlighting, and a safer two-step fire-confirmation flow for Android board games.
 
 ## UI, HUD, And Menus
 
@@ -111,6 +115,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `Game.createDebugRenderStage()`, `ImGuiRenderStage`, `BoundingBoxRenderStage`, and the text-component helpers show built-in debug overlay and sprite-font text capabilities instead of leaving them as game-local utilities.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `OreClient`, `InventoryView`, `HotbarInventoryView`, and `GeneratorControlPanelView` show a VisUI/Scene2D shell with drag-and-drop item movement, hotbar selection, chat/HUD layering, and device-specific fuel controls.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWindowsManager`, `AbstractInventoryWindow`, `WindowsRenderer`, and `OnboardingController` show centralized inventory-window state, multi-touch-aware stack manipulation, typed window rendering, and tested onboarding flows that differ between touch and keyboard.
+- [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `MainActivity`, the popup-menu flow, locale-limited resources, and the separate `layout` / `layout-land` boards show a compact Android-native HUD shell with edge-to-edge handling, non-game actions, and orientation-aware board UI rather than an engine-owned overlay layer.
 
 ## Physics And Collision
 
@@ -189,6 +194,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `build.gradle`, `core/build.gradle`, `.gitmodules`, and the texture-packing/protobuf tasks show an older but coherent pipeline around asset submodules, atlas packing, protobuf world data, and Artemis weaving.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `GLTF`, `GLTFSettings`, `EntityLoader`, the descriptor registry in `ECS`, and `thelema-studio` show a pipeline where import settings, serialized components, scene instances, and an editor shell are all built around the same runtime data model.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `android/build.gradle.kts` and `desktop/build.gradle.kts` show a relatively mature small-game pipeline with Android flavor gating, native extraction, notices/attribution generation, ProGuard shrinking, signed JAR creation, and `construo` packaging.
+- [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - the root/app Gradle files plus `.github/workflows/android_build.yml` show a modern single-app Android build surface with Java `17` CI, release shrinking, `DataBinding`/`ViewBinding`, and focused unit/instrumentation coverage, even though local discovery still fails on the lab's Java `8` machine.
 
 ## Android Platform Integration
 
@@ -209,6 +215,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `MiniGdxActivity`, `MiniGdxSurfaceView`, Android `PlatformContextCommon`, and Android `PlatformFileHandler` show a direct Android engine shell around `GLSurfaceView`, `SoundPool`, viewport scaling, and shared KMP game code.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `AndroidApp`, `AndroidFS`, `AndroidAudio`, `AndroidImageLoader`, and the root Android target show a direct `GLSurfaceView`-based Android shell with platform services kept thin around a shared KMP engine core.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `AndroidLauncher`, `AndroidManifest.xml`, and `android/build.gradle.kts` show a thin immersive `AndroidApplication` shell, touch-first landscape delivery, `foss` vs `store` variants, and Android-specific preferences/data-directory wiring around a shared LibGDX core.
+- [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `MainActivity`, `AndroidManifest.xml`, `app/build.gradle`, and the resource tree show a direct single-activity Android app with edge-to-edge insets, in-app review/share/privacy plumbing, locale filtering, and dedicated landscape layouts around a custom-view game surface.
 
 ## Performance And Memory
 
@@ -250,3 +257,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `build.gradle.kts`, `settings.gradle.kts`, `gradle/wrapper/gradle-wrapper.properties`, `buildSrc/src/main/kotlin/versions.kt`, and the tiny `commonTest` tree show a real KMP+Android engine build surface, but even `gradlew help` currently fails in the lab because `buildSrc` Kotlin compilation needs a full JDK rather than the available Java `8` JRE.
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `build.gradle`, the Gradle wrapper, and `src/test/kotlin/*` show a real JVM application build with meaningful pathfinding/economy/save tests, but lightweight discovery still fails in the lab because the JavaFX plugin and Kotlin target require Java `11+` while the machine remains on Java `8`.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - the Gradle `9.0.0` wrapper, Java `17` toolchain, `android/build.gradle.kts`, `desktop/build.gradle.kts`, and the focused `WorldEdgeMirrorTest` / `OnboardingControllerTest` files show a modern multi-target build surface with some meaningful subsystem tests, even though the current lab machine still cannot pass `gradlew help` beyond the JVM floor.
+- [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `build.gradle`, `app/build.gradle`, `.github/workflows/android_build.yml`, `ShotManagerTest.kt`, `BaseBattleFieldTest.kt`, and `MainActivityStartTest.kt` show a modern Android app build with real CI and targeted gameplay/UI tests, even though local Gradle discovery now needs Java `11+` and CI is pinned to Java `17`.

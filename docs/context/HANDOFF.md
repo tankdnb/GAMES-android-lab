@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The nineteenth real research batch is now completed and documented end-to-end.
-- The lab now has 25 researched repositories recorded:
+- The twentieth real research batch is now completed and documented end-to-end.
+- The lab now has 26 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -34,6 +34,7 @@
   - `kotcity/kotcity` - `accepted`
   - `wajahatkarim3/DinoCompose` - `reference-only`
   - `fredboy/cavedroid` - `accepted`
+  - `AlinaStepanova/SeaBattle` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -144,12 +145,17 @@
 - Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `cavedroid` wrapper, but `cmd /c gradlew.bat help --no-daemon` fails in the lab because Gradle `9.0.0` now requires Java `17+`, while the machine still exposes Java `8`.
 - Recorded an additional upstream build caveat for `cavedroid`: the README warns that Windows desktop builds need asset-symlink tweaks even after the JDK floor is satisfied.
 - Cleaned the transient `cavedroid` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
-- Left a short verified backlog in `research/registry/CANDIDATE_QUEUE.md` for `AlinaStepanova/SeaBattle` and `NiklasJohansen/PulseEngine`.
+- Completed `BATCH-2026-05-11-H` as a focused Android `Canvas` / `Custom View` pass for `AlinaStepanova/SeaBattle`.
+- Added durable `SeaBattle` findings for `ViewModel`-owned turn orchestration, reusable board `Canvas` rendering, touch-to-grid targeting with explicit fire confirmation, readable ship-placement rules, a remaining-ship-aware AI shot state machine, and the small but real unit/instrumentation test surface.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `SeaBattle` wrapper, but both `cmd /c gradlew.bat help --no-daemon` and `cmd /c gradlew.bat :app:testDebugUnitTest --dry-run --no-daemon` fail in the lab because Android Gradle Plugin `8.11.1` now requires Java `11+`, while the machine still exposes Java `8`.
+- Recorded an additional upstream packaging caveat for `SeaBattle`: no explicit `LICENSE` file was found and GitHub metadata still reports `licenseInfo: null`.
+- Cleaned the transient `SeaBattle` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Reduced the verified carry-over backlog in `research/registry/CANDIDATE_QUEUE.md` to `NiklasJohansen/PulseEngine`.
 
 ## Known Risks
 
-- The workflow has now been validated across 18 completed batches, but the scoring rubric and category usage may still need minor tuning.
-- Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, another failed because Android Gradle Plugin `8.5.2` now requires Java `11+`, and runtime execution is still intentionally uncommon.
+- The workflow has now been validated across 20 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
 - `AlmasB/FXGL` was kept as `reference-only` because the reviewed runtime path is JavaFX-first and only indirectly aligned with Android.
@@ -171,14 +177,16 @@
 - `kotcity/kotcity` is a strong simulator/systems reference, but it is stale, pre-alpha, desktop JavaFX/TornadoFX-first, effectively requires Java `11+`, and should be treated as a city-simulation architecture reference rather than as a direct Android runtime model.
 - `wajahatkarim3/DinoCompose` is a useful direct Android Compose prototype reference, but it is stale, narrow, built on legacy repositories/tooling, effectively untested, and mutates gameplay state directly during composition, so it should be treated as a comparison sample rather than as a primary architecture baseline.
 - `fredboy/cavedroid` is one of the stronger direct Android gameplay references in the lab, but it still has low ecosystem signal by stars, currently requires Java `17+` even for lightweight Gradle discovery, and upstream Windows desktop builds depend on asset-symlink handling.
+- `AlinaStepanova/SeaBattle` is a useful direct Android-native reference, but it is small in scope, has low ecosystem signal, currently needs Java `11+` even for lightweight Gradle discovery while CI is pinned to Java `17`, and still has no explicit license metadata for direct code reuse.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The refreshed shortlist still gets thin quickly even after closing `cavedroid`; start the next batch from fresh broader searches, but keep `AlinaStepanova/SeaBattle` and `NiklasJohansen/PulseEngine` as the strongest carry-over candidates from the latest pass.
+- The refreshed shortlist is still thin even after closing `SeaBattle`; start the next batch from fresh broader searches, but keep `NiklasJohansen/PulseEngine` as the strongest carry-over candidate from the latest pass.
 - If a future follow-up is needed for `fredboy/cavedroid`, focus it on wrapped-world seam handling, the hybrid save pipeline, or build/test verification in a real JDK `17+` environment instead of reopening the whole repository blindly.
+- If a future follow-up is needed for `SeaBattle`, focus it on the direct Android `Canvas` rendering layer, the `ShotManager` targeting logic, or rerunning build/test discovery in a Java `17` environment instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Unciv`, target map generation or server internals as a scoped revisit instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `RemsEngine`, scope it to one subsystem such as export, render graph tooling, or the separate Android fork rather than reopening the whole workspace at once.
 - If a future follow-up is needed for `minigdx/tiny`, focus it on the debugger/editor protocol or on later revisions that add a clearer Android or mobile export path.

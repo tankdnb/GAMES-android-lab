@@ -12,6 +12,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Darkest Pixel Dungeon](projects/egoal-darkest-pixel-dungeon.md) - Android roguelike with a custom `Noosa` runtime, buffered touch input, digger-based dungeon generation, split game/level saves, and data-backed mob AI/content tables.
 - [Neon](projects/mariodujic-neon.md) - Android Compose shoot-em-up with controller-owned gameplay state, `tinker`-scheduled loops, hold-to-move touch input, stage scripting, boss patterns, and focused runtime tests.
 - [CaveDroid](projects/fredboy-cavedroid.md) - LibGDX Android/Desktop sandbox with wrapped-world seam mirroring, chunked Box2D colliders, procedural biome/cave generation, hybrid RLE+ProtoBuf saves, touch cursor/joystick control, and tested onboarding/edge-wrap helpers.
+- [SeaBattle](projects/alinastepanova-seabattle.md) - Android `Canvas` / `Custom View` Battleship sample with `ViewModel`-owned turn flow, touch-grid targeting, ship-placement rules, a compact AI shot state machine, and a small but real test surface.
 
 ## engine-framework
 
