@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The twenty-third real research batch is now completed and documented end-to-end.
-- The lab now has 29 researched repositories recorded:
+- The twenty-fourth real research batch is now completed and documented end-to-end.
+- The lab now has 30 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -38,6 +38,7 @@
   - `NiklasJohansen/PulseEngine` - `accepted`
   - `hyeons-lab/prism` - `accepted`
   - `meikpiep/gauguin` - `accepted`
+  - `vitaviva/compose-tetris` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -166,10 +167,15 @@
 - Added durable `Gauguin` findings for persisted next-grid prefetching, pseudo-preview fallback, dual uniqueness-preserving generators, human-solver difficulty calibration, versioned save migration, and a strong screenshot/integration/benchmark verification surface.
 - Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `gauguin` wrapper, but `cmd /c gradlew.bat help --no-daemon` fails in the lab because Gradle `9.3.1` already requires JVM `17+` while the machine still exposes Java `8`; the checked-in modules and CI also expect JDK `21`.
 - Recorded an additional upstream caveat for `gauguin`: despite its strong Android/product quality, the repository is GPL-licensed and its deepest generator/solver logic is specialized to arithmetic cage puzzles.
-- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-third batch.
+- Completed `BATCH-2026-05-11-L` as a focused Android Compose gameplay pass for `vitaviva/compose-tetris`.
+- Added durable `Compose Tetris` findings for a reducer-like `ViewModel` game loop, Compose `Canvas` board rendering, LED-style handheld chrome, held-button auto-repeat controls, shuffled tetromino reserve generation, and status-driven line-clear/screen-clear animation states.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `compose-tetris` wrapper under Java `8`, but `cmd /c gradlew.bat help --no-daemon` fails in the lab because Android Gradle Plugin `7.1.2` requires Java `11+`; the checked-in GitHub Actions workflow also pins JDK `11`.
+- Recorded additional upstream caveats for `compose-tetris`: the repository is stale, still depends on `jcenter()`, exposes only placeholder template tests, and likely keeps drop speed fixed at the initial level because the main tick loop is launched in `LaunchedEffect(Unit)`.
+- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-fourth batch.
 - Cleaned the transient `prism` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 - Reduced the verified carry-over backlog in `research/registry/CANDIDATE_QUEUE.md` to `yamin8000/Dooz`.
 - Cleaned the transient `gauguin` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Cleaned the transient `compose-tetris` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
@@ -200,13 +206,15 @@
 - `NiklasJohansen/PulseEngine` is a useful compact engine reference, but it is desktop/LWJGL-first, has very low ecosystem signal, currently requires JDK `23` for real compile/benchmark tasks, exposes no normal `src/test` tree, and explicitly describes itself as a hobby/non-production-ready engine.
 - `hyeons-lab/prism` is a strong Android-relevant engine reference, but it is still extremely low-signal in stars, explicitly AI-experimental, build-fragile because it depends on `mavenLocal()` snapshot `wgpu4k` artifacts plus JDK `25` / `21+`, and its ECS/runtime layers should be treated as promising architecture rather than as proven production guidance.
 - `meikpiep/gauguin` is one of the stronger direct Android puzzle references in the lab, but it is GPL-licensed, currently build-blocked in the lab by Gradle/JDK `17+` and toolchain `21` requirements, and its most complex generator/solver logic is specialized to arithmetic cage puzzles rather than broad game genres.
+- `vitaviva/compose-tetris` is a useful direct Android Compose gameplay reference, but it is stale, built on older Compose/AGP tooling with `jcenter()`, has only template tests, and likely contains a stale-level tick-speed bug in its constant-key `LaunchedEffect(Unit)` loop.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The refreshed shortlist is still thin even after closing `gauguin`; start the next batch from fresh broader searches, but keep `yamin8000/Dooz` as the strongest carry-over candidate from the latest pass.
+- The refreshed shortlist is still thin even after closing `compose-tetris`; start the next batch from fresh broader searches, but keep `yamin8000/Dooz` as the strongest carry-over candidate from the latest pass.
+- If a future follow-up is needed for `compose-tetris`, verify the level-speed/tick loop on a real device or emulator, isolate the held-button repeat control pattern, or extract the reducer-style `ViewModel` plus `Canvas` board shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `gauguin`, rerun build/screenshot/benchmark discovery in a real JDK `21` Android environment or isolate the preview/next-grid pipeline, the human-solver difficulty ladder, or the save-migration model instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `prism`, rerun Gradle discovery in a JDK `25` + prepared-`mavenLocal` environment or isolate the WebGPU renderer, progressive glTF path, or Android/Compose surface lifecycle instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `PulseEngine`, rerun compile/JMH discovery in a real JDK `23` environment or isolate one subsystem such as the retained UI/editor shell, networking stack, or surface-based rendering pipeline instead of reopening the whole repository blindly.

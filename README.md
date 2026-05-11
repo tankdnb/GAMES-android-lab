@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-05-11`, `23` real GitHub research batches are completed end-to-end.
-- `29` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-05-11`, `24` real GitHub research batches are completed end-to-end.
+- `30` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `26`
+  - `accepted`: `27`
   - `reference-only`: `3`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `meikpiep/gauguin` as an `accepted` Android puzzle-game reference.
-- The latest accepted addition is `meikpiep/gauguin`.
+- The latest researched addition is `vitaviva/compose-tetris` as an `accepted` Android Compose gameplay reference.
+- The latest accepted addition is `vitaviva/compose-tetris`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

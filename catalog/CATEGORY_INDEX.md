@@ -14,6 +14,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [CaveDroid](projects/fredboy-cavedroid.md) - LibGDX Android/Desktop sandbox with wrapped-world seam mirroring, chunked Box2D colliders, procedural biome/cave generation, hybrid RLE+ProtoBuf saves, touch cursor/joystick control, and tested onboarding/edge-wrap helpers.
 - [SeaBattle](projects/alinastepanova-seabattle.md) - Android `Canvas` / `Custom View` Battleship sample with `ViewModel`-owned turn flow, touch-grid targeting, ship-placement rules, a compact AI shot state machine, and a small but real test surface.
 - [Gauguin](projects/meikpiep-gauguin.md) - Android arithmetic cage puzzle game with a custom `View` board, background next-grid prefetching, dual puzzle generators, human-solver difficulty calibration, save migration, and a serious screenshot/integration/benchmark surface.
+- [Compose Tetris](projects/vitaviva-compose-tetris.md) - Android Jetpack Compose Tetris sample with a reducer-like `ViewModel`, Compose `Canvas` board rendering, held-button auto-repeat controls, shuffled tetromino reserve generation, and compact line-clear animation states.
 
 ## engine-framework
 

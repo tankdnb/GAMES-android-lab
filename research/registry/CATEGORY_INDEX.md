@@ -34,6 +34,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `PulseEngineImpl`, `SceneManagerImpl`, `ServiceManagerImpl`, and `Testbed` show a compact service-driven engine with explicit multithreaded frame phases, async scene transitions, and editor/CLI/metrics services mounted into the same runtime.
 - [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `Engine`, `GameLoop`, `World`, `RenderSystem`, and `createGltfDemoScene()` show a modular KMP runtime that can tick from external frame schedulers, drive rendering through a normal ECS system, and stage progressive scene setup without a separate demo-only architecture.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `Game`, `GameLifecycle`, `GridCalculationService`, and `MainViewModel` show a direct Android puzzle runtime with flow-projected state, persisted next-grid prefetching, and a background generation loop hidden behind a simple app shell.
+- [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `GameViewModel`, `Action`, `ViewState`, and `MainActivity` show a compact Compose-native game shell where a reducer-like `ViewModel`, transient status states, and a `LaunchedEffect` tick loop replace a separate engine thread for a small Android game.
 
 ## Rendering And Graphics
 
@@ -62,6 +63,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `GraphicsImpl`, `SurfaceImpl`, `EntityRenderer`, and `GlobalIlluminationSystem` show named surfaces, pass injection, post-processing composition, and a surprisingly ambitious multi-pass 2D lighting/GI pipeline inside a compact LWJGL engine.
 - [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `WgpuRenderer` and `IblGenerator` show an explicit WebGPU PBR stack with scene/object/material/environment bind groups, HDR-to-tone-map routing, CPU-generated IBL textures, and cache-backed per-draw/per-material GPU resource management.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `GridUI`, `GridCellUI`, and `KeyPadLayoutCalculator` show a strong Android-native puzzle rendering stack with adaptive cell sizing, layered cage/cell/text drawing, preview ribbons, and responsive keypad layouts for dense number-entry boards.
+- [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `GameScreen`, `GameBody`, `LedNumber`, and `AppIcon` show a fully Compose-rendered board/HUD shell with a single `Canvas` for the matrix, LED-style overlays, custom handheld chrome, and reusable preview-generated visual assets.
 
 ## Gameplay Systems
 
@@ -85,6 +87,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `BattleField`, `Ship`, and `ShotManager` show readable Battleship placement rules, killed-ship neighbor marking, and a remaining-ship-aware opponent targeting state machine built without a heavyweight AI layer.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `SceneManagerImpl`, `PhysicsSystem`, and `Testbed` show scene/entity-system composition, fixed-step physics integrated into the same service model, and a runtime where tools and gameplay can share one shell.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `GridCalculatorFactory`, `RandomCageGridCalculator`, `MergingCageGridCalculator`, `HumanSolver`, and `HumanSolverStrategies` show dual uniqueness-preserving generators, solver-backed difficulty targeting, and a weighted ladder of human-style tactics for rating arithmetic-cage puzzles.
+- [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `Spirit`, `generateSpiritReverse`, `GameViewModel.updateBricks()`, and the scoring/level logic show pure tetromino transforms, shuffled full-piece reserve generation, a before/clearing/cleared board triple for animations, and compact line/score progression rules.
 
 ## Input And Controls
 
@@ -107,6 +110,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `ComputerSquareView` and `MainViewModel` show direct touch-to-grid conversion, selection highlighting, and a safer two-step fire-confirmation flow for Android board games.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `InputImpl` shows a compact engine-owned input service for keyboard, text, mouse, scroll, cursor mode/type, clipboard, gamepads, and focus-stack hover/click routing.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `GridUI`, `GridUiInjectionDefaultStrategy`, `Game`, and `KeyPadLayoutCalculator` show touch-to-cell mapping, delegated puzzle actions, fast-finishing/possible-entry input modes, and keypad density changes based on device size and board dimensions.
+- [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `GameButton` and `MainActivity` show held-button auto-repeat through `pointerInteropFilter` plus coroutine `ticker`, an explicit separate rotate button, and a touch-first arcade control scheme that maps `Up` to hard drop.
 
 ## UI, HUD, And Menus
 
@@ -237,6 +241,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `AndroidLauncher`, `AndroidManifest.xml`, and `android/build.gradle.kts` show a thin immersive `AndroidApplication` shell, touch-first landscape delivery, `foss` vs `store` variants, and Android-specific preferences/data-directory wiring around a shared LibGDX core.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `MainActivity`, `AndroidManifest.xml`, `app/build.gradle`, and the resource tree show a direct single-activity Android app with edge-to-edge insets, in-app review/share/privacy plumbing, locale filtering, and dedicated landscape layouts around a custom-view game surface.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `MainApplication`, `gauguin-app/build.gradle.kts`, `GridUI`, and the layout/resource variants show a direct Android puzzle app with custom-view rendering, dynamic colors, locale config generation, adaptive keypad/layout choices, and a real shipped mobile product shell.
+- [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `MainActivity`, `StatusBarUtil`, `SoundUtil`, and `android.yml` show a thin single-activity Android Compose shell with lifecycle-driven pause/resume, transparent-status-bar setup, preloaded `SoundPool` effects, and JDK11 GitHub Actions APK assembly.
 
 ## Performance And Memory
 
@@ -261,6 +266,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `PulseEngineImpl`, `ServiceManagerImpl`, and the flat-buffer benchmarks show a runtime that explicitly measures per-service costs, splits work across threads, and benchmarks custom data structures instead of assuming default object layouts are fast enough.
 - [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `WgpuRenderer`, `GltfDemoScene`, and `PrismView.android` show several practical performance-oriented seams: per-draw object UBO pooling, material/sampler caches, progressive texture upload with per-frame yielding, and immediate surface-destruction guards around async GPU initialization.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `GridPreviewCalculator`, `GridCalculationService`, `GameLifecycle`, and the benchmark module show a pragmatic performance strategy for heavy puzzle apps: short-timeout pseudo previews, persisted next-grid caching, background generation, and dedicated solver microbenchmarks.
+- [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `GameButton`, `MainActivity`, and the reducer-driven line-clear flow show a lightweight mobile-performance tradeoff: keep the runtime tiny, use input auto-repeat instead of a heavier gesture layer, and animate board transitions by swapping precomputed brick lists rather than recomputing game state every frame.
 
 ## Build, Release, And Testing
 
@@ -285,3 +291,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `build.gradle.kts`, `.github/workflows/build-and-publish.yml`, and the `src/jmh` tree show a clean Gradle/JMH build surface where `gradlew help` works in the lab, but actual compile/benchmark tasks currently need JDK `23` and no normal `src/test` suite was found.
 - [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `settings.gradle.kts`, `gradle/libs.versions.toml`, `gradle/gradle-daemon-jvm.properties`, `prism-demo-core/build.gradle.kts`, and the `commonTest` suites show a serious KMP/Android build and test surface, but local discovery still timed out and the repository depends on `mavenLocal()` snapshot artifacts plus JDK `25` / `21+`.
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `build.gradle.kts`, `gauguin-app/build.gradle.kts`, `.github/workflows/build.yml`, the `integrationTest` suites, Roborazzi screenshot tests, and `micro-benchmark` show a notably mature Android/JVM verification surface, even though local Gradle discovery stops immediately on the lab's Java `8` machine because Gradle `9.3.1` needs JVM `17+` and CI expects JDK `21`.
+- [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `build.gradle`, `app/build.gradle`, `gradle-wrapper.properties`, and `.github/workflows/android.yml` show an older but coherent Android Compose build surface pinned to AGP `7.1.2`, Kotlin `1.6.10`, Gradle `7.3-rc-1`, and JDK `11`; however the checked-in test tree is still only the default template and local `gradlew help` fails in the lab because AGP requires Java `11+` while the machine still exposes Java `8`.

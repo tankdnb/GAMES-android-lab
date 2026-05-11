@@ -9,7 +9,8 @@
 
 ## Next Recommended
 
-- The refreshed shortlist is still thin even after closing `meikpiep/gauguin`; rebuild it from broader Kotlin game/game-engine query families before starting the next batch, but keep `yamin8000/Dooz` in view.
+- The refreshed shortlist is still thin even after closing `vitaviva/compose-tetris`; rebuild it from broader Kotlin game/game-engine query families before starting the next batch, but keep `yamin8000/Dooz` in view.
+- If `vitaviva/compose-tetris` needs a future follow-up, verify the tick-speed behavior in a real device/emulator run, isolate the held-button input repeat pattern, or extract the reducer-style `ViewModel` plus Compose `Canvas` board flow instead of reopening the whole repository broadly.
 - If `meikpiep/gauguin` needs a future follow-up, isolate the preview/next-grid pipeline, the human-solver difficulty ladder, or the save-migration model, ideally in a real JDK `21` Android environment instead of reopening the whole repository broadly.
 - If `hyeons-lab/prism` needs a future follow-up, rerun Gradle discovery in a JDK `25` + prepared-`mavenLocal` environment, or isolate one subsystem such as the WebGPU renderer, progressive glTF pipeline, or Android/Compose surface lifecycle instead of reopening the whole repository broadly.
 - If `NiklasJohansen/PulseEngine` needs a future follow-up, rerun compile/JMH discovery in a real JDK `23` environment or isolate one subsystem such as the retained UI/editor shell, networking stack, or surface-based rendering pipeline instead of reopening the whole repository broadly.
