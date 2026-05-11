@@ -32,6 +32,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `StartGameConfig`, `GameScreen`, `GameProc`, and `GameWorld` show per-session Dagger assembly, timer-driven world-logic tasks, a wrapped-world runtime, and fixed-step Box2D/clock/weather ownership.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `MainActivity`, `MainViewModel`, `BattleField`, and `ShotManager` show a lightweight Android-only game shell where `LiveData` observers, a `ViewModel`, two mirrored board models, and coroutine-delayed turns replace the need for a heavier engine loop.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `PulseEngineImpl`, `SceneManagerImpl`, `ServiceManagerImpl`, and `Testbed` show a compact service-driven engine with explicit multithreaded frame phases, async scene transitions, and editor/CLI/metrics services mounted into the same runtime.
+- [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `Engine`, `GameLoop`, `World`, `RenderSystem`, and `createGltfDemoScene()` show a modular KMP runtime that can tick from external frame schedulers, drive rendering through a normal ECS system, and stage progressive scene setup without a separate demo-only architecture.
 
 ## Rendering And Graphics
 
@@ -58,6 +59,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameRenderer`, `BlocksRenderer`, `BackgroundBlocksRenderer`, and `WorldEdgeMirror` show dual world/HUD cameras, chunk framebuffer caching, layered tile/background shading, seam-safe lighting updates, and wrapped-edge mirror helpers.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `SquareView`, `ComputerSquareView`, and `PersonSquareView` show reusable Android `Canvas` grid primitives, board-specific overlay rendering, and a clean custom-view split for hidden-vs-visible board states.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `GraphicsImpl`, `SurfaceImpl`, `EntityRenderer`, and `GlobalIlluminationSystem` show named surfaces, pass injection, post-processing composition, and a surprisingly ambitious multi-pass 2D lighting/GI pipeline inside a compact LWJGL engine.
+- [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `WgpuRenderer` and `IblGenerator` show an explicit WebGPU PBR stack with scene/object/material/environment bind groups, HDR-to-tone-map routing, CPU-generated IBL textures, and cache-backed per-draw/per-material GPU resource management.
 
 ## Gameplay Systems
 
@@ -121,6 +123,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWindowsManager`, `AbstractInventoryWindow`, `WindowsRenderer`, and `OnboardingController` show centralized inventory-window state, multi-touch-aware stack manipulation, typed window rendering, and tested onboarding flows that differ between touch and keyboard.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `MainActivity`, the popup-menu flow, locale-limited resources, and the separate `layout` / `layout-land` boards show a compact Android-native HUD shell with edge-to-edge handling, non-game actions, and orientation-aware board UI rather than an engine-owned overlay layer.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `UiElement`, `DockingPanel`, and `SceneEditor` show a retained UI tree with dirty-layout propagation, popup/clipping passes, and editor-grade docking/outliner/inspector panels built from the same engine UI primitives.
+- [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `EngineStore`, `DemoStore`, and `PrismView.android` show a small MVI/StateFlow bridge around the engine so Compose can own FPS, surface size, and demo-control state without mutating rendering internals directly.
 
 ## Physics And Collision
 
@@ -204,6 +207,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `android/build.gradle.kts` and `desktop/build.gradle.kts` show a relatively mature small-game pipeline with Android flavor gating, native extraction, notices/attribution generation, ProGuard shrinking, signed JAR creation, and `construo` packaging.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - the root/app Gradle files plus `.github/workflows/android_build.yml` show a modern single-app Android build surface with Java `17` CI, release shrinking, `DataBinding`/`ViewBinding`, and focused unit/instrumentation coverage, even though local discovery still fails on the lab's Java `8` machine.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `AssetManagerImpl`, `FileWatcher`, `SceneEditor`, and the `src/jmh/kotlin/benchmarks/*` suite show staged hot reload, editor-as-runtime-service tooling, and intentional microbenchmarking of low-level engine primitives.
+- [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `GltfLoader`, `GlbReader`, `AssetManager`, and the root/demo build scripts show a pipeline built around progressive glTF loading, delayed texture upload, native-buffer byte-range reuse, and a shared downloaded demo asset consumed by multiple platform shells.
 
 ## Android Platform Integration
 
@@ -223,6 +227,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [wajahatkarim3-dinocompose](../findings/wajahatkarim3-dinocompose.md) - `app/build.gradle`, `AndroidManifest.xml`, `MainActivity`, and `Theme.kt` show a direct single-activity Compose Android app with no separate engine surface and with game colors adapting to system light/dark theme.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `MiniGdxActivity`, `MiniGdxSurfaceView`, Android `PlatformContextCommon`, and Android `PlatformFileHandler` show a direct Android engine shell around `GLSurfaceView`, `SoundPool`, viewport scaling, and shared KMP game code.
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `AndroidApp`, `AndroidFS`, `AndroidAudio`, `AndroidImageLoader`, and the root Android target show a direct `GLSurfaceView`-based Android shell with platform services kept thin around a shared KMP engine core.
+- [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `PrismSurface.android`, `PrismView.android`, and `PrismDemoActivity` show two direct Android hosting modes for the same shared engine core: a thin `SurfaceView` + `Choreographer` activity shell and a Compose-embedded surface that recreates Vulkan-backed `WGPUContext` instances safely across holder changes.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `AndroidLauncher`, `AndroidManifest.xml`, and `android/build.gradle.kts` show a thin immersive `AndroidApplication` shell, touch-first landscape delivery, `foss` vs `store` variants, and Android-specific preferences/data-directory wiring around a shared LibGDX core.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `MainActivity`, `AndroidManifest.xml`, `app/build.gradle`, and the resource tree show a direct single-activity Android app with edge-to-edge insets, in-app review/share/privacy plumbing, locale filtering, and dedicated landscape layouts around a custom-view game surface.
 
@@ -247,6 +252,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kotcity-kotcity](../findings/kotcity-kotcity.md) - `CityMap` combines an `RTree` spatial index with memoized building lookups, while `TrafficCalculator` and the overlay canvases keep heavy city-state queries and diagnostics derived from shared route data instead of duplicating simulation.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `GameWorld`, `GameWorldFluidsLogicControllerTask`, `GameWorldBlocksLogicControllerTask`, and the chunk/framebuffer renderers show nearby-only simulation, fixed-step physics, dirty-chunk updates, and cached tile rendering aimed at keeping a mutable sandbox world tractable on mobile hardware.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `PulseEngineImpl`, `ServiceManagerImpl`, and the flat-buffer benchmarks show a runtime that explicitly measures per-service costs, splits work across threads, and benchmarks custom data structures instead of assuming default object layouts are fast enough.
+- [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `WgpuRenderer`, `GltfDemoScene`, and `PrismView.android` show several practical performance-oriented seams: per-draw object UBO pooling, material/sampler caches, progressive texture upload with per-frame yielding, and immediate surface-destruction guards around async GPU initialization.
 
 ## Build, Release, And Testing
 
@@ -269,3 +275,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - the Gradle `9.0.0` wrapper, Java `17` toolchain, `android/build.gradle.kts`, `desktop/build.gradle.kts`, and the focused `WorldEdgeMirrorTest` / `OnboardingControllerTest` files show a modern multi-target build surface with some meaningful subsystem tests, even though the current lab machine still cannot pass `gradlew help` beyond the JVM floor.
 - [alinastepanova-seabattle](../findings/alinastepanova-seabattle.md) - `build.gradle`, `app/build.gradle`, `.github/workflows/android_build.yml`, `ShotManagerTest.kt`, `BaseBattleFieldTest.kt`, and `MainActivityStartTest.kt` show a modern Android app build with real CI and targeted gameplay/UI tests, even though local Gradle discovery now needs Java `11+` and CI is pinned to Java `17`.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `build.gradle.kts`, `.github/workflows/build-and-publish.yml`, and the `src/jmh` tree show a clean Gradle/JMH build surface where `gradlew help` works in the lab, but actual compile/benchmark tasks currently need JDK `23` and no normal `src/test` suite was found.
+- [hyeons-lab-prism](../findings/hyeons-lab-prism.md) - `settings.gradle.kts`, `gradle/libs.versions.toml`, `gradle/gradle-daemon-jvm.properties`, `prism-demo-core/build.gradle.kts`, and the `commonTest` suites show a serious KMP/Android build and test surface, but local discovery still timed out and the repository depends on `mavenLocal()` snapshot artifacts plus JDK `25` / `21+`.
