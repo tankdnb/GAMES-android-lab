@@ -9,7 +9,8 @@
 
 ## Next Recommended
 
-- Fresh activity-sorted Android-game results are still mostly low-signal; unless better candidates appear on the next refresh, prefer `wajahatkarim3/DinoCompose` as the next lightweight Android sample now that `kotcity/kotcity` is completed.
+- Fresh activity-sorted Android-game results are still mostly low-signal even after closing `DinoCompose`; rebuild the shortlist from broader Kotlin game/game-engine query families before starting the next batch.
+- If `wajahatkarim3/DinoCompose` needs a future follow-up, isolate the path-based vector rendering or the composition-time loop replacement in a Java `11+` environment instead of reopening the whole sample broadly.
 - If `Quilly-s-Adventure` needs a future follow-up, verify `:core:test` and target builds in a Java `11+` environment, or isolate one subsystem such as the trigger DSL or Tiled-to-ECS map flow instead of reopening the whole repository broadly.
 - If `Darkest Pixel Dungeon` needs a future follow-up, isolate one subsystem such as the actor scheduler, procedural dungeon pipeline, or split save-slot architecture rather than reopening the whole repository broadly.
 - If `Neon` needs a future follow-up, isolate one subsystem such as the `tinker` scheduler, stage progression, or controller-based collision/powerup flow, or rerun the unit-test surface in a Java `11+` or `17` environment.

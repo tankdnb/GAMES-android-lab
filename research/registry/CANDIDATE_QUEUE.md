@@ -31,6 +31,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-11-C` | `sreich/ore-infinium` | `gameplay-systems` | `2` | `2` | `0` | `3` | `190` | `2022-07-17` | Terraria-inspired LibGDX sandbox with Kotlin gameplay code, ECS, networking, and open-world systems; chosen as the strongest remaining systems-heavy candidate with permissive licensing and better ecosystem signal than the stale engine-only backlog | `done` | `refreshed shortlist + gh repo view verification` |
 | `BATCH-2026-05-11-D` | `zeganstyl/thelema-engine` | `engine-framework` | `3` | `1` | `0` | `2` | `83` | `2022-12-21` | Kotlin/libGDX-derived 3D engine with cross-platform graphics ambitions, Apache-2.0 licensing, and the strongest remaining rendering/engine-architecture yield among not-yet-researched backlog candidates | `done` | `refreshed shortlist + gh repo view verification` |
 | `BATCH-2026-05-11-E` | `kotcity/kotcity` | `gameplay-systems` | `2` | `2` | `0` | `3` | `488` | `2021-08-23` | Kotlin city-simulator with stronger systems/economy/simulation potential than the remaining backlog and better ecosystem signal than fresh zero-signal Android-game noise | `done` | `refreshed shortlist + gh repo view verification` |
+| `BATCH-2026-05-11-F` | `wajahatkarim3/DinoCompose` | `android-game` | `3` | `2` | `0` | `1` | `285` | `2022-01-09` | Direct Android Jetpack Compose game sample with better ecosystem signal than the fresh low-signal queue and enough gameplay/UI interest to justify a compact Android-focused pass | `done` | `refreshed shortlist + gh repo view verification` |
 
 ## Backlog Candidates
 
@@ -38,7 +39,6 @@ Keep this short. Move only the strongest candidates here.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `wajahatkarim3/DinoCompose` | `android-game` | `3` | `2` | `0` | `1` | `285` | `2022-01-09` | Direct Android Jetpack Compose game sample with decent visibility, but likely narrower research yield than the remaining engine/framework backlog | `refreshed shortlist + gh repo view verification` |
 
 ## Status Legend
 

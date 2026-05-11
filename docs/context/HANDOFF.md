@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The seventeenth real research batch is now completed and documented end-to-end.
-- The lab now has 23 researched repositories recorded:
+- The eighteenth real research batch is now completed and documented end-to-end.
+- The lab now has 24 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -32,6 +32,7 @@
   - `sreich/ore-infinium` - `accepted`
   - `zeganstyl/thelema-engine` - `accepted`
   - `kotcity/kotcity` - `accepted`
+  - `wajahatkarim3/DinoCompose` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -132,10 +133,15 @@
 - Verified that `cmd /c gradlew.bat help --no-daemon` currently fails in the lab because the inspected JavaFX plugin requires newer Java bytecode than the available Java `8` runtime supports; the inspected build also targets JVM `11` and still depends on `jcenter()`.
 - Cleaned the transient `kotcity` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 - Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the seventeenth batch.
+- Completed `BATCH-2026-05-11-F` as a lightweight Android Compose pass for `wajahatkarim3/DinoCompose`.
+- Added durable `DinoCompose` findings for path-based vector rendering, endless-runner obstacle/background recycling, debug hitbox overlays, and the small Compose-native runner shell.
+- Verified that both `cmd /c gradlew.bat help --no-daemon` and `cmd /c gradlew.bat :app:testDebugUnitTest --dry-run --no-daemon` currently fail in the lab because the inspected Android Gradle Plugin `7.0.2` requires Java `11`, while the machine still exposes Java `8`.
+- Cleaned the transient `DinoCompose` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the eighteenth batch.
 
 ## Known Risks
 
-- The workflow has now been validated across 17 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 18 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, another failed because Android Gradle Plugin `8.5.2` now requires Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -156,13 +162,14 @@
 - `sreich/ore-infinium` is a strong gameplay-systems reference, but it is inactive, desktop-only in the inspected revision, still lacks real world-load implementation, keeps player movement effectively client-authoritative, and now depends on dead Bintray-era build infrastructure.
 - `zeganstyl/thelema-engine` is one of the stronger 3D engine references in the lab, but it is stale, depends on an older Gradle/Kotlin/AGP stack, has only a tiny verified automated test surface, appears to skip its intended opaque front-to-back sort optimization, and likely needs extra work for robust multitouch-heavy Android gameplay.
 - `kotcity/kotcity` is a strong simulator/systems reference, but it is stale, pre-alpha, desktop JavaFX/TornadoFX-first, effectively requires Java `11+`, and should be treated as a city-simulation architecture reference rather than as a direct Android runtime model.
+- `wajahatkarim3/DinoCompose` is a useful direct Android Compose prototype reference, but it is stale, narrow, built on legacy repositories/tooling, effectively untested, and mutates gameplay state directly during composition, so it should be treated as a comparison sample rather than as a primary architecture baseline.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Fresh activity-sorted Android-game results still look weak; unless better candidates appear on the next refresh, prefer `wajahatkarim3/DinoCompose` as the next lightweight Android sample.
+- Fresh activity-sorted Android-game results still look weak even after closing `DinoCompose`, so the next batch should start from a fresh shortlist across broader Kotlin game and game-engine query families instead of reusing stale backlog assumptions.
 - If a future follow-up is needed for `Unciv`, target map generation or server internals as a scoped revisit instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `RemsEngine`, scope it to one subsystem such as export, render graph tooling, or the separate Android fork rather than reopening the whole workspace at once.
 - If a future follow-up is needed for `minigdx/tiny`, focus it on the debugger/editor protocol or on later revisions that add a clearer Android or mobile export path.
@@ -176,6 +183,7 @@
 - If a future follow-up is needed for `minigdx/minigdx`, focus it on the Android multitouch adapter, `ScriptContext.moveOf`, or build/test verification in a real JDK `11` environment instead of reopening the whole framework broadly.
 - If a future follow-up is needed for `ore-infinium`, focus it on server-authoritative movement/prediction, world save/load completion, or device/power-graph behavior instead of reopening the whole sandbox broadly.
 - If a future follow-up is needed for `kotcity/kotcity`, focus it on the contract economy, pathfinding/traffic loop, power-grid propagation, or build/test verification in a Java `11+` environment instead of reopening the whole simulator broadly.
+- If a future follow-up is needed for `DinoCompose`, focus it on the vector-path rendering approach or on replacing the composition-time loop with a frame-driven effect in a Java `11+` environment instead of reopening the whole sample broadly.
 - If a future follow-up is needed for `thelema-engine`, focus it on the glTF loader pipeline, shader-node authoring flow, Android input/runtime shell, or build verification in a real JDK `11+` environment instead of reopening the whole engine broadly.
 - If the minute-based automation proves too aggressive in practice, update or pause `games-android-lab-research` rather than duplicating it with another automation.
 - Keep the new rule in force: after each completed batch, prepare the durable outputs and push them to GitHub.

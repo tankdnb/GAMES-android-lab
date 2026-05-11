@@ -47,3 +47,4 @@ Use this file to group accepted catalog entries by their normalized categories.
 
 - [Godot Kotlin/JVM](projects/utopia-rise-godot-kotlin-jvm.md) - strong reference for Kotlin-to-engine runtime integration, build tooling, and Android export packaging, but less direct for native Android game reuse.
 - [FXGL](projects/almasb-fxgl.md) - mature service-oriented game framework with strong input, save/load, physics, and networking ideas, but weaker direct Android alignment than the main engine references.
+- [DinoCompose](projects/wajahatkarim3-dinocompose.md) - compact Android Compose endless-runner sample with path-drawn vector sprites, lightweight obstacle recycling, debug hitbox overlays, and a useful cautionary example around composition-time game-state mutation.
