@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-05-11`, `26` real GitHub research batches are completed end-to-end.
-- `32` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-05-11`, `27` real GitHub research batches are completed end-to-end.
+- `33` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `29`
+  - `accepted`: `30`
   - `reference-only`: `3`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `jayasuryat/minesweeper-j-compose` as an `accepted` Android puzzle reference.
-- The latest accepted addition is `jayasuryat/minesweeper-j-compose`.
+- The latest researched addition is `SimonSchubert/Braincup` as an `accepted` Android mini-game product-shell reference.
+- The latest accepted addition is `SimonSchubert/Braincup`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

@@ -16,6 +16,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Gauguin](projects/meikpiep-gauguin.md) - Android arithmetic cage puzzle game with a custom `View` board, background next-grid prefetching, dual puzzle generators, human-solver difficulty calibration, save migration, and a serious screenshot/integration/benchmark surface.
 - [Compose Tetris](projects/vitaviva-compose-tetris.md) - Android Jetpack Compose Tetris sample with a reducer-like `ViewModel`, Compose `Canvas` board rendering, held-button auto-repeat controls, shuffled tetromino reserve generation, and compact line-clear animation states.
 - [Minesweeper-JC](projects/jayasuryat-minesweeper-j-compose.md) - Android Compose Minesweeper sample with safe-first-click generation, a modular engine/UI split, zoomable board handling, resumable difficulty slots, and persisted quick-toggle/settings flow.
+- [Braincup](projects/simonschubert-braincup.md) - Kotlin Multiplatform brain-training mini-game collection with a shared Compose shell, daily-session progression, Android audio/haptic seams, custom Mini Chess/logic generators, screenshot automation, and broad Android/Desktop/Web packaging.
 
 ## engine-framework
 

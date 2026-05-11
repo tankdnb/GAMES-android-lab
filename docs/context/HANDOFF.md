@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The twenty-sixth real research batch is now completed and documented end-to-end.
-- The lab now has 32 researched repositories recorded:
+- The twenty-seventh real research batch is now completed and documented end-to-end.
+- The lab now has 33 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -41,6 +41,7 @@
   - `vitaviva/compose-tetris` - `accepted`
   - `blueUserRed/forty-five` - `accepted`
   - `jayasuryat/minesweeper-j-compose` - `accepted`
+  - `SimonSchubert/Braincup` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -190,6 +191,12 @@
 - Recorded additional upstream caveats for `minesweeper-j-compose`: older Gradle/AGP tooling, effectively no real automated tests beyond a debug-side generator probe, and a multiplatform scope limited mostly to the `data` layer rather than the gameplay/UI runtime.
 - Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-sixth batch.
 - Cleaned the transient `minesweeper-j-compose` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-05-11-O` as a focused Android/KMP mini-game product pass for `SimonSchubert/Braincup`.
+- Added durable `Braincup` findings for the shared Compose multi-game shell, session/streak/XP progression, platform audio/haptic seams, the custom Mini Chess subsystem, and the unusually mature multiplatform packaging plus screenshot workflow.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `Braincup` wrapper under Java `8`, but `cmd /c gradlew.bat help --no-daemon` fails immediately because the inspected Gradle `9.4.1` build now expects JVM `17+`.
+- Recorded additional upstream caveats for `Braincup`: it is more of a mini-game product-shell reference than a reusable engine baseline, `GameController` is already fairly branch-heavy, and automated testing is strongest in Mini Chess plus screenshot coverage rather than across every game mode.
+- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the twenty-seventh batch.
+- Cleaned the transient `Braincup` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
@@ -223,13 +230,15 @@
 - `vitaviva/compose-tetris` is a useful direct Android Compose gameplay reference, but it is stale, built on older Compose/AGP tooling with `jcenter()`, has only template tests, and likely contains a stale-level tick-speed bug in its constant-key `LaunchedEffect(Unit)` loop.
 - `blueUserRed/forty-five` is a strong gameplay-systems reference, but it is GPL-licensed, desktop-only, non-self-contained for a full build because it requires an external `Onj` checkout and manual asset setup, and it exposes no visible automated tests.
 - `jayasuryat/minesweeper-j-compose` is a strong direct Android puzzle reference, but it is built on an older Compose/AGP stack, exposes almost no real automated tests, and local Gradle discovery in the lab is currently blocked by the missing JDK tools on the Java `8` machine.
+- `SimonSchubert/Braincup` is a strong direct Android/KMP product reference, but it should be treated as a mini-game shell and progression/packaging reference more than as an engine baseline, its shared controller is already somewhat branch-heavy, and local Gradle discovery now needs JVM `17+`.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The refreshed shortlist is still thin even after closing `minesweeper-j-compose`; start the next batch from fresh broader searches, but keep `yamin8000/Dooz` as the strongest carry-over candidate from the latest pass.
+- The refreshed shortlist is still thin even after closing `Braincup`; start the next batch from fresh broader searches, but keep `yamin8000/Dooz` as the strongest carry-over candidate from the latest pass.
+- If a future follow-up is needed for `Braincup`, rerun Gradle discovery in a full JDK `17+` environment or isolate the Mini Chess subsystem, the daily-session progression layer, or the screenshot/release pipeline instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `minesweeper-j-compose`, rerun Gradle discovery in a full JDK `11+` Android environment or isolate the safe-first-click generator, the zoomable Compose board shell, or the save/resume snapshot pipeline instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `forty-five`, rerun build verification only in an environment prepared with the external `Onj` checkout plus packed textures and copied `large_assets`, or isolate the `Timeline`, ONJ screen/content pipeline, or seeded map/encounter subsystems instead of reopening the full repository blindly.
 - If a future follow-up is needed for `compose-tetris`, verify the level-speed/tick loop on a real device or emulator, isolate the held-button repeat control pattern, or extract the reducer-style `ViewModel` plus `Canvas` board shell instead of reopening the whole repository blindly.
