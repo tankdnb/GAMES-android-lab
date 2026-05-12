@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The thirtieth real research batch is now completed and documented end-to-end.
-- The lab now has 36 researched repositories recorded:
+- The thirty-first real research batch is now completed and documented end-to-end.
+- The lab now has 37 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -45,6 +45,7 @@
   - `yamin8000/Dooz` - `accepted`
   - `atillaturkmen/piano-tiles` - `reference-only`
   - `CescFe/numpairs` - `accepted`
+  - `sgalluz/k2d` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -219,10 +220,16 @@
 - Recorded additional upstream caveats for `numpairs`: the repository still has near-zero public signal, its puzzle content is currently seed-based rather than progression-heavy, and local Android task validation in the lab still needs a configured SDK.
 - Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the thirtieth batch.
 - Cleaned the transient `numpairs` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-05-13-A` as a focused desktop-first Compose engine pass for `sgalluz/k2d`.
+- Added durable `K2D` findings for a pure timing core, Compose-as-runtime adapter boundaries, flat ECS composition, abstract input mapping, naive but well-covered collision responses, and unexpectedly serious CI plus publication discipline.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected `k2d` wrapper under Java `8`, but `cmd /c gradlew.bat help --no-daemon` fails immediately because Gradle now requires Java `17+`; the checked-in `.java-version` still pins `21.0.7`.
+- Recorded additional upstream caveats for `k2d`: the repository is still pre-alpha, has zero public signal, stays desktop-first in the inspected revision, uses naive `O(n^2)` collision scanning, and its README references a `docs/` directory that is not present in the tree.
+- Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the thirty-first batch.
+- Cleaned the transient `k2d` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 29 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 31 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -256,13 +263,15 @@
 - `yamin8000/Dooz` is a useful direct Android board-game reference, but it is intentionally narrow, GPL-3.0 licensed, completely untested by automation in the inspected snapshot, and still has a stale metadata mismatch around the maximum supported board size.
 - `atillaturkmen/piano-tiles` is a useful direct Android `SurfaceView` comparison sample, but it is intentionally narrow, GPL-3.0 licensed, completely untested by automation, logs every frame from `Tile.update()`, and keeps a render thread alive forever because `GameThread` never exits after `running` is disabled.
 - `CescFe/numpairs` is one of the stronger direct Android puzzle-product references in the lab, but it still has almost no public ecosystem signal, its content surface is currently seed-based rather than progression-heavy, and local Android task validation in the lab still needs a configured Android SDK.
+- `sgalluz/k2d` is a useful lightweight engine reference, but it is still pre-alpha, has zero ecosystem signal, remains desktop-first in the inspected revision, currently exposes only naive `O(n^2)` collision handling, and still needs a Java `17+` or `21` environment for meaningful Gradle validation.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The current short carry-over backlog is now `sgalluz/k2d` and `Efimj/GameOfLife`; start from those verified candidates before doing another broad refresh.
+- The current short carry-over backlog is now `Efimj/GameOfLife`; start from that verified candidate before doing another broad refresh.
+- If a future follow-up is needed for `k2d`, rerun Gradle discovery and selected tests in a Java `17+` or `21` environment, or isolate the runtime-adapter boundary, flat ECS shape, or collision-response coverage instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `numpairs`, rerun Android tasks in an SDK-ready environment or isolate the stable strip-entry identity model, the layered completion-state validator, or the accessibility-tested Compose editing flow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `piano-tiles`, focus on the `SurfaceView` thread lifecycle, the device-height speed-normalization rule, or the queued-tile touch-hit-testing flow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Braincup`, rerun Gradle discovery in a full JDK `17+` environment or isolate the Mini Chess subsystem, the daily-session progression layer, or the screenshot/release pipeline instead of reopening the whole repository blindly.

@@ -41,6 +41,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameState`, `rememberHomeState`, `GameLogic`, and `GameAi` show a compact Compose-native Android board-game shell where one remembered controller owns runtime state, settings hydration, AI turns, and undo flow without a separate engine layer.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameActivity`, `GameThread`, `GameView`, and `Tile` show a minimal Android `SurfaceView` rhythm-game shell with device-height speed normalization, a fixed-FPS loop, and a useful cautionary example around thread shutdown.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameViewModel`, `GamePresentationState`, `GameUiStateFactory`, and the ADR/doc set show a direct Android puzzle shell where immutable domain state, transient modal/overlay state, and derived Compose UI snapshots stay explicitly separated.
+- [sgalluz-k2d](../findings/sgalluz-k2d.md) - `GameLoop`, `TimeTicker`, `rememberGameLoop`, `k2dProvideGameLoop`, and `World` show a small engine that keeps timing logic pure, lets Compose act as a frame host instead of engine logic, and uses a flat ECS without overcomplicating the runtime.
 
 ## Rendering And Graphics
 
@@ -76,6 +77,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameBoard`, `PlayerCard`, `Texts`, and the theme layer show a fully Compose-rendered board/HUD shell with screen-width-derived grid sizing, animated dice/player cards, and RTL-aware typography for localized casual-game UI.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView` and `Tile` show a compact `Canvas`-on-`SurfaceView` renderer where quarter-screen lane geometry, rect-based notes, and a reversed-speed red miss animation keep the visual stack extremely small.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameScreen`, `GameScreenLayout`, `GameScreenDialogs`, `GameScreenFeedback`, and `PuzzleTile` show a Compose-first puzzle surface with chip/board rendering, anchored operator selection, bottom-sheet operand picking, and accessibility-aware feedback states without a custom render thread.
+- [sgalluz-k2d](../findings/sgalluz-k2d.md) - `k2dCanvas`, `ShapeRenderSystem`, and the desktop sample show a minimal Compose `Canvas` render adapter where frame ticks only trigger redraws and ECS state stays responsible for what actually gets drawn.
 
 ## Gameplay Systems
 
@@ -134,6 +136,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameBoard` and `GameScreen` show a minimal mobile board-game input flow with human-only tap gating, simple PvC undo compensation, and bottom-bar action ownership instead of a heavier gesture or controller layer.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView` and `Tile` show raw pointer-down rhythm input, forgiving horizontal hitboxes, CopyOnWrite snapshotting before touch evaluation, and immediate wrong-lane punishment based on active tile bands.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameViewModel`, `GameScreenDialogs`, and `docs/ui-behavior.md` show a mobile-first puzzle input model where taps directly open strip-entry dialogs, anchored operator popups, or bottom-sheet operand selectors without any prior strip-selection mode.
+- [sgalluz-k2d](../findings/sgalluz-k2d.md) - `InputConfig`, `InputSystem`, `MouseSystem`, and the sample's host-side key/pointer capture show a lightweight pattern where abstract actions and raw platform state are projected into ECS components instead of being hard-wired into the render loop.
 
 ## UI, HUD, And Menus
 
@@ -176,6 +179,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [thelema-engine](../findings/zeganstyl-thelema-engine.md) - `RigidBodyPhysicsWorld` shows ODE-backed rigid bodies, descriptor-registered shape metadata, fixed-step stepping, and explicit begin/update/end contact dispatch inside the same engine component model.
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `ChunkedGameWorldSolidBlockBodiesManagerImpl`, `GameWorld`, and `WorldEdgeMirrorTest` show chunk-clustered `ChainShape` colliders, seam-mirrored static bodies for wrapped worlds, and explicit tests around edge-clamping predicates.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `PhysicsSystem` and `ContactSolver` show fixed-step entity physics, mouse-picking/debug hooks, and custom polygon/point/circle/line resolution with friction, restitution, and rotational response.
+- [sgalluz-k2d](../findings/sgalluz-k2d.md) - `CollisionSystem`, `CollisionResponseDispatcher`, `BoundarySystem`, and `CollisionSystemTest` show a readable naive AABB collision path with explicit `STATIC`, `BOUNCE`, `PUSH`, and `EXPLODE` policies plus better-than-usual coverage for a tiny hobby engine.
 
 ## Audio
 
@@ -344,3 +348,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `build.gradle.kts`, `app/build.gradle.kts`, `.github/workflows/android.yml`, and `fastlane/metadata/android/en-US/` show a direct Android Compose build/release surface pinned to AGP `8.13.0`, Kotlin `2.3.21`, Gradle `9.0.0`, and JDK `17`; however no automated test tree was found and local `gradlew help` in the lab fails immediately because Gradle now requires Java `17+`.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `build.gradle`, `app/build.gradle`, and `gradle-wrapper.properties` show a direct Android Groovy DSL build surface pinned to AGP `8.9.1`, Kotlin `1.8.22`, Gradle `8.11.1`, and Java/Kotlin target `17`; however no test directories are checked in and local `gradlew help` currently fails because the AGP classpath already needs Java `11+` while the lab machine still exposes Java `8`.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `app/build.gradle.kts`, `gradle/libs.versions.toml`, `gradle/gradle-daemon-jvm.properties`, `.github/workflows/validate-android.yml`, and the `src/test` plus `src/androidTest` trees show a notably mature Android build surface with JDK21 daemon configuration, modern SDK targets, meaningful unit/UI tests, and CI that reaches formatting, lint, unit tests, and APK assembly; local dry-run validation in the lab currently stops only because no Android SDK is configured.
+- [sgalluz-k2d](../findings/sgalluz-k2d.md) - `engine/build.gradle.kts`, `gradle/libs.versions.toml`, `.java-version`, and `.github/workflows/main-checks.yml` show a compact but serious engine-library build surface with ktlint, JUnit4 plus JUnit5 tests, JaCoCo coverage gates, Dokka, Sonatype publishing, and a real Java `17+` / `21` floor even though local discovery in the lab still fails on Java `8`.

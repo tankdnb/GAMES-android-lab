@@ -44,6 +44,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-11-P` | `yamin8000/Dooz` | `android-game` | `3` | `2` | `3` | `1` | `103` | `2026-05-10` | Fresh Android Jetpack Compose tic-tac-toe sample with the strongest current mix of ecosystem signal, recency, and direct Android relevance among the remaining viable backlog candidates | `done` | `refreshed shortlist + exact repo verification + alternative comparison` |
 | `BATCH-2026-05-11-Q` | `atillaturkmen/piano-tiles` | `android-game` | `3` | `1` | `3` | `2` | `17` | `2026-04-26` | Direct Android Kotlin arcade game with fresh activity, explicit GPL-3.0 licensing, and enough public signal to justify a focused pass for reusable gameplay, input, and rendering ideas | `done` | `activity-biased shortlist refresh + exact repo verification` |
 | `BATCH-2026-05-11-R` | `CescFe/numpairs` | `android-game` | `3` | `0` | `3` | `3` | `0` | `2026-05-10` | Fresh Android number-puzzle product with explicit architecture focus, clear licensing, and likely stronger reusable state-management and UX patterns than the remaining carry-over candidates | `done` | `carry-over backlog review + exact candidate verification` |
+| `BATCH-2026-05-13-A` | `sgalluz/k2d` | `engine-framework` | `2` | `0` | `3` | `3` | `0` | `2026-05-08` | Fresh Apache-2.0 Compose Multiplatform 2D engine with modular engine/sample layout, explicit future Android intent, and stronger expected architecture value than the remaining backlog candidate | `done` | `carry-over backlog verification + exact candidate comparison` |
 
 ## Backlog Candidates
 
@@ -51,7 +52,6 @@ Keep this short. Move only the strongest candidates here.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `sgalluz/k2d` | `engine-framework` | `2` | `0` | `3` | `3` | `0` | `2026-05-08` | Fresh Apache-2.0 Compose Multiplatform 2D engine that is still desktop-first, but architected with future Android/Web/iOS support in mind and likely useful for lightweight engine experimentation | `exact repo verification after shortlist refresh` |
 | `Efimj/GameOfLife` | `android-game` | `2` | `2` | `2` | `2` | `86` | `2026-01-31` | Higher-signal direct Android Compose candidate with potential board-rendering and simulation value, but its missing explicit license metadata lowers reuse confidence | `exact repo verification after shortlist refresh` |
 
 ## Status Legend

@@ -35,6 +35,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Thelema Engine](projects/zeganstyl-thelema-engine.md) - Kotlin Multiplatform 3D engine with descriptor-driven entity metadata, scene instancing, shader-node PBR, glTF loading, Android platform adapters, ODE physics, and a separate studio/editor surface.
 - [PulseEngine](projects/niklasjohansen-pulseengine.md) - compact Kotlin LWJGL engine with service-driven multithreaded frame phases, named render surfaces, retained UI, a dockable scene editor, typed networking, and staged asset hot reload.
 - [prism](projects/hyeons-lab-prism.md) - Kotlin Multiplatform 3D/WebGPU engine with subsystem-owned ticking, HDR/PBR rendering, progressive glTF texture upload, Compose-backed engine state, and direct Android Vulkan surface integration.
+- [K2D](projects/sgalluz-k2d.md) - desktop-first Compose Multiplatform 2D micro-engine with a pure timing core, runtime-layer Compose adapter, flat ECS, configurable input mapping, pluggable collision responses, and stronger-than-expected tests plus publication discipline.
 
 ## rendering-demo
 
