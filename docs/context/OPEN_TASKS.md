@@ -3,15 +3,16 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `MartianZoo/solarnet`.
+- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `StudioAdriatic/PGSGP`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
+- After `StudioAdriatic/PGSGP` is processed, refresh the shortlist again with explicit-license candidates instead of letting the backlog go stale.
 
 ## Next Recommended
 
 - Prefer the current verified backlog before running another broad search:
-  - `MartianZoo/solarnet`
   - `StudioAdriatic/PGSGP`
+- If `MartianZoo/solarnet` needs a future follow-up, rerun Gradle discovery or selected tests in a JDK `21`-ready environment, or at minimum a Java `11+` environment for configuration, or isolate the `Pets` DSL, the loaded type system, the full-game script tests, or the REPL shell instead of reopening the full repository broadly.
 - If `RajashekarRaju/hangman-compose` needs a future follow-up, rerun Gradle discovery or targeted tests in a JDK `17+` or `21` environment, or isolate the pure session engine, the word-catalog DSL, or the settings/history shell instead of reopening the full repository broadly.
 - If `andstatus/game2048` needs a future follow-up, rerun both the root and `game2048-android` Gradle surfaces in a Java `21` plus Android SDK-ready environment, or isolate the reversible history pipeline, the AI hint/autoplay split, or the Android share/load shell instead of reopening the full repository broadly.
 - If `sgalluz/k2d` needs a future follow-up, rerun Gradle discovery and selected tests in a Java `17+` or `21` environment, or isolate the runtime-adapter boundary, the flat ECS shape, or the collision-response coverage instead of reopening the whole repository broadly.

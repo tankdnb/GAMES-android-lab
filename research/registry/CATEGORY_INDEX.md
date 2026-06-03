@@ -44,6 +44,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `GameLoop`, `TimeTicker`, `rememberGameLoop`, `k2dProvideGameLoop`, and `World` show a small engine that keeps timing logic pure, lets Compose act as a frame host instead of engine logic, and uses a flat ECS without overcomplicating the runtime.
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `Main.kt`, `ViewData`, `Presenter`, `PresenterAsync`, and `Model` show a productized KorGE shell where async bootstrap, orchestration, domain logic, and persistence stay intentionally separated.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `AppInitializerViewModel`, `HangmanRoot`, `GameSessionEngine`, and `GameViewModel` show a Compose-first small-game shell where app bootstrap, pure rules, and controller-style feature orchestration stay clearly separated.
+- [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `Engine`, `ApiTranslation`, `TfmGameplay`, `Component`, `Effector`, and `MClass` show a JVM rules engine where declarative class/effect definitions are loaded into a typed runtime, assembled through scoped DI, and executed as task-driven gameplay.
 
 ## Rendering And Graphics
 
@@ -113,6 +114,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `Puzzle`, `PuzzleValidation`, `Strip`, `OperandSelection`, and `InitialPuzzle` show a compact arithmetic puzzle model with stable strip-entry identity, editable-run reordering, operator-specific usage caps, and cross-tile sum/product pairing validation.
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `Board`, `GamePosition`, `History`, `GamePlies`, and `AiPlayer` show a puzzle runtime built around reversible plies, recent-game records, bookmarks, variable board sizes, and several distinct AI strategies rather than only a single undo stack.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `GameSessionEngine`, `GameSessionState`, `WordCatalogDsl`, `WordBank`, and `WordSelection` show a pure word-game session core, typed rule updates, and a validated content DSL where difficulty depends on content shape rather than only on timers or scores.
+- [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `docs/language-intro.md`, `Changer`, `Effector`, `TfmGameplay`, and `Game20230521Test` show a rules-heavy turn-based engine where game state is a component multiset, effects emit queued tasks, and full games can be scripted and asserted end-to-end.
 
 ## Input And Controls
 
@@ -236,6 +238,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `UserStorage` shows a strong small-product persistence layer around highscores, time-vs-points score normalization, XP leveling, medal and streak achievements, daily-session state, and audio/difficulty preferences on top of `multiplatform-settings`.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `DataStoreHelper`, `App.settings`, and `SettingsState` show a compact preference-backed storage seam where theme, feedback toggles, game rules, and player customization persist through one DataStore owner.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView.saveIfHighScore()` and `HighScoresFragment` show a tiny SharedPreferences persistence seam where local leaderboards are grouped by starting speed rather than flattened into one all-mode score.
+- [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `TfmAuthority`, `Canon`, `ClassDeclaration`, and the `.pets` plus `.json5` resources show a clean split between reusable runtime code and declarative authoritative content packs that can be swapped or extended.
 
 ## Networking And Multiplayer
 
@@ -273,6 +276,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [meikpiep-gauguin](../findings/meikpiep-gauguin.md) - `docs/calculating-difficulties.md`, `difficulty-ratings.yml`, `fastlane/metadata/android/*`, and the benchmark/screenshot setup show a project where difficulty calibration, store metadata, performance measurement, and visual regression are treated as first-class tooling rather than as ad hoc extras.
 - [blueuserred-forty-five](../findings/blueuserred-forty-five.md) - `ScreenBuilder`, `ResourceManager`, `technical_design.md`, `project_setup_and_build.md`, and the ONJ config files show a content/UI pipeline built around templates, styles, named actors, asset borrowing, shader declarations, and an external ONJ dependency rather than a monolithic code-only UI.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `StoreScreenshotTest`, `build-release.yml`, `pages.yml`, `aur.yml`, and `flatpak.yml` show a mature product pipeline around localized screenshot generation, Android/Desktop/Web packaging, and downstream Linux package maintenance.
+- [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `ClassParsing`, `Canon`, and `ReplSession` show a domain-content pipeline where specification-language files and JSON definitions compile into runtime classes, and a CLI shell can inspect or drive the live rules engine.
 
 ## Android Platform Integration
 
@@ -366,3 +370,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `engine/build.gradle.kts`, `gradle/libs.versions.toml`, `.java-version`, and `.github/workflows/main-checks.yml` show a compact but serious engine-library build surface with ktlint, JUnit4 plus JUnit5 tests, JaCoCo coverage gates, Dokka, Sonatype publishing, and a real Java `17+` / `21` floor even though local discovery in the lab still fails on Java `8`.
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `build.gradle.kts`, `game2048-android/build.gradle`, `PersistenceTest.kt`, `MovesTest.kt`, and `AiPlayerTest.kt` show a real KMP-plus-Android build surface with meaningful gameplay/history tests, but local discovery now needs Java `21` at the root and Java `11+` for the separate Android project.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `build.gradle.kts`, `composeApp/build.gradle.kts`, `app/build.gradle.kts`, the GitHub workflows, and the `commonTest` plus repository-test trees show a notably mature small-game build surface with KMP packaging, Android/Desktop/Web automation, and real gameplay/VM/persistence tests, even though local discovery still stops immediately on the lab's Java `8` machine.
+- [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `build.gradle.kts`, `engine/build.gradle.kts`, `repl/build.gradle.kts`, and the broad parser/engine/full-game test tree show a serious JVM monorepo with KSP/Dagger assembly, toolchain `21`, Shadow-packaged REPL tooling, and unusually deep invariant plus full-game coverage even though local discovery currently stops on Java `8`.

@@ -47,6 +47,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-05-13-A` | `sgalluz/k2d` | `engine-framework` | `2` | `0` | `3` | `3` | `0` | `2026-05-08` | Fresh Apache-2.0 Compose Multiplatform 2D engine with modular engine/sample layout, explicit future Android intent, and stronger expected architecture value than the remaining backlog candidate | `done` | `carry-over backlog verification + exact candidate comparison` |
 | `BATCH-2026-06-04-A` | `andstatus/game2048` | `android-game` | `3` | `3` | `2` | `3` | `334` | `2025-11-29` | KorGE-based multiplatform 2048 with strong public signal, explicit Apache-2.0 licensing, and likely reusable patterns for input, persistence, progression, and cross-platform packaging | `done` | `permissive-license shortlist refresh + exact repo verification` |
 | `BATCH-2026-06-04-B` | `RajashekarRaju/hangman-compose` | `android-game` | `3` | `1` | `3` | `3` | `38` | `2026-03-12` | Compose Multiplatform Android-first game product with a shared engine, persistent settings/history, DSL-driven content, explicit CI/CD, and a broader small-product architecture surface than the remaining short backlog | `done` | `carry-over licensed shortlist execution + exact repo verification` |
+| `BATCH-2026-06-04-C` | `MartianZoo/solarnet` | `engine-framework` | `2` | `1` | `3` | `3` | `16` | `2026-06-01` | Fresh Apache-2.0 board-game engine and specification-language repo with stronger Kotlin game-engine / rules-modeling yield than the more Android-direct but narrower integration-plugin alternative in the current short backlog | `done` | `carry-over licensed shortlist execution + exact candidate comparison` |
 
 ## Backlog Candidates
 
@@ -56,7 +57,6 @@ Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was r
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `MartianZoo/solarnet` | `engine-framework` | `2` | `1` | `3` | `3` | `16` | `2026-06-01` | Fresh Apache-2.0 board-game engine and specification-language repo with likely strong yield around rules modeling, DSL design, and engine-backed game state | `permissive-license shortlist refresh + exact repo verification` |
 | `StudioAdriatic/PGSGP` | `library-sdk` | `2` | `1` | `3` | `2` | `50` | `2026-06-02` | Active MIT Android Play Games Services plugin for Godot 4.x with clear value for Kotlin-side Android game-platform integration patterns such as sign-in, achievements, and services wiring | `permissive-license shortlist refresh + exact repo verification` |
 
 ## Status Legend

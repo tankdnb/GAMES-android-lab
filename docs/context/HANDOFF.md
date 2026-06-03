@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The thirty-third real research batch is now completed and documented end-to-end.
-- The lab now has 39 researched repositories recorded:
+- The thirty-fourth real research batch is now completed and documented end-to-end.
+- The lab now has 40 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -48,6 +48,7 @@
   - `sgalluz/k2d` - `accepted`
   - `andstatus/game2048` - `accepted`
   - `RajashekarRaju/hangman-compose` - `accepted`
+  - `MartianZoo/solarnet` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -241,10 +242,15 @@
 - Recorded an upstream workflow caveat for `hangman-compose`: the default branch is `development`, but some release-style workflows still target `master`.
 - Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-third batch.
 - Cleaned the transient `hangman-compose` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-06-04-C` as a Kotlin rules-engine and specification-language pass for `MartianZoo/solarnet`.
+- Added durable `solarnet` findings for declarative `Pets` rules content, a loaded runtime type system, scoped DI assembly, canonical content packs, REPL tooling, and unusually deep full-game/invariant tests.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected wrapper, but `cmd /c gradlew.bat help --no-daemon --stacktrace` currently fails in the lab because the machine still exposes Java `8` while the resolved KSP/build setup already needs at least Java `11`; the checked-in root build also targets `jvmToolchain(21)`.
+- Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-fourth batch.
+- Cleaned the transient `solarnet` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 33 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 34 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -281,6 +287,7 @@
 - `sgalluz/k2d` is a useful lightweight engine reference, but it is still pre-alpha, has zero ecosystem signal, remains desktop-first in the inspected revision, currently exposes only naive `O(n^2)` collision handling, and still needs a Java `17+` or `21` environment for meaningful Gradle validation.
 - `andstatus/game2048` is one of the stronger small Android puzzle-product references in the lab, but its root documentation is partially stale about the JVM floor, its genre is still narrow, and meaningful local build verification now needs Java `21` plus an Android SDK-ready environment.
 - `RajashekarRaju/hangman-compose` is one of the stronger Compose-first product references in the lab, but its controller/view-model layer is already somewhat branch-heavy, its workflow triggers still look partially split between `development` and `master`, and meaningful local build verification still needs at least Java `17+` plus a fuller Android-ready environment.
+- `MartianZoo/solarnet` is a strong pure-logic reference, but it is tightly coupled to Terraforming Mars semantics, has no Android or rendering layer, remains low-signal by stars, and meaningful local build/test verification still needs at least Java `11` and effectively a newer toolchain-ready JVM environment.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -288,7 +295,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The current short carry-over backlog is now led by `MartianZoo/solarnet`; work through that refreshed licensed shortlist before doing another broad search.
+- The current short carry-over backlog is now led by `StudioAdriatic/PGSGP`; finish that remaining licensed candidate, then refresh the shortlist before doing another broad search.
+- If a future follow-up is needed for `solarnet`, rerun Gradle discovery or selected tests in a JDK `21`-ready environment, or isolate the `Pets` DSL, the loaded type system, the full-game script tests, or the REPL shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `hangman-compose`, rerun Gradle discovery or selected tests in a JDK `17+` or `21` environment, or isolate the pure session engine, the word-catalog DSL, or the settings/history shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `game2048`, rerun both the root and `game2048-android` Gradle surfaces in a Java `21` plus Android SDK-ready environment, or isolate the reversible history pipeline, the AI hint/autoplay split, or the Android share/load shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `k2d`, rerun Gradle discovery and selected tests in a Java `17+` or `21` environment, or isolate the runtime-adapter boundary, flat ECS shape, or collision-response coverage instead of reopening the whole repository blindly.

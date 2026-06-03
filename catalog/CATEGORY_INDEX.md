@@ -38,6 +38,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [PulseEngine](projects/niklasjohansen-pulseengine.md) - compact Kotlin LWJGL engine with service-driven multithreaded frame phases, named render surfaces, retained UI, a dockable scene editor, typed networking, and staged asset hot reload.
 - [prism](projects/hyeons-lab-prism.md) - Kotlin Multiplatform 3D/WebGPU engine with subsystem-owned ticking, HDR/PBR rendering, progressive glTF texture upload, Compose-backed engine state, and direct Android Vulkan surface integration.
 - [K2D](projects/sgalluz-k2d.md) - desktop-first Compose Multiplatform 2D micro-engine with a pure timing core, runtime-layer Compose adapter, flat ECS, configurable input mapping, pluggable collision responses, and stronger-than-expected tests plus publication discipline.
+- [Solarnet](projects/martianzoo-solarnet.md) - Kotlin JVM rules-engine workspace with a `Pets` specification language, Dagger-assembled runtime scopes, canonical content packs, REPL tooling, and unusually deep parser, invariant, and full-game test coverage.
 
 ## rendering-demo
 
