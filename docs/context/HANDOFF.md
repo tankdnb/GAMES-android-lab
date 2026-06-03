@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The thirty-fourth real research batch is now completed and documented end-to-end.
-- The lab now has 40 researched repositories recorded:
+- The thirty-fifth real research batch is now completed and documented end-to-end.
+- The lab now has 41 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -49,6 +49,7 @@
   - `andstatus/game2048` - `accepted`
   - `RajashekarRaju/hangman-compose` - `accepted`
   - `MartianZoo/solarnet` - `accepted`
+  - `StudioAdriatic/PGSGP` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -247,10 +248,15 @@
 - Verified that `cmd /c gradlew.bat --version` succeeds for the inspected wrapper, but `cmd /c gradlew.bat help --no-daemon --stacktrace` currently fails in the lab because the machine still exposes Java `8` while the resolved KSP/build setup already needs at least Java `11`; the checked-in root build also targets `jvmToolchain(21)`.
 - Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-fourth batch.
 - Cleaned the transient `solarnet` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-06-04-D` as a Godot Android Play Games Services plugin pass for `StudioAdriatic/PGSGP`.
+- Added durable `PGSGP` findings for controller-split Play Games Services wrappers, export-time manifest and dependency injection, dual legacy/v2 Godot plugin packaging, and the repository's release-matrix discipline.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected wrapper, but `cmd /c gradlew.bat help --no-daemon` currently fails in the lab because the Android Gradle Plugin classpath no longer matches the machine's Java `8` runtime; the inspected repository itself compiles for Java `17` and upstream docs plus CI standardize on JDK `17`.
+- Exhausted the carry-over licensed shortlist in `research/registry/CANDIDATE_QUEUE.md`; the next research cycle should refresh the short backlog before batch `36`.
+- Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-fifth batch.
 
 ## Known Risks
 
-- The workflow has now been validated across 34 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 35 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -295,7 +301,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The current short carry-over backlog is now led by `StudioAdriatic/PGSGP`; finish that remaining licensed candidate, then refresh the shortlist before doing another broad search.
+- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new short explicit-license backlog before starting batch `36`.
 - If a future follow-up is needed for `solarnet`, rerun Gradle discovery or selected tests in a JDK `21`-ready environment, or isolate the `Pets` DSL, the loaded type system, the full-game script tests, or the REPL shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `hangman-compose`, rerun Gradle discovery or selected tests in a JDK `17+` or `21` environment, or isolate the pure session engine, the word-catalog DSL, or the settings/history shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `game2048`, rerun both the root and `game2048-android` Gradle surfaces in a Java `21` plus Android SDK-ready environment, or isolate the reversible history pipeline, the AI hint/autoplay split, or the Android share/load shell instead of reopening the whole repository blindly.

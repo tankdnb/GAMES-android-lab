@@ -48,6 +48,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-A` | `andstatus/game2048` | `android-game` | `3` | `3` | `2` | `3` | `334` | `2025-11-29` | KorGE-based multiplatform 2048 with strong public signal, explicit Apache-2.0 licensing, and likely reusable patterns for input, persistence, progression, and cross-platform packaging | `done` | `permissive-license shortlist refresh + exact repo verification` |
 | `BATCH-2026-06-04-B` | `RajashekarRaju/hangman-compose` | `android-game` | `3` | `1` | `3` | `3` | `38` | `2026-03-12` | Compose Multiplatform Android-first game product with a shared engine, persistent settings/history, DSL-driven content, explicit CI/CD, and a broader small-product architecture surface than the remaining short backlog | `done` | `carry-over licensed shortlist execution + exact repo verification` |
 | `BATCH-2026-06-04-C` | `MartianZoo/solarnet` | `engine-framework` | `2` | `1` | `3` | `3` | `16` | `2026-06-01` | Fresh Apache-2.0 board-game engine and specification-language repo with stronger Kotlin game-engine / rules-modeling yield than the more Android-direct but narrower integration-plugin alternative in the current short backlog | `done` | `carry-over licensed shortlist execution + exact candidate comparison` |
+| `BATCH-2026-06-04-D` | `StudioAdriatic/PGSGP` | `library-sdk` | `2` | `1` | `3` | `2` | `50` | `2026-06-03` | Fresh MIT-licensed Android Play Games Services plugin for Godot 4.x with clear Kotlin-side value around sign-in, achievements, leaderboards, manifest wiring, and Android game-services integration | `done` | `carry-over licensed shortlist execution + exact repo verification` |
 
 ## Backlog Candidates
 
@@ -55,9 +56,10 @@ Keep this short. Move only the strongest candidates here.
 
 Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was removed from the short backlog after re-verification showed `licenseInfo: null` on GitHub, and the team chose to prefer candidates with explicit license metadata for the next pass.
 
+Carry-over licensed shortlist exhausted on `2026-06-04` after completing `StudioAdriatic/PGSGP`. Refresh this queue before starting the next batch.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `StudioAdriatic/PGSGP` | `library-sdk` | `2` | `1` | `3` | `2` | `50` | `2026-06-02` | Active MIT Android Play Games Services plugin for Godot 4.x with clear value for Kotlin-side Android game-platform integration patterns such as sign-in, achievements, and services wiring | `permissive-license shortlist refresh + exact repo verification` |
 
 ## Status Legend
 

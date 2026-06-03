@@ -32,10 +32,10 @@ Build a practical reference library of ideas and implementations that explains, 
 ## Current Verified State
 
 - The repository now contains documentation, catalog structure, and an exercised research workflow.
-- As of `2026-06-04`, `34` completed GitHub research batches are documented under `research/batches/`.
-- `40` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
-- The current registry split is `36` `accepted` and `4` `reference-only`.
-- The public catalog and findings set cover the current recorded repository set, including the latest researched and accepted `MartianZoo/solarnet` batch.
+- As of `2026-06-04`, `35` completed GitHub research batches are documented under `research/batches/`.
+- `41` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- The current registry split is `37` `accepted` and `4` `reference-only`.
+- The public catalog and findings set cover the current recorded repository set, including the latest researched and accepted `StudioAdriatic/PGSGP` batch.
 - Public-facing repository guidance now lives in root `README.md` and `CONTRIBUTING.md`.
 - Local repository hygiene now includes root `.gitattributes`, expanded `.gitignore`, and default branch `main`.
 - Public GitHub repository now exists at `https://github.com/tankdnb/GAMES-android-lab`.

@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `34` real GitHub research batches are completed end-to-end.
-- `40` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `35` real GitHub research batches are completed end-to-end.
+- `41` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `36`
+  - `accepted`: `37`
   - `reference-only`: `4`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `MartianZoo/solarnet` as an `accepted` Kotlin JVM rules-engine and specification-language reference with strong DSL, content-pack, and full-game test value for turn-based game logic.
-- The latest accepted addition is `MartianZoo/solarnet`.
+- The latest researched addition is `StudioAdriatic/PGSGP` as an `accepted` Godot Android Play Games Services plugin reference with strong Kotlin-side bridge, packaging, and manifest-injection value.
+- The latest accepted addition is `StudioAdriatic/PGSGP`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
