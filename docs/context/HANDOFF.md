@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The thirty-first real research batch is now completed and documented end-to-end.
-- The lab now has 37 researched repositories recorded:
+- The thirty-second real research batch is now completed and documented end-to-end.
+- The lab now has 38 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -46,6 +46,7 @@
   - `atillaturkmen/piano-tiles` - `reference-only`
   - `CescFe/numpairs` - `accepted`
   - `sgalluz/k2d` - `accepted`
+  - `andstatus/game2048` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -228,10 +229,15 @@
 - Cleaned the transient `k2d` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 - Re-verified that `Efimj/GameOfLife` still exposes `licenseInfo: null` on GitHub as of `2026-06-03`, so it was intentionally dropped from the short backlog instead of becoming the default next research target.
 - Refreshed `research/registry/CANDIDATE_QUEUE.md` with a cleaner licensed shortlist led by `andstatus/game2048`, followed by `RajashekarRaju/hangman-compose`, `MartianZoo/solarnet`, and `StudioAdriatic/PGSGP`.
+- Completed `BATCH-2026-06-04-A` as a direct Android puzzle-product pass for `andstatus/game2048`.
+- Added durable `Game 2048` findings for reversible ply history, paged persistence, AI hint/autoplay split, responsive KorGE board/UI composition, and explicit Android share/load/activity glue.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected root wrapper, but `cmd /c gradlew.bat help --no-daemon` now needs Java `21` while `cmd /c gradlew.bat -p game2048-android help --no-daemon` needs Java `11+`; both failures in the lab looked environmental rather than repository-specific.
+- Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-second batch.
+- Cleaned the transient `game2048` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 31 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 32 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -266,6 +272,7 @@
 - `atillaturkmen/piano-tiles` is a useful direct Android `SurfaceView` comparison sample, but it is intentionally narrow, GPL-3.0 licensed, completely untested by automation, logs every frame from `Tile.update()`, and keeps a render thread alive forever because `GameThread` never exits after `running` is disabled.
 - `CescFe/numpairs` is one of the stronger direct Android puzzle-product references in the lab, but it still has almost no public ecosystem signal, its content surface is currently seed-based rather than progression-heavy, and local Android task validation in the lab still needs a configured Android SDK.
 - `sgalluz/k2d` is a useful lightweight engine reference, but it is still pre-alpha, has zero ecosystem signal, remains desktop-first in the inspected revision, currently exposes only naive `O(n^2)` collision handling, and still needs a Java `17+` or `21` environment for meaningful Gradle validation.
+- `andstatus/game2048` is one of the stronger small Android puzzle-product references in the lab, but its root documentation is partially stale about the JVM floor, its genre is still narrow, and meaningful local build verification now needs Java `21` plus an Android SDK-ready environment.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -273,7 +280,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The current short carry-over backlog is now led by `andstatus/game2048`; work through that refreshed licensed shortlist before doing another broad search.
+- The current short carry-over backlog is now led by `RajashekarRaju/hangman-compose`; work through that refreshed licensed shortlist before doing another broad search.
+- If a future follow-up is needed for `game2048`, rerun both the root and `game2048-android` Gradle surfaces in a Java `21` plus Android SDK-ready environment, or isolate the reversible history pipeline, the AI hint/autoplay split, or the Android share/load shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `k2d`, rerun Gradle discovery and selected tests in a Java `17+` or `21` environment, or isolate the runtime-adapter boundary, flat ECS shape, or collision-response coverage instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `numpairs`, rerun Android tasks in an SDK-ready environment or isolate the stable strip-entry identity model, the layered completion-state validator, or the accessibility-tested Compose editing flow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `piano-tiles`, focus on the `SurfaceView` thread lifecycle, the device-height speed-normalization rule, or the queued-tile touch-hit-testing flow instead of reopening the whole repository blindly.

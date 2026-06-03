@@ -42,6 +42,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameActivity`, `GameThread`, `GameView`, and `Tile` show a minimal Android `SurfaceView` rhythm-game shell with device-height speed normalization, a fixed-FPS loop, and a useful cautionary example around thread shutdown.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameViewModel`, `GamePresentationState`, `GameUiStateFactory`, and the ADR/doc set show a direct Android puzzle shell where immutable domain state, transient modal/overlay state, and derived Compose UI snapshots stay explicitly separated.
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `GameLoop`, `TimeTicker`, `rememberGameLoop`, `k2dProvideGameLoop`, and `World` show a small engine that keeps timing logic pure, lets Compose act as a frame host instead of engine logic, and uses a flat ECS without overcomplicating the runtime.
+- [andstatus-game2048](../findings/andstatus-game2048.md) - `Main.kt`, `ViewData`, `Presenter`, `PresenterAsync`, and `Model` show a productized KorGE shell where async bootstrap, orchestration, domain logic, and persistence stay intentionally separated.
 
 ## Rendering And Graphics
 
@@ -78,6 +79,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView` and `Tile` show a compact `Canvas`-on-`SurfaceView` renderer where quarter-screen lane geometry, rect-based notes, and a reversed-speed red miss animation keep the visual stack extremely small.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameScreen`, `GameScreenLayout`, `GameScreenDialogs`, `GameScreenFeedback`, and `PuzzleTile` show a Compose-first puzzle surface with chip/board rendering, anchored operator selection, bottom-sheet operand picking, and accessibility-aware feedback states without a custom render thread.
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `k2dCanvas`, `ShapeRenderSystem`, and the desktop sample show a minimal Compose `Canvas` render adapter where frame ticks only trigger redraws and ECS state stays responsible for what actually gets drawn.
+- [andstatus-game2048](../findings/andstatus-game2048.md) - `Main.kt`, `ViewData`, `BoardView`, and `MainView` show aspect-aware virtual sizing, board-local gesture capture, and a small-product puzzle presentation layer that stays responsive across host sizes.
 
 ## Gameplay Systems
 
@@ -108,6 +110,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `SimpleGameLogic`, `SimpleGameAi`, `FirstPlayerPolicy`, and `GameConstants` show a compact turn-based board-game rule set with configurable `3..7` boards, PvP/PvC modes, dice-based first-player selection, and readable heuristic AI priorities.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView`, `Tile`, and `HighScoresFragment` show a very small arcade ruleset with no-same-lane spawning, optional gradual speed escalation, and separate high-score buckets keyed by the selected starting speed.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `Puzzle`, `PuzzleValidation`, `Strip`, `OperandSelection`, and `InitialPuzzle` show a compact arithmetic puzzle model with stable strip-entry identity, editable-run reordering, operator-specific usage caps, and cross-tile sum/product pairing validation.
+- [andstatus-game2048](../findings/andstatus-game2048.md) - `Board`, `GamePosition`, `History`, `GamePlies`, and `AiPlayer` show a puzzle runtime built around reversible plies, recent-game records, bookmarks, variable board sizes, and several distinct AI strategies rather than only a single undo stack.
 
 ## Input And Controls
 
@@ -137,6 +140,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView` and `Tile` show raw pointer-down rhythm input, forgiving horizontal hitboxes, CopyOnWrite snapshotting before touch evaluation, and immediate wrong-lane punishment based on active tile bands.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameViewModel`, `GameScreenDialogs`, and `docs/ui-behavior.md` show a mobile-first puzzle input model where taps directly open strip-entry dialogs, anchored operator popups, or bottom-sheet operand selectors without any prior strip-selection mode.
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `InputConfig`, `InputSystem`, `MouseSystem`, and the sample's host-side key/pointer capture show a lightweight pattern where abstract actions and raw platform state are projected into ECS components instead of being hard-wired into the render loop.
+- [andstatus-game2048](../findings/andstatus-game2048.md) - `BoardView`, `Presenter`, and the shared control flow show swipe-first board input, duplicate-key suppression, and a useful separation between manual play, replay stepping, AI hints, and AI autoplay.
 
 ## UI, HUD, And Menus
 
@@ -163,6 +167,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `Settings.kt`, `PlayerCard`, `GameInfoCard`, `About.kt`, and `PersianText` show a clean small-game shell with tabbed settings, animated status cards, Material3 styling, and locale-aware text direction/font switching for mixed-language UI.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `MainFragment`, `MainActivity`, `HighScoresFragment`, `navigation.xml`, and `centered_image.xml` show a tiny but complete shell with pre-game runtime options, a drawer-locked high-score screen, and a replay overlay kept outside the `SurfaceView`.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameScreenSemantics`, `GameScreenFeedback`, `GameScreenAccessibilityTest`, and `docs/ui-behavior.md` show a small but disciplined product shell where accessibility descriptions, invalid-state messaging, success overlays, and modal behavior are treated as first-class UI requirements.
+- [andstatus-game2048](../findings/andstatus-game2048.md) - `MainView`, `BoardView`, `History`, and `doc/User-Experience.md` show a small but fully productized puzzle shell with recent games, bookmarks, replay/watch flows, board-size/theme switches, and stateful score/status presentation.
 
 ## Physics And Collision
 
@@ -290,6 +295,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `AndroidApp`, `MainActivity`, `AudioPlayer.android`, and `HapticFeedback.android` show a thin Android shell with dynamic colors, splash and edge-to-edge setup, in-app review prompting, and platform audio/haptic implementations wrapped around a shared KMP game product.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `MainActivity`, `AndroidManifest.xml`, `App`, and the F-Droid/fastlane surface show a thin single-activity Android Compose shell with DataStore wiring, vibration permission, dynamic-color-ready theming, and real release/distribution metadata around a board-game app.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `MainActivity`, `AndroidManifest.xml`, `AppNavigation`, `app/build.gradle.kts`, and the CI workflow show a direct single-activity Android Compose app with modern SDK targets, lifecycle/view-model wiring, and an explicit JDK21 plus Android 36.1 validation path.
+- [andstatus-game2048](../findings/andstatus-game2048.md) - `MyMainActivity`, `PlatformUtilAndroid`, `FileProvider`, and `game2048-android/build.gradle` show direct Android activity replacement, cache-backed share-file export, document-picker loading, and a separate Android Studio app module reusing the shared KorGE/KMP game code.
 
 ## Performance And Memory
 
@@ -318,6 +324,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vitaviva-compose-tetris](../findings/vitaviva-compose-tetris.md) - `GameButton`, `MainActivity`, and the reducer-driven line-clear flow show a lightweight mobile-performance tradeoff: keep the runtime tiny, use input auto-repeat instead of a heavier gesture layer, and animate board transitions by swapping precomputed brick lists rather than recomputing game state every frame.
 - [jayasuryat-minesweeper-j-compose](../findings/jayasuryat-minesweeper-j-compose.md) - `GameViewModel`, `ActionListener`, and `Minefield` show practical mobile safeguards: disable cell animations for boards larger than `300` cells, keep pinch/pan state lightweight, and animate reveal waves from precomputed engine events rather than recomputing board state mid-animation.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `GameController`, `UserStorage`, `OrbitTrackerGame`, and the shared audio lifecycle hooks show pragmatic small-product performance choices: keep each mode self-contained, move heavier AI work off the main thread, and centralize route-driven audio/persistence state instead of duplicating product services per game.
+- [andstatus-game2048](../findings/andstatus-game2048.md) - `Board`, `PliesPageData`, `PresenterAsync`, and `History` show precomputed traversal links, a bounded in-memory page cache for long move histories, stale-result guards around background AI work, and async current-game persistence.
 
 ## Build, Release, And Testing
 
@@ -349,3 +356,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `build.gradle`, `app/build.gradle`, and `gradle-wrapper.properties` show a direct Android Groovy DSL build surface pinned to AGP `8.9.1`, Kotlin `1.8.22`, Gradle `8.11.1`, and Java/Kotlin target `17`; however no test directories are checked in and local `gradlew help` currently fails because the AGP classpath already needs Java `11+` while the lab machine still exposes Java `8`.
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `app/build.gradle.kts`, `gradle/libs.versions.toml`, `gradle/gradle-daemon-jvm.properties`, `.github/workflows/validate-android.yml`, and the `src/test` plus `src/androidTest` trees show a notably mature Android build surface with JDK21 daemon configuration, modern SDK targets, meaningful unit/UI tests, and CI that reaches formatting, lint, unit tests, and APK assembly; local dry-run validation in the lab currently stops only because no Android SDK is configured.
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `engine/build.gradle.kts`, `gradle/libs.versions.toml`, `.java-version`, and `.github/workflows/main-checks.yml` show a compact but serious engine-library build surface with ktlint, JUnit4 plus JUnit5 tests, JaCoCo coverage gates, Dokka, Sonatype publishing, and a real Java `17+` / `21` floor even though local discovery in the lab still fails on Java `8`.
+- [andstatus-game2048](../findings/andstatus-game2048.md) - `build.gradle.kts`, `game2048-android/build.gradle`, `PersistenceTest.kt`, `MovesTest.kt`, and `AiPlayerTest.kt` show a real KMP-plus-Android build surface with meaningful gameplay/history tests, but local discovery now needs Java `21` at the root and Java `11+` for the separate Android project.

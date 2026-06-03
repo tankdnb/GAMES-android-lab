@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-05-13`, `31` real GitHub research batches are completed end-to-end.
-- `37` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `32` real GitHub research batches are completed end-to-end.
+- `38` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `33`
+  - `accepted`: `34`
   - `reference-only`: `4`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `sgalluz/k2d` as an `accepted` desktop-first Compose Multiplatform 2D engine and architecture reference.
-- The latest accepted addition is `sgalluz/k2d`.
+- The latest researched addition is `andstatus/game2048` as an `accepted` direct Android puzzle-product reference with strong persistence, AI, and Android shell value.
+- The latest accepted addition is `andstatus/game2048`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
