@@ -3,14 +3,17 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `Efimj/GameOfLife`.
+- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `andstatus/game2048`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 
 ## Next Recommended
 
 - Prefer the current verified backlog before running another broad search:
-  - `Efimj/GameOfLife`
+  - `andstatus/game2048`
+  - `RajashekarRaju/hangman-compose`
+  - `MartianZoo/solarnet`
+  - `StudioAdriatic/PGSGP`
 - If `sgalluz/k2d` needs a future follow-up, rerun Gradle discovery and selected tests in a Java `17+` or `21` environment, or isolate the runtime-adapter boundary, the flat ECS shape, or the collision-response coverage instead of reopening the whole repository broadly.
 - If `CescFe/numpairs` needs a future follow-up, isolate the stable strip-entry identity model, the layered completion-state validator, or the accessibility-tested Compose editing flow, ideally in an Android SDK-ready environment instead of reopening the full repository broadly.
 - If `atillaturkmen/piano-tiles` needs a future follow-up, isolate the `SurfaceView` thread lifecycle, the device-height speed-normalization rule, or the queued-tile touch-hit-testing flow instead of reopening the full project broadly.

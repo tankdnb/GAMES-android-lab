@@ -107,3 +107,9 @@
 - Status: accepted
 - Why: finished research should become publicly available as part of the repository's normal operating cycle, not remain only in local history.
 - Implication: after each completed research batch, the durable outputs should be cleaned up, prepared for public readability, committed locally, and pushed to GitHub.
+
+## 2026-06-03 - Prefer explicit GitHub license metadata when refreshing the short backlog
+
+- Status: accepted
+- Why: the carry-over candidate `Efimj/GameOfLife` still exposed `licenseInfo: null` on GitHub during the latest shortlist review, and the team chose conservative reuse confidence over ambiguous licensing.
+- Implication: shortlist refreshes should prefer repositories with explicit license metadata and drop ambiguous-license candidates from the short backlog unless there is a stronger reason to inspect them anyway.

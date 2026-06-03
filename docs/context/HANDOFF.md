@@ -226,6 +226,8 @@
 - Recorded additional upstream caveats for `k2d`: the repository is still pre-alpha, has zero public signal, stays desktop-first in the inspected revision, uses naive `O(n^2)` collision scanning, and its README references a `docs/` directory that is not present in the tree.
 - Updated `README.md` and `docs/context/PROJECT_BRIEF.md` again so the public and internal project snapshots stay aligned after the thirty-first batch.
 - Cleaned the transient `k2d` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Re-verified that `Efimj/GameOfLife` still exposes `licenseInfo: null` on GitHub as of `2026-06-03`, so it was intentionally dropped from the short backlog instead of becoming the default next research target.
+- Refreshed `research/registry/CANDIDATE_QUEUE.md` with a cleaner licensed shortlist led by `andstatus/game2048`, followed by `RajashekarRaju/hangman-compose`, `MartianZoo/solarnet`, and `StudioAdriatic/PGSGP`.
 
 ## Known Risks
 
@@ -266,11 +268,12 @@
 - `sgalluz/k2d` is a useful lightweight engine reference, but it is still pre-alpha, has zero ecosystem signal, remains desktop-first in the inspected revision, currently exposes only naive `O(n^2)` collision handling, and still needs a Java `17+` or `21` environment for meaningful Gradle validation.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
+- A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
 
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- The current short carry-over backlog is now `Efimj/GameOfLife`; start from that verified candidate before doing another broad refresh.
+- The current short carry-over backlog is now led by `andstatus/game2048`; work through that refreshed licensed shortlist before doing another broad search.
 - If a future follow-up is needed for `k2d`, rerun Gradle discovery and selected tests in a Java `17+` or `21` environment, or isolate the runtime-adapter boundary, flat ECS shape, or collision-response coverage instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `numpairs`, rerun Android tasks in an SDK-ready environment or isolate the stable strip-entry identity model, the layered completion-state validator, or the accessibility-tested Compose editing flow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `piano-tiles`, focus on the `SurfaceView` thread lifecycle, the device-height speed-normalization rule, or the queued-tile touch-hit-testing flow instead of reopening the whole repository blindly.

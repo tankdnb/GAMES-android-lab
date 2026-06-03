@@ -50,9 +50,14 @@ Hard limit: no more than 4 new repositories at a time.
 
 Keep this short. Move only the strongest candidates here.
 
+Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was removed from the short backlog after re-verification showed `licenseInfo: null` on GitHub, and the team chose to prefer candidates with explicit license metadata for the next pass.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `Efimj/GameOfLife` | `android-game` | `2` | `2` | `2` | `2` | `86` | `2026-01-31` | Higher-signal direct Android Compose candidate with potential board-rendering and simulation value, but its missing explicit license metadata lowers reuse confidence | `exact repo verification after shortlist refresh` |
+| `andstatus/game2048` | `android-game` | `3` | `3` | `2` | `3` | `334` | `2025-11-29` | KorGE-based multiplatform 2048 with strong public signal, explicit Apache-2.0 licensing, and likely reusable patterns for input, persistence, progression, and cross-platform packaging | `permissive-license shortlist refresh + exact repo verification` |
+| `RajashekarRaju/hangman-compose` | `android-game` | `3` | `1` | `3` | `3` | `38` | `2026-03-12` | Active Compose Multiplatform game with a shared engine, DSL-driven word catalog, settings/history persistence, and stronger modern KMP product architecture value than the dropped license-ambiguous backlog candidate | `permissive-license shortlist refresh + exact repo verification` |
+| `MartianZoo/solarnet` | `engine-framework` | `2` | `1` | `3` | `3` | `16` | `2026-06-01` | Fresh Apache-2.0 board-game engine and specification-language repo with likely strong yield around rules modeling, DSL design, and engine-backed game state | `permissive-license shortlist refresh + exact repo verification` |
+| `StudioAdriatic/PGSGP` | `library-sdk` | `2` | `1` | `3` | `2` | `50` | `2026-06-02` | Active MIT Android Play Games Services plugin for Godot 4.x with clear value for Kotlin-side Android game-platform integration patterns such as sign-in, achievements, and services wiring | `permissive-license shortlist refresh + exact repo verification` |
 
 ## Status Legend
 
