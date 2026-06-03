@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `32` real GitHub research batches are completed end-to-end.
-- `38` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `33` real GitHub research batches are completed end-to-end.
+- `39` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `34`
+  - `accepted`: `35`
   - `reference-only`: `4`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `andstatus/game2048` as an `accepted` direct Android puzzle-product reference with strong persistence, AI, and Android shell value.
-- The latest accepted addition is `andstatus/game2048`.
+- The latest researched addition is `RajashekarRaju/hangman-compose` as an `accepted` Compose-first Android/KMP game-product reference with strong gameplay-core, persistence, and release-pipeline value.
+- The latest accepted addition is `RajashekarRaju/hangman-compose`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

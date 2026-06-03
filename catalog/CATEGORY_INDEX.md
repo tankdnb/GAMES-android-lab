@@ -20,6 +20,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Dooz](projects/yamin8000-dooz.md) - Android Jetpack Compose tic-tac-toe sample with controller-owned game state, heuristic AI difficulty, DataStore-backed settings, RTL-aware text handling, and a real F-Droid-ready product shell.
 - [NumPairs](projects/cescfe-numpairs.md) - Android arithmetic puzzle game with ADR-backed domain modeling, stable strip-entry identity, editable-run strip reordering, layered puzzle-completion states, accessible Compose editing flows, and a serious unit/UI test surface.
 - [Game 2048](projects/andstatus-game2048.md) - KorGE-based Kotlin Multiplatform 2048 product with reversible ply history, paged persistence, AI hint/autoplay modes, a separate Android app shell, and stronger-than-expected shared-core tests.
+- [Hangman Compose](projects/rajashekarraju-hangman-compose.md) - Compose Multiplatform hangman product with a pure session engine, DSL-authored word catalogs, reactive theme/language/settings shell, Room plus localStorage persistence seams, platform audio adapters, and wide packaging/test automation.
 
 ## engine-framework
 

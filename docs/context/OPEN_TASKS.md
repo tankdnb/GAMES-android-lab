@@ -3,16 +3,16 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `RajashekarRaju/hangman-compose`.
+- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `MartianZoo/solarnet`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 
 ## Next Recommended
 
 - Prefer the current verified backlog before running another broad search:
-  - `RajashekarRaju/hangman-compose`
   - `MartianZoo/solarnet`
   - `StudioAdriatic/PGSGP`
+- If `RajashekarRaju/hangman-compose` needs a future follow-up, rerun Gradle discovery or targeted tests in a JDK `17+` or `21` environment, or isolate the pure session engine, the word-catalog DSL, or the settings/history shell instead of reopening the full repository broadly.
 - If `andstatus/game2048` needs a future follow-up, rerun both the root and `game2048-android` Gradle surfaces in a Java `21` plus Android SDK-ready environment, or isolate the reversible history pipeline, the AI hint/autoplay split, or the Android share/load shell instead of reopening the full repository broadly.
 - If `sgalluz/k2d` needs a future follow-up, rerun Gradle discovery and selected tests in a Java `17+` or `21` environment, or isolate the runtime-adapter boundary, the flat ECS shape, or the collision-response coverage instead of reopening the whole repository broadly.
 - If `CescFe/numpairs` needs a future follow-up, isolate the stable strip-entry identity model, the layered completion-state validator, or the accessibility-tested Compose editing flow, ideally in an Android SDK-ready environment instead of reopening the full repository broadly.
