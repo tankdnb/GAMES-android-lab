@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `59` real GitHub research batches are completed end-to-end.
-- `65` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `60` real GitHub research batches are completed end-to-end.
+- `66` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `58`
-  - `reference-only`: `7`
+  - `reference-only`: `8`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `alexvanyo/composelife` as an `accepted` Android and Wear OS Game of Life reference with explicit evolving simulation state, HashLife or naive algorithm switching, AGSL or SKSL or OpenGL rendering paths, custom navigation, and WorkManager-backed pattern sync.
-- The latest accepted addition is `alexvanyo/composelife`.
+- The latest researched addition is `aleksrutins/platinum` as a `reference-only` compact Kotlin/JVM engine comparison with a tiny ECS-style loop, Swing/AWT rendering, rollback-based collision, and a callback-driven tilemap loader.
+- The latest accepted addition is still `alexvanyo/composelife`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

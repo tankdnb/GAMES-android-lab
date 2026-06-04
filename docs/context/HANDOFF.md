@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The fifty-ninth real research batch is now completed and documented end-to-end.
-- The lab now has 65 researched repositories recorded:
+- The sixtieth real research batch is now completed and documented end-to-end.
+- The lab now has 66 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -74,6 +74,7 @@
   - `Amigoconglomeration918/LinkGame` - `accepted`
   - `rogal01/tower-defense-android` - `accepted`
   - `alexvanyo/composelife` - `accepted`
+  - `aleksrutins/platinum` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -81,15 +82,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The current verified short backlog now leads with `aleksrutins/platinum`, followed by `yaroslavzghoba/KotCore` and `tottelofstrom/NFC-DOOM`.
+- The current verified short backlog now leads with `yaroslavzghoba/KotCore`, followed by `tottelofstrom/NFC-DOOM`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
 
-- Completed `BATCH-2026-06-04-AB` as a direct Android and Wear OS simulation-product pass for `alexvanyo/composelife`.
-- Added durable `ComposeLife` findings for explicit evolving simulation state, HashLife or naive algorithm switching, AGSL/SKSL/OpenGL rendering parity, Metro plus context-parameter DI, retained-entry navigation, and WorkManager-backed pattern sync.
-- Verified a new Windows-specific caveat in the research workflow: normal checkout fails because the repository contains `:`-named watchface solution resources; lightweight Gradle discovery was recovered through a sanitized tarball export, where `gradlew.bat --version` succeeds and `gradlew.bat help --no-daemon` still fails because the lab machine remains on Java `8` while upstream now needs Java `17+` and documents `JDK 21+`.
-- Refreshed the public and internal snapshot counts again so the repository now consistently reports `59` completed batches, `65` researched repositories, and a `58 accepted / 7 reference-only` split.
+- Completed `BATCH-2026-06-04-AC` as a compact engine-comparison pass for `aleksrutins/platinum`.
+- Added durable `Platinum` findings for the tiny system-typed component model, the timer-driven outer loop, Swing/AWT rendering, rollback-based collisions, and callback-driven tilemap entity loading, while keeping the repository only as `reference-only`.
+- Verified the main architectural caveat in the inspected runtime: `Scene` storage exists, but the renderer, camera, and collision paths still iterate only `baseEntities`, so scene switching is not actually integrated into the current engine flow.
+- Verified another recurring environment limit: `gradlew.bat --version` succeeds, but `gradlew.bat help --no-daemon` still fails because the lab machine remains on Java `8` while this build now needs Java `17+` and declares a JDK `21` toolchain.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `60` completed batches, `66` researched repositories, and a `58 accepted / 8 reference-only` split.
 - Added canonical memory entry point in `docs/context/CONTEXT_INDEX.md`.
 - Added durable memory files for project brief, open tasks, decisions, and session notes.
 - Kept `docs/context/project-overview.md` as a legacy alias instead of deleting or silently replacing it.
