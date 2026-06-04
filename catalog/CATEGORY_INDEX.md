@@ -44,6 +44,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Solarnet](projects/martianzoo-solarnet.md) - Kotlin JVM rules-engine workspace with a `Pets` specification language, Dagger-assembled runtime scopes, canonical content packs, REPL tooling, and unusually deep parser, invariant, and full-game test coverage.
 - [KRender](projects/dmytro-pashko-krender.md) - Kotlin engine-and-toolset workspace with a backend-neutral runtime core, LibGDX backend, serialized runtime scenes, terrain/runtime pipelines, built-in editor scenes, and a real Android app module.
 - [Canopy](projects/canopyengine-canopy.md) - compact Kotlin node-driven engine with a reusable app shell, DSL-built node tree, phased scene processing, modular saves, backend-bound input mapping, and a notably strong headless devtools test harness, even though its checked-in desktop rendering path is currently excluded from the active build.
+- [Materia](projects/codeyousef-materia.md) - Kotlin Multiplatform 3D engine stack with a scene-first hierarchy, explicit GPU abstraction modules, clone-on-read glTF asset reuse, WGSL shader tooling, Android host paths across wgpu and Filament, and serious validation/benchmark discipline despite an in-progress renderer transition.
 
 ## rendering-demo
 

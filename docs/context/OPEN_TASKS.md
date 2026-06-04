@@ -3,7 +3,7 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new explicit-license shortlist before the next research batch.
+- Execute the current verified shortlist in `research/registry/CANDIDATE_QUEUE.md` before running another broad search.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
@@ -11,7 +11,11 @@
 ## Next Recommended
 
 - Prefer the current verified backlog before running another broad search:
-- The verified short backlog is currently exhausted after `vitaviva/ugame`; rebuild it before starting the next batch.
+- `Quillraven/Fleks`
+- `libgdx/gdx-liftoff`
+- `Mesabloo/hm-defense`
+- `edezadev/la-bomba`
+- If `codeyousef/Materia` needs a future follow-up, rerun Gradle discovery or selected Android/JVM tasks in a JDK `22` plus Android SDK-ready environment, or isolate the dual renderer-stack boundary, the Filament/wgpu Android split, the GLTF cache/loader pipeline, or the validation/benchmark workflow instead of reopening the whole repository broadly.
 - If `vitaviva/ugame` needs a future follow-up, rerun targeted Android tasks in an SDK-ready environment and isolate the Camera2 face-detection mapping, the layered custom-view rendering stack, or the controller-owned score/collision loop instead of reopening the whole repository broadly.
 - If `canopyengine/canopy` needs a future follow-up, rerun the active test surface in a JDK `17+` or `21` environment and isolate the node/behavior runtime, the scene/tree-system ownership model, the save/input seam, or the excluded desktop rendering path instead of reopening the whole repository broadly.
 - If `joaomanaia/newquiz` needs a future follow-up, rerun build and selected tests in a JDK `17+` Android SDK-ready environment with the required `google-services.json`, or isolate the generated maze meta-mode, the central user/progression service, or the `normal` / `foss` build split instead of reopening the full repository broadly.

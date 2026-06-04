@@ -113,3 +113,9 @@
 - Status: accepted
 - Why: the carry-over candidate `Efimj/GameOfLife` still exposed `licenseInfo: null` on GitHub during the latest shortlist review, and the team chose conservative reuse confidence over ambiguous licensing.
 - Implication: shortlist refreshes should prefer repositories with explicit license metadata and drop ambiguous-license candidates from the short backlog unless there is a stronger reason to inspect them anyway.
+
+## 2026-06-04 - Exact repository-level `licenseInfo` verification outranks search-index license hints
+
+- Status: accepted
+- Why: during the shortlist refresh before `BATCH-2026-06-04-M`, GitHub search results and exact repository metadata did not always agree about license state.
+- Implication: use exact repository-level verification, ideally through GraphQL or `gh repo view`, before a candidate enters the short backlog for public research intake.

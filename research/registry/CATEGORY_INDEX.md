@@ -53,6 +53,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `AppNavGraphs`, `MainViewModel`, the App Startup initializers, and `ComparisonQuizCoreImpl` show a Compose-first Android game product where typed navigation, root meta-state, startup-owned workers, and per-mode gameplay cores stay modular without a separate engine layer.
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `App`, `Node`, `Behavior`, `SceneManager`, and `TreeSystem` show a small engine built around a DSL-created node tree, attached behaviors, centralized scene ownership, and phase-based tree processing instead of a heavier ECS-first runtime.
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `FullscreenActivity` and `GameController` show a very direct Android game shell where camera bootstrap, layered views, score flow, collision polling, and replay handling stay centralized instead of leaking across custom views.
+- [codeyousef-materia](../findings/codeyousef-materia.md) - `Object3D`, `Scene`, `RenderLoop`, and `EngineRenderer` show a scene-first 3D runtime with dirty-flagged transforms, explicit root-scene state, platform-specific loop seams, and a newer engine renderer that deliberately bypasses the older root renderer stack.
 
 ## Rendering And Graphics
 
@@ -97,6 +98,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - the Compose-first screen tree plus `WordleScreenTest` show a useful counterpoint to engine-heavy repos: boards, keyboards, overlays, and route transitions stay inside normal Android UI primitives and remain testable through semantics-aware Compose UI tests.
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `HeadlessHost`, `HeadlessApp`, `TerminalApp`, and the excluded `platforms/desktop` render path show a useful host/runtime separation pattern, while also serving as a caution that the repository's graphics-facing code is less trustworthy than the active engine core.
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `BackgroundView`, `Bar`, `ForegroundView`, and `BoatView` show a compact Android-native render stack built from layered overlay views, bitmap slicing, `Canvas` drawing, and smoothed sprite movement above a live camera preview.
+- [codeyousef-materia](../findings/codeyousef-materia.md) - `Renderer`, `EngineRendererImpl`, `GpuCoreJvm`, and `LODGenerator` show a scene-first 3D graphics stack with backend-aware WebGPU/Vulkan/WebGL contracts, cached FXAA/offscreen resources, Vulkan-first JVM GPU initialization, and built-in mesh LOD generation.
 
 ## Gameplay Systems
 
@@ -320,6 +322,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [johron-glare](../findings/johron-glare.md) - `Editor`, `ExplorerPanel`, `PropertiesPanel`, `generateConstants`, and the split engine/editor jar tasks show a compact project where editor inspection, reflection-driven property editing, code generation, and packaging discipline are all kept close to the runtime instead of being bolted on later.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `AssetBrowserScene`, `SceneEditorScene`, and `SceneSerializer` show a stronger-than-usual small-engine tooling surface: local asset browsing, tool dispatch, editable serialized scenes, and one shared content/runtime model for both tools and runtime scenes.
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `tooling/devtools` and `AppTestDriver` show that even a small engine benefits from a dedicated headless test harness instead of relying only on helper-level unit tests.
+- [codeyousef-materia](../findings/codeyousef-materia.md) - `GLTFLoader`, `GLTFAssetCache`, `compileShaders`, and `materia-validation` show a mature-looking asset/tooling pipeline around clone-on-read glTF reuse, WGSL-to-SPIR-V shader compilation, benchmark publication, and explicit validation/report generation.
 
 ## Android Platform Integration
 
@@ -356,6 +359,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [queuejw-space](../findings/queuejw-space.md) - `MainActivity`, `DreamUniverse`, `WindowInfoTracker` usage, `AndroidManifest.xml`, and `UniverseProgressNotifier` show an Android-only product shell with foldable posture handling, `DreamService` hosting, PLATLOGO launcher wiring, and Android 16 live progress notifications around an in-flight game session.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `android/build.gradle`, `LibGdxBackend`, and the shared module layout show a real Android host path around one engine core, including Android app packaging, asset/native preparation tasks, and a deliberate split between desktop ImGui tooling and Android runtime capabilities.
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `WorkManagerInitializer`, `EnqueueStartWorksInitializer`, the app shell, and the convention plugins show direct Android ownership of startup scheduling, Hilt worker injection, Compose navigation, and `normal` / `foss` distribution flavors rather than treating Android as a thin wrapper.
+- [codeyousef-materia](../findings/codeyousef-materia.md) - `AndroidWgpuRenderer`, `GpuContext.android`, `EngineRendererPlatform.android`, and the Android example activities show a direct but transitional Android path where wgpu/Vulkan renderers, reflective native bridges, and Filament-backed `SurfaceView` hosts all coexist inside the same engine effort.
 
 ## Performance And Memory
 
@@ -388,6 +392,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `GameViewModel`, `RoomGameSettingsRepository`, and the platform repositories show a practical small-product pattern: keep rules pure, move longer-lived timers and transitions into the VM, and mirror product settings through flows instead of recomputing them inside screens.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `EngineRuntime`, `CommandBuffer`, `GdxAssetService`, and the terrain/runtime-texture path show a sensible baseline strategy around fixed-step updates, deferred world mutation, cached model metadata/bounds/previews, and generated runtime terrain assets instead of repeated heavyweight reload work.
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `settings.gradle.kts`, `.github/workflows/android.yml`, the convention plugins, and the visible `73`-file test surface show a notably mature Android casual-game workflow with modular builds, flavor-specific assembly, repository/worker/gameplay-core tests, and Compose instrumentation coverage even though local validation in this lab still stops at a missing JDK.
+- [codeyousef-materia](../findings/codeyousef-materia.md) - `Object3D`, `GLTFAssetCache`, `EngineRendererImpl`, and the benchmark tasks show a practical 3D-engine performance posture built around transform dirtiness, clone-on-read asset reuse, cached post-process resources, and built-in benchmark capture instead of ad hoc measurement.
 
 ## Build, Release, And Testing
 
@@ -430,3 +435,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [johron-glare](../findings/johron-glare.md) - `build.gradle`, `.github/workflows/gradle.yml`, `generateConstants`, and the `buildEngine` plus main `jar` tasks show a small but disciplined JVM build that can configure cleanly in the lab and emits separate engine/editor artifacts, even though the checked-in verification surface is still mostly demo-oriented and upstream expects JDK `22`.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `gradle/gradle-daemon-jvm.properties`, the multi-module build scripts, and the focused `core` tests show a relatively healthy experimental-engine workflow: explicit toolchain expectations, working `gradlew help`, successful `:core:test --dry-run`, and real verification around runtime scenes, runtime UI, terrain pipeline, and scene serialization.
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `build.gradle.kts`, `settings.gradle.kts`, `.github/workflows/build.yml`, and the engine/devtools tests show a compact but serious engine workflow with working local Gradle discovery, passing targeted tests, and explicit JDK/toolchain intent even though top-level docs still drift on version, license, and active module scope.
+- [codeyousef-materia](../findings/codeyousef-materia.md) - `build.gradle.kts`, `gradle.properties`, `materia-validation/build.gradle.kts`, and `.github/workflows/publish.yml` show a serious but still transitional engine workflow around Kotlin `2.2.20`, AGP `8.12.3`, JDK `22`, selected wired tests, validation gates, and publish-on-main automation even though local discovery in the lab still stops at a missing JDK.

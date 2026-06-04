@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `43` real GitHub research batches are completed end-to-end.
-- `49` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `44` real GitHub research batches are completed end-to-end.
+- `50` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `43`
+  - `accepted`: `44`
   - `reference-only`: `6`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `vitaviva/ugame` as an `accepted` Android custom-View mini-game with Camera2 face-detection input, layered overlay rendering, and a compact controller-owned score/collision loop.
-- The latest accepted addition is `vitaviva/ugame`.
+- The latest researched addition is `codeyousef/Materia` as an `accepted` Kotlin Multiplatform 3D engine stack with a scene-first hierarchy, clone-on-read glTF caching, and a transitional Android renderer story across wgpu-oriented and Filament-backed hosts.
+- The latest accepted addition is `codeyousef/Materia`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
