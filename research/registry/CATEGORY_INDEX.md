@@ -62,6 +62,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `plugin.xml`, `build.gradle.kts`, and `LibGDXProjectFileSubstitutions.kt` show a clean tooling architecture where generated PSI, references, inspections, settings, and UI helpers are kept as separate plugin capability families instead of one monolithic parser layer.
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `State`, `StateAdapter`, `StateManager`, and `WorldConfig` show a compact libGDX state runtime with centralized camera/viewport ownership and transition hooks, while also exposing a useful caution that the null-transition handoff path still needs fixing before production use.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `Game`, `LoadingScreen`, `Screen`, `MenuScreen`, and `GameScreen` show a compact LibGDX/Ashley game shell with staged async asset loading, one shared engine reused across menu and gameplay, and system toggling instead of multiple runtime loops.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `PlaneRound`, `ComputerLogic`, `MultiplayerRound`, `MainActivity`, and `PlanesNavigation` show a direct Android game shell where a portable board-game core, a multiplayer wrapper, and a drawer-routed Compose product shell stay separate across a mixed-generation codebase.
 
 ## Rendering And Graphics
 
@@ -113,6 +114,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `TransitionFBO`, `Fade`, and `HorizontalSlide` show a compact render-to-texture state-transition pattern where whole screens are captured into FBOs and blended as plain textures instead of letting transition code reach into gameplay rendering.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `RenderSystem`, `AnimationSystem`, and `TransformComponent` show sorted z/y sprite rendering, speed-reactive repeated-background scrolling, cached atlas animation dispatch, and a dedicated shield-outline shader pass over the player entity.
 - [benpollarduk-ktaf](../findings/benpollarduk-ktaf.md) - `FrameBuilderCollection`, the ANSI builders, the HTML builders, and the grid-map builders show a frame-oriented presentation model where scenes, maps, and conversation screens can be rendered through different hosts without touching gameplay code.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `GridSquareGame`, `GameScreenSinglePlayer`, and `BoardEditingScreenSinglePlayer` show a lightweight Compose `Canvas` board renderer with annotation-driven square styling, hit/dead overlays, and orientation-aware layout around the active board.
 
 ## Gameplay Systems
 
@@ -152,6 +154,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `GenerateMazeQuizWorker`, `MazeCategories`, `WordleRepositoryImpl`, `ComparisonQuizCoreImpl`, and `DailyChallengeRepositoryImpl` show a broader casual-gameplay stack with generated maze runs, several Wordle-like rule variants, shared event-driven daily goals, and a mode-specific comparison-quiz core.
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `IntervalSystem`, `IteratingSystem`, `Family`, and `OneShotComponentSystem` show an unusually reusable gameplay-core layer where fixed-step updates, interpolation hooks, sorted family iteration, and transient one-shot tags and components are all first-class instead of ad hoc patterns.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `engine.kt`, `MoveSystem`, `PowerUpSystem`, `DamageSystem`, and `RemoveSystem` show a compact arcade-gameplay layer with attached exhaust entities, fixed-step interpolated movement, patterned pickup waves, shield-first hazard damage, and delayed death cleanup routed through events.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `ComputerLogic`, `PlaneRound`, and `PlaneGridViewModel` show a reusable board-game rules core with scored head-orientation inference, validated plane placement, show-plane-after-kill reveal logic, and asynchronous move reconciliation for multiplayer rounds.
 
 ## Input And Controls
 
@@ -194,6 +197,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `PlatformInputAndroid`, `TouchGestureEvaluator`, and `KoolSurfaceView` show a solid cross-platform input seam with shared pointer events, Android keyboard bridging, and built-in pinch plus two-finger-drag gesture handling.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `PlayerInputSystem`, `GameScreen`, and `MenuScreen` show a tiny but reusable Android-friendly input model where one pointer-follow control path works for mouse or touch, gameplay waits for an initial tap, and menu interactions remain separate from ECS movement logic.
 - [benpollarduk-ktaf](../findings/benpollarduk-ktaf.md) - `InputInterpreter`, `MovementCommandInterpreter`, and `Game.displayHelp()` show layered command parsing with contextual command help that is derived from current exits or conversation state instead of being hardcoded in the UI.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `BoardEditingScreenSinglePlayer`, `GameScreenSinglePlayer`, and `PlaneGridViewModel` show a good board-game input seam where taps select planes, long-press rotates, drags translate in grid-sized steps, and guesses stay explicit board taps instead of hidden gesture overload.
 
 ## UI, HUD, And Menus
 
@@ -209,6 +213,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-quilly-s-adventure](../findings/quillraven-quilly-s-adventure.md) - `GameHUD`, `GameScreen`, and `Screen` show a touch-first mobile HUD, portrait-driven stats overlay, and dialog-controlled simulation pause without splitting the runtime into separate UI and gameplay loops.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `GameScene`, `WndHero`, and `WndJournal` show layered in-game UI composition, tabbed hero sheets, and depth-aware journal/catalog flows.
 - [mariodujic-neon](../findings/mariodujic-neon.md) - `GameScreen`, `StatusIndicator`, `GamePauseDialog`, and the navigation flow show a Compose HUD/world split with a dialog-route pause overlay instead of a second activity or fragment shell.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `MainActivity`, `PlanesNavigation`, `VideoModelRepository`, and the screen modules show a richer-than-usual board-game shell with drawer-routed login, register, chat, multiplayer, tutorial, and preferences surfaces wrapped around the actual play boards.
 - [wajahatkarim3-dinocompose](../findings/wajahatkarim3-dinocompose.md) - `HighScoreTextViews`, `GameOverTextView`, and `drawBoundingBox` show a tiny score HUD, replay affordance, and runtime hitbox overlay that can be toggled without a separate debug screen.
 - [minigdx-minigdx](../findings/minigdx-minigdx.md) - `Game.createDebugRenderStage()`, `ImGuiRenderStage`, `BoundingBoxRenderStage`, and the text-component helpers show built-in debug overlay and sprite-font text capabilities instead of leaving them as game-local utilities.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `OreClient`, `InventoryView`, `HotbarInventoryView`, and `GeneratorControlPanelView` show a VisUI/Scene2D shell with drag-and-drop item movement, hotbar selection, chat/HUD layering, and device-specific fuel controls.
@@ -316,6 +321,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `World.snapshot`, `loadSnapshot`, and `SerializationTest.kt` show a strong ECS persistence seam where polymorphic components and tags can round-trip through serialized snapshots instead of each game inventing save and load from scratch.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `GameSave`, `build-info.json`, `special-info.json`, and `upgrades.json` show a compact progression/data seam where slot unlocks, upgrade levels, special counts, and production balance are externalized instead of being scattered through UI code.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `FirebaseAuthManager`, `FirestoreConfig`, `PenaltyDbManager`, `PlayerDbManager`, and `TopicDbManager` show anonymous-auth per-user Firestore collections with offline cache, live snapshot sync, and background-paged topic loading.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `DataStoreModule`, `PreferencesViewModel`, `RoomModule`, `ChatDao`, `NewMessagesDao`, and the chat repositories show a simple but useful split between preference persistence, local unread-message flags, and cached chat history.
 
 ## Networking And Multiplayer
 
@@ -326,6 +332,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `Network`, `ServerNetworkSystem`, `ClientNetworkSystem`, and `ServerNetworkEntitySystem` show block-region snapshots, sparse block deltas, batched entity spawn/destroy, inventory sync, and bidirectional network-id/local-id mapping for ECS entities.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `NetworkClientImpl`, `NetworkServerImpl`, and `NetworkCodec` show typed TCP/UDP channels, Kryo-based sealed-type registration, UDP handshake validation, ping tracking, queue backpressure handling, and per-channel traffic metrics.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `PenaltyDbManager`, `PlayerDbManager`, and `TopicDbManager` show a subtle but useful distinction: Firebase supplies live synced setup content and offline-aware reads, while the actual game session remains local pass-the-device rather than real-time multiplayer.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `RetrofitModule`, `PlanesUserApi`, `PlanesGameApi`, `CreateViewModel`, and `ComputerGridViewModelMultiPlayer` show a pragmatic Android turn-based multiplayer shell built on REST polling, indexed move reconciliation, chat polling, and locally cached unread-message flags instead of a socket-first design.
 
 ## Tooling And Content Pipeline
 
@@ -368,6 +375,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `AssetReferenceProvider`, `KotlinReferenceContributor`, `FileReference`, and the custom file-type stack show how `@GDXAssets`, `Skin`, `TextureAtlas`, Skin JSON, atlas, bitmap-font, and gdxAI tree files can all participate in one coherent asset-aware IDE workflow.
 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `ProjectFiles`, `enableAndroidPlatform`, and `disableAndroidPlatform` show a practical engine-tooling pattern where editor output lives in `src/commonMain` resources and Android support can be toggled on only when the local environment is ready for it.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `fastlane/Fastfile`, `fastlane/Appfile`, and the localized Play metadata tree show that even a small Android game benefits from checked-in deploy lanes, store text, feature graphics, and screenshots instead of leaving release packaging undocumented.
 
 ## Android Platform Integration
 
@@ -410,6 +418,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `BaseActivity`, `MainActivity`, `AndroidManifest.xml`, and `AdsManager` show a direct Android shell with edge-to-edge activity chrome, anonymous Firebase bootstrap, AdMob wiring, offline snackbar handling, and a sample-app-ID caveat worth documenting.
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `KoolContextAndroid`, `KoolConfigAndroid`, `KoolSurfaceView`, `PlatformInput.android.kt`, and `Assets.android.kt` show a real Android host with preserved GL context, density-aware UI scaling, platform asset decoding, and explicit unsupported-feature boundaries.
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `OpenGLESDirectiveInspection` and the XML inspection set show a useful Android-tooling pattern: encode real libGDX manifest pitfalls such as missing `glEsVersion` or unsafe external-file assumptions directly inside the IDE instead of leaving them to runtime failures.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `PlanesApplication`, `MainActivity`, `AndroidManifest.xml`, `VideoModelRepository`, and the fastlane/release metadata show a direct Android product shell with Hilt, edge-to-edge Compose hosting, tutorial-media integration, and a real Play/F-Droid distribution surface rather than a code-only demo.
 
 ## Performance And Memory
 
@@ -498,3 +507,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - root convention plugins, Android enable/disable tasks, and the `build.yml` plus `publish.yml` workflows show a strong multiplatform engine workflow with opt-in Android configuration, JDK `25` CI, and a focused core test surface, even though local discovery in this lab still stops at Java `8`.
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - the split helper modules, legacy Travis plus JitPack surface, successful `gradlew help` and `test --dry-run` runs, and the tiny `ImageHelperTests` file show a readable but clearly old build workflow whose main gap is not configuration anymore, but the lack of a full JDK and the almost nonexistent test depth.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `build.gradle.kts`, `buildSrc/Versions.kt`, `.github/workflows/build.yml`, and the local `gradlew help` failure show a readable Kotlin `1.4` / AGP `4` / JDK8-era workflow where upstream CI still expects a full JDK `8`, while local discovery in this lab stops because the machine is running only a Java `8` JRE without compiler tools.
+- [xxxcucus-planes](../findings/xxxcucus-planes.md) - `kotlin/PlanesCompose/app/build.gradle.kts`, `kotlin/PlanesAndroid/app/build.gradle`, `fastlane/Fastfile`, and the legacy Android/C++ test trees show a mixed but informative build story: modern Compose Android configuration with a missing checked-in wrapper, older Android verification that still matters, and a real release surface through fastlane and store metadata.

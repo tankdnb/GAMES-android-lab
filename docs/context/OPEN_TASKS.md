@@ -3,14 +3,15 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Refresh the short backlog after finishing `benpollarduk/ktaf`; the previous exact-license shortlist is now exhausted.
+- Continue the current exact-license shortlist; next candidate is `roomsmith-games/NeoMud`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
 
 ## Next Recommended
 
-- Refresh the shortlist before the next batch starts.
+- Keep the current shortlist compact and prefer exhausting it before doing another broad refresh.
+- If `xxxcucus/planes` needs a future follow-up, first restore or verify the current `PlanesCompose` wrapper/toolchain path, or isolate the `PlaneRound` plus `ComputerLogic` core, the polling-based multiplayer shell, or the migration delta between `PlanesAndroid` and `PlanesCompose` instead of reopening the whole repository broadly.
 - If `benpollarduk/ktaf` needs a future follow-up, rerun Gradle discovery or selected tests in a JDK `11+` environment, or isolate the frame-builder plus IO seam, the jar-discovery path, or the room/item/conversation parser surface instead of reopening the whole repository broadly.
 - If `Quillraven/Dark-Matter` needs a future follow-up, rerun `clean build` and `detekt` in a full JDK `8` environment, or isolate the Ashley ECS shell, `MoveSystem`, `RenderSystem`, or code-driven Scene2D HUD/menu layer instead of reopening the whole repository broadly.
 - If `ImXico/cyberpunk` needs a future follow-up, rerun `test` in a full JDK-backed environment, or isolate the `StateManager` handoff/transition seam or the Box2D builder layer instead of reopening the whole repository broadly.

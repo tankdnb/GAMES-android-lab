@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The fifty-third real research batch is now completed and documented end-to-end.
-- The lab now has 59 researched repositories recorded:
+- The fifty-fourth real research batch is now completed and documented end-to-end.
+- The lab now has 60 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -68,6 +68,7 @@
   - `ImXico/cyberpunk` - `accepted`
   - `Quillraven/Dark-Matter` - `accepted`
   - `benpollarduk/ktaf` - `accepted`
+  - `xxxcucus/planes` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -365,10 +366,16 @@
 - Classified `benpollarduk/ktaf` as `accepted` because it complements `ktvn` instead of duplicating it, with a narrower but still reusable parser-driven adventure architecture around rooms, items, exits, conversations, and swappable hosts.
 - Verified that `cmd /c gradlew.bat --version` succeeds for the inspected wrapper, but `help --no-daemon` still fails in this lab because the configured SonarQube plugin path resolves Java `11` variants while the machine still exposes Java `8`.
 - Cleaned the transient `benpollarduk/ktaf` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Refreshed `research/registry/CANDIDATE_QUEUE.md` with a new exact-license-verified shortlist led by `xxxcucus/planes`, followed by `roomsmith-games/NeoMud`, `Baret/pltcmd`, `Amigoconglomeration918/LinkGame`, and `rogal01/tower-defense-android`.
+- Completed `BATCH-2026-06-04-W` as an Android-game pass for `xxxcucus/planes`.
+- Added durable `Planes` findings for the portable `PlaneRound` rules core, scored `ComputerLogic` inference AI, REST-polled multiplayer/chat shell, gesture-driven Compose board editing, local Room/DataStore state, and a real Play/F-Droid release surface.
+- Classified `xxxcucus/planes` as `accepted` because it is a direct Android Kotlin game reference with a reusable board-game core, a current Compose rewrite, preserved legacy regression coverage, and a pragmatic product shell that is more transferable than its zero-engine framing suggests.
+- Recorded that the current `PlanesCompose` build is not reproducible from a fresh clone because the checked-in `gradlew.bat` has no companion wrapper files under `kotlin/PlanesCompose/gradle/wrapper/`, even though the repository remains strong as a static Android gameplay and product-shell reference.
+- Cleaned the transient `xxxcucus/planes` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 50 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 54 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -422,6 +429,7 @@
 - `ImXico/cyberpunk` is a useful compact libGDX helper reference, but it is stale, built on a legacy `jcenter()` plus Travis-era stack, has only a tiny test surface, and its central `StateManager` path currently has verified handoff/transition correctness issues.
 - `Quillraven/Dark-Matter` is a useful compact direct Android LibGDX reference, but it is stale, built on older AGP `4.0.2` plus Kotlin `1.4.10` tooling with `jcenter()`, has no visible automated tests beyond build plus `detekt`, and is narrower than the lab's richer gameplay-heavy Android references.
 - `benpollarduk/ktaf` is a useful Kotlin parser-driven narrative and exploration reference, but it is JVM-only, intentionally text-adventure-specific, and its Ktor example host relies on singleton state plus polling loops while meaningful local Gradle validation still needs at least Java `11`.
+- `xxxcucus/planes` is a useful direct Android game reference, but the current Compose rewrite still has placeholder tests, carries visible TODO and migration residue, and is not build-reproducible from a fresh clone until its missing wrapper files are restored.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -429,7 +437,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Refresh the shortlist again; the previous exact-license candidate set is now exhausted after `benpollarduk/ktaf`.
+- Continue the refreshed exact-license shortlist; next candidate is `roomsmith-games/NeoMud` unless a stronger explicit-license Kotlin game repo appears during the next refresh.
+- If a future follow-up is needed for `xxxcucus/planes`, first restore or verify the current `PlanesCompose` wrapper/toolchain path, or isolate the `PlaneRound` plus `ComputerLogic` core, the polling-based multiplayer shell, or the migration delta between `PlanesAndroid` and `PlanesCompose` instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `benpollarduk/ktaf`, rerun Gradle discovery or selected tests in a JDK `11+` environment, or isolate the frame-builder plus IO seam, the jar-discovery path, or the room/item/conversation parser surface instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Quillraven/Dark-Matter`, rerun `clean build` and `detekt` in a full JDK `8` environment, or isolate the Ashley ECS shell, fixed-step `MoveSystem`, `RenderSystem`, or code-driven Scene2D HUD/menu layer instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `ImXico/cyberpunk`, rerun `test` in a full JDK-backed environment, or isolate the `StateManager` handoff/transition seam or the Box2D builder layer instead of reopening the whole repository blindly.

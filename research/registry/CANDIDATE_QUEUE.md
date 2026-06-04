@@ -67,6 +67,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-T` | `ImXico/cyberpunk` | `library-sdk` | `2` | `1` | `0` | `2` | `78` | `2020-04-15` | MIT libGDX helper library with state-management, Box2D, transition, and camera abstractions that may still yield portable Kotlin gameplay-runtime patterns despite stale code activity | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-U` | `Quillraven/Dark-Matter` | `android-game` | `3` | `1` | `0` | `3` | `55` | `2023-02-05` | MIT Android/Desktop LibGDX + LibKTX + Ashley autoscroller with likely reusable ECS, input, and level-flow patterns that complement the already researched `Quilly-s-Adventure` sample from the same author | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-V` | `benpollarduk/ktaf` | `library-sdk` | `1` | `1` | `1` | `2` | `13` | `2025-05-08` | MIT Kotlin text-adventure framework that may complement the already researched `ktvn` runtime with a simpler narrative-engine baseline and a narrower text-adventure-specific architecture surface | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
+| `BATCH-2026-06-04-W` | `xxxcucus/planes` | `android-game` | `3` | `1` | `3` | `3` | `42` | `2026-06-03` | MIT Android battleship-variant game with current Kotlin app, multiplayer support, F-Droid/Play deployment, and a stronger mix of Android relevance, recency, and reusable gameplay/runtime patterns than the remaining refreshed shortlist | `done` | `explicit-license shortlist refresh + exact repository view verification + README screening` |
 
 ## Backlog Candidates
 
@@ -74,12 +75,14 @@ Keep this short. Move only the strongest candidates here.
 
 Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was removed from the short backlog after re-verification showed `licenseInfo: null` on GitHub, and the team chose to prefer candidates with explicit license metadata for the next pass.
 
-Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-R`. The shortlist below keeps only candidates that passed exact repository-level license verification, not just GitHub search-index metadata.
-
-The previous shortlist is now exhausted after `BATCH-2026-06-04-V`; refresh this section before the next batch starts.
+Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-W`. The shortlist below keeps only candidates that passed exact repository-level license verification, not just GitHub search-index metadata.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
+| `roomsmith-games/NeoMud` | `android-game` | `2` | `1` | `3` | `3` | `9` | `2026-06-03` | Fresh MIT Kotlin multiplatform MUD project with Ktor WebSocket server and Compose Android client; likely to yield reusable networking, shared-state, and Android host-shell patterns even if it leans more product than engine | `explicit-license shortlist refresh + exact repository view verification` |
+| `Baret/pltcmd` | `android-game` | `2` | `1` | `3` | `2` | `4` | `2026-06-03` | Fresh MIT tactical game with Kotlin code and unusual radio-command interaction model that may expose reusable input, simulation, or command-queue patterns | `explicit-license shortlist refresh + exact repository view verification` |
+| `Amigoconglomeration918/LinkGame` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-04` | Fresh MIT Android puzzle game with challenge and endless modes, audio, leaderboards, and nickname support; worth keeping as a direct Android product-shell fallback after the stronger current candidates | `explicit-license shortlist refresh + exact repository view verification` |
+| `rogal01/tower-defense-android` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-03` | Fresh MIT Android tower-defense candidate with low public signal but direct platform relevance; kept only as a reserve behind the better-documented shortlist entries | `explicit-license shortlist refresh + exact repository view verification` |
 
 ## Status Legend
 
