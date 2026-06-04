@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `61` real GitHub research batches are completed end-to-end.
-- `67` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `62` real GitHub research batches are completed end-to-end.
+- `68` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `58`
+  - `accepted`: `59`
   - `reference-only`: `9`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `yaroslavzghoba/KotCore` as a `reference-only` Kotlin Multiplatform engine scaffold whose main current value is publication-first target and release setup rather than actual engine code.
-- The latest accepted addition is still `alexvanyo/composelife`.
+- The latest researched addition is `tottelofstrom/NFC-DOOM` as an `accepted` Android Compose raycaster whose strongest reusable value is the combination of a low-resolution software renderer, a strict tiny cartridge format, and raw `NfcV` fallback for unreliable tags.
+- The latest accepted addition is also `tottelofstrom/NFC-DOOM`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

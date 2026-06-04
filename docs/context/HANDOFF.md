@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The sixty-first real research batch is now completed and documented end-to-end.
-- The lab now has 67 researched repositories recorded:
+- The sixty-second real research batch is now completed and documented end-to-end.
+- The lab now has 68 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -76,6 +76,7 @@
   - `alexvanyo/composelife` - `accepted`
   - `aleksrutins/platinum` - `reference-only`
   - `yaroslavzghoba/KotCore` - `reference-only`
+  - `tottelofstrom/NFC-DOOM` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -83,16 +84,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The current verified short backlog is now led by `tottelofstrom/NFC-DOOM`.
+- The exact-license short backlog is currently exhausted and should be refreshed before the next batch.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
 
-- Completed `BATCH-2026-06-04-AD` as a tiny KMP engine-scaffold pass for `yaroslavzghoba/KotCore`.
-- Added durable `KotCore` findings for publication-first multiplatform scaffolding, Android-library target declaration, Maven Central metadata, and PR version-guard automation, while keeping the repository only as `reference-only`.
-- Verified the most important maturity caveat in the inspected tree: `kotcore/src/commonMain/kotlin/Main.kt` contains only a package declaration, so the advertised grid-engine and Compose Canvas runtime are still aspirational rather than implemented.
-- Verified another recurring environment limit: `gradlew.bat --version` succeeds, but `gradlew.bat help --no-daemon` still fails because the lab machine remains on Java `8` while this build already requires Java `17+` and publishes on JDK `21`.
-- Refreshed the public and internal snapshot counts again so the repository now consistently reports `61` completed batches, `67` researched repositories, and a `58 accepted / 9 reference-only` split.
+- Completed `BATCH-2026-06-04-AE` as a direct Android raycaster/NFC-cartridge pass for `tottelofstrom/NFC-DOOM`.
+- Added durable `NFC-DOOM` findings for a low-resolution Compose-hosted software raycaster, a strict `1000`-byte cartridge format, raw ISO 15693 `NfcV` fallback, optional non-NFC demo mode, and a no-network Android shell.
+- Verified the current build caveat for this batch: `gradlew.bat --version` succeeds, but both `help --no-daemon` and `:app:testDebugUnitTest --dry-run` fail immediately because the lab machine still exposes only a Java `8` JRE without compiler tools, while upstream expects a full JDK `17`.
+- Exhausted the current exact-license shortlist again; the next research cycle should refresh `research/registry/CANDIDATE_QUEUE.md` before opening another batch.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `62` completed batches, `68` researched repositories, and a `59 accepted / 9 reference-only` split.
 - Added canonical memory entry point in `docs/context/CONTEXT_INDEX.md`.
 - Added durable memory files for project brief, open tasks, decisions, and session notes.
 - Kept `docs/context/project-overview.md` as a legacy alias instead of deleting or silently replacing it.
@@ -476,7 +477,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue the current exact-license shortlist with `tottelofstrom/NFC-DOOM`, then refresh `research/registry/CANDIDATE_QUEUE.md` once that short backlog is exhausted.
+- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new exact-license shortlist before opening the next batch.
+- If a future follow-up is needed for `tottelofstrom/NFC-DOOM`, rerun Android tasks in a JDK `17+` plus Android SDK-ready environment, or isolate the low-resolution software raycaster, the cartridge codec/builder seam, or the raw `NfcV` read/write fallback layer instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `yaroslavzghoba/KotCore`, revisit it only after real engine code appears or rerun Gradle discovery in a JDK `21` environment; the current repository is mainly a KMP publishing scaffold, not a usable engine baseline.
 - If a future follow-up is needed for `rogal01/tower-defense-android`, rerun Android tasks in a JDK-backed SDK-ready environment, or isolate the shared runtime boundary, randomized path generation, procedural audio pipeline, or JSON save export/import seam instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Amigoconglomeration918/LinkGame`, rerun Gradle discovery or Android tasks in a real JDK-backed SDK-ready environment, or isolate the solvability-aware board generator, the padded-grid pathfinding plus overlay renderer, or the local DataStore plus audio-lifecycle shell instead of reopening the whole repository blindly.

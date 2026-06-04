@@ -31,6 +31,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [LinkGame](projects/amigoconglomeration918-linkgame.md) - Android Compose tile-link puzzle with solvability-checked board generation, padded-grid pathfinding, off-board path rendering, local leaderboard plus nickname persistence, and a tidy lifecycle-aware audio/settings shell despite rough build and test hygiene.
 - [Tower Defense Android](projects/rogal01-tower-defense-android.md) - Android-first tower-defense game with a shared Kotlin runtime, randomized authored path layouts, custom `SurfaceView`/Canvas rendering, procedural SFX generation, and JSON save export/import inside a broad native product shell.
 - [ComposeLife](projects/alexvanyo-composelife.md) - Android Compose Game of Life simulator and Wear OS watchface with explicit evolving simulation state, HashLife or naive algorithm switching, AGSL or SKSL or OpenGL rendering paths, custom stateful navigation, remote pattern-archive sync, and an unusually deep CI plus test matrix for a game-adjacent product.
+- [NFC-DOOM](projects/tottelofstrom-nfc-doom.md) - Android Compose raycaster with a strict tiny NFC cartridge format, raw `NfcV` fallback when normal NDEF paths break, low-resolution offscreen software 3D upscaled through Compose, and an optional demo-cartridge mode for non-NFC devices.
 
 ## engine-framework
 

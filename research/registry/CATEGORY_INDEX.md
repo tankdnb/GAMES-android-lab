@@ -69,6 +69,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `TemporalGameOfLifeState`, `ConfigurableGameOfLifeAlgorithm`, `MainActivity`, and the scoped Metro graphs show a Compose-first simulation shell where evolution ownership, algorithm hot-swaps, activity-scoped updatables, and long-lived app state stay explicit instead of hiding inside composables.
 - [aleksrutins-platinum](../findings/aleksrutins-platinum.md) - `Game`, `System`, `Entity`, `Component`, and `Scene` show a very small ECS-style runtime with system-typed components and a timer-driven loop, while also exposing that scene entities never enter the main render or collision paths because subsystems still iterate only `baseEntities`.
 - [yaroslavzghoba-kotcore](../findings/yaroslavzghoba-kotcore.md) - `settings.gradle.kts`, `kotcore/build.gradle.kts`, and `Main.kt` show a useful cautionary case where a KMP engine repository already declares Android/JVM/iOS/Linux/Wasm targets and publishing metadata, but the checked-in runtime is still effectively empty.
+- [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `AppViewModel`, `GameState`, `GameLevel`, and `PlayScreen` show a direct Android game shell where NFC/device orchestration stays in the app layer while the pseudo-3D simulation and loaded level state stay pure Kotlin.
 
 ## Rendering And Graphics
 
@@ -126,6 +127,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GameView` and `EntityRenderer` show a custom `SurfaceView`/Canvas renderer with cached path and terrain geometry, preallocated paints, and fully code-drawn enemies, towers, bosses, and HUD layers instead of sprite assets.
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `AGSLNonInteractableCells`, `SKSLNonInteractableCells`, `GameOfLifeShape`, and `GameOfLifeRenderer` show one rendering idea carried across Android AGSL, desktop SKSL, and Wear OpenGL ES instead of re-implementing the cell visual per host.
 - [aleksrutins-platinum](../findings/aleksrutins-platinum.md) - `RenderSystem2D`, `Sprite2D`, and `Camera2D` show a tiny Swing/AWT 2D renderer where drawing is just another system pass and camera motion is implemented by mutating per-transform offsets.
+- [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `Raycaster`, `PlayScreen`, and `DoomAssets` show a low-resolution software 3D renderer hosted inside Compose, with offscreen wall-column rendering, billboard sprites, nearest-neighbor upscale, and a phone-side retro art bundle.
 
 ## Gameplay Systems
 
@@ -217,6 +219,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [baret-pltcmd](../findings/baret-pltcmd.md) - `ElementCommandFragment` and `GameView` show a tactics-friendly control seam where map clicks select destinations, callsigns stay explicit, and orders are routed through a conversation protocol instead of mutating units directly from the UI.
 - [amigoconglomeration918-linkgame](../findings/amigoconglomeration918-linkgame.md) - `GameBoard`, `GameScreen`, and `StartScreen` show a small Android puzzle control seam where tile taps become coordinate pairs, back presses route through save or exit dialogs, and endless-mode difficulty stays in-screen rather than behind a separate setup flow.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GameView` and `MainActivity` show a direct Android control seam where tap placement, long-press inspection, drag-to-move hero input, supply-drop collection, and HUD buttons all route into the shared runtime without duplicating gameplay logic in the UI.
+- [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `MainActivity`, `PlayScreen`, and the hold-button controls show a neat hybrid seam where Android NFC reader-mode events and touch-first movement/fire controls both feed a compact Compose-hosted game shell.
 
 ## UI, HUD, And Menus
 
@@ -353,6 +356,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [baret-pltcmd](../findings/baret-pltcmd.md) - `MapStorage`, `WorldMapDao`, and `StorageId` show a small but clean persistence seam where generated maps are saved and reloaded through typed IDs and DAO conversion instead of leaking raw file details into gameplay code.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GamePreferences`, `AndroidGamePreferences`, `SettingsActivity`, and `loadGame()` show a practical offline-first data seam with shared preference abstractions, JSON save export/import, and a deliberately partial resume model instead of full world snapshots.
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `PatternCollectionRepositoryImpl`, `PatternCollectionSync`, and `PatternCollectionSyncWorker` show a strong Android content-sync seam where remote pattern archives are hash-deduped, repository state stays shared, and WorkManager scheduling is driven directly from user preferences.
+- [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `CartridgeCodec` and `GameLevel` show a strong pattern for tiny external game content: CRC-validated binary cartridges are decoded once, then forked into phone-owned mutable runtime state instead of being mutated in place.
 
 ## Networking And Multiplayer
 
@@ -410,6 +414,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `ProjectFiles`, `enableAndroidPlatform`, and `disableAndroidPlatform` show a practical engine-tooling pattern where editor output lives in `src/commonMain` resources and Android support can be toggled on only when the local environment is ready for it.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `fastlane/Fastfile`, `fastlane/Appfile`, and the localized Play metadata tree show that even a small Android game benefits from checked-in deploy lanes, store text, feature graphics, and screenshots instead of leaving release packaging undocumented.
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - the `maker` app, `packageWorld`, and `validate-world.mjs` show a stronger-than-usual game-content pipeline where authored world data is edited in a dedicated tool, validated before packaging, and shipped as an explicit `.nmd` bundle instead of being copied ad hoc into the runtime.
+- [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `docs/CARTRIDGE_FORMAT.md`, `CartridgeCodec`, and `DemoCartridge.defaultBytes()` show a compact authoring pipeline where level content is packed into a documented MIME payload with strict byte budgets and reusable demo-generation helpers.
 
 ## Android Platform Integration
 
@@ -456,6 +461,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `MainActivity`, `NavGraph`, and the Android source sets show a direct Android host around a larger KMP game stack, with immersive fullscreen behavior, Android-specific layout handling, and most gameplay state still shared cleanly across platforms.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `MainActivity`, `MainMenuActivity`, `GameView`, `AndroidManifest.xml`, and `AndroidGamePreferences` show a direct Android game shell with native activities, `SurfaceView` rendering, document-picker backup flow, audio adapters, and thin platform storage boundaries around a shared core.
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `MainActivity`, the Wear watchface modules, and the pattern-sync worker stack show unusually broad Android integration for a game-adjacent Kotlin product: phone, watchface, adaptive Compose shell, background content refresh, and shared multiplatform modules all coexist cleanly.
+- [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `AndroidManifest.xml`, `MainActivity`, `NfcReader`, and `NfcVNdefWriter` show a direct Android NFC integration path with MIME-triggered launch, optional NFC hardware, reader-mode ownership, raw ISO 15693 fallback, and no network permission footprint.
 
 ## Performance And Memory
 
@@ -555,3 +561,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `kotlin/PlanesCompose/app/build.gradle.kts`, `kotlin/PlanesAndroid/app/build.gradle`, `fastlane/Fastfile`, and the legacy Android/C++ test trees show a mixed but informative build story: modern Compose Android configuration with a missing checked-in wrapper, older Android verification that still matters, and a real release surface through fastlane and store metadata.
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `shared/build.gradle.kts`, `server/build.gradle.kts`, `client/build.gradle.kts`, the `maker` tests, and the broad server/client/shared test surface show a serious multi-stack workflow with modern Android/KMP targets, explicit world validation and packaging, and much stronger regression depth than the repository's star count suggests, even though local discovery still stops at the Java `17+` floor.
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - the `80`-module Gradle monorepo, `.github/workflows/ci.yml`, broad screenshot and benchmark surface, and the Windows-breaking `:`-named watchface solution resources show both unusually strong Android/Wear verification discipline and a very real platform-specific checkout caveat for Windows-based labs.
+- [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `build.gradle.kts`, `app/build.gradle.kts`, and the focused cartridge tests show a current Android build on AGP `8.7.2`, Kotlin `2.0.21`, and Java `17`, with meaningful codec-level verification but local Gradle discovery in this lab still blocked by the missing full JDK/compiler.
