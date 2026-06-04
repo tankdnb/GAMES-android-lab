@@ -46,6 +46,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `AppInitializerViewModel`, `HangmanRoot`, `GameSessionEngine`, and `GameViewModel` show a Compose-first small-game shell where app bootstrap, pure rules, and controller-style feature orchestration stay clearly separated.
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `Engine`, `ApiTranslation`, `TfmGameplay`, `Component`, `Effector`, and `MClass` show a JVM rules engine where declarative class/effect definitions are loaded into a typed runtime, assembled through scoped DI, and executed as task-driven gameplay.
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `PlatformGameLoop.*`, `GameActivity`, `GameView.*`, and `GameLoop` show a strong multiplatform host-loop idea where Android `Choreographer`, JS `requestAnimationFrame`, and iOS `CADisplayLink` are hidden behind one shared loop API, even though the checked-in runtime still looks incomplete.
+- [queuejw-space](../findings/queuejw-space.md) - `Simulator.step`, `MainActivity.Spaaaace`, `Telescope`, and `DreamUniverse` show a compact Android-only game shell where Compose frame callbacks drive simulation, draw invalidation is tied to completed sim steps, and the same runtime can be rehosted into both an activity and a dream service.
 
 ## Rendering And Graphics
 
@@ -84,6 +85,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `k2dCanvas`, `ShapeRenderSystem`, and the desktop sample show a minimal Compose `Canvas` render adapter where frame ticks only trigger redraws and ECS state stays responsible for what actually gets drawn.
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `Main.kt`, `ViewData`, `BoardView`, and `MainView` show aspect-aware virtual sizing, board-local gesture capture, and a small-product puzzle presentation layer that stays responsive across host sizes.
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `RenderContext.*`, `Window.desktop`, and `GameView.js` show a backend-neutral render layer spanning Vulkan and WebGPU, an offscreen native-to-Compose desktop bridge, and a dual-canvas browser host that separates engine pixels from Compose UI.
+- [queuejw-space](../findings/queuejw-space.md) - `VisibleUniverse.kt`, `UniverseCanvas`, `ZoomedDrawScope`, and `PathTools` show a fully Compose-driven vector renderer with zoom-aware strokes, orbit/grid overlays, custom SVG-like path art, and simulation-step-triggered redraws instead of a separate `SurfaceView` renderer.
 
 ## Gameplay Systems
 
@@ -117,6 +119,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `Board`, `GamePosition`, `History`, `GamePlies`, and `AiPlayer` show a puzzle runtime built around reversible plies, recent-game records, bookmarks, variable board sizes, and several distinct AI strategies rather than only a single undo stack.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `GameSessionEngine`, `GameSessionState`, `WordCatalogDsl`, `WordBank`, and `WordSelection` show a pure word-game session core, typed rule updates, and a validated content DSL where difficulty depends on content shape rather than only on timers or scores.
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `docs/language-intro.md`, `Changer`, `Effector`, `TfmGameplay`, and `Game20230521Test` show a rules-heavy turn-based engine where game state is a component multiset, effects emit queued tasks, and full games can be scripted and asserted end-to-end.
+- [queuejw-space](../findings/queuejw-space.md) - `Universe.initRandom`, `Universe.solveAll`, `Landing`, and `Spacecraft` show a tiny but real gameplay layer with seeded solar-system generation, exploration/discovery state, landing constraints, launch windows, and continuous ship effects.
 
 ## Input And Controls
 
@@ -149,6 +152,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `BoardView`, `Presenter`, and the shared control flow show swipe-first board input, duplicate-key suppression, and a useful separation between manual play, replay stepping, AI hints, and AI autoplay.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `AppNavigation`, `GameViewModel`, and the shared feature shell show a touch-first Compose flow where gameplay input, hints, overlays, and route navigation stay separate from the pure session rules.
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `Window.kt`, `Window.android.kt`, `Window.desktop.kt`, and `GamepadManager.desktop.kt` show a clean platform-input seam where native pointer, keyboard, and gamepad events are normalized into one shared event/listener model instead of leaking platform APIs into game code.
+- [queuejw-space](../findings/queuejw-space.md) - `FlightStick`, the transformable camera hooks, and the `AUTO` control path show a direct Android touch-control model where a one-finger virtual stick drives thrust/orientation while camera gestures and autopilot stay explicit separate concerns.
 
 ## UI, HUD, And Menus
 
@@ -177,6 +181,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameScreenSemantics`, `GameScreenFeedback`, `GameScreenAccessibilityTest`, and `docs/ui-behavior.md` show a small but disciplined product shell where accessibility descriptions, invalid-state messaging, success overlays, and modal behavior are treated as first-class UI requirements.
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `MainView`, `BoardView`, `History`, and `doc/User-Experience.md` show a small but fully productized puzzle shell with recent games, bookmarks, replay/watch flows, board-size/theme switches, and stateful score/status presentation.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `HangmanRoot`, `AppNavigation`, `SettingsViewModel`, and `AchievementsViewModel` show a shared Compose shell where menus, gameplay, settings, history, achievements, and global theme/language/cursor state stay product-like without introducing a separate engine UI layer.
+- [queuejw-space](../findings/queuejw-space.md) - `Telemetry`, `ConsoleButton`, and the fold-aware `Spaaaace` layout show a compact in-game HUD shell with animated console overlays, autopilot controls, explored-body catalog text, and posture-aware camera centering on foldables.
 
 ## Physics And Collision
 
@@ -194,6 +199,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [fredboy-cavedroid](../findings/fredboy-cavedroid.md) - `ChunkedGameWorldSolidBlockBodiesManagerImpl`, `GameWorld`, and `WorldEdgeMirrorTest` show chunk-clustered `ChainShape` colliders, seam-mirrored static bodies for wrapped worlds, and explicit tests around edge-clamping predicates.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `PhysicsSystem` and `ContactSolver` show fixed-step entity physics, mouse-picking/debug hooks, and custom polygon/point/circle/line resolution with friction, restitution, and rotational response.
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `CollisionSystem`, `CollisionResponseDispatcher`, `BoundarySystem`, and `CollisionSystemTest` show a readable naive AABB collision path with explicit `STATIC`, `BOUNCE`, `PUSH`, and `EXPLODE` policies plus better-than-usual coverage for a tiny hobby engine.
+- [queuejw-space](../findings/queuejw-space.md) - `Body`, `Container`, `Universe.updateAll`, `Universe.solveAll`, and `Landing` show a compact gravity-plus-constraints model where the ship integrates motion, bounded-universe correction, land-vs-impact checks, and docking/launch rules without any external physics engine.
 
 ## Audio
 
@@ -215,6 +221,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Actor`, `Mob`, and `Database` show a time-based scheduler plus serializable mob AI modes and data-backed resistances, abilities, and loot tables.
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `MiniChessGame`, `ChessAi`, and `ScenarioGenerator` show a compact custom tactics subsystem with weighted scenario generation, alpha-beta search, difficulty-to-reward mapping, and real tests around legality and mate/stalemate behavior.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `SimpleGameAi` is a useful lightweight example of heuristic board-game AI where hard mode uses explicit win/block/fork priorities and medium mode mixes hard and random play for a softer casual-game curve.
+- [queuejw-space](../findings/queuejw-space.md) - `Autopilot` is a strong tiny-AI reference: it computes target-relative velocity, smooth braking distance, and timed strategy transitions across `CHASING`, `APPROACHING`, `LANDING`, `LANDED`, and `LAUNCHING`.
 
 ## Persistence And Data
 
@@ -315,6 +322,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `app/build.gradle.kts`, `PlatformDataModule.android.kt`, and the shared app shell show a direct Android Compose product target with modern SDK/toolchain levels, Firebase/Crashlytics wiring, and most platform persistence/audio details hidden behind shared interfaces.
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `PlayGameServicesGodot`, `export_plugin.gd`, `AndroidManifest.xml`, and `app/build.gradle` show a direct Android engine-plugin surface where Play Games Services clients, manifest metadata, permissions, and Maven dependencies are wired into Godot exports without manual downstream Android edits.
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `GameActivity.android`, `GameView.android`, `PlatformGameLoop.android`, and `Platform.android` show a direct Android engine shell built around `TextureView`, `Choreographer`, Compose interop, and platform-isolated audio/sensor services.
+- [queuejw-space](../findings/queuejw-space.md) - `MainActivity`, `DreamUniverse`, `WindowInfoTracker` usage, `AndroidManifest.xml`, and `UniverseProgressNotifier` show an Android-only product shell with foldable posture handling, `DreamService` hosting, PLATLOGO launcher wiring, and Android 16 live progress notifications around an in-flight game session.
 
 ## Performance And Memory
 
@@ -381,3 +389,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `build.gradle.kts`, `engine/build.gradle.kts`, `repl/build.gradle.kts`, and the broad parser/engine/full-game test tree show a serious JVM monorepo with KSP/Dagger assembly, toolchain `21`, Shadow-packaged REPL tooling, and unusually deep invariant plus full-game coverage even though local discovery currently stops on Java `8`.
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `app/build.gradle`, `godot-lib/build.gradle`, `.github/workflows/*.yml`, and the small test tree show a focused Android library/plugin build with Godot-version matrix validation, dual release packaging, and JDK `17` expectations, even though local `gradlew help` still fails in the lab because the current machine exposes Java `8`.
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `settings.gradle.kts`, `kanvas/build.gradle.kts`, `kanvas-rendering/build.gradle.kts`, and the module graph show a serious KMP+Android build ambition with Vulkan/WebGPU/editor/native pieces, but local `gradlew help` still fails in the lab because only a Java `8` JRE is available and the checked-in tree has almost no real test coverage.
+- [queuejw-space](../findings/queuejw-space.md) - `app/build.gradle.kts`, `gradle/libs.versions.toml`, `gradle-wrapper.properties`, and the missing `src/test` / workflow surface show a compact modern Android build on AGP `8.13`, Kotlin `2.2.10`, SDK `36`, and Java `21`, but with no automated tests or CI and a hard local JVM floor of `17+`.

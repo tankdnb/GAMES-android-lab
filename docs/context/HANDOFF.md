@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The thirty-sixth real research batch is now completed and documented end-to-end.
-- The lab now has 42 researched repositories recorded:
+- The thirty-seventh real research batch is now completed and documented end-to-end.
+- The lab now has 43 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -51,6 +51,7 @@
   - `MartianZoo/solarnet` - `accepted`
   - `StudioAdriatic/PGSGP` - `accepted`
   - `CheerWizard/Kanvas` - `reference-only`
+  - `queuejw/Space` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -260,10 +261,15 @@
 - Classified `Kanvas` as `reference-only` instead of `accepted` because the inspected revision still leaves key runtime seams incomplete: `GameLoop` never wires `GameModuleManager`, `RenderThread` is still scaffold-like, `kanvas-server` has no visible sources, and the shader toolchain looks mid-refactor.
 - Verified that `cmd /c gradlew.bat --version` succeeds for the inspected wrapper, but `cmd /c gradlew.bat help --no-daemon` currently fails in the lab because only a Java `8` JRE is available and Gradle cannot find a Java compiler/JDK.
 - Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-sixth batch.
+- Completed `BATCH-2026-06-04-F` as a compact Android-native gameplay pass for `queuejw/Space`.
+- Added durable `Space` findings for a Compose-hosted frame loop, simulation-step draw invalidation, touch flight-stick input, a small gravity/landing simulator, autopilot behavior, foldable-aware camera framing, dream-service hosting, and Android 16 progress notifications.
+- Classified `queuejw/Space` as `accepted` because, despite its narrow AOSP-derived scope, it is a clean and directly reusable Android-native reference for small real-time game shells.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected wrapper, but `cmd /c gradlew.bat help --no-daemon` currently fails in the lab because Gradle `9.0.0` now requires Java `17+` while the machine still exposes Java `8`.
+- Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-seventh batch.
 
 ## Known Risks
 
-- The workflow has now been validated across 36 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 37 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -301,6 +307,7 @@
 - `andstatus/game2048` is one of the stronger small Android puzzle-product references in the lab, but its root documentation is partially stale about the JVM floor, its genre is still narrow, and meaningful local build verification now needs Java `21` plus an Android SDK-ready environment.
 - `RajashekarRaju/hangman-compose` is one of the stronger Compose-first product references in the lab, but its controller/view-model layer is already somewhat branch-heavy, its workflow triggers still look partially split between `development` and `master`, and meaningful local build verification still needs at least Java `17+` plus a fuller Android-ready environment.
 - `MartianZoo/solarnet` is a strong pure-logic reference, but it is tightly coupled to Terraforming Mars semantics, has no Android or rendering layer, remains low-signal by stars, and meaningful local build/test verification still needs at least Java `11` and effectively a newer toolchain-ready JVM environment.
+- `queuejw/Space` is a useful direct Android-native reference, but it is intentionally narrow, heavily AOSP-derived, has no visible automated tests or CI workflows, and meaningful local Gradle validation now needs at least Java `17+` while the checked-in sources target Java `21`.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -308,7 +315,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current verified short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `queuejw/Space`.
+- Continue from the current verified short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `benpollarduk/ktvn`.
 - If a future follow-up is needed for `solarnet`, rerun Gradle discovery or selected tests in a JDK `21`-ready environment, or isolate the `Pets` DSL, the loaded type system, the full-game script tests, or the REPL shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `hangman-compose`, rerun Gradle discovery or selected tests in a JDK `17+` or `21` environment, or isolate the pure session engine, the word-catalog DSL, or the settings/history shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `game2048`, rerun both the root and `game2048-android` Gradle surfaces in a Java `21` plus Android SDK-ready environment, or isolate the reversible history pipeline, the AI hint/autoplay split, or the Android share/load shell instead of reopening the whole repository blindly.

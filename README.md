@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `36` real GitHub research batches are completed end-to-end.
-- `42` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `37` real GitHub research batches are completed end-to-end.
+- `43` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `37`
+  - `accepted`: `38`
   - `reference-only`: `5`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `CheerWizard/Kanvas` as a `reference-only` KMP engine architecture reference with interesting host-loop, render-backend, and shader-tooling ideas but clear incompleteness in the checked-in runtime.
-- The latest accepted addition is `StudioAdriatic/PGSGP`.
+- The latest researched addition is `queuejw/Space` as an `accepted` Android-native Compose game reference with a tiny simulator, readable touch controls, foldable-aware layout behavior, dream-service hosting, and Android 16 progress-notification integration.
+- The latest accepted addition is `queuejw/Space`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
