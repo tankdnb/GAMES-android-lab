@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `58` real GitHub research batches are completed end-to-end.
-- `64` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `59` real GitHub research batches are completed end-to-end.
+- `65` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `57`
+  - `accepted`: `58`
   - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `rogal01/tower-defense-android` as an `accepted` Android tower-defense reference with a shared Kotlin runtime, randomized authored path layouts, procedural Canvas rendering, procedural SFX generation, and JSON save export/import.
-- The latest accepted addition is `rogal01/tower-defense-android`.
+- The latest researched addition is `alexvanyo/composelife` as an `accepted` Android and Wear OS Game of Life reference with explicit evolving simulation state, HashLife or naive algorithm switching, AGSL or SKSL or OpenGL rendering paths, custom navigation, and WorkManager-backed pattern sync.
+- The latest accepted addition is `alexvanyo/composelife`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

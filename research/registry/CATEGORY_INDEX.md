@@ -66,6 +66,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `Application`, `GameLoop`, `CommandProcessor`, `SessionManager`, and `PlayerSession` show a server-authoritative multiplayer runtime where startup, world mutation, session state, and client/server ownership boundaries stay explicit instead of collapsing into handlers or screens.
 - [amigoconglomeration918-linkgame](../findings/amigoconglomeration918-linkgame.md) - `GameNavHost`, `GameController`, `LinkGameApplication`, and `AudioManager` show a compact Compose Android game shell where session ownership, mode switching, settings-driven audio, and app foreground/background behavior stay centralized without a heavier engine layer.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GameEngine`, `GameView`, `GamePreferences`, and `AndroidGamePreferences` show a direct Android tower-defense shell where one shared runtime owns campaign, waves, and progression while rendering, storage, and audio stay behind thin platform seams.
+- [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `TemporalGameOfLifeState`, `ConfigurableGameOfLifeAlgorithm`, `MainActivity`, and the scoped Metro graphs show a Compose-first simulation shell where evolution ownership, algorithm hot-swaps, activity-scoped updatables, and long-lived app state stay explicit instead of hiding inside composables.
 
 ## Rendering And Graphics
 
@@ -121,6 +122,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `MapOverlay`, `MapDrawingUtils`, `RoomBackground`, and `GameScreen` show a Compose-first rendering shell where minimaps, room art, overlays, and game presentation stay inside normal UI layers instead of requiring a separate graphics runtime.
 - [amigoconglomeration918-linkgame](../findings/amigoconglomeration918-linkgame.md) - `GameBoard` and `ScoreBar` show a neat Android puzzle-rendering pattern where the board includes a padded outer ring for off-board link paths, hint states pulse visually, and the last seconds of the timer escalate through animated HUD styling.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GameView` and `EntityRenderer` show a custom `SurfaceView`/Canvas renderer with cached path and terrain geometry, preallocated paints, and fully code-drawn enemies, towers, bosses, and HUD layers instead of sprite assets.
+- [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `AGSLNonInteractableCells`, `SKSLNonInteractableCells`, `GameOfLifeShape`, and `GameOfLifeRenderer` show one rendering idea carried across Android AGSL, desktop SKSL, and Wear OpenGL ES instead of re-implementing the cell visual per host.
 
 ## Gameplay Systems
 
@@ -256,6 +258,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `ImageHelper`, `TextHelper`, `CameraStyles`, and `StateAdapter.unproject()` show a compact menu/HUD helper layer where centering, camera-follow, and screen-to-world conversion logic stay reusable instead of being reimplemented in every state.
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `AuthViewModel`, `GameViewModel`, `WorldBrowserViewModel`, and `GameScreen` show a large Compose product shell where auth, world browsing, reconnect state, overlays, and in-game feature panels stay controller-owned instead of scattering through ad hoc screens.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `MainMenuActivity`, `MainActivity`, and `SettingsActivity` show a broader-than-usual Android product shell with mode selection, in-run upgrade HUD, and JSON save export/import through document pickers instead of a backend requirement.
+- [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `docs/di.md`, `navigation`, `ComposeLifeNavigation`, and `MainActivity` show a strong Compose product-shell pattern with Metro plus context-parameter DI, retained-entry custom navigation, serializable surrogates, and adaptive edge-to-edge UI ownership kept outside the rendering core.
 
 ## Physics And Collision
 
@@ -344,6 +347,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `MessageSerializer`, `NeoMudVersion`, the `.nmd` packaging flow, and the maker-backed world files show a clean split between shared protocol contracts, authoritative content bundles, and runtime-loaded world data instead of mixing data ownership into the client UI.
 - [baret-pltcmd](../findings/baret-pltcmd.md) - `MapStorage`, `WorldMapDao`, and `StorageId` show a small but clean persistence seam where generated maps are saved and reloaded through typed IDs and DAO conversion instead of leaking raw file details into gameplay code.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GamePreferences`, `AndroidGamePreferences`, `SettingsActivity`, and `loadGame()` show a practical offline-first data seam with shared preference abstractions, JSON save export/import, and a deliberately partial resume model instead of full world snapshots.
+- [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `PatternCollectionRepositoryImpl`, `PatternCollectionSync`, and `PatternCollectionSyncWorker` show a strong Android content-sync seam where remote pattern archives are hash-deduped, repository state stays shared, and WorkManager scheduling is driven directly from user preferences.
 
 ## Networking And Multiplayer
 
@@ -445,6 +449,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `PlanesApplication`, `MainActivity`, `AndroidManifest.xml`, `VideoModelRepository`, and the fastlane/release metadata show a direct Android product shell with Hilt, edge-to-edge Compose hosting, tutorial-media integration, and a real Play/F-Droid distribution surface rather than a code-only demo.
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `MainActivity`, `NavGraph`, and the Android source sets show a direct Android host around a larger KMP game stack, with immersive fullscreen behavior, Android-specific layout handling, and most gameplay state still shared cleanly across platforms.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `MainActivity`, `MainMenuActivity`, `GameView`, `AndroidManifest.xml`, and `AndroidGamePreferences` show a direct Android game shell with native activities, `SurfaceView` rendering, document-picker backup flow, audio adapters, and thin platform storage boundaries around a shared core.
+- [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `MainActivity`, the Wear watchface modules, and the pattern-sync worker stack show unusually broad Android integration for a game-adjacent Kotlin product: phone, watchface, adaptive Compose shell, background content refresh, and shared multiplatform modules all coexist cleanly.
 
 ## Performance And Memory
 
@@ -483,6 +488,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GameView`, `EntityRenderer`, and `SoundManager` show pragmatic small-game optimizations: preallocated paints, cached terrain and path geometry, optional 30/60 FPS pacing, code-drawn entities, and startup-time SFX caching instead of per-event synthesis.
 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `KoolContext`, `Lwjgl3Context`, and the async simulation helpers show a practical performance posture built around double-buffered frame data, optional precomputed next frames, fixed-step interpolated physics, and backend-owned GPU submission phases.
+- [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `HashLifeAlgorithm`, `TemporalGameOfLifeState`, and the AGSL or SKSL or OpenGL cell renderers show a practical simulation-performance posture built around memoized macro-cell evolution, no-extra-buffer ticking, and GPU-shaped cell visuals instead of per-cell UI drawing.
 
 ## Build, Release, And Testing
 
@@ -540,3 +546,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `build.gradle.kts`, `buildSrc/Versions.kt`, `.github/workflows/build.yml`, and the local `gradlew help` failure show a readable Kotlin `1.4` / AGP `4` / JDK8-era workflow where upstream CI still expects a full JDK `8`, while local discovery in this lab stops because the machine is running only a Java `8` JRE without compiler tools.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `kotlin/PlanesCompose/app/build.gradle.kts`, `kotlin/PlanesAndroid/app/build.gradle`, `fastlane/Fastfile`, and the legacy Android/C++ test trees show a mixed but informative build story: modern Compose Android configuration with a missing checked-in wrapper, older Android verification that still matters, and a real release surface through fastlane and store metadata.
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `shared/build.gradle.kts`, `server/build.gradle.kts`, `client/build.gradle.kts`, the `maker` tests, and the broad server/client/shared test surface show a serious multi-stack workflow with modern Android/KMP targets, explicit world validation and packaging, and much stronger regression depth than the repository's star count suggests, even though local discovery still stops at the Java `17+` floor.
+- [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - the `80`-module Gradle monorepo, `.github/workflows/ci.yml`, broad screenshot and benchmark surface, and the Windows-breaking `:`-named watchface solution resources show both unusually strong Android/Wear verification discipline and a very real platform-specific checkout caveat for Windows-based labs.

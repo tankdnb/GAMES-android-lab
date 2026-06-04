@@ -30,6 +30,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [NeoMud](projects/roomsmith-games-neomud.md) - Kotlin multiplatform MUD product stack with a Compose Android client, shared typed protocol, server-authoritative tick loop, reconnect-aware client shell, validated world bundles, and a surprisingly broad multiplayer test surface.
 - [LinkGame](projects/amigoconglomeration918-linkgame.md) - Android Compose tile-link puzzle with solvability-checked board generation, padded-grid pathfinding, off-board path rendering, local leaderboard plus nickname persistence, and a tidy lifecycle-aware audio/settings shell despite rough build and test hygiene.
 - [Tower Defense Android](projects/rogal01-tower-defense-android.md) - Android-first tower-defense game with a shared Kotlin runtime, randomized authored path layouts, custom `SurfaceView`/Canvas rendering, procedural SFX generation, and JSON save export/import inside a broad native product shell.
+- [ComposeLife](projects/alexvanyo-composelife.md) - Android Compose Game of Life simulator and Wear OS watchface with explicit evolving simulation state, HashLife or naive algorithm switching, AGSL or SKSL or OpenGL rendering paths, custom stateful navigation, remote pattern-archive sync, and an unusually deep CI plus test matrix for a game-adjacent product.
 
 ## engine-framework
 
