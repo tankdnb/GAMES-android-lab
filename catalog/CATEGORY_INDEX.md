@@ -61,6 +61,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 ## tooling-pipeline
 
 - [gdx-liftoff](projects/libgdx-gdx-liftoff.md) - libGDX project generator with a typed project model, root-versus-module Gradle emitters, Android module scaffolding, Kotlin multi-launcher templates, and daemon-JDK bootstrap discipline for generated projects.
+- [LibGDXPlugin](projects/blueboxware-libgdxplugin.md) - IntelliJ / Android Studio plugin for libGDX with asset-aware PSI references, semantic Skin/atlas/JSON/tree editors, Android-specific manifest inspections, sharp preview tooling, and a strong fixture-driven regression surface.
 
 ## library-sdk
 

@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `49` real GitHub research batches are completed end-to-end.
-- `55` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `50` real GitHub research batches are completed end-to-end.
+- `56` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `48`
+  - `accepted`: `49`
   - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `kool-engine/kool` as an `accepted` multiplatform 3D engine with real Android source sets, backend abstraction, in-engine Compose-style UI, editor modules, and opt-in Android Gradle enablement.
-- The latest accepted addition is `kool-engine/kool`.
+- The latest researched addition is `BlueBoxWare/LibGDXPlugin` as an `accepted` IntelliJ / Android Studio libGDX tooling reference with asset-aware PSI navigation, semantic Skin/atlas/tree editors, Android manifest inspections, and a strong fixture-driven test surface.
+- The latest accepted addition is `BlueBoxWare/LibGDXPlugin`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
