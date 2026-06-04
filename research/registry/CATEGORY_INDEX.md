@@ -63,6 +63,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `State`, `StateAdapter`, `StateManager`, and `WorldConfig` show a compact libGDX state runtime with centralized camera/viewport ownership and transition hooks, while also exposing a useful caution that the null-transition handoff path still needs fixing before production use.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `Game`, `LoadingScreen`, `Screen`, `MenuScreen`, and `GameScreen` show a compact LibGDX/Ashley game shell with staged async asset loading, one shared engine reused across menu and gameplay, and system toggling instead of multiple runtime loops.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `PlaneRound`, `ComputerLogic`, `MultiplayerRound`, `MainActivity`, and `PlanesNavigation` show a direct Android game shell where a portable board-game core, a multiplayer wrapper, and a drawer-routed Compose product shell stay separate across a mixed-generation codebase.
+- [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `Application`, `GameLoop`, `CommandProcessor`, `SessionManager`, and `PlayerSession` show a server-authoritative multiplayer runtime where startup, world mutation, session state, and client/server ownership boundaries stay explicit instead of collapsing into handlers or screens.
 
 ## Rendering And Graphics
 
@@ -115,6 +116,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `RenderSystem`, `AnimationSystem`, and `TransformComponent` show sorted z/y sprite rendering, speed-reactive repeated-background scrolling, cached atlas animation dispatch, and a dedicated shield-outline shader pass over the player entity.
 - [benpollarduk-ktaf](../findings/benpollarduk-ktaf.md) - `FrameBuilderCollection`, the ANSI builders, the HTML builders, and the grid-map builders show a frame-oriented presentation model where scenes, maps, and conversation screens can be rendered through different hosts without touching gameplay code.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `GridSquareGame`, `GameScreenSinglePlayer`, and `BoardEditingScreenSinglePlayer` show a lightweight Compose `Canvas` board renderer with annotation-driven square styling, hit/dead overlays, and orientation-aware layout around the active board.
+- [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `MapOverlay`, `MapDrawingUtils`, `RoomBackground`, and `GameScreen` show a Compose-first rendering shell where minimaps, room art, overlays, and game presentation stay inside normal UI layers instead of requiring a separate graphics runtime.
 
 ## Gameplay Systems
 
@@ -155,6 +157,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `IntervalSystem`, `IteratingSystem`, `Family`, and `OneShotComponentSystem` show an unusually reusable gameplay-core layer where fixed-step updates, interpolation hooks, sorted family iteration, and transient one-shot tags and components are all first-class instead of ad hoc patterns.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `engine.kt`, `MoveSystem`, `PowerUpSystem`, `DamageSystem`, and `RemoveSystem` show a compact arcade-gameplay layer with attached exhaust entities, fixed-step interpolated movement, patterned pickup waves, shield-first hazard damage, and delayed death cleanup routed through events.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `ComputerLogic`, `PlaneRound`, and `PlaneGridViewModel` show a reusable board-game rules core with scored head-orientation inference, validated plane placement, show-plane-after-kill reveal logic, and asynchronous move reconciliation for multiplayer rounds.
+- [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `CombatManager`, `NpcManager`, and `WorldGraph` show a richer-than-usual multiplayer gameplay stack with initiative-ordered combat, pursuit and spawn logic, boss phases, mutable room state, and authoritative room/interaction timers.
 
 ## Input And Controls
 
@@ -239,6 +242,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `UiSurfaceComposition` and the demo-side `LaunchedEffectTest` show a Compose-style UI layer mounted directly inside the engine viewport and driven from the same frame clock as the rest of the runtime.
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `SkinCompletionContributor` and `ImagePreviewDocumentationTarget` show a strong UI-authoring toolchain for scene2d assets, with semantic property/resource completion and sharp nearest-neighbor atlas or tinted-drawable previews embedded directly into the IDE.
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `ImageHelper`, `TextHelper`, `CameraStyles`, and `StateAdapter.unproject()` show a compact menu/HUD helper layer where centering, camera-follow, and screen-to-world conversion logic stay reusable instead of being reimplemented in every state.
+- [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `AuthViewModel`, `GameViewModel`, `WorldBrowserViewModel`, and `GameScreen` show a large Compose product shell where auth, world browsing, reconnect state, overlays, and in-game feature panels stay controller-owned instead of scattering through ad hoc screens.
 
 ## Physics And Collision
 
@@ -322,6 +326,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `GameSave`, `build-info.json`, `special-info.json`, and `upgrades.json` show a compact progression/data seam where slot unlocks, upgrade levels, special counts, and production balance are externalized instead of being scattered through UI code.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `FirebaseAuthManager`, `FirestoreConfig`, `PenaltyDbManager`, `PlayerDbManager`, and `TopicDbManager` show anonymous-auth per-user Firestore collections with offline cache, live snapshot sync, and background-paged topic loading.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `DataStoreModule`, `PreferencesViewModel`, `RoomModule`, `ChatDao`, `NewMessagesDao`, and the chat repositories show a simple but useful split between preference persistence, local unread-message flags, and cached chat history.
+- [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `MessageSerializer`, `NeoMudVersion`, the `.nmd` packaging flow, and the maker-backed world files show a clean split between shared protocol contracts, authoritative content bundles, and runtime-loaded world data instead of mixing data ownership into the client UI.
 
 ## Networking And Multiplayer
 
@@ -333,6 +338,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `NetworkClientImpl`, `NetworkServerImpl`, and `NetworkCodec` show typed TCP/UDP channels, Kryo-based sealed-type registration, UDP handshake validation, ping tracking, queue backpressure handling, and per-channel traffic metrics.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `PenaltyDbManager`, `PlayerDbManager`, and `TopicDbManager` show a subtle but useful distinction: Firebase supplies live synced setup content and offline-aware reads, while the actual game session remains local pass-the-device rather than real-time multiplayer.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `RetrofitModule`, `PlanesUserApi`, `PlanesGameApi`, `CreateViewModel`, and `ComputerGridViewModelMultiPlayer` show a pragmatic Android turn-based multiplayer shell built on REST polling, indexed move reconciliation, chat polling, and locally cached unread-message flags instead of a socket-first design.
+- [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `ClientMessage`, `ServerMessage`, `WebSocketClient`, `ReconnectCoordinator`, `PlatformApiClient`, and `SessionManager` show a stronger shared-contract multiplayer stack where live gameplay WebSockets, HTTP product APIs, reconnect state, duplicate-login handling, and rate-limited sessions stay intentionally separated.
 
 ## Tooling And Content Pipeline
 
@@ -376,6 +382,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `ProjectFiles`, `enableAndroidPlatform`, and `disableAndroidPlatform` show a practical engine-tooling pattern where editor output lives in `src/commonMain` resources and Android support can be toggled on only when the local environment is ready for it.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `fastlane/Fastfile`, `fastlane/Appfile`, and the localized Play metadata tree show that even a small Android game benefits from checked-in deploy lanes, store text, feature graphics, and screenshots instead of leaving release packaging undocumented.
+- [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - the `maker` app, `packageWorld`, and `validate-world.mjs` show a stronger-than-usual game-content pipeline where authored world data is edited in a dedicated tool, validated before packaging, and shipped as an explicit `.nmd` bundle instead of being copied ad hoc into the runtime.
 
 ## Android Platform Integration
 
@@ -419,6 +426,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `KoolContextAndroid`, `KoolConfigAndroid`, `KoolSurfaceView`, `PlatformInput.android.kt`, and `Assets.android.kt` show a real Android host with preserved GL context, density-aware UI scaling, platform asset decoding, and explicit unsupported-feature boundaries.
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `OpenGLESDirectiveInspection` and the XML inspection set show a useful Android-tooling pattern: encode real libGDX manifest pitfalls such as missing `glEsVersion` or unsafe external-file assumptions directly inside the IDE instead of leaving them to runtime failures.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `PlanesApplication`, `MainActivity`, `AndroidManifest.xml`, `VideoModelRepository`, and the fastlane/release metadata show a direct Android product shell with Hilt, edge-to-edge Compose hosting, tutorial-media integration, and a real Play/F-Droid distribution surface rather than a code-only demo.
+- [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `MainActivity`, `NavGraph`, and the Android source sets show a direct Android host around a larger KMP game stack, with immersive fullscreen behavior, Android-specific layout handling, and most gameplay state still shared cleanly across platforms.
 
 ## Performance And Memory
 
@@ -508,3 +516,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - the split helper modules, legacy Travis plus JitPack surface, successful `gradlew help` and `test --dry-run` runs, and the tiny `ImageHelperTests` file show a readable but clearly old build workflow whose main gap is not configuration anymore, but the lack of a full JDK and the almost nonexistent test depth.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `build.gradle.kts`, `buildSrc/Versions.kt`, `.github/workflows/build.yml`, and the local `gradlew help` failure show a readable Kotlin `1.4` / AGP `4` / JDK8-era workflow where upstream CI still expects a full JDK `8`, while local discovery in this lab stops because the machine is running only a Java `8` JRE without compiler tools.
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `kotlin/PlanesCompose/app/build.gradle.kts`, `kotlin/PlanesAndroid/app/build.gradle`, `fastlane/Fastfile`, and the legacy Android/C++ test trees show a mixed but informative build story: modern Compose Android configuration with a missing checked-in wrapper, older Android verification that still matters, and a real release surface through fastlane and store metadata.
+- [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `shared/build.gradle.kts`, `server/build.gradle.kts`, `client/build.gradle.kts`, the `maker` tests, and the broad server/client/shared test surface show a serious multi-stack workflow with modern Android/KMP targets, explicit world validation and packaging, and much stronger regression depth than the repository's star count suggests, even though local discovery still stops at the Java `17+` floor.
