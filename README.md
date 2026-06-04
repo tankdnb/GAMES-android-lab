@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `56` real GitHub research batches are completed end-to-end.
-- `62` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `57` real GitHub research batches are completed end-to-end.
+- `63` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `55`
+  - `accepted`: `56`
   - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `Baret/pltcmd` as an `accepted` Kotlin tactics-simulation reference with radio-as-protocol command flow, terrain-aware radio and vision propagation, modular unit blueprints, and a stronger-than-expected tested monorepo split.
-- The latest accepted addition is `Baret/pltcmd`.
+- The latest researched addition is `Amigoconglomeration918/LinkGame` as an `accepted` Android puzzle reference with solvability-checked board generation, padded-grid pathfinding, off-board path rendering, local leaderboard plus nickname persistence, and lifecycle-aware audio handling.
+- The latest accepted addition is `Amigoconglomeration918/LinkGame`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

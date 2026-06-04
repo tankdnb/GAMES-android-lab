@@ -70,6 +70,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-W` | `xxxcucus/planes` | `android-game` | `3` | `1` | `3` | `3` | `42` | `2026-06-03` | MIT Android battleship-variant game with current Kotlin app, multiplayer support, F-Droid/Play deployment, and a stronger mix of Android relevance, recency, and reusable gameplay/runtime patterns than the remaining refreshed shortlist | `done` | `explicit-license shortlist refresh + exact repository view verification + README screening` |
 | `BATCH-2026-06-04-X` | `roomsmith-games/NeoMud` | `android-game` | `2` | `1` | `3` | `3` | `9` | `2026-06-03` | Fresh MIT Kotlin multiplatform MUD project with Ktor WebSocket server and Compose Android client; likely to yield reusable networking, shared-state, and Android host-shell patterns even if it leans more product than engine | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-Y` | `Baret/pltcmd` | `gameplay-systems` | `2` | `1` | `3` | `2` | `4` | `2026-06-03` | Fresh MIT tactical game with an unusual radio-command-only control model, strong modular simulation surface, and better current novelty and public signal than the remaining zero-star fallback candidates | `done` | `carry-over explicit-license shortlist execution + exact repository view verification + shortlist re-check` |
+| `BATCH-2026-06-04-Z` | `Amigoconglomeration918/LinkGame` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-04` | Fresh MIT Android puzzle game with challenge and endless modes, audio, leaderboards, and nickname support; selected as the next direct Android fallback now that the stronger shortlist leaders are exhausted | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
 
 ## Backlog Candidates
 
@@ -81,7 +82,6 @@ Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-W`. The shortlist be
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `Amigoconglomeration918/LinkGame` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-04` | Fresh MIT Android puzzle game with challenge and endless modes, audio, leaderboards, and nickname support; worth keeping as a direct Android product-shell fallback after the stronger current candidates | `explicit-license shortlist refresh + exact repository view verification` |
 | `rogal01/tower-defense-android` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-03` | Fresh MIT Android tower-defense candidate with low public signal but direct platform relevance; kept only as a reserve behind the better-documented shortlist entries | `explicit-license shortlist refresh + exact repository view verification` |
 
 ## Status Legend

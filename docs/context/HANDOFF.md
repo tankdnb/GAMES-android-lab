@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The fifty-sixth real research batch is now completed and documented end-to-end.
-- The lab now has 62 researched repositories recorded:
+- The fifty-seventh real research batch is now completed and documented end-to-end.
+- The lab now has 63 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -71,6 +71,7 @@
   - `xxxcucus/planes` - `accepted`
   - `roomsmith-games/NeoMud` - `accepted`
   - `Baret/pltcmd` - `accepted`
+  - `Amigoconglomeration918/LinkGame` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -384,10 +385,15 @@
 - Classified `Baret/pltcmd` as `accepted` because its desktop-first shell is outweighed by the reusable tactics-simulation architecture in the `util` / `model` / `game` split.
 - Recorded that no local Maven validation was possible in the lab because the repository ships no wrapper and `mvn` is not installed here, while the checked-in upstream workflow still builds the monorepo on JDK `21`.
 - Cleaned the transient `Baret/pltcmd` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-06-04-Z` as a direct Android puzzle pass for `Amigoconglomeration918/LinkGame`.
+- Added durable `LinkGame` findings for solvability-checked board generation, padded-grid pathfinding with off-board path rendering, split DataStore persistence seams, and process-lifecycle-aware audio handling in a compact Compose shell.
+- Classified `Amigoconglomeration918/LinkGame` as `accepted` because its small scale is offset by direct Android relevance and several clean reusable patterns for puzzle shells, local state, and product polish.
+- Recorded that local Gradle discovery currently stops in the lab because the repository bootstraps Gradle successfully but the environment still exposes only a Java `8` JRE without compiler tools.
+- Cleaned the transient `Amigoconglomeration918/LinkGame` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 56 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 57 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -444,6 +450,7 @@
 - `xxxcucus/planes` is a useful direct Android game reference, but the current Compose rewrite still has placeholder tests, carries visible TODO and migration residue, and is not build-reproducible from a fresh clone until its missing wrapper files are restored.
 - `roomsmith-games/NeoMud` is a strong multiplayer product-stack reference, but it is large, openly framed as an AI-built playground, depends on newer Java toolchains plus a mixed Kotlin/Node stack, and much of its strongest value lives in shared/server architecture rather than Android-only code.
 - `Baret/pltcmd` is a strong indirect tactics-simulation reference, but it has no Android target, its desktop Swing/Zircon shell is not portable as-is, some command/knowledge paths are still TODO-only, and local build verification in this lab is currently blocked by the missing Maven toolchain.
+- `Amigoconglomeration918/LinkGame` is a useful direct Android casual-game reference, but it has zero public signal, only template tests, rough dependency and README hygiene, a bundled zip artifact committed inside `src/main/java`, and local build validation in this lab still stops at the missing JDK/compiler surface.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -451,7 +458,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue the refreshed exact-license shortlist; next candidate is `Amigoconglomeration918/LinkGame` unless a stronger explicit-license Kotlin game repo appears during the next refresh.
+- Continue the refreshed exact-license shortlist; next candidate is `rogal01/tower-defense-android` unless a stronger explicit-license Kotlin game repo appears during the next refresh.
+- If a future follow-up is needed for `Amigoconglomeration918/LinkGame`, rerun Gradle discovery or Android tasks in a real JDK-backed SDK-ready environment, or isolate the solvability-aware board generator, the padded-grid pathfinding plus overlay renderer, or the local DataStore plus audio-lifecycle shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Baret/pltcmd`, rerun build or selected tests in a Maven plus JDK `21` environment, or isolate the radio-conversation protocol, the terrain-aware signal and visibility propagation, or the unit-blueprint DSL instead of reopening the whole monorepo blindly.
 - If a future follow-up is needed for `roomsmith-games/NeoMud`, rerun Gradle discovery or selected server/client tasks in a JDK `17+` or `21` environment, or isolate the shared protocol layer, the reconnect flow, the authoritative server loop, or the world-bundle validation pipeline instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `xxxcucus/planes`, first restore or verify the current `PlanesCompose` wrapper/toolchain path, or isolate the `PlaneRound` plus `ComputerLogic` core, the polling-based multiplayer shell, or the migration delta between `PlanesAndroid` and `PlanesCompose` instead of reopening the whole repository blindly.
