@@ -3,7 +3,7 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Continue the current exact-license shortlist; next candidate is `Baret/pltcmd`.
+- Continue the current exact-license shortlist; next candidate is `Amigoconglomeration918/LinkGame`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
@@ -11,6 +11,7 @@
 ## Next Recommended
 
 - Keep the current shortlist compact and prefer exhausting it before doing another broad refresh.
+- If `Baret/pltcmd` needs a future follow-up, rerun build or selected tests in a Maven plus JDK `21` environment, or isolate the radio-conversation protocol, the terrain-aware signal and visibility propagation, or the unit-blueprint DSL instead of reopening the whole repository broadly.
 - If `roomsmith-games/NeoMud` needs a future follow-up, rerun Gradle discovery or selected server/client tasks in a JDK `17+` or `21` environment, or isolate the shared protocol layer, the reconnect flow, the authoritative server loop, or the world-bundle validation pipeline instead of reopening the whole repository broadly.
 - If `xxxcucus/planes` needs a future follow-up, first restore or verify the current `PlanesCompose` wrapper/toolchain path, or isolate the `PlaneRound` plus `ComputerLogic` core, the polling-based multiplayer shell, or the migration delta between `PlanesAndroid` and `PlanesCompose` instead of reopening the whole repository broadly.
 - If `benpollarduk/ktaf` needs a future follow-up, rerun Gradle discovery or selected tests in a JDK `11+` environment, or isolate the frame-builder plus IO seam, the jar-discovery path, or the room/item/conversation parser surface instead of reopening the whole repository broadly.

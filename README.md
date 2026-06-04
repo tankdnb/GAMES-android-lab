@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `55` real GitHub research batches are completed end-to-end.
-- `61` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `56` real GitHub research batches are completed end-to-end.
+- `62` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `54`
+  - `accepted`: `55`
   - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `roomsmith-games/NeoMud` as an `accepted` Kotlin multiplatform MUD reference with a shared typed protocol, an authoritative server tick loop, a Compose Android client shell, and a validated world-content pipeline.
-- The latest accepted addition is `roomsmith-games/NeoMud`.
+- The latest researched addition is `Baret/pltcmd` as an `accepted` Kotlin tactics-simulation reference with radio-as-protocol command flow, terrain-aware radio and vision propagation, modular unit blueprints, and a stronger-than-expected tested monorepo split.
+- The latest accepted addition is `Baret/pltcmd`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

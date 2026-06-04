@@ -60,6 +60,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Ore Infinium](projects/sreich-ore-infinium.md) - Terraria-inspired Kotlin/LibGDX sandbox prototype with fixed-step ECS client/server worlds, viewport-based entity replication, multithreaded worldgen, fluid/light simulation, and inventory-driven generator devices.
 - [KotCity](projects/kotcity-kotcity.md) - pre-alpha Kotlin city simulator with layered city state, contract-driven logistics, traffic-aware road/rail routing, desirability-led growth, power-grid automata, and map-inspection overlays.
 - [Forty-Five](projects/blueuserred-forty-five.md) - wild-west libGDX deckbuilder with timeline-sequenced combat, ONJ-driven screens/content, weighted encounter data, seeded node-map generation, explicit resource borrowing, and a distinctive revolver-slot battle model.
+- [PltCmd](projects/baret-pltcmd.md) - Kotlin/JVM tactics simulation with radio-only order flow, terrain-aware radio and vision propagation, structured military-unit blueprints, deterministic world generation, and a stronger-than-expected tested module split.
 
 ## tooling-pipeline
 
