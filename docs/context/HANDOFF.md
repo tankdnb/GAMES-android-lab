@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The forty-sixth real research batch is now completed and documented end-to-end.
-- The lab now has 52 researched repositories recorded:
+- The forty-seventh real research batch is now completed and documented end-to-end.
+- The lab now has 53 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -61,6 +61,7 @@
   - `codeyousef/Materia` - `accepted`
   - `Quillraven/Fleks` - `accepted`
   - `libgdx/gdx-liftoff` - `accepted`
+  - `Mesabloo/hm-defense` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -321,6 +322,11 @@
 - Classified `libgdx/gdx-liftoff` as `accepted` because the repository is one of the clearest tooling references in the lab for Kotlin-friendly Android/Desktop/Web project bootstrap even though it is generator-first rather than runtime-first.
 - Verified that both `cmd /c gradlew.bat --version` and `cmd /c gradlew.bat help --no-daemon` succeed in the inspected clone; the repository can provision a Java `21` daemon from its checked-in toolchain metadata even when the launcher JVM is older.
 - Cleaned the transient `gdx-liftoff` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-06-04-P` as a compact libGDX rewrite pass for `Mesabloo/hm-defense`.
+- Added durable `hm-defense` findings for scrollpane-backed battlefield composition, Scene2D HUD layering, radar mirroring, JSON-driven build and upgrade data, and a tiny deferred z-sorted batcher.
+- Classified `Mesabloo/hm-defense` as `reference-only` because the checked-in runtime remains unfinished, the Android target is still absent from the module graph, and the repository is more useful as a comparison sample than as a main Android baseline.
+- Verified that both `cmd /c gradlew.bat --version` and `cmd /c gradlew.bat help --no-daemon` succeed in the inspected clone, but that the build surface only covers `core` plus `desktop` and does not include a checked-in Android host module.
+- Cleaned the transient `hm-defense` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
@@ -371,6 +377,7 @@
 - `codeyousef/Materia` is one of the stronger current 3D engine references in the lab, but it is still mid-transition between overlapping renderer/runtime layers, Android currently spans both wgpu-oriented and Filament-backed paths, some standalone tests are unwired or placeholder-only, and meaningful local validation still needs JDK `22` plus Android SDK tooling.
 - `Quillraven/Fleks` is a strong gameplay-runtime reference, but Android relevance is indirect because the repository intentionally stops at the ECS layer, and meaningful local Gradle validation still needs a real JDK even for lightweight discovery.
 - `libgdx/gdx-liftoff` is one of the stronger tooling references in the lab, but it is generator-specific rather than runtime-specific, `Architecture.md` is explicitly stale, and the visible confidence surface is stronger in build/sample/demo automation than in a large checked-in unit-test tree.
+- `Mesabloo/hm-defense` is a useful small libGDX HUD/runtime comparison sample, but the default-branch code looks stale in practice, no Android module is checked in despite the README goal, the visible gameplay loop is unfinished, and no real automated tests were found.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -378,8 +385,9 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current verified shortlist in `research/registry/CANDIDATE_QUEUE.md`, led by `Mesabloo/hm-defense`, and then `edezadev/la-bomba`.
+- Continue from the current verified shortlist in `research/registry/CANDIDATE_QUEUE.md`, now reduced to `edezadev/la-bomba`.
 - If a future follow-up is needed for `libgdx/gdx-liftoff`, rerun broader sample-generation tasks in a JDK `17+` or `21` environment, or isolate the Android Gradle scaffolding path, the root-versus-module build split, the Kotlin launcher/template family, or the daemon-JDK bootstrap workflow instead of reopening the whole repository blindly.
+- If a future follow-up is needed for `Mesabloo/hm-defense`, revisit it only as a narrow pass around Scene2D/HUD composition, the JSON economy layer, or any future Android host module instead of reopening it as a broad Android gameplay baseline.
 - If a future follow-up is needed for `Quillraven/Fleks`, rerun Gradle discovery or selected tests and benchmarks in a JDK `11+` or `17+` environment, or isolate the snapshot serialization path, family hooks and delayed-removal behavior, or the Ashley and Artemis benchmark comparisons instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `codeyousef/Materia`, rerun Gradle discovery or selected Android/JVM tasks in a JDK `22` plus Android SDK-ready environment, or isolate the dual renderer-stack boundary, the Filament/wgpu Android split, the GLTF cache/loader pipeline, or the validation/benchmark workflow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `vitaviva/ugame`, rerun targeted Android tasks in an SDK-ready environment, or isolate the Camera2 face-detection flow, the layered custom-view rendering stack, or the controller-owned score/collision loop instead of reopening the whole repository blindly.

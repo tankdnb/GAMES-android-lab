@@ -11,8 +11,8 @@
 ## Next Recommended
 
 - Prefer the current verified backlog before running another broad search:
-- `Mesabloo/hm-defense`
 - `edezadev/la-bomba`
+- If `Mesabloo/hm-defense` needs a future follow-up, revisit only its Scene2D/HUD composition, JSON economy layer, or any future Android host module instead of reopening the whole repository broadly.
 - If `libgdx/gdx-liftoff` needs a future follow-up, rerun broader sample-generation tasks in a JDK `17+` or `21` environment, or isolate the Android Gradle scaffolding path, the root-versus-module build split, the Kotlin launcher/template family, or the daemon-JDK bootstrap workflow instead of reopening the whole repository broadly.
 - If `Quillraven/Fleks` needs a future follow-up, rerun Gradle discovery or selected tests and benchmarks in a JDK `11+` or `17+` environment, or isolate the snapshot serialization path, family hooks and delayed-removal behavior, or the Ashley and Artemis benchmark comparisons instead of reopening the whole repository broadly.
 - If `codeyousef/Materia` needs a future follow-up, rerun Gradle discovery or selected Android/JVM tasks in a JDK `22` plus Android SDK-ready environment, or isolate the dual renderer-stack boundary, the Filament/wgpu Android split, the GLTF cache/loader pipeline, or the validation/benchmark workflow instead of reopening the whole repository broadly.

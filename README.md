@@ -14,14 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `46` real GitHub research batches are completed end-to-end.
-- `52` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `47` real GitHub research batches are completed end-to-end.
+- `53` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `46`
-  - `reference-only`: `6`
+  - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `libgdx/gdx-liftoff` as an `accepted` libGDX project-generator reference with typed project generation, Android module scaffolding, Kotlin launcher templates, and daemon-JDK bootstrap discipline.
+- The latest researched addition is `Mesabloo/hm-defense` as a `reference-only` libGDX rewrite sample with a Scene2D HUD shell, radar mirroring, JSON-driven build tables, and a tiny deferred z-sorted batcher, but no checked-in Android module.
 - The latest accepted addition is `libgdx/gdx-liftoff`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 

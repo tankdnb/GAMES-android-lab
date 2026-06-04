@@ -55,6 +55,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `FullscreenActivity` and `GameController` show a very direct Android game shell where camera bootstrap, layered views, score flow, collision polling, and replay handling stay centralized instead of leaking across custom views.
 - [codeyousef-materia](../findings/codeyousef-materia.md) - `Object3D`, `Scene`, `RenderLoop`, and `EngineRenderer` show a scene-first 3D runtime with dirty-flagged transforms, explicit root-scene state, platform-specific loop seams, and a newer engine renderer that deliberately bypasses the older root renderer stack.
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `World`, `WorldConfiguration`, `ComponentService`, and `EntityService` show a compact ECS runtime where versioned entities, array-backed component holders, bit-mask membership, and a Kotlin DSL keep gameplay-core ownership explicit without tying the library to any one engine.
+- [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `MainGame`, `AbstractScreen`, `StageScreen`, `UIWorld`, and `GameWorld` show a compact libGDX runtime where a scrollable battlefield, fixed HUD shell, and actor-synced Box2D world stay separate, even though the gameplay loop itself is still incomplete.
 
 ## Rendering And Graphics
 
@@ -100,6 +101,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `HeadlessHost`, `HeadlessApp`, `TerminalApp`, and the excluded `platforms/desktop` render path show a useful host/runtime separation pattern, while also serving as a caution that the repository's graphics-facing code is less trustworthy than the active engine core.
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `BackgroundView`, `Bar`, `ForegroundView`, and `BoatView` show a compact Android-native render stack built from layered overlay views, bitmap slicing, `Canvas` drawing, and smoothed sprite movement above a live camera preview.
 - [codeyousef-materia](../findings/codeyousef-materia.md) - `Renderer`, `EngineRendererImpl`, `GpuCoreJvm`, and `LODGenerator` show a scene-first 3D graphics stack with backend-aware WebGPU/Vulkan/WebGL contracts, cached FXAA/offscreen resources, Vulkan-first JVM GPU initialization, and built-in mesh LOD generation.
+- [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `Batcher`, `StageAssetsManager`, `Radar`, and `StageScreen` show a compact libGDX rendering shell with deferred z-sorted drawing, atlas-backed UI art, a viewport-mirroring radar, and a scrollpane-backed battlefield instead of a separate minimap or renderer graph.
 
 ## Gameplay Systems
 
@@ -208,6 +210,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `RuntimeUiService`, `AssetBrowserScene`, and `SceneEditorScene` show an engine where ordered runtime UI layers and desktop editor panels are first-class runtime concepts rather than bolted-on debug menus.
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `AppNavGraphs`, `MainViewModel`, and `ProfileViewModel` show a polished Compose product shell where gameplay routes, profile/progression dashboards, daily-challenge surfaces, and top-level meta-state stay coordinated without fragment-style sprawl.
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `activity_fullscreen.xml`, `FullscreenActivity`, and `GameState` show a tiny but readable Android HUD shell with one centered score layer, one bottom camera-switch control strip, and a dialog-driven replay loop.
+- [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `StageScreen`, `BuildQueue`, `MachineBuildSlot`, `SpecialBuildSlot`, and the tweened menu listeners show a dense Scene2D HUD shell with build slots, gauges, radar, side menus, and queue feedback kept in one readable in-game UI layer.
 
 ## Physics And Collision
 
@@ -227,6 +230,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `CollisionSystem`, `CollisionResponseDispatcher`, `BoundarySystem`, and `CollisionSystemTest` show a readable naive AABB collision path with explicit `STATIC`, `BOUNCE`, `PUSH`, and `EXPLODE` policies plus better-than-usual coverage for a tiny hobby engine.
 - [queuejw-space](../findings/queuejw-space.md) - `Body`, `Container`, `Universe.updateAll`, `Universe.solveAll`, and `Landing` show a compact gravity-plus-constraints model where the ship integrates motion, bounded-universe correction, land-vs-impact checks, and docking/launch rules without any external physics engine.
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `GameController.isCollision(...)`, `BackgroundView`, and the paired `Bar` views show a simple AABB collision loop and deterministic endless-obstacle generation pattern that fits compact Android arcade shells without a physics dependency.
+- [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `GameWorld` and the terrain/body setup show a minimal Box2D seam where the world steps centrally, actor positions mirror body coordinates back into Scene2D, and border contacts are observed in one place without a heavier ECS layer.
 
 ## Audio
 
@@ -281,6 +285,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `AppDatabase`, `LocalUserServiceImpl`, `MultiChoiceQuizEndGameWorker`, and `WordleEndGameWorker` show a practical Android casual-game data seam where Room, DataStore, worker-owned endgame persistence, XP, diamonds, and level-up rewards stay centralized across several game modes.
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `SaveManager` plus `InputManager.registerPersistence(...)` show a compact save architecture where subsystems contribute their own JSON-backed modules and slot ownership stays separate from runtime logic.
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `World.snapshot`, `loadSnapshot`, and `SerializationTest.kt` show a strong ECS persistence seam where polymorphic components and tags can round-trip through serialized snapshots instead of each game inventing save and load from scratch.
+- [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `GameSave`, `build-info.json`, `special-info.json`, and `upgrades.json` show a compact progression/data seam where slot unlocks, upgrade levels, special counts, and production balance are externalized instead of being scattered through UI code.
 
 ## Networking And Multiplayer
 
@@ -327,6 +332,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `tooling/devtools` and `AppTestDriver` show that even a small engine benefits from a dedicated headless test harness instead of relying only on helper-level unit tests.
 - [codeyousef-materia](../findings/codeyousef-materia.md) - `GLTFLoader`, `GLTFAssetCache`, `compileShaders`, and `materia-validation` show a mature-looking asset/tooling pipeline around clone-on-read glTF reuse, WGSL-to-SPIR-V shader compilation, benchmark publication, and explicit validation/report generation.
 - [libgdx-gdx-liftoff](../findings/libgdx-gdx-liftoff.md) - `Project`, `RootGradleFile`, `AndroidGradleFile`, `KotlinTemplate`, and the workflow files show a typed bootstrap pipeline for multi-platform game projects where root build layout, per-platform Gradle emitters, launcher templates, and demo publication are all first-class tooling concerns instead of ad hoc scripts.
+- [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `StageAssetsManager`, the `core/assets/data` JSON files, and the `core` / `desktop` split show a lightweight libGDX content pipeline where atlases, textures, and gameplay balance data stay centralized without a larger external tooling stack.
 
 ## Android Platform Integration
 
@@ -444,3 +450,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [codeyousef-materia](../findings/codeyousef-materia.md) - `build.gradle.kts`, `gradle.properties`, `materia-validation/build.gradle.kts`, and `.github/workflows/publish.yml` show a serious but still transitional engine workflow around Kotlin `2.2.20`, AGP `8.12.3`, JDK `22`, selected wired tests, validation gates, and publish-on-main automation even though local discovery in the lab still stops at a missing JDK.
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `build.gradle.kts`, the custom `buildSrc` plugins, `.github/workflows/build.yml`, `publish.yml`, and the common plus benchmark test trees show a disciplined KMP library workflow with real CI, publishing, snapshots and serialization tests, and benchmark automation even though local Gradle discovery in the lab still stops at the missing JDK compiler.
 - [libgdx-gdx-liftoff](../findings/libgdx-gdx-liftoff.md) - `settings.gradle`, `gradle/gradle-daemon-jvm.properties`, `build.gradle`, `build.yml`, and `publish-demos.yml` show a particularly transferable build workflow: Foojay-based toolchain resolution, checked-in daemon JDK provisioning, build plus sample generation on Java `17` and `21`, and automatic publication of generated demo outputs.
+- [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `build.gradle`, `core/build.gradle`, `desktop/build.gradle`, and the successful `gradlew help --no-daemon` run show a readable older libGDX Gradle surface around Java `11`, but also confirm the structural limit that only `core` and `desktop` are checked in and no real test tree exists.
