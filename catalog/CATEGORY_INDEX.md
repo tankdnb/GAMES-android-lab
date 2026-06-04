@@ -58,7 +58,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 
 ## tooling-pipeline
 
-- Add accepted tooling, editor, and asset-pipeline cards here.
+- [gdx-liftoff](projects/libgdx-gdx-liftoff.md) - libGDX project generator with a typed project model, root-versus-module Gradle emitters, Android module scaffolding, Kotlin multi-launcher templates, and daemon-JDK bootstrap discipline for generated projects.
 
 ## library-sdk
 

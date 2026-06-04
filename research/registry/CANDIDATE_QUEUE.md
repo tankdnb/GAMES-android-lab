@@ -59,6 +59,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-L` | `vitaviva/ugame` | `android-game` | `3` | `2` | `0` | `2` | `159` | `2020-04-19` | Apache-2.0 Android custom-View mini-game with stronger public signal than the current low-star alternatives and likely useful direct input/render/runtime patterns outside Compose-heavy samples | `done` | `carry-over explicit-license shortlist execution + exact repo verification` |
 | `BATCH-2026-06-04-M` | `codeyousef/Materia` | `engine-framework` | `3` | `2` | `3` | `3` | `108` | `2026-05-10` | Apache-2.0 Kotlin Multiplatform 3D graphics/engine candidate with Android target, active Vulkan/WebGPU direction, and stronger current architecture yield than the remaining shortlist alternatives | `done` | `explicit-license shortlist refresh + exact repository GraphQL verification` |
 | `BATCH-2026-06-04-N` | `Quillraven/Fleks` | `library-sdk` | `2` | `2` | `3` | `3` | `258` | `2026-05-14` | MIT-licensed multiplatform ECS core with stronger direct gameplay-architecture value than most remaining engine-side options and a useful complement to the already researched `korge-fleks` integration layer | `done` | `carry-over explicit-license shortlist execution + exact repository GraphQL verification` |
+| `BATCH-2026-06-04-O` | `libgdx/gdx-liftoff` | `tooling-pipeline` | `2` | `3` | `3` | `2` | `669` | `2026-06-02` | Apache-2.0 libGDX project generator with unusually strong ecosystem signal and likely reusable Gradle/module/bootstrap patterns for Kotlin game project setup | `done` | `carry-over explicit-license shortlist execution + exact repository GraphQL verification` |
 
 ## Backlog Candidates
 
@@ -70,7 +71,6 @@ Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-M`. The shortlist be
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `libgdx/gdx-liftoff` | `tooling-pipeline` | `2` | `3` | `3` | `2` | `669` | `2026-06-02` | Apache-2.0 libGDX project generator with unusually strong ecosystem signal and likely reusable Gradle/module/bootstrap patterns for Kotlin game project setup | `explicit-license shortlist refresh + exact repository GraphQL verification` |
 | `Mesabloo/hm-defense` | `android-game` | `3` | `1` | `1` | `2` | `38` | `2025-01-16` | BSD-3-Clause Android game rewrite candidate with a manageable footprint and a chance to yield direct runtime/input/UI patterns outside the current Compose-heavy batch streak | `explicit-license shortlist refresh + exact repository GraphQL verification` |
 | `edezadev/la-bomba` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-03` | Fresh Apache-2.0 Android multiplayer game with Firebase-backed realtime/product-shell value and stronger Android-specific novelty than the remaining zero-signal alternatives | `explicit-license shortlist refresh + exact repository GraphQL verification` |
 

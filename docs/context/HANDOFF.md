@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The forty-fifth real research batch is now completed and documented end-to-end.
-- The lab now has 51 researched repositories recorded:
+- The forty-sixth real research batch is now completed and documented end-to-end.
+- The lab now has 52 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -60,6 +60,7 @@
   - `vitaviva/ugame` - `accepted`
   - `codeyousef/Materia` - `accepted`
   - `Quillraven/Fleks` - `accepted`
+  - `libgdx/gdx-liftoff` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -315,10 +316,15 @@
 - Classified `Quillraven/Fleks` as `accepted` because the standalone library still adds strong reusable gameplay-architecture value beyond the already researched `korge-fleks` integration layer.
 - Verified that `gradlew --version` works in the inspected clone, while `gradlew help --no-daemon` still stops in the lab at the missing JDK compiler rather than at a repository-specific failure.
 - Cleaned the transient `Fleks` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-06-04-O` as a tooling-pipeline pass for `libgdx/gdx-liftoff`.
+- Added durable `gdx-liftoff` findings for typed project generation, root-versus-module Gradle emitters, Android module scaffolding, Kotlin launcher templates, and the checked-in Foojay plus daemon-JDK bootstrap workflow.
+- Classified `libgdx/gdx-liftoff` as `accepted` because the repository is one of the clearest tooling references in the lab for Kotlin-friendly Android/Desktop/Web project bootstrap even though it is generator-first rather than runtime-first.
+- Verified that both `cmd /c gradlew.bat --version` and `cmd /c gradlew.bat help --no-daemon` succeed in the inspected clone; the repository can provision a Java `21` daemon from its checked-in toolchain metadata even when the launcher JVM is older.
+- Cleaned the transient `gdx-liftoff` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 45 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 46 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -364,6 +370,7 @@
 - `vitaviva/ugame` is a useful direct Android-native reference, but it is stale by code activity, depends on older tooling plus `jcenter()`, has only placeholder tests, and carries a sloppy manifest surface with duplicated or overly broad permission declarations.
 - `codeyousef/Materia` is one of the stronger current 3D engine references in the lab, but it is still mid-transition between overlapping renderer/runtime layers, Android currently spans both wgpu-oriented and Filament-backed paths, some standalone tests are unwired or placeholder-only, and meaningful local validation still needs JDK `22` plus Android SDK tooling.
 - `Quillraven/Fleks` is a strong gameplay-runtime reference, but Android relevance is indirect because the repository intentionally stops at the ECS layer, and meaningful local Gradle validation still needs a real JDK even for lightweight discovery.
+- `libgdx/gdx-liftoff` is one of the stronger tooling references in the lab, but it is generator-specific rather than runtime-specific, `Architecture.md` is explicitly stale, and the visible confidence surface is stronger in build/sample/demo automation than in a large checked-in unit-test tree.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -371,7 +378,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current verified shortlist in `research/registry/CANDIDATE_QUEUE.md`, led by `libgdx/gdx-liftoff`, then `Mesabloo/hm-defense`, and `edezadev/la-bomba`.
+- Continue from the current verified shortlist in `research/registry/CANDIDATE_QUEUE.md`, led by `Mesabloo/hm-defense`, and then `edezadev/la-bomba`.
+- If a future follow-up is needed for `libgdx/gdx-liftoff`, rerun broader sample-generation tasks in a JDK `17+` or `21` environment, or isolate the Android Gradle scaffolding path, the root-versus-module build split, the Kotlin launcher/template family, or the daemon-JDK bootstrap workflow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Quillraven/Fleks`, rerun Gradle discovery or selected tests and benchmarks in a JDK `11+` or `17+` environment, or isolate the snapshot serialization path, family hooks and delayed-removal behavior, or the Ashley and Artemis benchmark comparisons instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `codeyousef/Materia`, rerun Gradle discovery or selected Android/JVM tasks in a JDK `22` plus Android SDK-ready environment, or isolate the dual renderer-stack boundary, the Filament/wgpu Android split, the GLTF cache/loader pipeline, or the validation/benchmark workflow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `vitaviva/ugame`, rerun targeted Android tasks in an SDK-ready environment, or isolate the Camera2 face-detection flow, the layered custom-view rendering stack, or the controller-owned score/collision loop instead of reopening the whole repository blindly.
