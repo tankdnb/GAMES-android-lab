@@ -59,6 +59,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `BaseActivity`, `MainActivity`, `SettingsActivity`, `StartGameActivity`, `ResultsActivity`, and `GameSession` show a compact Android product shell where anonymous-auth bootstrap, a fragment wizard, global session state, timed rounds, and rematch handling stay explicit without an engine layer.
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `KoolContext`, `Scene`, `Lwjgl3Context`, and `KoolDispatchers` show a double-buffered frame pipeline with split frontend / backend / synced dispatchers, dependency-sorted GPU passes, and optional async next-frame preparation on desktop.
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `plugin.xml`, `build.gradle.kts`, and `LibGDXProjectFileSubstitutions.kt` show a clean tooling architecture where generated PSI, references, inspections, settings, and UI helpers are kept as separate plugin capability families instead of one monolithic parser layer.
+- [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `State`, `StateAdapter`, `StateManager`, and `WorldConfig` show a compact libGDX state runtime with centralized camera/viewport ownership and transition hooks, while also exposing a useful caution that the null-transition handoff path still needs fixing before production use.
 
 ## Rendering And Graphics
 
@@ -107,6 +108,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `Batcher`, `StageAssetsManager`, `Radar`, and `StageScreen` show a compact libGDX rendering shell with deferred z-sorted drawing, atlas-backed UI art, a viewport-mirroring radar, and a scrollpane-backed battlefield instead of a separate minimap or renderer graph.
 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `RenderBackend`, `Scene.ScreenPass`, and the platform backend trees show one scene/render API spanning desktop Vulkan / OpenGL / `wgpu4k`, browser WebGPU / WebGL, and Android GLES3 with explicit NDC and pass-order control.
+- [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `TransitionFBO`, `Fade`, and `HorizontalSlide` show a compact render-to-texture state-transition pattern where whole screens are captured into FBOs and blended as plain textures instead of letting transition code reach into gameplay rendering.
 
 ## Gameplay Systems
 
@@ -221,6 +223,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `SettingsActivity`, `TopicsFragment`, `ResultsActivity`, and the bottom sheets show a guided Material 3 shell with paged content selection, loser standings, rematch affordances, and a clean separation between setup and round UI.
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `UiSurfaceComposition` and the demo-side `LaunchedEffectTest` show a Compose-style UI layer mounted directly inside the engine viewport and driven from the same frame clock as the rest of the runtime.
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `SkinCompletionContributor` and `ImagePreviewDocumentationTarget` show a strong UI-authoring toolchain for scene2d assets, with semantic property/resource completion and sharp nearest-neighbor atlas or tinted-drawable previews embedded directly into the IDE.
+- [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `ImageHelper`, `TextHelper`, `CameraStyles`, and `StateAdapter.unproject()` show a compact menu/HUD helper layer where centering, camera-follow, and screen-to-world conversion logic stay reusable instead of being reimplemented in every state.
 
 ## Physics And Collision
 
@@ -243,6 +246,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `GameWorld` and the terrain/body setup show a minimal Box2D seam where the world steps centrally, actor positions mirror body coordinates back into Scene2D, and border contacts are observed in one place without a heavier ECS layer.
 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `PhysicsWorld`, `Physics2dWorld`, and the transform tasks in `kool-physics/build.gradle.kts` show async interpolated 3D and 2D physics pipelines plus a distinctive shared-source strategy for Android and web bindings.
+- [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `PhysicsUtility`, `PhysicsWorld`, `PhysicsConfig`, `BodyBuilder`, `BodyDefBuilder`, and `FixtureDefBuilder` show a still-useful pixel-first Box2D wrapper where conversion helpers, reusable builders, and automatic shape cleanup reduce raw physics boilerplate substantially.
 
 ## Audio
 
@@ -257,6 +261,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView` shows an equally small Android audio/haptics path where optional `SoundPool` note/fail playback and vibration are toggled directly from the session shell instead of being abstracted behind dedicated services.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `AndroidBackgroundAudioController`, `AndroidGameSoundEffectPlayer`, and the WASM audio actuals show a clean platform-seam approach where Android media, desktop clips, and browser autoplay restrictions all stay behind shared interfaces.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `StartGameActivity` and its timer-to-sound map show a tidy Android seam where Media3 ExoPlayer swaps countdown tracks by selected round length instead of adding a larger audio service.
+- [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `SoundManager`, `MusicManager`, and the audio README show a deliberately prototype-oriented keyed audio registry pattern, useful mainly as a small libGDX jam-shell reference and as a reminder of where `AssetManager` should eventually replace singleton ownership.
 
 ## AI And Behavior
 
@@ -477,3 +482,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `build.gradle.kts`, `app/build.gradle.kts`, `SETUP.md`, and the template-only test tree show a current single-module Android build that already needs Java `11+` despite docs still claiming `Java 8+`, with no visible CI and almost no real automated verification.
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `build.gradle.kts`, `gradle.properties`, `TestInspections.kt`, and `TestAssetUtils.kt` show a mature IntelliJ-platform workflow with GrammarKit generation, explicit JDK `21` intent, broad fixture-based inspection tests, and real asset-resolution regression coverage, even though local Gradle discovery in the lab still stops at Java `8`.
 - [kool-engine-kool](../findings/kool-engine-kool.md) - root convention plugins, Android enable/disable tasks, and the `build.yml` plus `publish.yml` workflows show a strong multiplatform engine workflow with opt-in Android configuration, JDK `25` CI, and a focused core test surface, even though local discovery in this lab still stops at Java `8`.
+- [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - the split helper modules, legacy Travis plus JitPack surface, successful `gradlew help` and `test --dry-run` runs, and the tiny `ImageHelperTests` file show a readable but clearly old build workflow whose main gap is not configuration anymore, but the lack of a full JDK and the almost nonexistent test depth.

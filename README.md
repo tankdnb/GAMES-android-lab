@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `50` real GitHub research batches are completed end-to-end.
-- `56` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `51` real GitHub research batches are completed end-to-end.
+- `57` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `49`
+  - `accepted`: `50`
   - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `BlueBoxWare/LibGDXPlugin` as an `accepted` IntelliJ / Android Studio libGDX tooling reference with asset-aware PSI navigation, semantic Skin/atlas/tree editors, Android manifest inspections, and a strong fixture-driven test surface.
-- The latest accepted addition is `BlueBoxWare/LibGDXPlugin`.
+- The latest researched addition is `ImXico/cyberpunk` as an `accepted` libGDX helper-library reference with a compact `StateManager` shell, FBO-based transitions, pixel-first Box2D builders, and deliberately lightweight prototype-era asset helpers.
+- The latest accepted addition is `ImXico/cyberpunk`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
