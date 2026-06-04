@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The sixty-sixth real research batch is now completed and documented end-to-end.
-- The lab now has 72 researched repositories recorded:
+- The sixty-seventh real research batch is now completed and documented end-to-end.
+- The lab now has 73 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -81,6 +81,7 @@
   - `Saar25/PlanetEngine` - `accepted`
   - `Juanoff/roulette-android-app` - `accepted`
   - `icela/FriceEngine` - `reference-only`
+  - `mshdabiola/Naijaludo` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -88,17 +89,17 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The active exact-license short backlog is empty and must be refreshed before the next batch is opened.
+- The active exact-license short backlog now continues with `AndreasHefti/flyko-lib`, `robmat/arrows_game`, and `qorrnsmj/smf`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
 
-- Completed `BATCH-2026-06-04-AI` as an engine-framework pass for `icela/FriceEngine`.
-- Added durable `FriceEngine` findings for the shared Swing/JavaFX drawer split, buffered layer mutation queues, tiny timer/event scheduler, resource-cache helpers, and lightweight preference utilities.
-- Verified the current build caveat for this batch: `gradlew help --no-daemon` and `test --dry-run` fail because the legacy Bintray publishing plugin still depends on `org.codehaus.groovy.modules.http-builder:http-builder:0.7.2`, which no longer resolves, even though the wrapper itself still boots under Java `8`.
-- Kept `FriceEngine` as `reference-only` because it is stale, desktop-only, AGPL-3.0 licensed, and still exposes runtime quality issues such as broken `FButton` removal bookkeeping in `Layer`.
-- Refreshed the public and internal snapshot counts again so the repository now consistently reports `66` completed batches, `72` researched repositories, and a `62 accepted / 10 reference-only` split.
-- Exhausted the current exact-license shortlist again, so the next research cycle must refresh `research/registry/CANDIDATE_QUEUE.md` before another batch is opened.
+- Completed `BATCH-2026-06-04-AJ` as a direct Android board-game pass for `mshdabiola/Naijaludo`.
+- Added durable `Naijaludo` findings for the shared `LudoGame` rules core, heuristic AI, save/resume and meta-progress seams, Compose feature shell, and stronger-than-usual screenshot/baseline-profile workflow.
+- Verified the current build caveat for this batch: `gradlew help --no-daemon` and `:features:game:jvmTest --dry-run --no-daemon` fail in the lab because the machine exposes only a Java `8` runtime without compiler tools, while upstream CI explicitly expects JDK `21` and `17`.
+- Accepted `Naijaludo` into the main catalog, but recorded one important caveat: the Android Koin module currently binds a stub `P2pManager` while a richer Wi-Fi P2P implementation exists elsewhere in the repository.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `67` completed batches, `73` researched repositories, and a `63 accepted / 10 reference-only` split.
+- Kept the refreshed exact-license shortlist moving with `AndreasHefti/flyko-lib`, `robmat/arrows_game`, and `qorrnsmj/smf` still queued behind the completed `Naijaludo` batch.
 - Completed `BATCH-2026-06-04-AG` as an engine-framework pass for `Saar25/PlanetEngine`.
 - Added durable `PlanetEngine` findings for annotation-driven renderer prototypes, typed forward or deferred or shadow node groups, a retained GUI/input layer, LWJGL/OpenGL wrapper classes, and a readable Maven module split.
 - Verified the current build caveat for this batch: the checked-in reactor targets Java `11`, but the lab cannot validate it because Maven is unavailable locally; also confirmed that repo-level freshness is inflated by activity on `origin/dev` while default `master` ends at a `2022-10-28` commit.
