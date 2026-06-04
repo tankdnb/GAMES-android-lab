@@ -76,6 +76,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-AC` | `aleksrutins/platinum` | `engine-framework` | `3` | `1` | `3` | `3` | `5` | `2026-05-31` | Fresh MIT engine candidate with clearer runtime-architecture intent than most low-signal alternatives and better balance of freshness and expected engine yield than the tiny one-day prototype options | `done` | `carry-over exact-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-AD` | `yaroslavzghoba/KotCore` | `engine-framework` | `3` | `0` | `3` | `2` | `0` | `2026-05-30` | Fresh Apache-2.0 KMP grid-engine candidate with direct Android or Compose relevance and a small enough surface to confirm quickly whether it is a reusable micro-engine or only a thin scaffold | `done` | `carry-over exact-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-AE` | `tottelofstrom/NFC-DOOM` | `android-game` | `2` | `0` | `3` | `3` | `0` | `2026-06-03` | Fresh MIT Android Compose raycaster with unusual technical value around software-3D and NFC-cartridge constraints, kept as a high-novelty wildcard behind the stronger signal leader | `done` | `carry-over exact-license shortlist execution + exact repository view verification` |
+| `BATCH-2026-06-04-AF` | `mimoguz/tripeaks-gdx` | `android-game` | `3` | `2` | `2` | `3` | `88` | `2025-03-15` | Explicit GPL-3.0 Kotlin libGDX solitaire game with stronger public signal and more likely reusable gameplay or cross-platform runtime patterns than the other refreshed shortlist options | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 
 ## Backlog Candidates
 
@@ -85,10 +86,13 @@ Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was r
 
 Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AB`. The shortlist below keeps only candidates that passed exact repository-level license verification, not just GitHub search-index metadata.
 
-The shortlist is empty again after completing `BATCH-2026-06-04-AE`. Refresh this section with another exact-license pass before the next batch.
+Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AF`. The shortlist below keeps only candidates that passed exact repository-level `licenseInfo` verification and are not already listed in `research/registry/RESEARCHED_REPOS.md`.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
+| `Saar25/PlanetEngine` | `engine-framework` | `3` | `1` | `3` | `3` | `7` | `2026-05-29` | Fresh GPL-3.0 LWJGL/OpenGL engine candidate with better current activity and expected architecture yield than the low-signal Android side projects in the same refresh pass | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
+| `Juanoff/roulette-android-app` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-05-28` | Fresh MIT Android Compose game shell with likely reusable spin animation, touch interaction, and MVVM product-flow patterns once the stronger signal libGDX candidate is cleared first | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
+| `icela/FriceEngine` | `engine-framework` | `2` | `2` | `0` | `2` | `349` | `2019-12-28` | Older but still high-signal AGPL engine reference worth preserving as a fallback architecture pass if the fresher shortlist leaders disappoint | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 
 ## Status Legend
 

@@ -70,6 +70,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [aleksrutins-platinum](../findings/aleksrutins-platinum.md) - `Game`, `System`, `Entity`, `Component`, and `Scene` show a very small ECS-style runtime with system-typed components and a timer-driven loop, while also exposing that scene entities never enter the main render or collision paths because subsystems still iterate only `baseEntities`.
 - [yaroslavzghoba-kotcore](../findings/yaroslavzghoba-kotcore.md) - `settings.gradle.kts`, `kotcore/build.gradle.kts`, and `Main.kt` show a useful cautionary case where a KMP engine repository already declares Android/JVM/iOS/Linux/Wasm targets and publishing metadata, but the checked-in runtime is still effectively empty.
 - [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `AppViewModel`, `GameState`, `GameLevel`, and `PlayScreen` show a direct Android game shell where NFC/device orchestration stays in the app layer while the pseudo-3D simulation and loaded level state stay pure Kotlin.
+- [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `Main`, `LoadingScreen`, `GameScreen`, `GameScreenState`, and `StartScreenState` show a compact shared libGDX runtime where assets, services, normal rendering, blurred paused rendering, and screen orchestration stay separated instead of collapsing into one activity-sized class.
 
 ## Rendering And Graphics
 
@@ -128,6 +129,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `AGSLNonInteractableCells`, `SKSLNonInteractableCells`, `GameOfLifeShape`, and `GameOfLifeRenderer` show one rendering idea carried across Android AGSL, desktop SKSL, and Wear OpenGL ES instead of re-implementing the cell visual per host.
 - [aleksrutins-platinum](../findings/aleksrutins-platinum.md) - `RenderSystem2D`, `Sprite2D`, and `Camera2D` show a tiny Swing/AWT 2D renderer where drawing is just another system pass and camera motion is implemented by mutating per-transform offsets.
 - [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `Raycaster`, `PlayScreen`, and `DoomAssets` show a low-resolution software 3D renderer hosted inside Compose, with offscreen wall-column rendering, billboard sprites, nearest-neighbor upscale, and a phone-side retro art bundle.
+- [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `CustomViewport`, `SimpleRenderer`, `BlurredRenderer`, and `GameView` show a neat small-game rendering stack with constant-height viewport scaling, framebuffer-backed pause blur, pooled card or animation views, and z-sorted socket rendering.
 
 ## Gameplay Systems
 
@@ -172,6 +174,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [baret-pltcmd](../findings/baret-pltcmd.md) - `ExecuteOrder`, `RadioCommunicator`, `TransmissionDecoding`, `Elements`, and `WorldMapGenerator` show a distinctive tactics layer where radio phrases become commands, unit formations are structured as blueprints, and procedural terrain drives movement, visibility, and communications.
 - [amigoconglomeration918-linkgame](../findings/amigoconglomeration918-linkgame.md) - `BoardGenerator`, `Solver`, `ConnectionChecker`, `PathFinder`, and `GameController` show a compact puzzle stack with solvability-checked board generation, two-turn padded-grid matching rules, path reconstruction for feedback, and shared challenge/endless progression ownership.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `CampaignLevel`, `CampaignData`, `GameEngine.generatePaths(...)`, and the placement methods show a dense tower-defense rules layer with code-authored levels, randomized authored paths, geometric tower or trap validation, and meta-progression folded into the main runtime.
+- [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `GameState`, `Card.areNeighbors`, `Layout`, and `BasicLayout` show a strong card-gameplay core where circular rank adjacency, stacked blocker graphs, undo-safe tableau empties, and restart-from-initial-deal semantics stay fully outside the UI layer.
 
 ## Input And Controls
 
@@ -220,12 +223,14 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [amigoconglomeration918-linkgame](../findings/amigoconglomeration918-linkgame.md) - `GameBoard`, `GameScreen`, and `StartScreen` show a small Android puzzle control seam where tile taps become coordinate pairs, back presses route through save or exit dialogs, and endless-mode difficulty stays in-screen rather than behind a separate setup flow.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GameView` and `MainActivity` show a direct Android control seam where tap placement, long-press inspection, drag-to-move hero input, supply-drop collection, and HUD buttons all route into the shared runtime without duplicating gameplay logic in the UI.
 - [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `MainActivity`, `PlayScreen`, and the hold-button controls show a neat hybrid seam where Android NFC reader-mode events and touch-first movement/fire controls both feed a compact Compose-hosted game shell.
+- [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `GameUi` and `GameScreen` show a tidy board-game input seam where anchored HUD buttons coexist with touch-to-cell translation and top-most socket lookup, instead of mixing card logic directly into sprite hitboxes.
 
 ## UI, HUD, And Menus
 
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - the LibGDX stage and actor layering demonstrate a custom in-game board UI inside a standard Android app shell.
 - [ktx](../findings/libktx-ktx.md) - the Scene2D DSL is a strong pattern for reducing UI boilerplate in Kotlin game UIs.
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `DebugMenuManager` treats debug overlays as a first-class manager instead of gameplay-specific debug code.
+- [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `StartScreen`, `GameScreen`, `OptionsDialog`, and `StatisticsDialog` show a compact libGDX UI shell where themed menus, statistics, options, and pause dialogs are kept as discrete `PopTable` flows instead of being fused into the main game screen.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `GameUI`, `MenuUI`, and `ui/skin.kt` show a code-driven Scene2D UI layer with pulsing prompts, bar/alpha-based HUD feedback, Kotlin-built skin styles, and small-game menus that stay readable without JSON skin files.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `MultiplayerLobbyScreen` shows a state-driven Scene2D lobby that safely stages cross-thread UI changes.
 - [unciv](../findings/yairm210-unciv.md) - `WorldScreen` is a strong reference for composing a map-heavy HUD around chat, minimap, diplomacy, notifications, and tile/unit panels without a static layout.
@@ -323,6 +328,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - `SaveFileSerializer` demonstrates compact explicit binary save/load logic.
 - [ktx](../findings/libktx-ktx.md) - `AssetStorage` exposes coroutine-first asset loading with progress and dependency tracking.
 - [littlektframework-littlekt](../findings/littlektframework-littlekt.md) - `AssetProvider` separates async loading from post-load preparation and prevents duplicate in-flight loads.
+- [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `PersistenceService`, `PlayerStatisticsService`, and `SettingsService` show a pragmatic small-game data layer where JSON saves live in LibGDX preferences, malformed or legacy formats are migrated or rejected cleanly, and meta-progression stays layout-scoped rather than global and opaque.
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `SerializationManagerImpl` uses typed metadata registration for actor save/load.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `SaveLoadService` packages persistence as pluggable handlers rather than hardwired scene logic.
 - [unciv](../findings/yairm210-unciv.md) - `GameInfo.setTransients`, `UncivFiles`, and the ruleset merge path separate durable serialized state from reconstructed runtime caches, previews, and mod compatibility repair.
@@ -415,6 +421,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [xxxcucus-planes](../findings/xxxcucus-planes.md) - `fastlane/Fastfile`, `fastlane/Appfile`, and the localized Play metadata tree show that even a small Android game benefits from checked-in deploy lanes, store text, feature graphics, and screenshots instead of leaving release packaging undocumented.
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - the `maker` app, `packageWorld`, and `validate-world.mjs` show a stronger-than-usual game-content pipeline where authored world data is edited in a dedicated tool, validated before packaging, and shipped as an explicit `.nmd` bundle instead of being copied ad hoc into the runtime.
 - [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `docs/CARTRIDGE_FORMAT.md`, `CartridgeCodec`, and `DemoCartridge.defaultBytes()` show a compact authoring pipeline where level content is packed into a documented MIME payload with strict byte budgets and reusable demo-generation helpers.
+- [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - root `build.gradle`, `lwjgl3/build.gradle`, `fastlane/metadata/android/`, and the README store badges show a practical small-product pipeline where shared assets are enumerated automatically, desktop builds are packaged through `construo`, and Android store metadata stays versioned with the codebase.
 
 ## Android Platform Integration
 
@@ -422,6 +429,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [korge](../findings/korlibs-korge.md) - `KorgeAndroidView` and `AndroidGameWindowNoActivity` show host-view embedding without forcing a full activity-owned runtime.
 - [godot-kotlin-jvm](../findings/utopia-rise-godot-kotlin-jvm.md) - Android export support includes explicit main-dex generation and plugin wiring.
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `KubrikoViewport` and `InternalViewport` show how to embed a game runtime directly inside Compose-based Android UI.
+- [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `AndroidLauncher`, `AndroidManifest.xml`, and `android/build.gradle` show a straightforward but reusable Android libGDX host path with immersive landscape mode, game-category manifest metadata, shared assets, and system-dark-mode forwarding into shared Kotlin settings.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `AndroidPlatform` isolates share intents, multicast locks, and IP handling behind a platform boundary.
 - [unciv](../findings/yairm210-unciv.md) - `AndroidLauncher`, `AndroidGame`, `AndroidDisplay`, and `AndroidSaverLoader` show deep-link handling, SAF saves, background multiplayer workers, immersive-mode control, and external-mod bridging.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `android/build.gradle.kts`, `AndroidManifest.xml`, and `android/.../launcher.kt` show a straightforward direct-Android LibGDX shell with shared root assets, explicit native extraction during packaging, portrait orientation, and immersive-mode startup without extra app-layer indirection.
@@ -562,3 +570,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `shared/build.gradle.kts`, `server/build.gradle.kts`, `client/build.gradle.kts`, the `maker` tests, and the broad server/client/shared test surface show a serious multi-stack workflow with modern Android/KMP targets, explicit world validation and packaging, and much stronger regression depth than the repository's star count suggests, even though local discovery still stops at the Java `17+` floor.
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - the `80`-module Gradle monorepo, `.github/workflows/ci.yml`, broad screenshot and benchmark surface, and the Windows-breaking `:`-named watchface solution resources show both unusually strong Android/Wear verification discipline and a very real platform-specific checkout caveat for Windows-based labs.
 - [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `build.gradle.kts`, `app/build.gradle.kts`, and the focused cartridge tests show a current Android build on AGP `8.7.2`, Kotlin `2.0.21`, and Java `17`, with meaningful codec-level verification but local Gradle discovery in this lab still blocked by the missing full JDK/compiler.
+- [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `build.gradle`, `android/build.gradle`, `lwjgl3/build.gradle`, and the missing `.github/workflows/` tree show a compact but real Android-plus-desktop release surface around AGP `8.5.2`, Kotlin `2.0.0`, Java `17`, desktop packaging via `construo`, and store metadata via fastlane, even though local Gradle discovery in this lab still stops at the Java `11+` JVM floor and no tests or CI were found.

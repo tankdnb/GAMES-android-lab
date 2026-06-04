@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `62` real GitHub research batches are completed end-to-end.
-- `68` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `63` real GitHub research batches are completed end-to-end.
+- `69` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `59`
+  - `accepted`: `60`
   - `reference-only`: `9`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `tottelofstrom/NFC-DOOM` as an `accepted` Android Compose raycaster whose strongest reusable value is the combination of a low-resolution software renderer, a strict tiny cartridge format, and raw `NfcV` fallback for unreliable tags.
-- The latest accepted addition is also `tottelofstrom/NFC-DOOM`.
+- The latest researched addition is `mimoguz/tripeaks-gdx` as an `accepted` Android card-game reference whose strongest reusable value is the combination of a layout-graph solitaire core, migration-aware JSON persistence, pooled board rendering, and a practical Android plus desktop libGDX product split.
+- The latest accepted addition is also `mimoguz/tripeaks-gdx`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
