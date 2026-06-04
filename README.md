@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `65` real GitHub research batches are completed end-to-end.
-- `71` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `66` real GitHub research batches are completed end-to-end.
+- `72` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `62`
-  - `reference-only`: `9`
+  - `reference-only`: `10`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `Juanoff/roulette-android-app` as an `accepted` Android-game reference whose strongest reusable value is the combination of resumable finite spin animation state, custom Compose Canvas wheel rendering, angle-normalized winner calculation, and a clean single-screen MVVM shell.
-- The latest accepted addition is also `Juanoff/roulette-android-app`.
+- The latest researched addition is `icela/FriceEngine` as a `reference-only` historical JVM engine comparison whose strongest reusable value is the dual Swing/JavaFX runtime split, buffered layer mutation model, and tiny event/resource helper stack.
+- The latest accepted addition is `Juanoff/roulette-android-app`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

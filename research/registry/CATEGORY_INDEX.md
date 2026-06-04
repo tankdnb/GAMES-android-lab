@@ -73,6 +73,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `Main`, `LoadingScreen`, `GameScreen`, `GameScreenState`, and `StartScreenState` show a compact shared libGDX runtime where assets, services, normal rendering, blurred paused rendering, and screen orchestration stay separated instead of collapsing into one activity-sized class.
 - [saar25-planetengine](../findings/saar25-planetengine.md) - `Node3D`, `NodeComponentGroup`, `SimpleRenderingPath`, and the typed forward or deferred or shadows node groups show a real scene-runtime architecture where node composition, pass traversal, and per-frame orchestration stay explicit instead of being buried inside one renderer.
 - [juanoff-roulette-android-app](../findings/juanoff-roulette-android-app.md) - `RouletteViewModel`, `RouletteState`, `RouletteSpinState`, and `RouletteAnimationStateCalculator` show a compact Compose Android game shell where session state, winner calculation, and resumable finite animation stay centralized outside the rendering composables.
+- [icela-friceengine](../findings/icela-friceengine.md) - `Game`, `GameFX`, `FriceGame`, `Initializer`, and `Layer` show a small historical engine that unifies Swing and JavaFX behind one API, stages per-frame mutations through buffers, and keeps delayed events/timers explicit instead of burying them in toolkit callbacks.
 
 ## Rendering And Graphics
 
@@ -134,6 +135,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `CustomViewport`, `SimpleRenderer`, `BlurredRenderer`, and `GameView` show a neat small-game rendering stack with constant-height viewport scaling, framebuffer-backed pause blur, pooled card or animation views, and z-sorted socket rendering.
 - [saar25-planetengine](../findings/saar25-planetengine.md) - `Renderers`, `RendererPrototypeHelper`, `RenderPassPrototypeWrapper`, `DeferredRenderer3D`, `LightRenderPass`, and `ShadowsRenderPass` show a reusable OpenGL architecture where reflection-bound shader or uniform prototypes, G-buffer draws, and fullscreen light or shadow passes are kept modular instead of hardwired into one renderer class.
 - [juanoff-roulette-android-app](../findings/juanoff-roulette-android-app.md) - `RouletteWheel`, `RouletteSectorView`, and `RouletteScreen` show a small but clean Canvas-rendering pattern where arcs, rotated labels, and orientation-aware wheel sizing stay inside reusable Compose drawing and layout blocks.
+- [icela-friceengine](../findings/icela-friceengine.md) - `FriceDrawer`, `JvmDrawer`, `JfxDrawer`, `FriceImage`, and `FrameImageResource` show a compact dual-backend rendering seam where drawing, image transforms, and timed frame animation stay abstracted away from game code even on a very old JVM stack.
 
 ## Gameplay Systems
 
@@ -231,6 +233,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `GameUi` and `GameScreen` show a tidy board-game input seam where anchored HUD buttons coexist with touch-to-cell translation and top-most socket lookup, instead of mixing card logic directly into sprite hitboxes.
 - [saar25-planetengine](../findings/saar25-planetengine.md) - `Window`, `UIDisplay`, `UIInputHelper`, and the node components show a desktop-first but still reusable input seam where raw GLFW callbacks, focus or hover tracking, drag handling, and behavior components stay outside the renderer core.
 - [juanoff-roulette-android-app](../findings/juanoff-roulette-android-app.md) - `SectorCountSelector`, `SpinButton`, and `RouletteViewModel` show a neat small-game control seam where configuration changes are blocked during active animation and the primary spin action is hard-locked until the wheel settles.
+- [icela-friceengine](../findings/icela-friceengine.md) - `Game`, `GameFX`, `FriceGame.mouse(...)`, and `Layer` show a tiny backend-to-engine input seam where native key/mouse events are normalized once and button hit-testing stays centralized, while also exposing a real button-removal bookkeeping bug in the current runtime.
 
 ## UI, HUD, And Menus
 
@@ -305,6 +308,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `PhysicsWorld`, `Physics2dWorld`, and the transform tasks in `kool-physics/build.gradle.kts` show async interpolated 3D and 2D physics pipelines plus a distinctive shared-source strategy for Android and web bindings.
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `PhysicsUtility`, `PhysicsWorld`, `PhysicsConfig`, `BodyBuilder`, `BodyDefBuilder`, and `FixtureDefBuilder` show a still-useful pixel-first Box2D wrapper where conversion helpers, reusable builders, and automatic shape cleanup reduce raw physics boilerplate substantially.
+- [icela-friceengine](../findings/icela-friceengine.md) - `Objects.kt`, `FriceGame.dealWithObjects(...)`, and `QuadTree.kt` show a tiny collision/runtime stack built from AABB overlap, optional off-screen auto-GC, and an unused quadtree direction that never graduates into the main loop.
 
 ## Audio
 
@@ -322,6 +326,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `SoundManager`, `MusicManager`, and the audio README show a deliberately prototype-oriented keyed audio registry pattern, useful mainly as a small libGDX jam-shell reference and as a reminder of where `AssetManager` should eventually replace singleton ownership.
 - [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `DefaultAudioService` shows a practical small-game pattern where duplicate sound requests are coalesced per frame, current music ownership stays explicit, and effect playback remains queued instead of being triggered ad hoc across screens.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `SoundManager` and `AndroidGameAudio` show a standout Android audio seam where short PCM clips are synthesized into cached WAV files, loaded into `SoundPool`, and exposed to gameplay through a tiny platform adapter.
+- [icela-friceengine](../findings/icela-friceengine.md) - `AudioPlayer.kt` and the vendored MP3 jars under `lib/` show a practical old-JVM audio compatibility pattern where JavaSound playback is normalized to PCM and MP3 support is shipped directly with the engine instead of relying on normal dependency resolution.
 
 ## AI And Behavior
 
@@ -583,3 +588,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [juanoff-roulette-android-app](../findings/juanoff-roulette-android-app.md) - `app/build.gradle.kts`, `gradle/libs.versions.toml`, `gradle/gradle-daemon-jvm.properties`, and the template tests show a modern AGP `9.2.1` / Kotlin `2.3.21` / Java `21` Android build that can configure locally through daemon-JDK provisioning, but still has no real CI and only placeholder tests, including a stale instrumentation package assertion.
 - [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - `build.gradle`, `android/build.gradle`, `lwjgl3/build.gradle`, and the missing `.github/workflows/` tree show a compact but real Android-plus-desktop release surface around AGP `8.5.2`, Kotlin `2.0.0`, Java `17`, desktop packaging via `construo`, and store metadata via fastlane, even though local Gradle discovery in this lab still stops at the Java `11+` JVM floor and no tests or CI were found.
 - [saar25-planetengine](../findings/saar25-planetengine.md) - the root and module `pom.xml` files show a readable Maven reactor around Java `11`, Kotlin `1.7.20`, and OS-specific LWJGL native profiles, but no Maven wrapper, no visible CI, no real tests, and no local build verification because Maven is unavailable in the current lab.
+- [icela-friceengine](../findings/icela-friceengine.md) - `build.gradle.kts`, `.travis.yml`, `.circleci/config.yml`, `appveyor.yml`, and the mixed `test/` tree show a vivid Java `8` / Gradle `4.7` / Kotlin `1.2.60` / Bintray-era workflow whose wrapper still starts locally but whose configuration is now broken by the missing transitive `http-builder:0.7.2` dependency behind the old Bintray plugin path.

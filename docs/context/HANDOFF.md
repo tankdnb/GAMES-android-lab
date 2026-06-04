@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The sixty-fifth real research batch is now completed and documented end-to-end.
-- The lab now has 71 researched repositories recorded:
+- The sixty-sixth real research batch is now completed and documented end-to-end.
+- The lab now has 72 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -80,6 +80,7 @@
   - `mimoguz/tripeaks-gdx` - `accepted`
   - `Saar25/PlanetEngine` - `accepted`
   - `Juanoff/roulette-android-app` - `accepted`
+  - `icela/FriceEngine` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -87,16 +88,17 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The active exact-license short backlog is now `icela/FriceEngine`; the next candidate is `icela/FriceEngine`.
+- The active exact-license short backlog is empty and must be refreshed before the next batch is opened.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
 
-- Completed `BATCH-2026-06-04-AH` as an android-game pass for `Juanoff/roulette-android-app`.
-- Added durable `roulette-android-app` findings for resumable finite spin animation state, custom Compose Canvas wheel rendering, angle-normalized winner calculation, and a clean portrait/landscape single-screen MVVM shell.
-- Verified the current build shape for this batch: `gradlew help --no-daemon` works locally because the checked-in daemon JDK provisioning resolves Java `21`, while `:app:testDebugUnitTest --dry-run` still stops at the missing Android SDK; also confirmed that the checked-in instrumentation test is stale and asserts the wrong package name.
-- Cleared the head of the exact-license shortlist; the next candidate is now `icela/FriceEngine`.
-- Refreshed the public and internal snapshot counts again so the repository now consistently reports `65` completed batches, `71` researched repositories, and a `62 accepted / 9 reference-only` split.
+- Completed `BATCH-2026-06-04-AI` as an engine-framework pass for `icela/FriceEngine`.
+- Added durable `FriceEngine` findings for the shared Swing/JavaFX drawer split, buffered layer mutation queues, tiny timer/event scheduler, resource-cache helpers, and lightweight preference utilities.
+- Verified the current build caveat for this batch: `gradlew help --no-daemon` and `test --dry-run` fail because the legacy Bintray publishing plugin still depends on `org.codehaus.groovy.modules.http-builder:http-builder:0.7.2`, which no longer resolves, even though the wrapper itself still boots under Java `8`.
+- Kept `FriceEngine` as `reference-only` because it is stale, desktop-only, AGPL-3.0 licensed, and still exposes runtime quality issues such as broken `FButton` removal bookkeeping in `Layer`.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `66` completed batches, `72` researched repositories, and a `62 accepted / 10 reference-only` split.
+- Exhausted the current exact-license shortlist again, so the next research cycle must refresh `research/registry/CANDIDATE_QUEUE.md` before another batch is opened.
 - Completed `BATCH-2026-06-04-AG` as an engine-framework pass for `Saar25/PlanetEngine`.
 - Added durable `PlanetEngine` findings for annotation-driven renderer prototypes, typed forward or deferred or shadow node groups, a retained GUI/input layer, LWJGL/OpenGL wrapper classes, and a readable Maven module split.
 - Verified the current build caveat for this batch: the checked-in reactor targets Java `11`, but the lab cannot validate it because Maven is unavailable locally; also confirmed that repo-level freshness is inflated by activity on `origin/dev` while default `master` ends at a `2022-10-28` commit.
@@ -475,6 +477,7 @@
 - `Baret/pltcmd` is a strong indirect tactics-simulation reference, but it has no Android target, its desktop Swing/Zircon shell is not portable as-is, some command/knowledge paths are still TODO-only, and local build verification in this lab is currently blocked by the missing Maven toolchain.
 - `Amigoconglomeration918/LinkGame` is a useful direct Android casual-game reference, but it has zero public signal, only template tests, rough dependency and README hygiene, a bundled zip artifact committed inside `src/main/java`, and local build validation in this lab still stops at the missing JDK/compiler surface.
 - `rogal01/tower-defense-android` is a useful direct Android tower-defense reference, but it still has zero public signal, no visible tests or CI, extremely large monolithic runtime or render files, only partial multiplatform follow-through, and rough repository hygiene including an empty checked-in `GameEngine.kt` file under the Android source tree.
+- `icela/FriceEngine` is a historically useful JVM engine comparison, but it is stale, desktop-only, AGPL-3.0 licensed, build-broken through a dead Bintray-era dependency path, and includes verified runtime issues like broken button-removal bookkeeping.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - `yaroslavzghoba/KotCore` currently has more publishing scaffolding than runtime substance, so it should not be treated as evidence of real Compose Canvas or Android engine maturity until actual loop, grid, input, or rendering code appears.
@@ -483,8 +486,9 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue with `icela/FriceEngine` from the current exact-license shortlist if no unfinished batch is present.
-- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new exact-license shortlist only after `icela/FriceEngine` is cleared or intentionally dropped.
+- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new exact-license shortlist before opening the next batch.
+- Once that shortlist is exhausted, refresh it again instead of carrying an empty or stale queue forward.
+- If a future follow-up is needed for `icela/FriceEngine`, keep it narrow: isolate the shared Swing/JavaFX drawer seam, the buffered layer mutation model, the small event/timer helpers, or the resource-cache utilities instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Saar25/PlanetEngine`, decide first whether the target should be default `master` or the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input layer instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `mimoguz/tripeaks-gdx`, rerun Android or desktop tasks in a JDK `17+` plus Android SDK-ready environment, or isolate the layout-graph rules core, the JSON persistence plus migration seam, or the viewport and blurred-render split instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `tottelofstrom/NFC-DOOM`, rerun Android tasks in a JDK `17+` plus Android SDK-ready environment, or isolate the low-resolution software raycaster, the cartridge codec/builder seam, or the raw `NfcV` read/write fallback layer instead of reopening the whole repository blindly.

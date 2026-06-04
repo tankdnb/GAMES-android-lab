@@ -79,6 +79,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-AF` | `mimoguz/tripeaks-gdx` | `android-game` | `3` | `2` | `2` | `3` | `88` | `2025-03-15` | Explicit GPL-3.0 Kotlin libGDX solitaire game with stronger public signal and more likely reusable gameplay or cross-platform runtime patterns than the other refreshed shortlist options | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `BATCH-2026-06-04-AG` | `Saar25/PlanetEngine` | `engine-framework` | `3` | `1` | `3` | `3` | `7` | `2026-05-29` | Fresh GPL-3.0 LWJGL/OpenGL engine candidate with better current activity and expected architecture yield than the remaining shortlist alternatives | `done` | `carry-over exact-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-AH` | `Juanoff/roulette-android-app` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-05-28` | Fresh MIT Android Compose game shell with likely reusable spin animation, touch interaction, and MVVM product-flow patterns now that the stronger engine candidate is cleared | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
+| `BATCH-2026-06-04-AI` | `icela/FriceEngine` | `engine-framework` | `2` | `2` | `0` | `2` | `349` | `2019-12-28` | Older but still high-signal AGPL engine reference worth preserving as a fallback architecture pass if the fresher shortlist leaders disappoint | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 
 ## Backlog Candidates
 
@@ -89,10 +90,7 @@ Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was r
 Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AB`. The shortlist below keeps only candidates that passed exact repository-level license verification, not just GitHub search-index metadata.
 
 Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AF`. The shortlist below keeps only candidates that passed exact repository-level `licenseInfo` verification and are not already listed in `research/registry/RESEARCHED_REPOS.md`.
-
-| Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `icela/FriceEngine` | `engine-framework` | `2` | `2` | `0` | `2` | `349` | `2019-12-28` | Older but still high-signal AGPL engine reference worth preserving as a fallback architecture pass if the fresher shortlist leaders disappoint | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
+Current short backlog is empty. Refresh this file with a new exact-license shortlist before opening the next batch.
 
 ## Status Legend
 
