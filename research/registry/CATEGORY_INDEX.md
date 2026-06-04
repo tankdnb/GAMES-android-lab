@@ -50,6 +50,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `Story`, `Chapter`, `Scene`, `VisualNovel`, and `Game` show a clean hierarchical narrative runtime where content DSL, execution ownership, and host configuration stay separate instead of being fused into one UI shell.
 - [johron-glare](../findings/johron-glare.md) - `Engine`, `Node`, and `Editor` show a compact node/component runtime with queued child insertion, dependency auto-wiring, and an editor that runs inside the same process as the engine, even though the checked-in runtime is not mature enough for a main baseline.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `EngineRuntime`, `SceneManager`, `SceneWorld`, `RuntimeScene`, and `RuntimeSceneBuilder` show a backend-neutral engine loop with deferred scene transitions, command-buffered ECS mutation, and serialized runtime-scene loading into the same core runtime used by the editor tools.
+- [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `AppNavGraphs`, `MainViewModel`, the App Startup initializers, and `ComparisonQuizCoreImpl` show a Compose-first Android game product where typed navigation, root meta-state, startup-owned workers, and per-mode gameplay cores stay modular without a separate engine layer.
 
 ## Rendering And Graphics
 
@@ -91,6 +92,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [queuejw-space](../findings/queuejw-space.md) - `VisibleUniverse.kt`, `UniverseCanvas`, `ZoomedDrawScope`, and `PathTools` show a fully Compose-driven vector renderer with zoom-aware strokes, orbit/grid overlays, custom SVG-like path art, and simulation-step-triggered redraws instead of a separate `SurfaceView` renderer.
 - [johron-glare](../findings/johron-glare.md) - `Renderer`, `MeshRenderer`, `ShaderComponent`, and `ImGuiRenderer` show a very small shader-backed OpenGL path with in-process docked tooling, while also exposing a concrete caution that the current checked-in renderer only walks first-level scene children.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `RenderCommandBuffer`, `ModelRenderSystem`, `RuntimeEnvironmentSystem`, `TerrainRenderSystem`, and `GdxRenderer3D` show a useful split between backend-neutral render commands and a LibGDX backend that resolves static models, glTF scenes, dynamic terrain meshes, debug views, PBR previews, and skybox/environment commands.
+- [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - the Compose-first screen tree plus `WordleScreenTest` show a useful counterpoint to engine-heavy repos: boards, keyboards, overlays, and route transitions stay inside normal Android UI primitives and remain testable through semantics-aware Compose UI tests.
 
 ## Gameplay Systems
 
@@ -126,6 +128,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `docs/language-intro.md`, `Changer`, `Effector`, `TfmGameplay`, and `Game20230521Test` show a rules-heavy turn-based engine where game state is a component multiset, effects emit queued tasks, and full games can be scripted and asserted end-to-end.
 - [queuejw-space](../findings/queuejw-space.md) - `Universe.initRandom`, `Universe.solveAll`, `Landing`, and `Spacecraft` show a tiny but real gameplay layer with seeded solar-system generation, exploration/discovery state, landing constraints, launch windows, and continuous ship effects.
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `Then`, `Decision`, `Conditional`, `Interactive`, and `StepResult` show a surprisingly complete narrative-gameplay flow where branching, named jumps, mini-game hooks, and clear/end actions are modeled as composable step primitives instead of one-off screen logic.
+- [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `GenerateMazeQuizWorker`, `MazeCategories`, `WordleRepositoryImpl`, `ComparisonQuizCoreImpl`, and `DailyChallengeRepositoryImpl` show a broader casual-gameplay stack with generated maze runs, several Wordle-like rule variants, shared event-driven daily goals, and a mode-specific comparison-quiz core.
 
 ## Input And Controls
 
@@ -161,6 +164,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [queuejw-space](../findings/queuejw-space.md) - `FlightStick`, the transformable camera hooks, and the `AUTO` control path show a direct Android touch-control model where a one-finger virtual stick drives thrust/orientation while camera gestures and autopilot stay explicit separate concerns.
 - [johron-glare](../findings/johron-glare.md) - `Input`, `Window`, and `FreecamScript` show a compact GLFW polling seam where raw desktop input stays simple, ImGui-active widgets can suppress gameplay key holds, and higher-level behavior lives in scripts instead of the window layer.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `InputSnapshot`, `InputService`, and `GdxInputService` show a normalized keyboard/mouse/pointer/action snapshot model with UI-capture awareness, cursor capture, and a clean boundary between LibGDX callbacks and engine-facing input state.
+- [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `MultiChoiceQuizScreenViewModel`, `WordleScreenViewModel`, and `RecentCategoriesRepositoryImpl` show a useful Android product pattern where answer flow, keyboard logic, paid skips, and personalized category selection stay controller-owned instead of leaking across composables.
 
 ## UI, HUD, And Menus
 
@@ -192,6 +196,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [queuejw-space](../findings/queuejw-space.md) - `Telemetry`, `ConsoleButton`, and the fold-aware `Spaaaace` layout show a compact in-game HUD shell with animated console overlays, autopilot controls, explored-body catalog text, and posture-aware camera centering on foldables.
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `GameEngine`, `AnsiConsoleGameEngine`, and the Swing `App` show a reusable UI seam where the same story runtime can be hosted by a minimal console renderer or by a richer tool-like debug shell with progression controls, flag viewers, and restore-point jumping.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `RuntimeUiService`, `AssetBrowserScene`, and `SceneEditorScene` show an engine where ordered runtime UI layers and desktop editor panels are first-class runtime concepts rather than bolted-on debug menus.
+- [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `AppNavGraphs`, `MainViewModel`, and `ProfileViewModel` show a polished Compose product shell where gameplay routes, profile/progression dashboards, daily-challenge surfaces, and top-level meta-state stay coordinated without fragment-style sprawl.
 
 ## Physics And Collision
 
@@ -261,6 +266,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `TfmAuthority`, `Canon`, `ClassDeclaration`, and the `.pets` plus `.json5` resources show a clean split between reusable runtime code and declarative authoritative content packs that can be swapped or extended.
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `SavedGamesController`, `PlayerInfoController`, and `PlayerStatsController` show a compact Android service-data seam where cloud saves and player-profile models are wrapped into serializable payloads for an engine-facing API instead of leaking Google client objects directly.
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `GameSave`, `RestorePoint`, `StepIdentifierTracker`, and `ProgressionController` show a clean split between meta-progress, current route position, seen-step history, and shared skip/auto/wait behavior instead of one monolithic save-state blob.
+- [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `AppDatabase`, `LocalUserServiceImpl`, `MultiChoiceQuizEndGameWorker`, and `WordleEndGameWorker` show a practical Android casual-game data seam where Room, DataStore, worker-owned endgame persistence, XP, diamonds, and level-up rewards stay centralized across several game modes.
 
 ## Networking And Multiplayer
 
@@ -338,6 +344,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `GameActivity.android`, `GameView.android`, `PlatformGameLoop.android`, and `Platform.android` show a direct Android engine shell built around `TextureView`, `Choreographer`, Compose interop, and platform-isolated audio/sensor services.
 - [queuejw-space](../findings/queuejw-space.md) - `MainActivity`, `DreamUniverse`, `WindowInfoTracker` usage, `AndroidManifest.xml`, and `UniverseProgressNotifier` show an Android-only product shell with foldable posture handling, `DreamService` hosting, PLATLOGO launcher wiring, and Android 16 live progress notifications around an in-flight game session.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `android/build.gradle`, `LibGdxBackend`, and the shared module layout show a real Android host path around one engine core, including Android app packaging, asset/native preparation tasks, and a deliberate split between desktop ImGui tooling and Android runtime capabilities.
+- [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `WorkManagerInitializer`, `EnqueueStartWorksInitializer`, the app shell, and the convention plugins show direct Android ownership of startup scheduling, Hilt worker injection, Compose navigation, and `normal` / `foss` distribution flavors rather than treating Android as a thin wrapper.
 
 ## Performance And Memory
 
@@ -369,6 +376,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `Board`, `PliesPageData`, `PresenterAsync`, and `History` show precomputed traversal links, a bounded in-memory page cache for long move histories, stale-result guards around background AI work, and async current-game persistence.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `GameViewModel`, `RoomGameSettingsRepository`, and the platform repositories show a practical small-product pattern: keep rules pure, move longer-lived timers and transitions into the VM, and mirror product settings through flows instead of recomputing them inside screens.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `EngineRuntime`, `CommandBuffer`, `GdxAssetService`, and the terrain/runtime-texture path show a sensible baseline strategy around fixed-step updates, deferred world mutation, cached model metadata/bounds/previews, and generated runtime terrain assets instead of repeated heavyweight reload work.
+- [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `settings.gradle.kts`, `.github/workflows/android.yml`, the convention plugins, and the visible `73`-file test surface show a notably mature Android casual-game workflow with modular builds, flavor-specific assembly, repository/worker/gameplay-core tests, and Compose instrumentation coverage even though local validation in this lab still stops at a missing JDK.
 
 ## Build, Release, And Testing
 

@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The fortieth real research batch is now completed and documented end-to-end.
-- The lab now has 46 researched repositories recorded:
+- The forty-first real research batch is now completed and documented end-to-end.
+- The lab now has 47 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -55,6 +55,7 @@
   - `benpollarduk/ktvn` - `accepted`
   - `johron/glare` - `reference-only`
   - `Dmytro-Pashko/KRender` - `accepted`
+  - `joaomanaia/newquiz` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -285,6 +286,11 @@
 - Classified `KRender` as `accepted` because the inspected revision already offers a real reusable engine/tooling reference instead of only an architecture scaffold, and local `gradlew help` plus `:core:test --dry-run` both succeed.
 - Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the fortieth batch.
 - Cleaned the transient `KRender` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-06-04-J` as an Android-first Compose casual-game product pass for `joaomanaia/newquiz`.
+- Added durable `newquiz` findings for typed Compose navigation, a shared product-shell `MainViewModel`, worker-owned maze and daily-challenge flows, centralized XP/diamonds progression services, and a broader-than-usual Android casual-game test surface.
+- Classified `joaomanaia/newquiz` as `accepted` because the inspected revision is a strong reference for multi-mode Android game products even without custom engine code: several quiz modes, generated meta-runs, progression, persistence, and flavor-specific distribution concerns all stay modular in one Kotlin codebase.
+- Updated `research/registry/CANDIDATE_QUEUE.md`, `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` so the live shortlist now rolls forward to `canopyengine/canopy` and the public/internal snapshots reflect the forty-first batch.
+- Cleaned the transient `newquiz` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
@@ -337,7 +343,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current verified short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `joaomanaia/newquiz`.
+- Continue from the current verified short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `canopyengine/canopy`.
+- If a future follow-up is needed for `joaomanaia/newquiz`, rerun build and selected tests in a JDK `17+` Android SDK-ready environment with the required `google-services.json`, or isolate the generated maze meta-mode, the central user/progression service, or the `normal` / `foss` build split instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `KRender`, rerun selected `core` tests or Android tasks in a JDK `21` plus Android SDK-ready environment, or isolate the render-command/backend seam, the scene-editor document/runtime split, the runtime UI layering, or the terrain runtime pipeline instead of reopening the whole repository blindly.
 - Once the refreshed shortlist is exhausted, refresh it again with another explicit-license pass instead of letting the queue go stale.
 - If a future follow-up is needed for `glare`, rerun build or selected tasks in a JDK `22` environment, or isolate the node/component dependency wiring, editor-in-runtime tooling, or renderer traversal / disabled physics seam instead of reopening the whole repository blindly.

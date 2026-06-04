@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `40` real GitHub research batches are completed end-to-end.
-- `46` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `41` real GitHub research batches are completed end-to-end.
+- `47` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `40`
+  - `accepted`: `41`
   - `reference-only`: `6`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `Dmytro-Pashko/KRender` as an `accepted` Kotlin engine-and-toolset workspace with a backend-neutral runtime core, LibGDX backend, serialized runtime scenes, terrain/runtime pipelines, built-in editor scenes, and a direct Android app module.
-- The latest accepted addition is `Dmytro-Pashko/KRender`.
+- The latest researched addition is `joaomanaia/newquiz` as an `accepted` Android-first Compose trivia and word-game product with several quiz modes, generated maze runs, daily challenges, centralized progression/economy state, and a stronger-than-usual modular/tested casual-game shell.
+- The latest accepted addition is `joaomanaia/newquiz`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
