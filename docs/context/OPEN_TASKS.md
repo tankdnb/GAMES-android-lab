@@ -3,15 +3,16 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Continue the current exact-license shortlist from `research/registry/CANDIDATE_QUEUE.md`; the next candidate is `Saar25/PlanetEngine`, with `Juanoff/roulette-android-app` and `icela/FriceEngine` still queued behind it.
+- Continue the current exact-license shortlist from `research/registry/CANDIDATE_QUEUE.md`; the next candidate is `Juanoff/roulette-android-app`, with `icela/FriceEngine` still queued behind it.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
 
 ## Next Recommended
 
-- Run the next batch against `Saar25/PlanetEngine` if there is no unfinished active batch.
+- Run the next batch against `Juanoff/roulette-android-app` if there is no unfinished active batch.
 - Refresh the shortlist with another exact-license pass only after the current carry-over shortlist is exhausted.
+- If `Saar25/PlanetEngine` needs a future follow-up, decide up front whether to stay on the stale default `master` branch or intentionally inspect the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input system instead of reopening the whole repository broadly.
 - If `mimoguz/tripeaks-gdx` needs a future follow-up, rerun Android or desktop tasks in a JDK `17+` plus Android SDK-ready environment, or isolate the layout-graph rules core, the JSON save migration layer, or the renderer or viewport split instead of reopening the whole repository broadly.
 - If `tottelofstrom/NFC-DOOM` needs a future follow-up, rerun Android tasks in a JDK `17+` plus Android SDK-ready environment, or isolate the low-resolution software raycaster, the cartridge codec/builder seam, or the raw `NfcV` read/write fallback layer instead of reopening the whole repository broadly.
 - If `yaroslavzghoba/KotCore` needs a future follow-up, revisit it only after real engine files appear, or rerun Gradle discovery in a JDK `21` environment and isolate the KMP publishing scaffold rather than treating the current tree as a real engine baseline.
