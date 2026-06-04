@@ -3,14 +3,15 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Continue the current exact-license shortlist; next candidate is `rogal01/tower-defense-android`.
+- Refresh the exact-license shortlist before the next batch; the current short backlog is exhausted after `rogal01/tower-defense-android`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
 
 ## Next Recommended
 
-- Keep the current shortlist compact and prefer exhausting it before doing another broad refresh.
+- Refresh the shortlist with another exact-license pass, then keep it compact again.
+- If `rogal01/tower-defense-android` needs a future follow-up, rerun Android tasks in a JDK-backed SDK-ready environment, or isolate the shared runtime boundary, randomized path generation, procedural audio pipeline, or JSON save export/import seam instead of reopening the whole repository broadly.
 - If `Amigoconglomeration918/LinkGame` needs a future follow-up, rerun Gradle discovery or Android tasks in a real JDK-backed SDK-ready environment, or isolate the solvability-aware board generator, the padded-grid pathfinding and overlay renderer, or the small DataStore plus audio-lifecycle shell instead of reopening the whole repository broadly.
 - If `Baret/pltcmd` needs a future follow-up, rerun build or selected tests in a Maven plus JDK `21` environment, or isolate the radio-conversation protocol, the terrain-aware signal and visibility propagation, or the unit-blueprint DSL instead of reopening the whole repository broadly.
 - If `roomsmith-games/NeoMud` needs a future follow-up, rerun Gradle discovery or selected server/client tasks in a JDK `17+` or `21` environment, or isolate the shared protocol layer, the reconnect flow, the authoritative server loop, or the world-bundle validation pipeline instead of reopening the whole repository broadly.

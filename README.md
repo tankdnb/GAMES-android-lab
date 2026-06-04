@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `57` real GitHub research batches are completed end-to-end.
-- `63` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `58` real GitHub research batches are completed end-to-end.
+- `64` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `56`
+  - `accepted`: `57`
   - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `Amigoconglomeration918/LinkGame` as an `accepted` Android puzzle reference with solvability-checked board generation, padded-grid pathfinding, off-board path rendering, local leaderboard plus nickname persistence, and lifecycle-aware audio handling.
-- The latest accepted addition is `Amigoconglomeration918/LinkGame`.
+- The latest researched addition is `rogal01/tower-defense-android` as an `accepted` Android tower-defense reference with a shared Kotlin runtime, randomized authored path layouts, procedural Canvas rendering, procedural SFX generation, and JSON save export/import.
+- The latest accepted addition is `rogal01/tower-defense-android`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

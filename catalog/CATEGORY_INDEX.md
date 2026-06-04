@@ -29,6 +29,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Dark Matter](projects/quillraven-dark-matter.md) - compact LibGDX Android/Desktop autoscroller with a shared Ashley ECS shell, fixed-step interpolated movement, pointer-follow touch input, code-driven Scene2D HUD, patterned power-up waves, and a speed-reactive background plus shield-outline presentation stack.
 - [NeoMud](projects/roomsmith-games-neomud.md) - Kotlin multiplatform MUD product stack with a Compose Android client, shared typed protocol, server-authoritative tick loop, reconnect-aware client shell, validated world bundles, and a surprisingly broad multiplayer test surface.
 - [LinkGame](projects/amigoconglomeration918-linkgame.md) - Android Compose tile-link puzzle with solvability-checked board generation, padded-grid pathfinding, off-board path rendering, local leaderboard plus nickname persistence, and a tidy lifecycle-aware audio/settings shell despite rough build and test hygiene.
+- [Tower Defense Android](projects/rogal01-tower-defense-android.md) - Android-first tower-defense game with a shared Kotlin runtime, randomized authored path layouts, custom `SurfaceView`/Canvas rendering, procedural SFX generation, and JSON save export/import inside a broad native product shell.
 
 ## engine-framework
 

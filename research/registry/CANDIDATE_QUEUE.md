@@ -71,6 +71,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-X` | `roomsmith-games/NeoMud` | `android-game` | `2` | `1` | `3` | `3` | `9` | `2026-06-03` | Fresh MIT Kotlin multiplatform MUD project with Ktor WebSocket server and Compose Android client; likely to yield reusable networking, shared-state, and Android host-shell patterns even if it leans more product than engine | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-Y` | `Baret/pltcmd` | `gameplay-systems` | `2` | `1` | `3` | `2` | `4` | `2026-06-03` | Fresh MIT tactical game with an unusual radio-command-only control model, strong modular simulation surface, and better current novelty and public signal than the remaining zero-star fallback candidates | `done` | `carry-over explicit-license shortlist execution + exact repository view verification + shortlist re-check` |
 | `BATCH-2026-06-04-Z` | `Amigoconglomeration918/LinkGame` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-04` | Fresh MIT Android puzzle game with challenge and endless modes, audio, leaderboards, and nickname support; selected as the next direct Android fallback now that the stronger shortlist leaders are exhausted | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
+| `BATCH-2026-06-04-AA` | `rogal01/tower-defense-android` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-03` | Fresh MIT Android tower-defense candidate with low public signal but direct platform relevance; promoted from reserve because the compact explicit-license shortlist is otherwise exhausted | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
 
 ## Backlog Candidates
 
@@ -80,9 +81,7 @@ Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was r
 
 Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-W`. The shortlist below keeps only candidates that passed exact repository-level license verification, not just GitHub search-index metadata.
 
-| Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
-|---|---|---|---|---|---|---|---|---|---|
-| `rogal01/tower-defense-android` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-03` | Fresh MIT Android tower-defense candidate with low public signal but direct platform relevance; kept only as a reserve behind the better-documented shortlist entries | `explicit-license shortlist refresh + exact repository view verification` |
+Short backlog is currently empty. Refresh the shortlist again before the next batch.
 
 ## Status Legend
 
