@@ -3,19 +3,20 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Refresh the short backlog in `research/registry/CANDIDATE_QUEUE.md` before starting the next research batch.
+- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `queuejw/Space`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
 
 ## Next Recommended
 
-- Refresh the shortlist with up to 4 explicit-license Kotlin game, game-engine, or directly game-development-relevant library candidates before starting batch `36`.
-- Bias the refresh toward the usual project heuristics:
-  - popularity signal strong enough to matter
-  - recent maintenance
-  - likely yield for Android-facing gameplay, runtime, tooling, or platform-integration ideas
+- Prefer the current verified backlog before running another broad search:
+  - `queuejw/Space`
+  - `benpollarduk/ktvn`
+  - `johron/glare`
+- Keep the current shortlist compact unless it is exhausted again.
 - Avoid repopulating the queue with license-unclear repositories unless the team explicitly decides to relax the current screen.
+- If `CheerWizard/Kanvas` needs a future follow-up, rerun Gradle discovery in a real JDK environment and isolate the platform loop abstraction, the Vulkan/WebGPU render split, or the shader/editor toolchain instead of reopening the whole repository broadly.
 - If `StudioAdriatic/PGSGP` needs a future follow-up, rerun Gradle discovery or selected tests in a JDK `17` environment, or isolate the export-plugin manifest/dependency injection path, the saved-games wrapper, or the documentation/API drift instead of reopening the full repository broadly.
 - If `MartianZoo/solarnet` needs a future follow-up, rerun Gradle discovery or selected tests in a JDK `21`-ready environment, or at minimum a Java `11+` environment for configuration, or isolate the `Pets` DSL, the loaded type system, the full-game script tests, or the REPL shell instead of reopening the full repository broadly.
 - If `RajashekarRaju/hangman-compose` needs a future follow-up, rerun Gradle discovery or targeted tests in a JDK `17+` or `21` environment, or isolate the pure session engine, the word-catalog DSL, or the settings/history shell instead of reopening the full repository broadly.

@@ -49,6 +49,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-B` | `RajashekarRaju/hangman-compose` | `android-game` | `3` | `1` | `3` | `3` | `38` | `2026-03-12` | Compose Multiplatform Android-first game product with a shared engine, persistent settings/history, DSL-driven content, explicit CI/CD, and a broader small-product architecture surface than the remaining short backlog | `done` | `carry-over licensed shortlist execution + exact repo verification` |
 | `BATCH-2026-06-04-C` | `MartianZoo/solarnet` | `engine-framework` | `2` | `1` | `3` | `3` | `16` | `2026-06-01` | Fresh Apache-2.0 board-game engine and specification-language repo with stronger Kotlin game-engine / rules-modeling yield than the more Android-direct but narrower integration-plugin alternative in the current short backlog | `done` | `carry-over licensed shortlist execution + exact candidate comparison` |
 | `BATCH-2026-06-04-D` | `StudioAdriatic/PGSGP` | `library-sdk` | `2` | `1` | `3` | `2` | `50` | `2026-06-03` | Fresh MIT-licensed Android Play Games Services plugin for Godot 4.x with clear Kotlin-side value around sign-in, achievements, leaderboards, manifest wiring, and Android game-services integration | `done` | `carry-over licensed shortlist execution + exact repo verification` |
+| `BATCH-2026-06-04-E` | `CheerWizard/Kanvas` | `engine-framework` | `3` | `0` | `2` | `3` | `1` | `2026-04-10` | Fresh MIT-licensed KMP engine with explicit mobile/web/native targets, large mixed Kotlin/native surface, and stronger expected Android-transfer architecture value than the narrower refreshed-shortlist alternatives | `done` | `explicit-license shortlist refresh + exact candidate comparison` |
 
 ## Backlog Candidates
 
@@ -56,10 +57,13 @@ Keep this short. Move only the strongest candidates here.
 
 Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was removed from the short backlog after re-verification showed `licenseInfo: null` on GitHub, and the team chose to prefer candidates with explicit license metadata for the next pass.
 
-Carry-over licensed shortlist exhausted on `2026-06-04` after completing `StudioAdriatic/PGSGP`. Refresh this queue before starting the next batch.
+Refreshed on `2026-06-04` after completing `StudioAdriatic/PGSGP`. After researching `CheerWizard/Kanvas`, the current compact explicit-license shortlist is now led by `queuejw/Space`.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
+| `queuejw/Space` | `android-game` | `3` | `1` | `2` | `2` | `7` | `2025-09-05` | Direct Android game based on the Android 14-16 Easter Egg, with permissive Apache-2.0 licensing and likely reusable Android-native game loop, input, and rendering patterns | `explicit-license shortlist refresh + exact candidate comparison` |
+| `benpollarduk/ktvn` | `library-sdk` | `2` | `1` | `1` | `3` | `20` | `2025-05-08` | MIT-licensed visual-novel framework with a substantial Kotlin DSL and likely reusable content-structure, state-flow, and narrative runtime ideas | `explicit-license shortlist refresh + exact candidate comparison` |
+| `johron/glare` | `engine-framework` | `2` | `0` | `2` | `2` | `4` | `2025-09-01` | Fresh MIT-licensed modular Kotlin LWJGL/OpenGL engine that may still yield compact runtime and renderer patterns despite low public signal | `explicit-license shortlist refresh + exact candidate comparison` |
 
 ## Status Legend
 

@@ -45,6 +45,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `Main.kt`, `ViewData`, `Presenter`, `PresenterAsync`, and `Model` show a productized KorGE shell where async bootstrap, orchestration, domain logic, and persistence stay intentionally separated.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `AppInitializerViewModel`, `HangmanRoot`, `GameSessionEngine`, and `GameViewModel` show a Compose-first small-game shell where app bootstrap, pure rules, and controller-style feature orchestration stay clearly separated.
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `Engine`, `ApiTranslation`, `TfmGameplay`, `Component`, `Effector`, and `MClass` show a JVM rules engine where declarative class/effect definitions are loaded into a typed runtime, assembled through scoped DI, and executed as task-driven gameplay.
+- [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `PlatformGameLoop.*`, `GameActivity`, `GameView.*`, and `GameLoop` show a strong multiplatform host-loop idea where Android `Choreographer`, JS `requestAnimationFrame`, and iOS `CADisplayLink` are hidden behind one shared loop API, even though the checked-in runtime still looks incomplete.
 
 ## Rendering And Graphics
 
@@ -82,6 +83,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [cescfe-numpairs](../findings/cescfe-numpairs.md) - `GameScreen`, `GameScreenLayout`, `GameScreenDialogs`, `GameScreenFeedback`, and `PuzzleTile` show a Compose-first puzzle surface with chip/board rendering, anchored operator selection, bottom-sheet operand picking, and accessibility-aware feedback states without a custom render thread.
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `k2dCanvas`, `ShapeRenderSystem`, and the desktop sample show a minimal Compose `Canvas` render adapter where frame ticks only trigger redraws and ECS state stays responsible for what actually gets drawn.
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `Main.kt`, `ViewData`, `BoardView`, and `MainView` show aspect-aware virtual sizing, board-local gesture capture, and a small-product puzzle presentation layer that stays responsive across host sizes.
+- [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `RenderContext.*`, `Window.desktop`, and `GameView.js` show a backend-neutral render layer spanning Vulkan and WebGPU, an offscreen native-to-Compose desktop bridge, and a dual-canvas browser host that separates engine pixels from Compose UI.
 
 ## Gameplay Systems
 
@@ -146,6 +148,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [sgalluz-k2d](../findings/sgalluz-k2d.md) - `InputConfig`, `InputSystem`, `MouseSystem`, and the sample's host-side key/pointer capture show a lightweight pattern where abstract actions and raw platform state are projected into ECS components instead of being hard-wired into the render loop.
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `BoardView`, `Presenter`, and the shared control flow show swipe-first board input, duplicate-key suppression, and a useful separation between manual play, replay stepping, AI hints, and AI autoplay.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `AppNavigation`, `GameViewModel`, and the shared feature shell show a touch-first Compose flow where gameplay input, hints, overlays, and route navigation stay separate from the pure session rules.
+- [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `Window.kt`, `Window.android.kt`, `Window.desktop.kt`, and `GamepadManager.desktop.kt` show a clean platform-input seam where native pointer, keyboard, and gamepad events are normalized into one shared event/listener model instead of leaking platform APIs into game code.
 
 ## UI, HUD, And Menus
 
@@ -279,6 +282,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `StoreScreenshotTest`, `build-release.yml`, `pages.yml`, `aur.yml`, and `flatpak.yml` show a mature product pipeline around localized screenshot generation, Android/Desktop/Web packaging, and downstream Linux package maintenance.
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `ClassParsing`, `Canon`, and `ReplSession` show a domain-content pipeline where specification-language files and JSON definitions compile into runtime classes, and a CLI shell can inspect or drive the live rules engine.
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `generate_gdap.py`, `GodotPlayGamesServices.gdap`, `export_plugin.gd`, and the Godot-version matrix workflows show a careful plugin-content pipeline where legacy and v2 packaging metadata, dependencies, and release artifacts are generated from one source of truth.
+- [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `kanvas-shaderc`, `kanvas-shaderc-sandbox`, `ProjectManager`, and `GameModuleLoader` show a repo that treats shader generation, editor-driven build/launch, and dynamic project-module loading as first-class tooling concerns, even though several of those surfaces are still incomplete.
 
 ## Android Platform Integration
 
@@ -310,6 +314,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `MyMainActivity`, `PlatformUtilAndroid`, `FileProvider`, and `game2048-android/build.gradle` show direct Android activity replacement, cache-backed share-file export, document-picker loading, and a separate Android Studio app module reusing the shared KorGE/KMP game code.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `app/build.gradle.kts`, `PlatformDataModule.android.kt`, and the shared app shell show a direct Android Compose product target with modern SDK/toolchain levels, Firebase/Crashlytics wiring, and most platform persistence/audio details hidden behind shared interfaces.
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `PlayGameServicesGodot`, `export_plugin.gd`, `AndroidManifest.xml`, and `app/build.gradle` show a direct Android engine-plugin surface where Play Games Services clients, manifest metadata, permissions, and Maven dependencies are wired into Godot exports without manual downstream Android edits.
+- [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `GameActivity.android`, `GameView.android`, `PlatformGameLoop.android`, and `Platform.android` show a direct Android engine shell built around `TextureView`, `Choreographer`, Compose interop, and platform-isolated audio/sensor services.
 
 ## Performance And Memory
 
@@ -375,3 +380,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `build.gradle.kts`, `composeApp/build.gradle.kts`, `app/build.gradle.kts`, the GitHub workflows, and the `commonTest` plus repository-test trees show a notably mature small-game build surface with KMP packaging, Android/Desktop/Web automation, and real gameplay/VM/persistence tests, even though local discovery still stops immediately on the lab's Java `8` machine.
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `build.gradle.kts`, `engine/build.gradle.kts`, `repl/build.gradle.kts`, and the broad parser/engine/full-game test tree show a serious JVM monorepo with KSP/Dagger assembly, toolchain `21`, Shadow-packaged REPL tooling, and unusually deep invariant plus full-game coverage even though local discovery currently stops on Java `8`.
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `app/build.gradle`, `godot-lib/build.gradle`, `.github/workflows/*.yml`, and the small test tree show a focused Android library/plugin build with Godot-version matrix validation, dual release packaging, and JDK `17` expectations, even though local `gradlew help` still fails in the lab because the current machine exposes Java `8`.
+- [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `settings.gradle.kts`, `kanvas/build.gradle.kts`, `kanvas-rendering/build.gradle.kts`, and the module graph show a serious KMP+Android build ambition with Vulkan/WebGPU/editor/native pieces, but local `gradlew help` still fails in the lab because only a Java `8` JRE is available and the checked-in tree has almost no real test coverage.

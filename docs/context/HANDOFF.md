@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The thirty-fifth real research batch is now completed and documented end-to-end.
-- The lab now has 41 researched repositories recorded:
+- The thirty-sixth real research batch is now completed and documented end-to-end.
+- The lab now has 42 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -50,6 +50,7 @@
   - `RajashekarRaju/hangman-compose` - `accepted`
   - `MartianZoo/solarnet` - `accepted`
   - `StudioAdriatic/PGSGP` - `accepted`
+  - `CheerWizard/Kanvas` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -253,10 +254,16 @@
 - Verified that `cmd /c gradlew.bat --version` succeeds for the inspected wrapper, but `cmd /c gradlew.bat help --no-daemon` currently fails in the lab because the Android Gradle Plugin classpath no longer matches the machine's Java `8` runtime; the inspected repository itself compiles for Java `17` and upstream docs plus CI standardize on JDK `17`.
 - Exhausted the carry-over licensed shortlist in `research/registry/CANDIDATE_QUEUE.md`; the next research cycle should refresh the short backlog before batch `36`.
 - Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-fifth batch.
+- Refreshed `research/registry/CANDIDATE_QUEUE.md` with a new explicit-license shortlist led by `CheerWizard/Kanvas`, `queuejw/Space`, `benpollarduk/ktvn`, and `johron/glare`.
+- Completed `BATCH-2026-06-04-E` as a multiplatform engine-architecture pass for `CheerWizard/Kanvas`.
+- Added durable `Kanvas` findings for shared platform-loop abstractions, Android/desktop/web/iOS host surfaces, Vulkan/WebGPU rendering splits, shader DSL tooling, and editor/runtime project orchestration.
+- Classified `Kanvas` as `reference-only` instead of `accepted` because the inspected revision still leaves key runtime seams incomplete: `GameLoop` never wires `GameModuleManager`, `RenderThread` is still scaffold-like, `kanvas-server` has no visible sources, and the shader toolchain looks mid-refactor.
+- Verified that `cmd /c gradlew.bat --version` succeeds for the inspected wrapper, but `cmd /c gradlew.bat help --no-daemon` currently fails in the lab because only a Java `8` JRE is available and Gradle cannot find a Java compiler/JDK.
+- Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-sixth batch.
 
 ## Known Risks
 
-- The workflow has now been validated across 35 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 36 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -301,7 +308,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new short explicit-license backlog before starting batch `36`.
+- Continue from the current verified short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `queuejw/Space`.
 - If a future follow-up is needed for `solarnet`, rerun Gradle discovery or selected tests in a JDK `21`-ready environment, or isolate the `Pets` DSL, the loaded type system, the full-game script tests, or the REPL shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `hangman-compose`, rerun Gradle discovery or selected tests in a JDK `17+` or `21` environment, or isolate the pure session engine, the word-catalog DSL, or the settings/history shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `game2048`, rerun both the root and `game2048-android` Gradle surfaces in a Java `21` plus Android SDK-ready environment, or isolate the reversible history pipeline, the AI hint/autoplay split, or the Android share/load shell instead of reopening the whole repository blindly.

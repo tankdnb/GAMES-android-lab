@@ -14,14 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `35` real GitHub research batches are completed end-to-end.
-- `41` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `36` real GitHub research batches are completed end-to-end.
+- `42` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `37`
-  - `reference-only`: `4`
+  - `reference-only`: `5`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `StudioAdriatic/PGSGP` as an `accepted` Godot Android Play Games Services plugin reference with strong Kotlin-side bridge, packaging, and manifest-injection value.
+- The latest researched addition is `CheerWizard/Kanvas` as a `reference-only` KMP engine architecture reference with interesting host-loop, render-backend, and shader-tooling ideas but clear incompleteness in the checked-in runtime.
 - The latest accepted addition is `StudioAdriatic/PGSGP`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
