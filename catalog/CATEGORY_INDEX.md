@@ -42,6 +42,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [K2D](projects/sgalluz-k2d.md) - desktop-first Compose Multiplatform 2D micro-engine with a pure timing core, runtime-layer Compose adapter, flat ECS, configurable input mapping, pluggable collision responses, and stronger-than-expected tests plus publication discipline.
 - [Solarnet](projects/martianzoo-solarnet.md) - Kotlin JVM rules-engine workspace with a `Pets` specification language, Dagger-assembled runtime scopes, canonical content packs, REPL tooling, and unusually deep parser, invariant, and full-game test coverage.
 - [KRender](projects/dmytro-pashko-krender.md) - Kotlin engine-and-toolset workspace with a backend-neutral runtime core, LibGDX backend, serialized runtime scenes, terrain/runtime pipelines, built-in editor scenes, and a real Android app module.
+- [Canopy](projects/canopyengine-canopy.md) - compact Kotlin node-driven engine with a reusable app shell, DSL-built node tree, phased scene processing, modular saves, backend-bound input mapping, and a notably strong headless devtools test harness, even though its checked-in desktop rendering path is currently excluded from the active build.
 
 ## rendering-demo
 

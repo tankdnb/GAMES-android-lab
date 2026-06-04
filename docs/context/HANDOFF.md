@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The forty-first real research batch is now completed and documented end-to-end.
-- The lab now has 47 researched repositories recorded:
+- The forty-second real research batch is now completed and documented end-to-end.
+- The lab now has 48 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -56,6 +56,7 @@
   - `johron/glare` - `reference-only`
   - `Dmytro-Pashko/KRender` - `accepted`
   - `joaomanaia/newquiz` - `accepted`
+  - `canopyengine/canopy` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -289,12 +290,16 @@
 - Completed `BATCH-2026-06-04-J` as an Android-first Compose casual-game product pass for `joaomanaia/newquiz`.
 - Added durable `newquiz` findings for typed Compose navigation, a shared product-shell `MainViewModel`, worker-owned maze and daily-challenge flows, centralized XP/diamonds progression services, and a broader-than-usual Android casual-game test surface.
 - Classified `joaomanaia/newquiz` as `accepted` because the inspected revision is a strong reference for multi-mode Android game products even without custom engine code: several quiz modes, generated meta-runs, progression, persistence, and flavor-specific distribution concerns all stay modular in one Kotlin codebase.
-- Updated `research/registry/CANDIDATE_QUEUE.md`, `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` so the live shortlist now rolls forward to `canopyengine/canopy` and the public/internal snapshots reflect the forty-first batch.
-- Cleaned the transient `newquiz` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-06-04-K` as a compact engine-architecture pass for `canopyengine/canopy`.
+- Added durable `canopy` findings for the app shell, DSL-built node tree, attached behaviors, phased tree systems, modular save slices, backend-owned input mapping, and the headless `tooling/devtools` test harness.
+- Classified `canopyengine/canopy` as `accepted` because the active runtime, save/input seams, and deterministic test surface are already reusable even though the excluded desktop rendering path remains stale and Android relevance is still indirect.
+- Verified a stronger local build surface than usual for this size of engine repo: `gradlew help`, `build --dry-run`, `:engine:test`, and `:tooling:devtools:test` all succeed on the inspected clone.
+- Updated `research/registry/CANDIDATE_QUEUE.md`, `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` so the live shortlist now rolls forward to `vitaviva/ugame` and the public/internal snapshots reflect the forty-second batch.
+- Cleaned the transient `canopy` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 40 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 42 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -336,6 +341,7 @@
 - `benpollarduk/ktvn` is a useful Kotlin narrative-runtime reference, but it is JVM-only in the checked-in state, README still calls the DSL early-stage, and meaningful local Gradle validation now needs at least Java `11` because the configured build plugins no longer configure on the lab's Java `8` runtime.
 - `johron/glare` is a useful compact engine/editor comparison sample, but it is desktop LWJGL/OpenGL-first in practice, its checked-in physics path currently exits immediately, its renderer only walks root children, and the visible test surface is mostly a demo harness plus resources rather than a real regression suite.
 - `Dmytro-Pashko/KRender` is one of the stronger current engine references in the lab, but the default branch is still `feature/v2`, the backend/runtime surface is still LibGDX-centered, and meaningful Android verification would still need a real JDK `21` plus Android SDK-ready environment instead of only static review.
+- `canopyengine/canopy` is a useful compact engine reference, but Android relevance is currently indirect, the checked-in `platforms/desktop` tree is excluded from the active build and appears partially stale, and top-level version/license/scope documentation still drifts from the active module graph.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -343,7 +349,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current verified short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `canopyengine/canopy`.
+- Continue from the current verified short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `vitaviva/ugame`.
+- If a future follow-up is needed for `canopyengine/canopy`, rerun the active tests in a JDK `17+` or `21` environment, or isolate the node/behavior runtime, the scene/tree-system ownership model, the save/input integration seam, or the excluded desktop rendering path instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `joaomanaia/newquiz`, rerun build and selected tests in a JDK `17+` Android SDK-ready environment with the required `google-services.json`, or isolate the generated maze meta-mode, the central user/progression service, or the `normal` / `foss` build split instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `KRender`, rerun selected `core` tests or Android tasks in a JDK `21` plus Android SDK-ready environment, or isolate the render-command/backend seam, the scene-editor document/runtime split, the runtime UI layering, or the terrain runtime pipeline instead of reopening the whole repository blindly.
 - Once the refreshed shortlist is exhausted, refresh it again with another explicit-license pass instead of letting the queue go stale.

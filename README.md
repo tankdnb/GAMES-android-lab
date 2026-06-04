@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `41` real GitHub research batches are completed end-to-end.
-- `47` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `42` real GitHub research batches are completed end-to-end.
+- `48` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `41`
+  - `accepted`: `42`
   - `reference-only`: `6`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `joaomanaia/newquiz` as an `accepted` Android-first Compose trivia and word-game product with several quiz modes, generated maze runs, daily challenges, centralized progression/economy state, and a stronger-than-usual modular/tested casual-game shell.
-- The latest accepted addition is `joaomanaia/newquiz`.
+- The latest researched addition is `canopyengine/canopy` as an `accepted` compact Kotlin node-driven engine with a reusable app shell, phased scene processing, save and input seams, and a stronger-than-usual headless devtools test harness.
+- The latest accepted addition is `canopyengine/canopy`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

@@ -51,6 +51,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [johron-glare](../findings/johron-glare.md) - `Engine`, `Node`, and `Editor` show a compact node/component runtime with queued child insertion, dependency auto-wiring, and an editor that runs inside the same process as the engine, even though the checked-in runtime is not mature enough for a main baseline.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `EngineRuntime`, `SceneManager`, `SceneWorld`, `RuntimeScene`, and `RuntimeSceneBuilder` show a backend-neutral engine loop with deferred scene transitions, command-buffered ECS mutation, and serialized runtime-scene loading into the same core runtime used by the editor tools.
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `AppNavGraphs`, `MainViewModel`, the App Startup initializers, and `ComparisonQuizCoreImpl` show a Compose-first Android game product where typed navigation, root meta-state, startup-owned workers, and per-mode gameplay cores stay modular without a separate engine layer.
+- [canopyengine-canopy](../findings/canopyengine-canopy.md) - `App`, `Node`, `Behavior`, `SceneManager`, and `TreeSystem` show a small engine built around a DSL-created node tree, attached behaviors, centralized scene ownership, and phase-based tree processing instead of a heavier ECS-first runtime.
 
 ## Rendering And Graphics
 
@@ -93,6 +94,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [johron-glare](../findings/johron-glare.md) - `Renderer`, `MeshRenderer`, `ShaderComponent`, and `ImGuiRenderer` show a very small shader-backed OpenGL path with in-process docked tooling, while also exposing a concrete caution that the current checked-in renderer only walks first-level scene children.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `RenderCommandBuffer`, `ModelRenderSystem`, `RuntimeEnvironmentSystem`, `TerrainRenderSystem`, and `GdxRenderer3D` show a useful split between backend-neutral render commands and a LibGDX backend that resolves static models, glTF scenes, dynamic terrain meshes, debug views, PBR previews, and skybox/environment commands.
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - the Compose-first screen tree plus `WordleScreenTest` show a useful counterpoint to engine-heavy repos: boards, keyboards, overlays, and route transitions stay inside normal Android UI primitives and remain testable through semantics-aware Compose UI tests.
+- [canopyengine-canopy](../findings/canopyengine-canopy.md) - `HeadlessHost`, `HeadlessApp`, `TerminalApp`, and the excluded `platforms/desktop` render path show a useful host/runtime separation pattern, while also serving as a caution that the repository's graphics-facing code is less trustworthy than the active engine core.
 
 ## Gameplay Systems
 
@@ -165,6 +167,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [johron-glare](../findings/johron-glare.md) - `Input`, `Window`, and `FreecamScript` show a compact GLFW polling seam where raw desktop input stays simple, ImGui-active widgets can suppress gameplay key holds, and higher-level behavior lives in scripts instead of the window layer.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `InputSnapshot`, `InputService`, and `GdxInputService` show a normalized keyboard/mouse/pointer/action snapshot model with UI-capture awareness, cursor capture, and a clean boundary between LibGDX callbacks and engine-facing input state.
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `MultiChoiceQuizScreenViewModel`, `WordleScreenViewModel`, and `RecentCategoriesRepositoryImpl` show a useful Android product pattern where answer flow, keyboard logic, paid skips, and personalized category selection stay controller-owned instead of leaking across composables.
+- [canopyengine-canopy](../findings/canopyengine-canopy.md) - `InputManager`, `InputSystem`, and `GdxInputManager` show an engine-owned action/state model with backend binding and persistence hooks, plus a useful warning that small engines should verify system-to-node dispatch paths early.
 
 ## UI, HUD, And Menus
 
@@ -267,6 +270,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `SavedGamesController`, `PlayerInfoController`, and `PlayerStatsController` show a compact Android service-data seam where cloud saves and player-profile models are wrapped into serializable payloads for an engine-facing API instead of leaking Google client objects directly.
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `GameSave`, `RestorePoint`, `StepIdentifierTracker`, and `ProgressionController` show a clean split between meta-progress, current route position, seen-step history, and shared skip/auto/wait behavior instead of one monolithic save-state blob.
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `AppDatabase`, `LocalUserServiceImpl`, `MultiChoiceQuizEndGameWorker`, and `WordleEndGameWorker` show a practical Android casual-game data seam where Room, DataStore, worker-owned endgame persistence, XP, diamonds, and level-up rewards stay centralized across several game modes.
+- [canopyengine-canopy](../findings/canopyengine-canopy.md) - `SaveManager` plus `InputManager.registerPersistence(...)` show a compact save architecture where subsystems contribute their own JSON-backed modules and slot ownership stays separate from runtime logic.
 
 ## Networking And Multiplayer
 
@@ -310,6 +314,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `VisualNovelCatalogResolver`, the console `Main`, and the split examples/prototyper modules show a useful narrative-tooling pattern where authored stories can be packaged into jars, discovered dynamically, and run through a generic host without hardcoding one title into the runtime.
 - [johron-glare](../findings/johron-glare.md) - `Editor`, `ExplorerPanel`, `PropertiesPanel`, `generateConstants`, and the split engine/editor jar tasks show a compact project where editor inspection, reflection-driven property editing, code generation, and packaging discipline are all kept close to the runtime instead of being bolted on later.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `AssetBrowserScene`, `SceneEditorScene`, and `SceneSerializer` show a stronger-than-usual small-engine tooling surface: local asset browsing, tool dispatch, editable serialized scenes, and one shared content/runtime model for both tools and runtime scenes.
+- [canopyengine-canopy](../findings/canopyengine-canopy.md) - `tooling/devtools` and `AppTestDriver` show that even a small engine benefits from a dedicated headless test harness instead of relying only on helper-level unit tests.
 
 ## Android Platform Integration
 
@@ -417,3 +422,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `ktvn/build.gradle.kts`, the release/docs workflows, and the broad `ktvn/src/test` tree show a niche JVM game library with explicit API mode, quality gates, publishing automation, and unusually dense runtime/persistence/text-engine tests, even though local `gradlew help` still fails in the lab because the configured SonarQube plugin path expects Java `11+`.
 - [johron-glare](../findings/johron-glare.md) - `build.gradle`, `.github/workflows/gradle.yml`, `generateConstants`, and the `buildEngine` plus main `jar` tasks show a small but disciplined JVM build that can configure cleanly in the lab and emits separate engine/editor artifacts, even though the checked-in verification surface is still mostly demo-oriented and upstream expects JDK `22`.
 - [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `gradle/gradle-daemon-jvm.properties`, the multi-module build scripts, and the focused `core` tests show a relatively healthy experimental-engine workflow: explicit toolchain expectations, working `gradlew help`, successful `:core:test --dry-run`, and real verification around runtime scenes, runtime UI, terrain pipeline, and scene serialization.
+- [canopyengine-canopy](../findings/canopyengine-canopy.md) - `build.gradle.kts`, `settings.gradle.kts`, `.github/workflows/build.yml`, and the engine/devtools tests show a compact but serious engine workflow with working local Gradle discovery, passing targeted tests, and explicit JDK/toolchain intent even though top-level docs still drift on version, license, and active module scope.
