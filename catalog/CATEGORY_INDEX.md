@@ -69,6 +69,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [KTX](projects/libktx-ktx.md) - Kotlin-first libGDX SDK with coroutine dispatchers, async asset storage, Scene2D DSLs, and AI helpers.
 - [PGSGP](projects/studioadriatic-pgsgp.md) - Godot 4.x Android Play Games Services plugin with a controller-split Kotlin bridge, saved-games and leaderboard wrappers, automatic manifest/dependency injection, and dual legacy/v2 plugin packaging support.
 - [Ktvn](projects/benpollarduk-ktvn.md) - Kotlin visual-novel framework with a story DSL, host-agnostic engine adapters, restore points, seen-step tracking, jar-based story discovery, and unusually broad unit coverage for a niche game library.
+- [Ktaf](projects/benpollarduk-ktaf.md) - Kotlin text-adventure framework with coordinate-authored room graphs, contextual command parsing, interchangeable console/HTML hosts, jar-discoverable game templates, and a broad command/rendering/discovery test surface.
 - [Fleks](projects/quillraven-fleks.md) - Kotlin Multiplatform ECS library with versioned entity recycling, array-backed component storage, bit-mask family queries, fixed-step or per-frame system scheduling, built-in snapshots, and benchmark-backed comparisons against other ECS runtimes.
 - [Cyberpunk](projects/imxico-cyberpunk.md) - compact libGDX helper-library stack with a small `StateManager` shell, FBO-based screen transitions, pixel-first Box2D builders, keyed audio/atlas managers, and lightweight HUD/camera helpers suited to prototypes and older Android libGDX game shells.
 

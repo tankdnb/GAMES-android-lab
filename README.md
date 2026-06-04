@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `52` real GitHub research batches are completed end-to-end.
-- `58` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `53` real GitHub research batches are completed end-to-end.
+- `59` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `51`
+  - `accepted`: `52`
   - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `Quillraven/Dark-Matter` as an `accepted` Android LibGDX autoscroller reference with a shared Ashley ECS shell, fixed-step interpolated movement, pointer-follow touch controls, code-driven Scene2D HUD, and speed-reactive background plus outline presentation.
-- The latest accepted addition is `Quillraven/Dark-Matter`.
+- The latest researched addition is `benpollarduk/ktaf` as an `accepted` Kotlin text-adventure framework reference with room-graph authoring, layered command interpretation, frame-builder hosts, and jar-discoverable game templates.
+- The latest accepted addition is `benpollarduk/ktaf`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

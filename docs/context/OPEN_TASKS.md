@@ -3,14 +3,15 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Work through the remaining exact-license shortlist candidate `benpollarduk/ktaf`, then refresh the shortlist again.
+- Refresh the short backlog after finishing `benpollarduk/ktaf`; the previous exact-license shortlist is now exhausted.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
 
 ## Next Recommended
 
-- Continue with the remaining shortlist candidate `benpollarduk/ktaf` unless a stronger newly verified candidate overtakes it.
+- Refresh the shortlist before the next batch starts.
+- If `benpollarduk/ktaf` needs a future follow-up, rerun Gradle discovery or selected tests in a JDK `11+` environment, or isolate the frame-builder plus IO seam, the jar-discovery path, or the room/item/conversation parser surface instead of reopening the whole repository broadly.
 - If `Quillraven/Dark-Matter` needs a future follow-up, rerun `clean build` and `detekt` in a full JDK `8` environment, or isolate the Ashley ECS shell, `MoveSystem`, `RenderSystem`, or code-driven Scene2D HUD/menu layer instead of reopening the whole repository broadly.
 - If `ImXico/cyberpunk` needs a future follow-up, rerun `test` in a full JDK-backed environment, or isolate the `StateManager` handoff/transition seam or the Box2D builder layer instead of reopening the whole repository broadly.
 - If `BlueBoxWare/LibGDXPlugin` needs a future follow-up, rerun plugin tests or targeted Gradle discovery in a `JDK 17+` or `21` environment, or isolate the asset-reference pipeline, the custom Skin/JSON/atlas/tree file-type stack, the Android-manifest inspections, or the IntelliJ-platform build/test workflow instead of reopening the whole repository broadly.
