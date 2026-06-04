@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `47` real GitHub research batches are completed end-to-end.
-- `53` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `48` real GitHub research batches are completed end-to-end.
+- `54` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `46`
+  - `accepted`: `47`
   - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `Mesabloo/hm-defense` as a `reference-only` libGDX rewrite sample with a Scene2D HUD shell, radar mirroring, JSON-driven build tables, and a tiny deferred z-sorted batcher, but no checked-in Android module.
-- The latest accepted addition is `libgdx/gdx-liftoff`.
+- The latest researched addition is `edezadev/la-bomba` as an `accepted` Android party-game shell with anonymous Firebase auth, Firestore-backed synced content, a fragment-hosted setup wizard, and ExoPlayer-driven countdown rounds.
+- The latest accepted addition is `edezadev/la-bomba`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

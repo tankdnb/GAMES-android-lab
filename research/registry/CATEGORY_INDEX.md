@@ -56,6 +56,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [codeyousef-materia](../findings/codeyousef-materia.md) - `Object3D`, `Scene`, `RenderLoop`, and `EngineRenderer` show a scene-first 3D runtime with dirty-flagged transforms, explicit root-scene state, platform-specific loop seams, and a newer engine renderer that deliberately bypasses the older root renderer stack.
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `World`, `WorldConfiguration`, `ComponentService`, and `EntityService` show a compact ECS runtime where versioned entities, array-backed component holders, bit-mask membership, and a Kotlin DSL keep gameplay-core ownership explicit without tying the library to any one engine.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `MainGame`, `AbstractScreen`, `StageScreen`, `UIWorld`, and `GameWorld` show a compact libGDX runtime where a scrollable battlefield, fixed HUD shell, and actor-synced Box2D world stay separate, even though the gameplay loop itself is still incomplete.
+- [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `BaseActivity`, `MainActivity`, `SettingsActivity`, `StartGameActivity`, `ResultsActivity`, and `GameSession` show a compact Android product shell where anonymous-auth bootstrap, a fragment wizard, global session state, timed rounds, and rematch handling stay explicit without an engine layer.
 
 ## Rendering And Graphics
 
@@ -177,6 +178,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `MultiChoiceQuizScreenViewModel`, `WordleScreenViewModel`, and `RecentCategoriesRepositoryImpl` show a useful Android product pattern where answer flow, keyboard logic, paid skips, and personalized category selection stay controller-owned instead of leaking across composables.
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `InputManager`, `InputSystem`, and `GdxInputManager` show an engine-owned action/state model with backend binding and persistence hooks, plus a useful warning that small engines should verify system-to-node dispatch paths early.
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `CameraHelper`, `ForegroundView`, and `BoatView` show a distinct direct-Android control pattern where Camera2 face detection becomes the primary gameplay input and smoothed position/rotation animation makes the mapping playable.
+- [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `PenaltyFragment`, `PlayerFragment`, `TopicsFragment`, `TimerFragment`, and `SelectLoserBottomSheet` show a small Android control model where step-specific widgets and bottom sheets write into one shared session instead of routing everything through heavier navigation or immutable state.
 
 ## UI, HUD, And Menus
 
@@ -211,6 +213,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `AppNavGraphs`, `MainViewModel`, and `ProfileViewModel` show a polished Compose product shell where gameplay routes, profile/progression dashboards, daily-challenge surfaces, and top-level meta-state stay coordinated without fragment-style sprawl.
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `activity_fullscreen.xml`, `FullscreenActivity`, and `GameState` show a tiny but readable Android HUD shell with one centered score layer, one bottom camera-switch control strip, and a dialog-driven replay loop.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `StageScreen`, `BuildQueue`, `MachineBuildSlot`, `SpecialBuildSlot`, and the tweened menu listeners show a dense Scene2D HUD shell with build slots, gauges, radar, side menus, and queue feedback kept in one readable in-game UI layer.
+- [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `SettingsActivity`, `TopicsFragment`, `ResultsActivity`, and the bottom sheets show a guided Material 3 shell with paged content selection, loser standings, rematch affordances, and a clean separation between setup and round UI.
 
 ## Physics And Collision
 
@@ -244,6 +247,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `GameState` shows a very small Android-game audio approach where short move and dice sounds are triggered directly from gameplay-state transitions instead of through a dedicated audio service layer.
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView` shows an equally small Android audio/haptics path where optional `SoundPool` note/fail playback and vibration are toggled directly from the session shell instead of being abstracted behind dedicated services.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `AndroidBackgroundAudioController`, `AndroidGameSoundEffectPlayer`, and the WASM audio actuals show a clean platform-seam approach where Android media, desktop clips, and browser autoplay restrictions all stay behind shared interfaces.
+- [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `StartGameActivity` and its timer-to-sound map show a tidy Android seam where Media3 ExoPlayer swaps countdown tracks by selected round length instead of adding a larger audio service.
 
 ## AI And Behavior
 
@@ -286,6 +290,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `SaveManager` plus `InputManager.registerPersistence(...)` show a compact save architecture where subsystems contribute their own JSON-backed modules and slot ownership stays separate from runtime logic.
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `World.snapshot`, `loadSnapshot`, and `SerializationTest.kt` show a strong ECS persistence seam where polymorphic components and tags can round-trip through serialized snapshots instead of each game inventing save and load from scratch.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `GameSave`, `build-info.json`, `special-info.json`, and `upgrades.json` show a compact progression/data seam where slot unlocks, upgrade levels, special counts, and production balance are externalized instead of being scattered through UI code.
+- [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `FirebaseAuthManager`, `FirestoreConfig`, `PenaltyDbManager`, `PlayerDbManager`, and `TopicDbManager` show anonymous-auth per-user Firestore collections with offline cache, live snapshot sync, and background-paged topic loading.
 
 ## Networking And Multiplayer
 
@@ -295,6 +300,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [hugobros3-chunkstories](../findings/hugobros3-chunkstories.md) - `LoadedContentTranslator`, `ConnectionsManager`, and `ServerModsProvider` show content-id compatibility checks, server metadata handshakes, and redistributable mod packaging, even though the current remote runtime path is unfinished on the inspected branch.
 - [sreich-ore-infinium](../findings/sreich-ore-infinium.md) - `Network`, `ServerNetworkSystem`, `ClientNetworkSystem`, and `ServerNetworkEntitySystem` show block-region snapshots, sparse block deltas, batched entity spawn/destroy, inventory sync, and bidirectional network-id/local-id mapping for ECS entities.
 - [niklasjohansen-pulseengine](../findings/niklasjohansen-pulseengine.md) - `NetworkClientImpl`, `NetworkServerImpl`, and `NetworkCodec` show typed TCP/UDP channels, Kryo-based sealed-type registration, UDP handshake validation, ping tracking, queue backpressure handling, and per-channel traffic metrics.
+- [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `PenaltyDbManager`, `PlayerDbManager`, and `TopicDbManager` show a subtle but useful distinction: Firebase supplies live synced setup content and offline-aware reads, while the actual game session remains local pass-the-device rather than real-time multiplayer.
 
 ## Tooling And Content Pipeline
 
@@ -371,6 +377,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `WorkManagerInitializer`, `EnqueueStartWorksInitializer`, the app shell, and the convention plugins show direct Android ownership of startup scheduling, Hilt worker injection, Compose navigation, and `normal` / `foss` distribution flavors rather than treating Android as a thin wrapper.
 - [codeyousef-materia](../findings/codeyousef-materia.md) - `AndroidWgpuRenderer`, `GpuContext.android`, `EngineRendererPlatform.android`, and the Android example activities show a direct but transitional Android path where wgpu/Vulkan renderers, reflective native bridges, and Filament-backed `SurfaceView` hosts all coexist inside the same engine effort.
 - [libgdx-gdx-liftoff](../findings/libgdx-gdx-liftoff.md) - `Android.kt`, `AndroidGradleFile`, and `Kotlin.kt` show a strong Android bootstrap pattern where manifests, resources, native extraction, desugaring flags, source-set wiring, and even an `adb` run task are generated from one structured project model instead of being hand-maintained in every new game repository.
+- [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `BaseActivity`, `MainActivity`, `AndroidManifest.xml`, and `AdsManager` show a direct Android shell with edge-to-edge activity chrome, anonymous Firebase bootstrap, AdMob wiring, offline snackbar handling, and a sample-app-ID caveat worth documenting.
 
 ## Performance And Memory
 
@@ -451,3 +458,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `build.gradle.kts`, the custom `buildSrc` plugins, `.github/workflows/build.yml`, `publish.yml`, and the common plus benchmark test trees show a disciplined KMP library workflow with real CI, publishing, snapshots and serialization tests, and benchmark automation even though local Gradle discovery in the lab still stops at the missing JDK compiler.
 - [libgdx-gdx-liftoff](../findings/libgdx-gdx-liftoff.md) - `settings.gradle`, `gradle/gradle-daemon-jvm.properties`, `build.gradle`, `build.yml`, and `publish-demos.yml` show a particularly transferable build workflow: Foojay-based toolchain resolution, checked-in daemon JDK provisioning, build plus sample generation on Java `17` and `21`, and automatic publication of generated demo outputs.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `build.gradle`, `core/build.gradle`, `desktop/build.gradle`, and the successful `gradlew help --no-daemon` run show a readable older libGDX Gradle surface around Java `11`, but also confirm the structural limit that only `core` and `desktop` are checked in and no real test tree exists.
+- [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `build.gradle.kts`, `app/build.gradle.kts`, `SETUP.md`, and the template-only test tree show a current single-module Android build that already needs Java `11+` despite docs still claiming `Java 8+`, with no visible CI and almost no real automated verification.

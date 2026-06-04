@@ -3,15 +3,15 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Execute the current verified shortlist in `research/registry/CANDIDATE_QUEUE.md` before running another broad search.
+- Refresh `research/registry/CANDIDATE_QUEUE.md` with another exact-license shortlist now that the current short backlog is exhausted.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
 
 ## Next Recommended
 
-- Prefer the current verified backlog before running another broad search:
-- `edezadev/la-bomba`
+- Refresh the shortlist with exact repository-level license verification before starting the next batch.
+- If `edezadev/la-bomba` needs a future follow-up, rerun build and selected Android tasks in a Java `11+` plus Android SDK-ready environment with Firebase config present, or isolate the anonymous-auth plus Firestore content seam, the fragment wizard plus `GameSession` ownership model, or the ad/audio/lifecycle shell instead of reopening the whole repository broadly.
 - If `Mesabloo/hm-defense` needs a future follow-up, revisit only its Scene2D/HUD composition, JSON economy layer, or any future Android host module instead of reopening the whole repository broadly.
 - If `libgdx/gdx-liftoff` needs a future follow-up, rerun broader sample-generation tasks in a JDK `17+` or `21` environment, or isolate the Android Gradle scaffolding path, the root-versus-module build split, the Kotlin launcher/template family, or the daemon-JDK bootstrap workflow instead of reopening the whole repository broadly.
 - If `Quillraven/Fleks` needs a future follow-up, rerun Gradle discovery or selected tests and benchmarks in a JDK `11+` or `17+` environment, or isolate the snapshot serialization path, family hooks and delayed-removal behavior, or the Ashley and Artemis benchmark comparisons instead of reopening the whole repository broadly.
@@ -20,7 +20,7 @@
 - If `canopyengine/canopy` needs a future follow-up, rerun the active test surface in a JDK `17+` or `21` environment and isolate the node/behavior runtime, the scene/tree-system ownership model, the save/input seam, or the excluded desktop rendering path instead of reopening the whole repository broadly.
 - If `joaomanaia/newquiz` needs a future follow-up, rerun build and selected tests in a JDK `17+` Android SDK-ready environment with the required `google-services.json`, or isolate the generated maze meta-mode, the central user/progression service, or the `normal` / `foss` build split instead of reopening the full repository broadly.
 - If `Dmytro-Pashko/KRender` needs a future follow-up, rerun selected `core` tests or Android tasks in a JDK `21` plus Android SDK-ready environment, or isolate the render-command/backend seam, the scene-editor document/runtime split, the runtime UI layering, or the terrain runtime pipeline instead of reopening the full repository broadly.
-- Keep the current shortlist compact unless it is exhausted again.
+- Keep the next shortlist compact once it is refreshed.
 - Avoid repopulating the queue with license-unclear repositories unless the team explicitly decides to relax the current screen.
 - If `johron/glare` needs a future follow-up, rerun build or selected tasks in a JDK `22` environment and isolate the node/component dependency wiring, editor-in-runtime tooling, or renderer traversal / disabled physics seam instead of reopening the whole repository broadly.
 - If `benpollarduk/ktvn` needs a future follow-up, rerun Gradle discovery or selected tests in a JDK `11+` environment, or isolate the story/runtime flow seam, the step-tracker persistence model, or the jar-based visual-novel discovery surface instead of reopening the whole repository broadly.

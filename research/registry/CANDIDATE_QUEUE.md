@@ -61,6 +61,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-N` | `Quillraven/Fleks` | `library-sdk` | `2` | `2` | `3` | `3` | `258` | `2026-05-14` | MIT-licensed multiplatform ECS core with stronger direct gameplay-architecture value than most remaining engine-side options and a useful complement to the already researched `korge-fleks` integration layer | `done` | `carry-over explicit-license shortlist execution + exact repository GraphQL verification` |
 | `BATCH-2026-06-04-O` | `libgdx/gdx-liftoff` | `tooling-pipeline` | `2` | `3` | `3` | `2` | `669` | `2026-06-02` | Apache-2.0 libGDX project generator with unusually strong ecosystem signal and likely reusable Gradle/module/bootstrap patterns for Kotlin game project setup | `done` | `carry-over explicit-license shortlist execution + exact repository GraphQL verification` |
 | `BATCH-2026-06-04-P` | `Mesabloo/hm-defense` | `android-game` | `3` | `1` | `1` | `2` | `38` | `2025-01-16` | BSD-3-Clause Android game rewrite candidate with a manageable footprint and a stronger current balance of signal and expected runtime/UI value than the fresher but zero-signal backlog alternative | `done` | `carry-over explicit-license shortlist execution + exact repository GraphQL verification + alternative comparison` |
+| `BATCH-2026-06-04-Q` | `edezadev/la-bomba` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-03` | Fresh Apache-2.0 Android party-game shell with Firebase-backed synced-content value and stronger Android-specific novelty than the remaining zero-signal alternatives | `done` | `carry-over explicit-license shortlist execution + exact repository GraphQL verification` |
 
 ## Backlog Candidates
 
@@ -70,9 +71,10 @@ Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was r
 
 Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-M`. The shortlist below keeps only candidates that passed exact repository-level license verification, not just GitHub search-index metadata.
 
+The short backlog is currently exhausted after `BATCH-2026-06-04-Q`. Refresh this file with another exact-license shortlist before starting the next batch.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `edezadev/la-bomba` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-03` | Fresh Apache-2.0 Android multiplayer game with Firebase-backed realtime/product-shell value and stronger Android-specific novelty than the remaining zero-signal alternatives | `explicit-license shortlist refresh + exact repository GraphQL verification` |
 
 ## Status Legend
 
