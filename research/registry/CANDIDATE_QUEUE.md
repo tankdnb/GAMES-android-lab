@@ -65,6 +65,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-R` | `kool-engine/kool` | `engine-framework` | `3` | `3` | `3` | `3` | `556` | `2026-06-03` | Fresh Apache-2.0 Kotlin multiplatform 3D engine with Android target, Vulkan/WebGPU/OpenGL surface, and the strongest current mix of ecosystem signal, freshness, and architecture yield in the refreshed shortlist | `done` | `explicit-license shortlist refresh + exact repository view verification` |
 | `BATCH-2026-06-04-S` | `BlueBoxWare/LibGDXPlugin` | `tooling-pipeline` | `2` | `2` | `3` | `2` | `158` | `2026-05-29` | Apache-2.0 IntelliJ plugin for LibGDX with likely reusable project-generation, run-configuration, and game-dev IDE workflow patterns | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-T` | `ImXico/cyberpunk` | `library-sdk` | `2` | `1` | `0` | `2` | `78` | `2020-04-15` | MIT libGDX helper library with state-management, Box2D, transition, and camera abstractions that may still yield portable Kotlin gameplay-runtime patterns despite stale code activity | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
+| `BATCH-2026-06-04-U` | `Quillraven/Dark-Matter` | `android-game` | `3` | `1` | `0` | `3` | `55` | `2023-02-05` | MIT Android/Desktop LibGDX + LibKTX + Ashley autoscroller with likely reusable ECS, input, and level-flow patterns that complement the already researched `Quilly-s-Adventure` sample from the same author | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
 
 ## Backlog Candidates
 
@@ -76,7 +77,6 @@ Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-R`. The shortlist be
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `Quillraven/Dark-Matter` | `android-game` | `3` | `1` | `0` | `3` | `55` | `2023-02-05` | MIT Android/Desktop LibGDX + LibKTX + Ashley autoscroller with likely reusable ECS, input, and level-flow patterns if the codebase is still coherent enough to justify a full pass | `explicit-license shortlist refresh + exact repository view verification` |
 | `benpollarduk/ktaf` | `engine-framework` | `1` | `1` | `1` | `2` | `13` | `2025-05-08` | MIT Kotlin text-adventure framework that may complement the already researched `ktvn` runtime with a simpler narrative-engine baseline | `explicit-license shortlist refresh + exact repository view verification` |
 
 ## Status Legend

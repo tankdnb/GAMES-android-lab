@@ -60,6 +60,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `KoolContext`, `Scene`, `Lwjgl3Context`, and `KoolDispatchers` show a double-buffered frame pipeline with split frontend / backend / synced dispatchers, dependency-sorted GPU passes, and optional async next-frame preparation on desktop.
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `plugin.xml`, `build.gradle.kts`, and `LibGDXProjectFileSubstitutions.kt` show a clean tooling architecture where generated PSI, references, inspections, settings, and UI helpers are kept as separate plugin capability families instead of one monolithic parser layer.
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `State`, `StateAdapter`, `StateManager`, and `WorldConfig` show a compact libGDX state runtime with centralized camera/viewport ownership and transition hooks, while also exposing a useful caution that the null-transition handoff path still needs fixing before production use.
+- [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `Game`, `LoadingScreen`, `Screen`, `MenuScreen`, and `GameScreen` show a compact LibGDX/Ashley game shell with staged async asset loading, one shared engine reused across menu and gameplay, and system toggling instead of multiple runtime loops.
 
 ## Rendering And Graphics
 
@@ -109,6 +110,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `RenderBackend`, `Scene.ScreenPass`, and the platform backend trees show one scene/render API spanning desktop Vulkan / OpenGL / `wgpu4k`, browser WebGPU / WebGL, and Android GLES3 with explicit NDC and pass-order control.
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `TransitionFBO`, `Fade`, and `HorizontalSlide` show a compact render-to-texture state-transition pattern where whole screens are captured into FBOs and blended as plain textures instead of letting transition code reach into gameplay rendering.
+- [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `RenderSystem`, `AnimationSystem`, and `TransformComponent` show sorted z/y sprite rendering, speed-reactive repeated-background scrolling, cached atlas animation dispatch, and a dedicated shield-outline shader pass over the player entity.
 
 ## Gameplay Systems
 
@@ -146,6 +148,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `Then`, `Decision`, `Conditional`, `Interactive`, and `StepResult` show a surprisingly complete narrative-gameplay flow where branching, named jumps, mini-game hooks, and clear/end actions are modeled as composable step primitives instead of one-off screen logic.
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `GenerateMazeQuizWorker`, `MazeCategories`, `WordleRepositoryImpl`, `ComparisonQuizCoreImpl`, and `DailyChallengeRepositoryImpl` show a broader casual-gameplay stack with generated maze runs, several Wordle-like rule variants, shared event-driven daily goals, and a mode-specific comparison-quiz core.
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `IntervalSystem`, `IteratingSystem`, `Family`, and `OneShotComponentSystem` show an unusually reusable gameplay-core layer where fixed-step updates, interpolation hooks, sorted family iteration, and transient one-shot tags and components are all first-class instead of ad hoc patterns.
+- [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `engine.kt`, `MoveSystem`, `PowerUpSystem`, `DamageSystem`, and `RemoveSystem` show a compact arcade-gameplay layer with attached exhaust entities, fixed-step interpolated movement, patterned pickup waves, shield-first hazard damage, and delayed death cleanup routed through events.
 
 ## Input And Controls
 
@@ -186,12 +189,14 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `CameraHelper`, `ForegroundView`, and `BoatView` show a distinct direct-Android control pattern where Camera2 face detection becomes the primary gameplay input and smoothed position/rotation animation makes the mapping playable.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `PenaltyFragment`, `PlayerFragment`, `TopicsFragment`, `TimerFragment`, and `SelectLoserBottomSheet` show a small Android control model where step-specific widgets and bottom sheets write into one shared session instead of routing everything through heavier navigation or immutable state.
 - [kool-engine-kool](../findings/kool-engine-kool.md) - `PlatformInputAndroid`, `TouchGestureEvaluator`, and `KoolSurfaceView` show a solid cross-platform input seam with shared pointer events, Android keyboard bridging, and built-in pinch plus two-finger-drag gesture handling.
+- [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `PlayerInputSystem`, `GameScreen`, and `MenuScreen` show a tiny but reusable Android-friendly input model where one pointer-follow control path works for mouse or touch, gameplay waits for an initial tap, and menu interactions remain separate from ECS movement logic.
 
 ## UI, HUD, And Menus
 
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - the LibGDX stage and actor layering demonstrate a custom in-game board UI inside a standard Android app shell.
 - [ktx](../findings/libktx-ktx.md) - the Scene2D DSL is a strong pattern for reducing UI boilerplate in Kotlin game UIs.
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `DebugMenuManager` treats debug overlays as a first-class manager instead of gameplay-specific debug code.
+- [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `GameUI`, `MenuUI`, and `ui/skin.kt` show a code-driven Scene2D UI layer with pulsing prompts, bar/alpha-based HUD feedback, Kotlin-built skin styles, and small-game menus that stay readable without JSON skin files.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `MultiplayerLobbyScreen` shows a state-driven Scene2D lobby that safely stages cross-thread UI changes.
 - [unciv](../findings/yairm210-unciv.md) - `WorldScreen` is a strong reference for composing a map-heavy HUD around chat, minimap, diplomacy, notifications, and tile/unit panels without a static layout.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `ScoringRenderer` and `LevelCheckRenderer` show lightweight puzzle HUD patterns for floating feedback, remaining moves, and tile objectives.
@@ -262,6 +267,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `AndroidBackgroundAudioController`, `AndroidGameSoundEffectPlayer`, and the WASM audio actuals show a clean platform-seam approach where Android media, desktop clips, and browser autoplay restrictions all stay behind shared interfaces.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `StartGameActivity` and its timer-to-sound map show a tidy Android seam where Media3 ExoPlayer swaps countdown tracks by selected round length instead of adding a larger audio service.
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - `SoundManager`, `MusicManager`, and the audio README show a deliberately prototype-oriented keyed audio registry pattern, useful mainly as a small libGDX jam-shell reference and as a reminder of where `AssetManager` should eventually replace singleton ownership.
+- [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `DefaultAudioService` shows a practical small-game pattern where duplicate sound requests are coalesced per frame, current music ownership stays explicit, and effect playback remains queued instead of being triggered ad hoc across screens.
 
 ## AI And Behavior
 
@@ -365,6 +371,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `KubrikoViewport` and `InternalViewport` show how to embed a game runtime directly inside Compose-based Android UI.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - `AndroidPlatform` isolates share intents, multicast locks, and IP handling behind a platform boundary.
 - [unciv](../findings/yairm210-unciv.md) - `AndroidLauncher`, `AndroidGame`, `AndroidDisplay`, and `AndroidSaverLoader` show deep-link handling, SAF saves, background multiplayer workers, immersive-mode control, and external-mod bridging.
+- [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `android/build.gradle.kts`, `AndroidManifest.xml`, and `android/.../launcher.kt` show a straightforward direct-Android LibGDX shell with shared root assets, explicit native extraction during packaging, portrait orientation, and immersive-mode startup without extra app-layer indirection.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - the KorGE target matrix in `build.gradle.kts` shows a compact path to Android delivery from a `commonMain` game codebase.
 - [remsengine](../findings/antonionoack-remsengine.md) - `UI.md` and `PanelListY` show Android-inspired UI layout assumptions, but the engine itself remains JVM-first and should be treated as an architectural rather than turnkey Android reference.
 - [korlibs-korge-fleks](../findings/korlibs-korge-fleks.md) - the root `build.gradle.kts` enables `targetAndroid()`, while the pooling and serialization design explicitly accounts for tighter Android/JVM memory constraints than many desktop-first Kotlin engine samples do.
@@ -483,3 +490,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [blueboxware-libgdxplugin](../findings/blueboxware-libgdxplugin.md) - `build.gradle.kts`, `gradle.properties`, `TestInspections.kt`, and `TestAssetUtils.kt` show a mature IntelliJ-platform workflow with GrammarKit generation, explicit JDK `21` intent, broad fixture-based inspection tests, and real asset-resolution regression coverage, even though local Gradle discovery in the lab still stops at Java `8`.
 - [kool-engine-kool](../findings/kool-engine-kool.md) - root convention plugins, Android enable/disable tasks, and the `build.yml` plus `publish.yml` workflows show a strong multiplatform engine workflow with opt-in Android configuration, JDK `25` CI, and a focused core test surface, even though local discovery in this lab still stops at Java `8`.
 - [imxico-cyberpunk](../findings/imxico-cyberpunk.md) - the split helper modules, legacy Travis plus JitPack surface, successful `gradlew help` and `test --dry-run` runs, and the tiny `ImageHelperTests` file show a readable but clearly old build workflow whose main gap is not configuration anymore, but the lack of a full JDK and the almost nonexistent test depth.
+- [quillraven-dark-matter](../findings/quillraven-dark-matter.md) - `build.gradle.kts`, `buildSrc/Versions.kt`, `.github/workflows/build.yml`, and the local `gradlew help` failure show a readable Kotlin `1.4` / AGP `4` / JDK8-era workflow where upstream CI still expects a full JDK `8`, while local discovery in this lab stops because the machine is running only a Java `8` JRE without compiler tools.

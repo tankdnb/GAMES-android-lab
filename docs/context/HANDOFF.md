@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The fifty-first real research batch is now completed and documented end-to-end.
-- The lab now has 57 researched repositories recorded:
+- The fifty-second real research batch is now completed and documented end-to-end.
+- The lab now has 58 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -66,6 +66,7 @@
   - `kool-engine/kool` - `accepted`
   - `BlueBoxWare/LibGDXPlugin` - `accepted`
   - `ImXico/cyberpunk` - `accepted`
+  - `Quillraven/Dark-Matter` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -353,6 +354,11 @@
 - Verified that `cmd /c gradlew.bat help --no-daemon` and `test --dry-run --no-daemon` both succeed in the lab, while real `test` fails because Gradle is running on the machine's Java `8` JRE instead of a full JDK with compiler tools.
 - Recorded two code-level caveats in `StateManager`: the null-transition handoff path is incomplete, and the current state is disposed before transition rendering begins.
 - Cleaned the transient `ImXico/cyberpunk` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-06-04-U` as an android-game pass for `Quillraven/Dark-Matter`.
+- Added durable `Dark Matter` findings for a shared Ashley ECS shell, fixed-step interpolated movement, pointer-follow mobile controls, code-driven Scene2D HUD/menu composition, patterned power-up spawning, and speed-reactive background plus outline-shader presentation.
+- Classified `Quillraven/Dark-Matter` as `accepted` because it remains a compact but coherent direct Android LibGDX reference even though the stack is older and narrower than stronger adventure-scale samples.
+- Verified that `cmd /c gradlew.bat --version` succeeds in the lab, while `help --no-daemon` and `:core:tasks --all --no-daemon` fail because Gradle is running on the machine's Java `8` JRE instead of a full JDK; upstream CI still expects a full JDK `8`.
+- Cleaned the transient `Quillraven/Dark-Matter` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
@@ -408,6 +414,7 @@
 - `kool-engine/kool` is one of the stronger engine references in the lab, but it is large, the checked-in Android path is intentionally disabled by default until build files are rewritten, the effective JDK floor is high (`17+` to configure, `25` in conventions, `22` for `wgpu4k`), and the automated test surface is still much stronger in core utilities than across the full renderer/editor/physics stack.
 - `BlueBoxWare/LibGDXPlugin` is one of the stronger tooling references in the lab, but it is IDE-specific rather than runtime-specific, Android relevance is indirect, the checked-in wrapper surface lacks `gradlew.bat`, and meaningful local build validation still needs a real `JDK 17+` or `21` environment.
 - `ImXico/cyberpunk` is a useful compact libGDX helper reference, but it is stale, built on a legacy `jcenter()` plus Travis-era stack, has only a tiny test surface, and its central `StateManager` path currently has verified handoff/transition correctness issues.
+- `Quillraven/Dark-Matter` is a useful compact direct Android LibGDX reference, but it is stale, built on older AGP `4.0.2` plus Kotlin `1.4.10` tooling with `jcenter()`, has no visible automated tests beyond build plus `detekt`, and is narrower than the lab's richer gameplay-heavy Android references.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -415,7 +422,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue with the refreshed shortlist led by `Quillraven/Dark-Matter`, then `benpollarduk/ktaf`.
+- Continue with the remaining exact-license shortlist candidate `benpollarduk/ktaf`, then refresh the shortlist again once it is exhausted.
+- If a future follow-up is needed for `Quillraven/Dark-Matter`, rerun `clean build` and `detekt` in a full JDK `8` environment, or isolate the Ashley ECS shell, fixed-step `MoveSystem`, `RenderSystem`, or code-driven Scene2D HUD/menu layer instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `ImXico/cyberpunk`, rerun `test` in a full JDK-backed environment, or isolate the `StateManager` handoff/transition seam or the Box2D builder layer instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `BlueBoxWare/LibGDXPlugin`, rerun plugin tests or targeted Gradle discovery in a `JDK 17+` or `21` environment, or isolate the asset-reference pipeline, the custom Skin/JSON/atlas/tree file-type stack, the Android-manifest inspections, or the IntelliJ-platform build/test workflow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `kool-engine/kool`, rerun Gradle discovery and selected module tasks in a JDK `25` plus Android SDK-ready environment, or isolate the Android enable/disable workflow, the backend split between Vulkan / OpenGL / `wgpu4k`, the Compose-style in-engine UI, or the shared-source physics transformation path instead of reopening the whole repository blindly.

@@ -3,14 +3,15 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Work through the refreshed exact-license shortlist led by `Quillraven/Dark-Matter` and `benpollarduk/ktaf`.
+- Work through the remaining exact-license shortlist candidate `benpollarduk/ktaf`, then refresh the shortlist again.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
 
 ## Next Recommended
 
-- Continue with the refreshed shortlist, starting from `Quillraven/Dark-Matter` unless a stronger newly verified candidate overtakes it.
+- Continue with the remaining shortlist candidate `benpollarduk/ktaf` unless a stronger newly verified candidate overtakes it.
+- If `Quillraven/Dark-Matter` needs a future follow-up, rerun `clean build` and `detekt` in a full JDK `8` environment, or isolate the Ashley ECS shell, `MoveSystem`, `RenderSystem`, or code-driven Scene2D HUD/menu layer instead of reopening the whole repository broadly.
 - If `ImXico/cyberpunk` needs a future follow-up, rerun `test` in a full JDK-backed environment, or isolate the `StateManager` handoff/transition seam or the Box2D builder layer instead of reopening the whole repository broadly.
 - If `BlueBoxWare/LibGDXPlugin` needs a future follow-up, rerun plugin tests or targeted Gradle discovery in a `JDK 17+` or `21` environment, or isolate the asset-reference pipeline, the custom Skin/JSON/atlas/tree file-type stack, the Android-manifest inspections, or the IntelliJ-platform build/test workflow instead of reopening the whole repository broadly.
 - If `kool-engine/kool` needs a future follow-up, rerun Gradle discovery and selected module tasks in a JDK `25` plus Android SDK-ready environment, or isolate the Android enable/disable workflow, the backend split between Vulkan / OpenGL / `wgpu4k`, the Compose-style in-engine UI, or the shared-source physics transformation path instead of reopening the whole repository broadly.

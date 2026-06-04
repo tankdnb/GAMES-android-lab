@@ -25,6 +25,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [NewQuiz](projects/joaomanaia-newquiz.md) - Android-first Compose trivia and word-game product with several quiz modes, generated maze runs, daily challenges, centralized progression/economy state, worker-owned endgame bookkeeping, and a stronger-than-usual modular/tested casual-game shell.
 - [UGame](projects/vitaviva-ugame.md) - Android custom-View mini-game with Camera2 face-detection input, a layered `TextureView` plus overlay rendering stack, bitmap-sliced obstacles, controller-owned collision/score flow, and compact replay handling without any external engine.
 - [La Bomba](projects/edezadev-la-bomba.md) - Android Material 3 party-game shell with anonymous Firebase auth, Firestore-backed synced setup content, a fragment-hosted configuration wizard, ExoPlayer countdown rounds, tied-player rematches, and compact AdMob seams.
+- [Dark Matter](projects/quillraven-dark-matter.md) - compact LibGDX Android/Desktop autoscroller with a shared Ashley ECS shell, fixed-step interpolated movement, pointer-follow touch input, code-driven Scene2D HUD, patterned power-up waves, and a speed-reactive background plus shield-outline presentation stack.
 
 ## engine-framework
 
