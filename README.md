@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `48` real GitHub research batches are completed end-to-end.
-- `54` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `49` real GitHub research batches are completed end-to-end.
+- `55` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `47`
+  - `accepted`: `48`
   - `reference-only`: `7`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `edezadev/la-bomba` as an `accepted` Android party-game shell with anonymous Firebase auth, Firestore-backed synced content, a fragment-hosted setup wizard, and ExoPlayer-driven countdown rounds.
-- The latest accepted addition is `edezadev/la-bomba`.
+- The latest researched addition is `kool-engine/kool` as an `accepted` multiplatform 3D engine with real Android source sets, backend abstraction, in-engine Compose-style UI, editor modules, and opt-in Android Gradle enablement.
+- The latest accepted addition is `kool-engine/kool`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

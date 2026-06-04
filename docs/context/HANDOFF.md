@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The forty-eighth real research batch is now completed and documented end-to-end.
-- The lab now has 54 researched repositories recorded:
+- The forty-ninth real research batch is now completed and documented end-to-end.
+- The lab now has 55 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -63,6 +63,7 @@
   - `libgdx/gdx-liftoff` - `accepted`
   - `Mesabloo/hm-defense` - `reference-only`
   - `edezadev/la-bomba` - `accepted`
+  - `kool-engine/kool` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -333,10 +334,16 @@
 - Classified `edezadev/la-bomba` as `accepted` because the repository is a compact but current Android product-shell reference even though it is not a real-time multiplayer baseline and exposes only a thin verification surface.
 - Verified that `cmd /c gradlew.bat --version` succeeds in the inspected clone, while both `cmd /c gradlew.bat help --no-daemon` and `cmd /c gradlew.bat :app:testDebugUnitTest --dry-run --no-daemon` currently fail in the lab because the checked-in AGP plus Google Services stack now requires Java `11+` while the machine still exposes Java `8`.
 - Cleaned the transient `la-bomba` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Refreshed `research/registry/CANDIDATE_QUEUE.md` with a new exact-license-verified shortlist led by `kool-engine/kool`, followed by `BlueBoxWare/LibGDXPlugin`, `ImXico/cyberpunk`, `Quillraven/Dark-Matter`, and `benpollarduk/ktaf`.
+- Completed `BATCH-2026-06-04-R` as a multiplatform engine and Android-platform pass for `kool-engine/kool`.
+- Added durable `kool` findings for the split frontend/backend/synced frame pipeline, dependency-sorted GPU passes, Compose-style in-engine UI, async physics stepping, Android `GLSurfaceView` host glue, and the opt-in Android Gradle enablement workflow.
+- Classified `kool-engine/kool` as `accepted` because the repository combines real Android source sets with a deep multiplatform engine architecture, even though Android is disabled by default for contributors and the effective toolchain floor is high.
+- Verified that `cmd /c gradlew.bat --version` succeeds in the inspected clone, while `cmd /c gradlew.bat help --no-daemon` and `cmd /c gradlew.bat :kool-core:desktopTest --dry-run --no-daemon` currently fail in the lab because Gradle now requires Java `17+` while the machine still exposes Java `8`.
+- Cleaned the transient `kool` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 48 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 49 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -385,6 +392,7 @@
 - `libgdx/gdx-liftoff` is one of the stronger tooling references in the lab, but it is generator-specific rather than runtime-specific, `Architecture.md` is explicitly stale, and the visible confidence surface is stronger in build/sample/demo automation than in a large checked-in unit-test tree.
 - `Mesabloo/hm-defense` is a useful small libGDX HUD/runtime comparison sample, but the default-branch code looks stale in practice, no Android module is checked in despite the README goal, the visible gameplay loop is unfinished, and no real automated tests were found.
 - `edezadev/la-bomba` is a useful direct Android product-shell reference, but public signal is still zero-star low, the visible test surface is only template-level, the checked-in docs still understate the real Java `11+` floor, and the "multiplayer" label should be read as local pass-the-device play plus synced content rather than as live match networking.
+- `kool-engine/kool` is one of the stronger engine references in the lab, but it is large, the checked-in Android path is intentionally disabled by default until build files are rewritten, the effective JDK floor is high (`17+` to configure, `25` in conventions, `22` for `wgpu4k`), and the automated test surface is still much stronger in core utilities than across the full renderer/editor/physics stack.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -392,7 +400,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Refresh `research/registry/CANDIDATE_QUEUE.md` with another exact-license shortlist before starting the next batch.
+- Continue with the refreshed shortlist led by `BlueBoxWare/LibGDXPlugin`, then `ImXico/cyberpunk`, `Quillraven/Dark-Matter`, and `benpollarduk/ktaf`.
+- If a future follow-up is needed for `kool-engine/kool`, rerun Gradle discovery and selected module tasks in a JDK `25` plus Android SDK-ready environment, or isolate the Android enable/disable workflow, the backend split between Vulkan / OpenGL / `wgpu4k`, the Compose-style in-engine UI, or the shared-source physics transformation path instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `edezadev/la-bomba`, rerun build and selected Android tasks in a JDK `11+` plus Android SDK-ready environment with Firebase config present, or isolate the anonymous-auth plus Firestore content seam, the fragment wizard plus `GameSession` ownership model, or the ad/audio/lifecycle shell instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `libgdx/gdx-liftoff`, rerun broader sample-generation tasks in a JDK `17+` or `21` environment, or isolate the Android Gradle scaffolding path, the root-versus-module build split, the Kotlin launcher/template family, or the daemon-JDK bootstrap workflow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Mesabloo/hm-defense`, revisit it only as a narrow pass around Scene2D/HUD composition, the JSON economy layer, or any future Android host module instead of reopening it as a broad Android gameplay baseline.

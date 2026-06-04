@@ -57,6 +57,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `World`, `WorldConfiguration`, `ComponentService`, and `EntityService` show a compact ECS runtime where versioned entities, array-backed component holders, bit-mask membership, and a Kotlin DSL keep gameplay-core ownership explicit without tying the library to any one engine.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `MainGame`, `AbstractScreen`, `StageScreen`, `UIWorld`, and `GameWorld` show a compact libGDX runtime where a scrollable battlefield, fixed HUD shell, and actor-synced Box2D world stay separate, even though the gameplay loop itself is still incomplete.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `BaseActivity`, `MainActivity`, `SettingsActivity`, `StartGameActivity`, `ResultsActivity`, and `GameSession` show a compact Android product shell where anonymous-auth bootstrap, a fragment wizard, global session state, timed rounds, and rematch handling stay explicit without an engine layer.
+- [kool-engine-kool](../findings/kool-engine-kool.md) - `KoolContext`, `Scene`, `Lwjgl3Context`, and `KoolDispatchers` show a double-buffered frame pipeline with split frontend / backend / synced dispatchers, dependency-sorted GPU passes, and optional async next-frame preparation on desktop.
 
 ## Rendering And Graphics
 
@@ -103,6 +104,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `BackgroundView`, `Bar`, `ForegroundView`, and `BoatView` show a compact Android-native render stack built from layered overlay views, bitmap slicing, `Canvas` drawing, and smoothed sprite movement above a live camera preview.
 - [codeyousef-materia](../findings/codeyousef-materia.md) - `Renderer`, `EngineRendererImpl`, `GpuCoreJvm`, and `LODGenerator` show a scene-first 3D graphics stack with backend-aware WebGPU/Vulkan/WebGL contracts, cached FXAA/offscreen resources, Vulkan-first JVM GPU initialization, and built-in mesh LOD generation.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `Batcher`, `StageAssetsManager`, `Radar`, and `StageScreen` show a compact libGDX rendering shell with deferred z-sorted drawing, atlas-backed UI art, a viewport-mirroring radar, and a scrollpane-backed battlefield instead of a separate minimap or renderer graph.
+
+- [kool-engine-kool](../findings/kool-engine-kool.md) - `RenderBackend`, `Scene.ScreenPass`, and the platform backend trees show one scene/render API spanning desktop Vulkan / OpenGL / `wgpu4k`, browser WebGPU / WebGL, and Android GLES3 with explicit NDC and pass-order control.
 
 ## Gameplay Systems
 
@@ -179,6 +182,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [canopyengine-canopy](../findings/canopyengine-canopy.md) - `InputManager`, `InputSystem`, and `GdxInputManager` show an engine-owned action/state model with backend binding and persistence hooks, plus a useful warning that small engines should verify system-to-node dispatch paths early.
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `CameraHelper`, `ForegroundView`, and `BoatView` show a distinct direct-Android control pattern where Camera2 face detection becomes the primary gameplay input and smoothed position/rotation animation makes the mapping playable.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `PenaltyFragment`, `PlayerFragment`, `TopicsFragment`, `TimerFragment`, and `SelectLoserBottomSheet` show a small Android control model where step-specific widgets and bottom sheets write into one shared session instead of routing everything through heavier navigation or immutable state.
+- [kool-engine-kool](../findings/kool-engine-kool.md) - `PlatformInputAndroid`, `TouchGestureEvaluator`, and `KoolSurfaceView` show a solid cross-platform input seam with shared pointer events, Android keyboard bridging, and built-in pinch plus two-finger-drag gesture handling.
 
 ## UI, HUD, And Menus
 
@@ -214,6 +218,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `activity_fullscreen.xml`, `FullscreenActivity`, and `GameState` show a tiny but readable Android HUD shell with one centered score layer, one bottom camera-switch control strip, and a dialog-driven replay loop.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `StageScreen`, `BuildQueue`, `MachineBuildSlot`, `SpecialBuildSlot`, and the tweened menu listeners show a dense Scene2D HUD shell with build slots, gauges, radar, side menus, and queue feedback kept in one readable in-game UI layer.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `SettingsActivity`, `TopicsFragment`, `ResultsActivity`, and the bottom sheets show a guided Material 3 shell with paged content selection, loser standings, rematch affordances, and a clean separation between setup and round UI.
+- [kool-engine-kool](../findings/kool-engine-kool.md) - `UiSurfaceComposition` and the demo-side `LaunchedEffectTest` show a Compose-style UI layer mounted directly inside the engine viewport and driven from the same frame clock as the rest of the runtime.
 
 ## Physics And Collision
 
@@ -234,6 +239,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [queuejw-space](../findings/queuejw-space.md) - `Body`, `Container`, `Universe.updateAll`, `Universe.solveAll`, and `Landing` show a compact gravity-plus-constraints model where the ship integrates motion, bounded-universe correction, land-vs-impact checks, and docking/launch rules without any external physics engine.
 - [vitaviva-ugame](../findings/vitaviva-ugame.md) - `GameController.isCollision(...)`, `BackgroundView`, and the paired `Bar` views show a simple AABB collision loop and deterministic endless-obstacle generation pattern that fits compact Android arcade shells without a physics dependency.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `GameWorld` and the terrain/body setup show a minimal Box2D seam where the world steps centrally, actor positions mirror body coordinates back into Scene2D, and border contacts are observed in one place without a heavier ECS layer.
+
+- [kool-engine-kool](../findings/kool-engine-kool.md) - `PhysicsWorld`, `Physics2dWorld`, and the transform tasks in `kool-physics/build.gradle.kts` show async interpolated 3D and 2D physics pipelines plus a distinctive shared-source strategy for Android and web bindings.
 
 ## Audio
 
@@ -340,6 +347,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [libgdx-gdx-liftoff](../findings/libgdx-gdx-liftoff.md) - `Project`, `RootGradleFile`, `AndroidGradleFile`, `KotlinTemplate`, and the workflow files show a typed bootstrap pipeline for multi-platform game projects where root build layout, per-platform Gradle emitters, launcher templates, and demo publication are all first-class tooling concerns instead of ad hoc scripts.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `StageAssetsManager`, the `core/assets/data` JSON files, and the `core` / `desktop` split show a lightweight libGDX content pipeline where atlases, textures, and gameplay balance data stay centralized without a larger external tooling stack.
 
+- [kool-engine-kool](../findings/kool-engine-kool.md) - `ProjectFiles`, `enableAndroidPlatform`, and `disableAndroidPlatform` show a practical engine-tooling pattern where editor output lives in `src/commonMain` resources and Android support can be toggled on only when the local environment is ready for it.
+
 ## Android Platform Integration
 
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - separate `wear` and `auto` modules plus cloud-save wiring show unusually deep Android adaptation.
@@ -378,6 +387,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [codeyousef-materia](../findings/codeyousef-materia.md) - `AndroidWgpuRenderer`, `GpuContext.android`, `EngineRendererPlatform.android`, and the Android example activities show a direct but transitional Android path where wgpu/Vulkan renderers, reflective native bridges, and Filament-backed `SurfaceView` hosts all coexist inside the same engine effort.
 - [libgdx-gdx-liftoff](../findings/libgdx-gdx-liftoff.md) - `Android.kt`, `AndroidGradleFile`, and `Kotlin.kt` show a strong Android bootstrap pattern where manifests, resources, native extraction, desugaring flags, source-set wiring, and even an `adb` run task are generated from one structured project model instead of being hand-maintained in every new game repository.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `BaseActivity`, `MainActivity`, `AndroidManifest.xml`, and `AdsManager` show a direct Android shell with edge-to-edge activity chrome, anonymous Firebase bootstrap, AdMob wiring, offline snackbar handling, and a sample-app-ID caveat worth documenting.
+- [kool-engine-kool](../findings/kool-engine-kool.md) - `KoolContextAndroid`, `KoolConfigAndroid`, `KoolSurfaceView`, `PlatformInput.android.kt`, and `Assets.android.kt` show a real Android host with preserved GL context, density-aware UI scaling, platform asset decoding, and explicit unsupported-feature boundaries.
 
 ## Performance And Memory
 
@@ -412,6 +422,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [joaomanaia-newquiz](../findings/joaomanaia-newquiz.md) - `settings.gradle.kts`, `.github/workflows/android.yml`, the convention plugins, and the visible `73`-file test surface show a notably mature Android casual-game workflow with modular builds, flavor-specific assembly, repository/worker/gameplay-core tests, and Compose instrumentation coverage even though local validation in this lab still stops at a missing JDK.
 - [codeyousef-materia](../findings/codeyousef-materia.md) - `Object3D`, `GLTFAssetCache`, `EngineRendererImpl`, and the benchmark tasks show a practical 3D-engine performance posture built around transform dirtiness, clone-on-read asset reuse, cached post-process resources, and built-in benchmark capture instead of ad hoc measurement.
 - [quillraven-fleks](../findings/quillraven-fleks.md) - `ComponentService`, `Family`, `EntityService`, and the JVM benchmarks show a strong ECS performance baseline built around array-backed component holders, bit-mask family checks, delayed-removal-safe iteration, and explicit Ashley and Artemis comparisons instead of undocumented speed claims.
+
+- [kool-engine-kool](../findings/kool-engine-kool.md) - `KoolContext`, `Lwjgl3Context`, and the async simulation helpers show a practical performance posture built around double-buffered frame data, optional precomputed next frames, fixed-step interpolated physics, and backend-owned GPU submission phases.
 
 ## Build, Release, And Testing
 
@@ -459,3 +471,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [libgdx-gdx-liftoff](../findings/libgdx-gdx-liftoff.md) - `settings.gradle`, `gradle/gradle-daemon-jvm.properties`, `build.gradle`, `build.yml`, and `publish-demos.yml` show a particularly transferable build workflow: Foojay-based toolchain resolution, checked-in daemon JDK provisioning, build plus sample generation on Java `17` and `21`, and automatic publication of generated demo outputs.
 - [mesabloo-hm-defense](../findings/mesabloo-hm-defense.md) - `build.gradle`, `core/build.gradle`, `desktop/build.gradle`, and the successful `gradlew help --no-daemon` run show a readable older libGDX Gradle surface around Java `11`, but also confirm the structural limit that only `core` and `desktop` are checked in and no real test tree exists.
 - [edezadev-la-bomba](../findings/edezadev-la-bomba.md) - `build.gradle.kts`, `app/build.gradle.kts`, `SETUP.md`, and the template-only test tree show a current single-module Android build that already needs Java `11+` despite docs still claiming `Java 8+`, with no visible CI and almost no real automated verification.
+- [kool-engine-kool](../findings/kool-engine-kool.md) - root convention plugins, Android enable/disable tasks, and the `build.yml` plus `publish.yml` workflows show a strong multiplatform engine workflow with opt-in Android configuration, JDK `25` CI, and a focused core test surface, even though local discovery in this lab still stops at Java `8`.

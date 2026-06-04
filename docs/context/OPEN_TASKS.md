@@ -3,14 +3,15 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Refresh `research/registry/CANDIDATE_QUEUE.md` with another exact-license shortlist now that the current short backlog is exhausted.
+- Work through the refreshed exact-license shortlist led by `BlueBoxWare/LibGDXPlugin`, `ImXico/cyberpunk`, `Quillraven/Dark-Matter`, and `benpollarduk/ktaf`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
 
 ## Next Recommended
 
-- Refresh the shortlist with exact repository-level license verification before starting the next batch.
+- Continue with the refreshed shortlist, starting from `BlueBoxWare/LibGDXPlugin` unless a stronger newly verified candidate overtakes it.
+- If `kool-engine/kool` needs a future follow-up, rerun Gradle discovery and selected module tasks in a JDK `25` plus Android SDK-ready environment, or isolate the Android enable/disable workflow, the backend split between Vulkan / OpenGL / `wgpu4k`, the Compose-style in-engine UI, or the shared-source physics transformation path instead of reopening the whole repository broadly.
 - If `edezadev/la-bomba` needs a future follow-up, rerun build and selected Android tasks in a Java `11+` plus Android SDK-ready environment with Firebase config present, or isolate the anonymous-auth plus Firestore content seam, the fragment wizard plus `GameSession` ownership model, or the ad/audio/lifecycle shell instead of reopening the whole repository broadly.
 - If `Mesabloo/hm-defense` needs a future follow-up, revisit only its Scene2D/HUD composition, JSON economy layer, or any future Android host module instead of reopening the whole repository broadly.
 - If `libgdx/gdx-liftoff` needs a future follow-up, rerun broader sample-generation tasks in a JDK `17+` or `21` environment, or isolate the Android Gradle scaffolding path, the root-versus-module build split, the Kotlin launcher/template family, or the daemon-JDK bootstrap workflow instead of reopening the whole repository broadly.
