@@ -78,6 +78,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-AE` | `tottelofstrom/NFC-DOOM` | `android-game` | `2` | `0` | `3` | `3` | `0` | `2026-06-03` | Fresh MIT Android Compose raycaster with unusual technical value around software-3D and NFC-cartridge constraints, kept as a high-novelty wildcard behind the stronger signal leader | `done` | `carry-over exact-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-AF` | `mimoguz/tripeaks-gdx` | `android-game` | `3` | `2` | `2` | `3` | `88` | `2025-03-15` | Explicit GPL-3.0 Kotlin libGDX solitaire game with stronger public signal and more likely reusable gameplay or cross-platform runtime patterns than the other refreshed shortlist options | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `BATCH-2026-06-04-AG` | `Saar25/PlanetEngine` | `engine-framework` | `3` | `1` | `3` | `3` | `7` | `2026-05-29` | Fresh GPL-3.0 LWJGL/OpenGL engine candidate with better current activity and expected architecture yield than the remaining shortlist alternatives | `done` | `carry-over exact-license shortlist execution + exact repository view verification` |
+| `BATCH-2026-06-04-AH` | `Juanoff/roulette-android-app` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-05-28` | Fresh MIT Android Compose game shell with likely reusable spin animation, touch interaction, and MVVM product-flow patterns now that the stronger engine candidate is cleared | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 
 ## Backlog Candidates
 
@@ -91,7 +92,6 @@ Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AF`. The shortlist b
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `Juanoff/roulette-android-app` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-05-28` | Fresh MIT Android Compose game shell with likely reusable spin animation, touch interaction, and MVVM product-flow patterns now that the stronger engine candidate is cleared | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `icela/FriceEngine` | `engine-framework` | `2` | `2` | `0` | `2` | `349` | `2019-12-28` | Older but still high-signal AGPL engine reference worth preserving as a fallback architecture pass if the fresher shortlist leaders disappoint | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 
 ## Status Legend

@@ -33,6 +33,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [ComposeLife](projects/alexvanyo-composelife.md) - Android Compose Game of Life simulator and Wear OS watchface with explicit evolving simulation state, HashLife or naive algorithm switching, AGSL or SKSL or OpenGL rendering paths, custom stateful navigation, remote pattern-archive sync, and an unusually deep CI plus test matrix for a game-adjacent product.
 - [NFC-DOOM](projects/tottelofstrom-nfc-doom.md) - Android Compose raycaster with a strict tiny NFC cartridge format, raw `NfcV` fallback when normal NDEF paths break, low-resolution offscreen software 3D upscaled through Compose, and an optional demo-cartridge mode for non-NFC devices.
 - [TriPeaks](projects/mimoguz-tripeaks-gdx.md) - compact libGDX solitaire product with a pure layout-graph rules core, pooled card and animation views, JSON-in-preferences persistence with legacy migration, and a practical Android plus desktop packaging split.
+- [Roulette Android App](projects/juanoff-roulette-android-app.md) - compact Android Compose roulette shell with custom Canvas wheel rendering, resumable finite spin animation state, idle-only sector-count configuration, and a clean single-screen MVVM product flow.
 
 ## engine-framework
 

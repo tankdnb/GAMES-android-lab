@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `64` real GitHub research batches are completed end-to-end.
-- `70` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `65` real GitHub research batches are completed end-to-end.
+- `71` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `61`
+  - `accepted`: `62`
   - `reference-only`: `9`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `Saar25/PlanetEngine` as an `accepted` engine-framework reference whose strongest reusable value is the combination of annotation-driven renderer prototypes, pass-specific scene traversal, strongly typed LWJGL/OpenGL wrappers, and a retained GUI/input layer.
-- The latest accepted addition is also `Saar25/PlanetEngine`.
+- The latest researched addition is `Juanoff/roulette-android-app` as an `accepted` Android-game reference whose strongest reusable value is the combination of resumable finite spin animation state, custom Compose Canvas wheel rendering, angle-normalized winner calculation, and a clean single-screen MVVM shell.
+- The latest accepted addition is also `Juanoff/roulette-android-app`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

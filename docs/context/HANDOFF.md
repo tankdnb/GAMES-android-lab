@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The sixty-fourth real research batch is now completed and documented end-to-end.
-- The lab now has 70 researched repositories recorded:
+- The sixty-fifth real research batch is now completed and documented end-to-end.
+- The lab now has 71 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -79,6 +79,7 @@
   - `tottelofstrom/NFC-DOOM` - `accepted`
   - `mimoguz/tripeaks-gdx` - `accepted`
   - `Saar25/PlanetEngine` - `accepted`
+  - `Juanoff/roulette-android-app` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -86,16 +87,19 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The active exact-license short backlog is now `Juanoff/roulette-android-app` and `icela/FriceEngine`; the next candidate is `Juanoff/roulette-android-app`.
+- The active exact-license short backlog is now `icela/FriceEngine`; the next candidate is `icela/FriceEngine`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
 
+- Completed `BATCH-2026-06-04-AH` as an android-game pass for `Juanoff/roulette-android-app`.
+- Added durable `roulette-android-app` findings for resumable finite spin animation state, custom Compose Canvas wheel rendering, angle-normalized winner calculation, and a clean portrait/landscape single-screen MVVM shell.
+- Verified the current build shape for this batch: `gradlew help --no-daemon` works locally because the checked-in daemon JDK provisioning resolves Java `21`, while `:app:testDebugUnitTest --dry-run` still stops at the missing Android SDK; also confirmed that the checked-in instrumentation test is stale and asserts the wrong package name.
+- Cleared the head of the exact-license shortlist; the next candidate is now `icela/FriceEngine`.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `65` completed batches, `71` researched repositories, and a `62 accepted / 9 reference-only` split.
 - Completed `BATCH-2026-06-04-AG` as an engine-framework pass for `Saar25/PlanetEngine`.
 - Added durable `PlanetEngine` findings for annotation-driven renderer prototypes, typed forward or deferred or shadow node groups, a retained GUI/input layer, LWJGL/OpenGL wrapper classes, and a readable Maven module split.
 - Verified the current build caveat for this batch: the checked-in reactor targets Java `11`, but the lab cannot validate it because Maven is unavailable locally; also confirmed that repo-level freshness is inflated by activity on `origin/dev` while default `master` ends at a `2022-10-28` commit.
-- Cleared the head of the exact-license shortlist; the next candidate is now `Juanoff/roulette-android-app`, with `icela/FriceEngine` still queued behind it.
-- Refreshed the public and internal snapshot counts again so the repository now consistently reports `64` completed batches, `70` researched repositories, and a `61 accepted / 9 reference-only` split.
 - Added canonical memory entry point in `docs/context/CONTEXT_INDEX.md`.
 - Added durable memory files for project brief, open tasks, decisions, and session notes.
 - Kept `docs/context/project-overview.md` as a legacy alias instead of deleting or silently replacing it.
@@ -479,8 +483,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue with `Juanoff/roulette-android-app` from the current exact-license shortlist if no unfinished batch is present.
-- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new exact-license shortlist only after `Juanoff/roulette-android-app` and `icela/FriceEngine` are cleared or intentionally dropped.
+- Continue with `icela/FriceEngine` from the current exact-license shortlist if no unfinished batch is present.
+- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new exact-license shortlist only after `icela/FriceEngine` is cleared or intentionally dropped.
 - If a future follow-up is needed for `Saar25/PlanetEngine`, decide first whether the target should be default `master` or the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input layer instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `mimoguz/tripeaks-gdx`, rerun Android or desktop tasks in a JDK `17+` plus Android SDK-ready environment, or isolate the layout-graph rules core, the JSON persistence plus migration seam, or the viewport and blurred-render split instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `tottelofstrom/NFC-DOOM`, rerun Android tasks in a JDK `17+` plus Android SDK-ready environment, or isolate the low-resolution software raycaster, the cartridge codec/builder seam, or the raw `NfcV` read/write fallback layer instead of reopening the whole repository blindly.
