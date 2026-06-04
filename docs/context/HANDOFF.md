@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The forty-fourth real research batch is now completed and documented end-to-end.
-- The lab now has 50 researched repositories recorded:
+- The forty-fifth real research batch is now completed and documented end-to-end.
+- The lab now has 51 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -59,6 +59,7 @@
   - `canopyengine/canopy` - `accepted`
   - `vitaviva/ugame` - `accepted`
   - `codeyousef/Materia` - `accepted`
+  - `Quillraven/Fleks` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -309,10 +310,15 @@
 - Recorded a stricter shortlist-refresh rule: exact repository-level `licenseInfo` verification now outranks GitHub search-index license hints when the two disagree.
 - Verified that local `gradlew help` still stops at the missing JDK in this lab, while the inspected upstream workflow expects JDK `22` plus Android SDK tooling.
 - Cleaned the transient `Materia` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
+- Completed `BATCH-2026-06-04-N` as a focused ECS and library pass for `Quillraven/Fleks`.
+- Added durable `Fleks` findings for versioned entities, array-backed component storage, bit-mask family queries, fixed-step system scheduling, snapshot serialization, and benchmark-backed ECS comparisons.
+- Classified `Quillraven/Fleks` as `accepted` because the standalone library still adds strong reusable gameplay-architecture value beyond the already researched `korge-fleks` integration layer.
+- Verified that `gradlew --version` works in the inspected clone, while `gradlew help --no-daemon` still stops in the lab at the missing JDK compiler rather than at a repository-specific failure.
+- Cleaned the transient `Fleks` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 44 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 45 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -357,6 +363,7 @@
 - `canopyengine/canopy` is a useful compact engine reference, but Android relevance is currently indirect, the checked-in `platforms/desktop` tree is excluded from the active build and appears partially stale, and top-level version/license/scope documentation still drifts from the active module graph.
 - `vitaviva/ugame` is a useful direct Android-native reference, but it is stale by code activity, depends on older tooling plus `jcenter()`, has only placeholder tests, and carries a sloppy manifest surface with duplicated or overly broad permission declarations.
 - `codeyousef/Materia` is one of the stronger current 3D engine references in the lab, but it is still mid-transition between overlapping renderer/runtime layers, Android currently spans both wgpu-oriented and Filament-backed paths, some standalone tests are unwired or placeholder-only, and meaningful local validation still needs JDK `22` plus Android SDK tooling.
+- `Quillraven/Fleks` is a strong gameplay-runtime reference, but Android relevance is indirect because the repository intentionally stops at the ECS layer, and meaningful local Gradle validation still needs a real JDK even for lightweight discovery.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -364,7 +371,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current verified shortlist in `research/registry/CANDIDATE_QUEUE.md`, led by `Quillraven/Fleks`, then `libgdx/gdx-liftoff`, `Mesabloo/hm-defense`, and `edezadev/la-bomba`.
+- Continue from the current verified shortlist in `research/registry/CANDIDATE_QUEUE.md`, led by `libgdx/gdx-liftoff`, then `Mesabloo/hm-defense`, and `edezadev/la-bomba`.
+- If a future follow-up is needed for `Quillraven/Fleks`, rerun Gradle discovery or selected tests and benchmarks in a JDK `11+` or `17+` environment, or isolate the snapshot serialization path, family hooks and delayed-removal behavior, or the Ashley and Artemis benchmark comparisons instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `codeyousef/Materia`, rerun Gradle discovery or selected Android/JVM tasks in a JDK `22` plus Android SDK-ready environment, or isolate the dual renderer-stack boundary, the Filament/wgpu Android split, the GLTF cache/loader pipeline, or the validation/benchmark workflow instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `vitaviva/ugame`, rerun targeted Android tasks in an SDK-ready environment, or isolate the Camera2 face-detection flow, the layered custom-view rendering stack, or the controller-owned score/collision loop instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `canopyengine/canopy`, rerun the active tests in a JDK `17+` or `21` environment, or isolate the node/behavior runtime, the scene/tree-system ownership model, the save/input integration seam, or the excluded desktop rendering path instead of reopening the whole repository blindly.

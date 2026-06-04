@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `44` real GitHub research batches are completed end-to-end.
-- `50` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `45` real GitHub research batches are completed end-to-end.
+- `51` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `44`
+  - `accepted`: `45`
   - `reference-only`: `6`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `codeyousef/Materia` as an `accepted` Kotlin Multiplatform 3D engine stack with a scene-first hierarchy, clone-on-read glTF caching, and a transitional Android renderer story across wgpu-oriented and Filament-backed hosts.
-- The latest accepted addition is `codeyousef/Materia`.
+- The latest researched addition is `Quillraven/Fleks` as an `accepted` Kotlin Multiplatform ECS library with versioned entities, bit-mask family queries, built-in snapshots, and benchmark-backed performance posture.
+- The latest accepted addition is `Quillraven/Fleks`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
