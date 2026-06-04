@@ -23,6 +23,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Hangman Compose](projects/rajashekarraju-hangman-compose.md) - Compose Multiplatform hangman product with a pure session engine, DSL-authored word catalogs, reactive theme/language/settings shell, Room plus localStorage persistence seams, platform audio adapters, and wide packaging/test automation.
 - [Space](projects/queuejw-space.md) - compact Android-native Compose space sandbox derived from the Android Easter Egg, with a tiny simulator/constraint loop, readable flight-stick controls, autopilot, foldable-aware camera framing, a dream-service mode, and Android 16 progress-notification integration.
 - [NewQuiz](projects/joaomanaia-newquiz.md) - Android-first Compose trivia and word-game product with several quiz modes, generated maze runs, daily challenges, centralized progression/economy state, worker-owned endgame bookkeeping, and a stronger-than-usual modular/tested casual-game shell.
+- [UGame](projects/vitaviva-ugame.md) - Android custom-View mini-game with Camera2 face-detection input, a layered `TextureView` plus overlay rendering stack, bitmap-sliced obstacles, controller-owned collision/score flow, and compact replay handling without any external engine.
 
 ## engine-framework
 

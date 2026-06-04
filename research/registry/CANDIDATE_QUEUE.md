@@ -56,6 +56,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-I` | `Dmytro-Pashko/KRender` | `engine-framework` | `2` | `0` | `3` | `3` | `2` | `2026-06-03` | Fresh Apache-2.0 minimal engine with explicit scene/load/editor/runtime goals and a better current balance of freshness and expected architecture yield than the remaining alternatives | `done` | `carry-over explicit-license shortlist execution + exact repo verification` |
 | `BATCH-2026-06-04-J` | `joaomanaia/newquiz` | `android-game` | `3` | `2` | `1` | `2` | `156` | `2025-01-27` | Popular Apache-2.0 Jetpack Compose trivia game with direct Android product-shell value and a better current balance of signal and freshness than the reserve alternatives | `done` | `carry-over explicit-license shortlist execution + exact candidate comparison` |
 | `BATCH-2026-06-04-K` | `canopyengine/canopy` | `engine-framework` | `2` | `0` | `3` | `2` | `3` | `2026-06-01` | Fresh Apache-2.0 node-driven engine candidate with likely reusable scene/runtime ideas and better current architecture potential than the remaining older Android reserve | `done` | `carry-over explicit-license shortlist execution + exact candidate comparison` |
+| `BATCH-2026-06-04-L` | `vitaviva/ugame` | `android-game` | `3` | `2` | `0` | `2` | `159` | `2020-04-19` | Apache-2.0 Android custom-View mini-game with stronger public signal than the current low-star alternatives and likely useful direct input/render/runtime patterns outside Compose-heavy samples | `done` | `carry-over explicit-license shortlist execution + exact repo verification` |
 
 ## Backlog Candidates
 
@@ -63,11 +64,10 @@ Keep this short. Move only the strongest candidates here.
 
 Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was removed from the short backlog after re-verification showed `licenseInfo: null` on GitHub, and the team chose to prefer candidates with explicit license metadata for the next pass.
 
-Refreshed on `2026-06-04` after completing `BATCH-2026-06-04-K`. The short explicit-license backlog is now down to a single older but stronger-signal Android reserve candidate after the active engine pass was documented and closed.
+Refreshed on `2026-06-04` after completing `BATCH-2026-06-04-L`. The short explicit-license backlog is now empty and should be rebuilt before the next batch.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `vitaviva/ugame` | `android-game` | `3` | `2` | `0` | `2` | `159` | `2020-04-19` | Apache-2.0 Android custom-View mini-game with stronger public signal than the low-star fresh noise and likely useful direct input/render/runtime patterns outside Compose-heavy samples | `explicit-license shortlist refresh + exact repo verification` |
 
 ## Status Legend
 

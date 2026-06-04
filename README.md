@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `42` real GitHub research batches are completed end-to-end.
-- `48` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `43` real GitHub research batches are completed end-to-end.
+- `49` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `42`
+  - `accepted`: `43`
   - `reference-only`: `6`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `canopyengine/canopy` as an `accepted` compact Kotlin node-driven engine with a reusable app shell, phased scene processing, save and input seams, and a stronger-than-usual headless devtools test harness.
-- The latest accepted addition is `canopyengine/canopy`.
+- The latest researched addition is `vitaviva/ugame` as an `accepted` Android custom-View mini-game with Camera2 face-detection input, layered overlay rendering, and a compact controller-owned score/collision loop.
+- The latest accepted addition is `vitaviva/ugame`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
