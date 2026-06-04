@@ -51,6 +51,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-D` | `StudioAdriatic/PGSGP` | `library-sdk` | `2` | `1` | `3` | `2` | `50` | `2026-06-03` | Fresh MIT-licensed Android Play Games Services plugin for Godot 4.x with clear Kotlin-side value around sign-in, achievements, leaderboards, manifest wiring, and Android game-services integration | `done` | `carry-over licensed shortlist execution + exact repo verification` |
 | `BATCH-2026-06-04-E` | `CheerWizard/Kanvas` | `engine-framework` | `3` | `0` | `2` | `3` | `1` | `2026-04-10` | Fresh MIT-licensed KMP engine with explicit mobile/web/native targets, large mixed Kotlin/native surface, and stronger expected Android-transfer architecture value than the narrower refreshed-shortlist alternatives | `done` | `explicit-license shortlist refresh + exact candidate comparison` |
 | `BATCH-2026-06-04-F` | `queuejw/Space` | `android-game` | `3` | `1` | `2` | `2` | `7` | `2025-09-05` | Direct Android game based on the Android 14-16 Easter Egg, with permissive Apache-2.0 licensing and likely reusable Android-native game loop, input, and rendering patterns | `done` | `carry-over explicit-license shortlist execution + exact repo verification` |
+| `BATCH-2026-06-04-G` | `benpollarduk/ktvn` | `library-sdk` | `2` | `1` | `1` | `3` | `20` | `2025-05-08` | MIT-licensed visual-novel framework with a substantial Kotlin DSL and likely reusable content-structure, state-flow, and narrative runtime ideas | `done` | `carry-over explicit-license shortlist execution + exact candidate comparison` |
 
 ## Backlog Candidates
 
@@ -58,11 +59,10 @@ Keep this short. Move only the strongest candidates here.
 
 Recently dropped during license screen on `2026-06-03`: `Efimj/GameOfLife` was removed from the short backlog after re-verification showed `licenseInfo: null` on GitHub, and the team chose to prefer candidates with explicit license metadata for the next pass.
 
-Refreshed on `2026-06-04` after completing `StudioAdriatic/PGSGP`. After researching `queuejw/Space`, the compact explicit-license shortlist is now led by `benpollarduk/ktvn`.
+Refreshed on `2026-06-04` after completing `StudioAdriatic/PGSGP`. After researching `benpollarduk/ktvn`, only `johron/glare` remains in the current compact explicit-license shortlist.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why It Might Matter | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| `benpollarduk/ktvn` | `library-sdk` | `2` | `1` | `1` | `3` | `20` | `2025-05-08` | MIT-licensed visual-novel framework with a substantial Kotlin DSL and likely reusable content-structure, state-flow, and narrative runtime ideas | `explicit-license shortlist refresh + exact candidate comparison` |
 | `johron/glare` | `engine-framework` | `2` | `0` | `2` | `2` | `4` | `2025-09-01` | Fresh MIT-licensed modular Kotlin LWJGL/OpenGL engine that may still yield compact runtime and renderer patterns despite low public signal | `explicit-license shortlist refresh + exact candidate comparison` |
 
 ## Status Legend

@@ -59,6 +59,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 
 - [KTX](projects/libktx-ktx.md) - Kotlin-first libGDX SDK with coroutine dispatchers, async asset storage, Scene2D DSLs, and AI helpers.
 - [PGSGP](projects/studioadriatic-pgsgp.md) - Godot 4.x Android Play Games Services plugin with a controller-split Kotlin bridge, saved-games and leaderboard wrappers, automatic manifest/dependency injection, and dual legacy/v2 plugin packaging support.
+- [Ktvn](projects/benpollarduk-ktvn.md) - Kotlin visual-novel framework with a story DSL, host-agnostic engine adapters, restore points, seen-step tracking, jar-based story discovery, and unusually broad unit coverage for a niche game library.
 
 ## reference-only
 

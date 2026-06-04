@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `37` real GitHub research batches are completed end-to-end.
-- `43` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `38` real GitHub research batches are completed end-to-end.
+- `44` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `38`
+  - `accepted`: `39`
   - `reference-only`: `5`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `queuejw/Space` as an `accepted` Android-native Compose game reference with a tiny simulator, readable touch controls, foldable-aware layout behavior, dream-service hosting, and Android 16 progress-notification integration.
-- The latest accepted addition is `queuejw/Space`.
+- The latest researched addition is `benpollarduk/ktvn` as an `accepted` Kotlin narrative-framework reference with a story DSL, pluggable engine adapters, split persistence, and jar-based story discovery.
+- The latest accepted addition is `benpollarduk/ktvn`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

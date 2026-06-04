@@ -47,6 +47,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `Engine`, `ApiTranslation`, `TfmGameplay`, `Component`, `Effector`, and `MClass` show a JVM rules engine where declarative class/effect definitions are loaded into a typed runtime, assembled through scoped DI, and executed as task-driven gameplay.
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `PlatformGameLoop.*`, `GameActivity`, `GameView.*`, and `GameLoop` show a strong multiplatform host-loop idea where Android `Choreographer`, JS `requestAnimationFrame`, and iOS `CADisplayLink` are hidden behind one shared loop API, even though the checked-in runtime still looks incomplete.
 - [queuejw-space](../findings/queuejw-space.md) - `Simulator.step`, `MainActivity.Spaaaace`, `Telescope`, and `DreamUniverse` show a compact Android-only game shell where Compose frame callbacks drive simulation, draw invalidation is tied to completed sim steps, and the same runtime can be rehosted into both an activity and a dream service.
+- [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `Story`, `Chapter`, `Scene`, `VisualNovel`, and `Game` show a clean hierarchical narrative runtime where content DSL, execution ownership, and host configuration stay separate instead of being fused into one UI shell.
 
 ## Rendering And Graphics
 
@@ -120,6 +121,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `GameSessionEngine`, `GameSessionState`, `WordCatalogDsl`, `WordBank`, and `WordSelection` show a pure word-game session core, typed rule updates, and a validated content DSL where difficulty depends on content shape rather than only on timers or scores.
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `docs/language-intro.md`, `Changer`, `Effector`, `TfmGameplay`, and `Game20230521Test` show a rules-heavy turn-based engine where game state is a component multiset, effects emit queued tasks, and full games can be scripted and asserted end-to-end.
 - [queuejw-space](../findings/queuejw-space.md) - `Universe.initRandom`, `Universe.solveAll`, `Landing`, and `Spacecraft` show a tiny but real gameplay layer with seeded solar-system generation, exploration/discovery state, landing constraints, launch windows, and continuous ship effects.
+- [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `Then`, `Decision`, `Conditional`, `Interactive`, and `StepResult` show a surprisingly complete narrative-gameplay flow where branching, named jumps, mini-game hooks, and clear/end actions are modeled as composable step primitives instead of one-off screen logic.
 
 ## Input And Controls
 
@@ -182,6 +184,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `MainView`, `BoardView`, `History`, and `doc/User-Experience.md` show a small but fully productized puzzle shell with recent games, bookmarks, replay/watch flows, board-size/theme switches, and stateful score/status presentation.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `HangmanRoot`, `AppNavigation`, `SettingsViewModel`, and `AchievementsViewModel` show a shared Compose shell where menus, gameplay, settings, history, achievements, and global theme/language/cursor state stay product-like without introducing a separate engine UI layer.
 - [queuejw-space](../findings/queuejw-space.md) - `Telemetry`, `ConsoleButton`, and the fold-aware `Spaaaace` layout show a compact in-game HUD shell with animated console overlays, autopilot controls, explored-body catalog text, and posture-aware camera centering on foldables.
+- [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `GameEngine`, `AnsiConsoleGameEngine`, and the Swing `App` show a reusable UI seam where the same story runtime can be hosted by a minimal console renderer or by a richer tool-like debug shell with progression controls, flag viewers, and restore-point jumping.
 
 ## Physics And Collision
 
@@ -250,6 +253,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [atillaturkmen-piano-tiles](../findings/atillaturkmen-piano-tiles.md) - `GameView.saveIfHighScore()` and `HighScoresFragment` show a tiny SharedPreferences persistence seam where local leaderboards are grouped by starting speed rather than flattened into one all-mode score.
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `TfmAuthority`, `Canon`, `ClassDeclaration`, and the `.pets` plus `.json5` resources show a clean split between reusable runtime code and declarative authoritative content packs that can be swapped or extended.
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `SavedGamesController`, `PlayerInfoController`, and `PlayerStatsController` show a compact Android service-data seam where cloud saves and player-profile models are wrapped into serializable payloads for an engine-facing API instead of leaking Google client objects directly.
+- [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `GameSave`, `RestorePoint`, `StepIdentifierTracker`, and `ProgressionController` show a clean split between meta-progress, current route position, seen-step history, and shared skip/auto/wait behavior instead of one monolithic save-state blob.
 
 ## Networking And Multiplayer
 
@@ -290,6 +294,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [martianzoo-solarnet](../findings/martianzoo-solarnet.md) - `ClassParsing`, `Canon`, and `ReplSession` show a domain-content pipeline where specification-language files and JSON definitions compile into runtime classes, and a CLI shell can inspect or drive the live rules engine.
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `generate_gdap.py`, `GodotPlayGamesServices.gdap`, `export_plugin.gd`, and the Godot-version matrix workflows show a careful plugin-content pipeline where legacy and v2 packaging metadata, dependencies, and release artifacts are generated from one source of truth.
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `kanvas-shaderc`, `kanvas-shaderc-sandbox`, `ProjectManager`, and `GameModuleLoader` show a repo that treats shader generation, editor-driven build/launch, and dynamic project-module loading as first-class tooling concerns, even though several of those surfaces are still incomplete.
+- [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `VisualNovelCatalogResolver`, the console `Main`, and the split examples/prototyper modules show a useful narrative-tooling pattern where authored stories can be packaged into jars, discovered dynamically, and run through a generic host without hardcoding one title into the runtime.
 
 ## Android Platform Integration
 
@@ -390,3 +395,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `app/build.gradle`, `godot-lib/build.gradle`, `.github/workflows/*.yml`, and the small test tree show a focused Android library/plugin build with Godot-version matrix validation, dual release packaging, and JDK `17` expectations, even though local `gradlew help` still fails in the lab because the current machine exposes Java `8`.
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `settings.gradle.kts`, `kanvas/build.gradle.kts`, `kanvas-rendering/build.gradle.kts`, and the module graph show a serious KMP+Android build ambition with Vulkan/WebGPU/editor/native pieces, but local `gradlew help` still fails in the lab because only a Java `8` JRE is available and the checked-in tree has almost no real test coverage.
 - [queuejw-space](../findings/queuejw-space.md) - `app/build.gradle.kts`, `gradle/libs.versions.toml`, `gradle-wrapper.properties`, and the missing `src/test` / workflow surface show a compact modern Android build on AGP `8.13`, Kotlin `2.2.10`, SDK `36`, and Java `21`, but with no automated tests or CI and a hard local JVM floor of `17+`.
+- [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `ktvn/build.gradle.kts`, the release/docs workflows, and the broad `ktvn/src/test` tree show a niche JVM game library with explicit API mode, quality gates, publishing automation, and unusually dense runtime/persistence/text-engine tests, even though local `gradlew help` still fails in the lab because the configured SonarQube plugin path expects Java `11+`.
