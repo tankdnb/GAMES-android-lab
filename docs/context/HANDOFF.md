@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The thirty-ninth real research batch is now completed and documented end-to-end.
-- The lab now has 45 researched repositories recorded:
+- The fortieth real research batch is now completed and documented end-to-end.
+- The lab now has 46 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -54,6 +54,7 @@
   - `queuejw/Space` - `accepted`
   - `benpollarduk/ktvn` - `accepted`
   - `johron/glare` - `reference-only`
+  - `Dmytro-Pashko/KRender` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -279,10 +280,15 @@
 - Verified that `cmd /c gradlew.bat --version`, `cmd /c gradlew.bat help --no-daemon`, and `cmd /c gradlew.bat build --dry-run --no-daemon` all succeed for the inspected wrapper, but the build still targets JDK `22` and warns about an invalid auto-provisioned toolchain path in the current lab environment.
 - Refreshed `research/registry/CANDIDATE_QUEUE.md` with a new explicit-license shortlist led by `Dmytro-Pashko/KRender`, followed by `joaomanaia/newquiz`, `canopyengine/canopy`, and `vitaviva/ugame`.
 - Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the thirty-ninth batch.
+- Completed `BATCH-2026-06-04-I` as a Kotlin engine-and-toolset pass for `Dmytro-Pashko/KRender`.
+- Added durable `KRender` findings for a backend-neutral runtime core, deferred ECS mutation, render-command submission, serialized runtime scenes, terrain/runtime pipelines, runtime UI layering, built-in editor scenes, and the direct Android host path.
+- Classified `KRender` as `accepted` because the inspected revision already offers a real reusable engine/tooling reference instead of only an architecture scaffold, and local `gradlew help` plus `:core:test --dry-run` both succeed.
+- Updated `README.md`, `docs/context/PROJECT_BRIEF.md`, and `docs/context/OPEN_TASKS.md` again so the public and internal project snapshots stay aligned after the fortieth batch.
+- Cleaned the transient `KRender` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 39 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 40 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -323,6 +329,7 @@
 - `queuejw/Space` is a useful direct Android-native reference, but it is intentionally narrow, heavily AOSP-derived, has no visible automated tests or CI workflows, and meaningful local Gradle validation now needs at least Java `17+` while the checked-in sources target Java `21`.
 - `benpollarduk/ktvn` is a useful Kotlin narrative-runtime reference, but it is JVM-only in the checked-in state, README still calls the DSL early-stage, and meaningful local Gradle validation now needs at least Java `11` because the configured build plugins no longer configure on the lab's Java `8` runtime.
 - `johron/glare` is a useful compact engine/editor comparison sample, but it is desktop LWJGL/OpenGL-first in practice, its checked-in physics path currently exits immediately, its renderer only walks root children, and the visible test surface is mostly a demo harness plus resources rather than a real regression suite.
+- `Dmytro-Pashko/KRender` is one of the stronger current engine references in the lab, but the default branch is still `feature/v2`, the backend/runtime surface is still LibGDX-centered, and meaningful Android verification would still need a real JDK `21` plus Android SDK-ready environment instead of only static review.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - A conservative license-first backlog screen can skip otherwise interesting repositories when GitHub metadata is incomplete, so ambiguous-license candidates may still need occasional manual reconsideration if the strong shortlist gets thin.
@@ -330,7 +337,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current verified short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `Dmytro-Pashko/KRender`.
+- Continue from the current verified short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `joaomanaia/newquiz`.
+- If a future follow-up is needed for `KRender`, rerun selected `core` tests or Android tasks in a JDK `21` plus Android SDK-ready environment, or isolate the render-command/backend seam, the scene-editor document/runtime split, the runtime UI layering, or the terrain runtime pipeline instead of reopening the whole repository blindly.
 - Once the refreshed shortlist is exhausted, refresh it again with another explicit-license pass instead of letting the queue go stale.
 - If a future follow-up is needed for `glare`, rerun build or selected tasks in a JDK `22` environment, or isolate the node/component dependency wiring, editor-in-runtime tooling, or renderer traversal / disabled physics seam instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `ktvn`, rerun Gradle discovery or selected tests in a JDK `11+` environment, or isolate the story/runtime flow seam, the step-tracker persistence model, or the jar-based visual-novel discovery pipeline instead of reopening the whole repository blindly.

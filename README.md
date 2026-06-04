@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `39` real GitHub research batches are completed end-to-end.
-- `45` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `40` real GitHub research batches are completed end-to-end.
+- `46` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `39`
+  - `accepted`: `40`
   - `reference-only`: `6`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `johron/glare` as a `reference-only` Kotlin LWJGL/OpenGL engine-and-editor sample with dependency-aware node assembly, a fixed-step loop, per-node shader rendering, and in-process ImGui tooling.
-- The latest accepted addition is `benpollarduk/ktvn`.
+- The latest researched addition is `Dmytro-Pashko/KRender` as an `accepted` Kotlin engine-and-toolset workspace with a backend-neutral runtime core, LibGDX backend, serialized runtime scenes, terrain/runtime pipelines, built-in editor scenes, and a direct Android app module.
+- The latest accepted addition is `Dmytro-Pashko/KRender`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

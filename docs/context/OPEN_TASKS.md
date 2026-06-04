@@ -3,7 +3,7 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `Dmytro-Pashko/KRender`.
+- Continue from the refreshed short backlog in `research/registry/CANDIDATE_QUEUE.md`, now led by `joaomanaia/newquiz`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
@@ -11,10 +11,10 @@
 ## Next Recommended
 
 - Prefer the current verified backlog before running another broad search:
-  - `Dmytro-Pashko/KRender`
   - `joaomanaia/newquiz`
   - `canopyengine/canopy`
   - `vitaviva/ugame`
+- If `Dmytro-Pashko/KRender` needs a future follow-up, rerun selected `core` tests or Android tasks in a JDK `21` plus Android SDK-ready environment, or isolate the render-command/backend seam, the scene-editor document/runtime split, the runtime UI layering, or the terrain runtime pipeline instead of reopening the full repository broadly.
 - Keep the current shortlist compact unless it is exhausted again.
 - Avoid repopulating the queue with license-unclear repositories unless the team explicitly decides to relax the current screen.
 - If `johron/glare` needs a future follow-up, rerun build or selected tasks in a JDK `22` environment and isolate the node/component dependency wiring, editor-in-runtime tooling, or renderer traversal / disabled physics seam instead of reopening the whole repository broadly.

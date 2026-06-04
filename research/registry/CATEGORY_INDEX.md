@@ -49,6 +49,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [queuejw-space](../findings/queuejw-space.md) - `Simulator.step`, `MainActivity.Spaaaace`, `Telescope`, and `DreamUniverse` show a compact Android-only game shell where Compose frame callbacks drive simulation, draw invalidation is tied to completed sim steps, and the same runtime can be rehosted into both an activity and a dream service.
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `Story`, `Chapter`, `Scene`, `VisualNovel`, and `Game` show a clean hierarchical narrative runtime where content DSL, execution ownership, and host configuration stay separate instead of being fused into one UI shell.
 - [johron-glare](../findings/johron-glare.md) - `Engine`, `Node`, and `Editor` show a compact node/component runtime with queued child insertion, dependency auto-wiring, and an editor that runs inside the same process as the engine, even though the checked-in runtime is not mature enough for a main baseline.
+- [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `EngineRuntime`, `SceneManager`, `SceneWorld`, `RuntimeScene`, and `RuntimeSceneBuilder` show a backend-neutral engine loop with deferred scene transitions, command-buffered ECS mutation, and serialized runtime-scene loading into the same core runtime used by the editor tools.
 
 ## Rendering And Graphics
 
@@ -89,6 +90,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `RenderContext.*`, `Window.desktop`, and `GameView.js` show a backend-neutral render layer spanning Vulkan and WebGPU, an offscreen native-to-Compose desktop bridge, and a dual-canvas browser host that separates engine pixels from Compose UI.
 - [queuejw-space](../findings/queuejw-space.md) - `VisibleUniverse.kt`, `UniverseCanvas`, `ZoomedDrawScope`, and `PathTools` show a fully Compose-driven vector renderer with zoom-aware strokes, orbit/grid overlays, custom SVG-like path art, and simulation-step-triggered redraws instead of a separate `SurfaceView` renderer.
 - [johron-glare](../findings/johron-glare.md) - `Renderer`, `MeshRenderer`, `ShaderComponent`, and `ImGuiRenderer` show a very small shader-backed OpenGL path with in-process docked tooling, while also exposing a concrete caution that the current checked-in renderer only walks first-level scene children.
+- [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `RenderCommandBuffer`, `ModelRenderSystem`, `RuntimeEnvironmentSystem`, `TerrainRenderSystem`, and `GdxRenderer3D` show a useful split between backend-neutral render commands and a LibGDX backend that resolves static models, glTF scenes, dynamic terrain meshes, debug views, PBR previews, and skybox/environment commands.
 
 ## Gameplay Systems
 
@@ -158,6 +160,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `Window.kt`, `Window.android.kt`, `Window.desktop.kt`, and `GamepadManager.desktop.kt` show a clean platform-input seam where native pointer, keyboard, and gamepad events are normalized into one shared event/listener model instead of leaking platform APIs into game code.
 - [queuejw-space](../findings/queuejw-space.md) - `FlightStick`, the transformable camera hooks, and the `AUTO` control path show a direct Android touch-control model where a one-finger virtual stick drives thrust/orientation while camera gestures and autopilot stay explicit separate concerns.
 - [johron-glare](../findings/johron-glare.md) - `Input`, `Window`, and `FreecamScript` show a compact GLFW polling seam where raw desktop input stays simple, ImGui-active widgets can suppress gameplay key holds, and higher-level behavior lives in scripts instead of the window layer.
+- [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `InputSnapshot`, `InputService`, and `GdxInputService` show a normalized keyboard/mouse/pointer/action snapshot model with UI-capture awareness, cursor capture, and a clean boundary between LibGDX callbacks and engine-facing input state.
 
 ## UI, HUD, And Menus
 
@@ -188,6 +191,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `HangmanRoot`, `AppNavigation`, `SettingsViewModel`, and `AchievementsViewModel` show a shared Compose shell where menus, gameplay, settings, history, achievements, and global theme/language/cursor state stay product-like without introducing a separate engine UI layer.
 - [queuejw-space](../findings/queuejw-space.md) - `Telemetry`, `ConsoleButton`, and the fold-aware `Spaaaace` layout show a compact in-game HUD shell with animated console overlays, autopilot controls, explored-body catalog text, and posture-aware camera centering on foldables.
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `GameEngine`, `AnsiConsoleGameEngine`, and the Swing `App` show a reusable UI seam where the same story runtime can be hosted by a minimal console renderer or by a richer tool-like debug shell with progression controls, flag viewers, and restore-point jumping.
+- [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `RuntimeUiService`, `AssetBrowserScene`, and `SceneEditorScene` show an engine where ordered runtime UI layers and desktop editor panels are first-class runtime concepts rather than bolted-on debug menus.
 
 ## Physics And Collision
 
@@ -299,6 +303,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `kanvas-shaderc`, `kanvas-shaderc-sandbox`, `ProjectManager`, and `GameModuleLoader` show a repo that treats shader generation, editor-driven build/launch, and dynamic project-module loading as first-class tooling concerns, even though several of those surfaces are still incomplete.
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `VisualNovelCatalogResolver`, the console `Main`, and the split examples/prototyper modules show a useful narrative-tooling pattern where authored stories can be packaged into jars, discovered dynamically, and run through a generic host without hardcoding one title into the runtime.
 - [johron-glare](../findings/johron-glare.md) - `Editor`, `ExplorerPanel`, `PropertiesPanel`, `generateConstants`, and the split engine/editor jar tasks show a compact project where editor inspection, reflection-driven property editing, code generation, and packaging discipline are all kept close to the runtime instead of being bolted on later.
+- [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `AssetBrowserScene`, `SceneEditorScene`, and `SceneSerializer` show a stronger-than-usual small-engine tooling surface: local asset browsing, tool dispatch, editable serialized scenes, and one shared content/runtime model for both tools and runtime scenes.
 
 ## Android Platform Integration
 
@@ -332,6 +337,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [studioadriatic-pgsgp](../findings/studioadriatic-pgsgp.md) - `PlayGameServicesGodot`, `export_plugin.gd`, `AndroidManifest.xml`, and `app/build.gradle` show a direct Android engine-plugin surface where Play Games Services clients, manifest metadata, permissions, and Maven dependencies are wired into Godot exports without manual downstream Android edits.
 - [cheerwizard-kanvas](../findings/cheerwizard-kanvas.md) - `GameActivity.android`, `GameView.android`, `PlatformGameLoop.android`, and `Platform.android` show a direct Android engine shell built around `TextureView`, `Choreographer`, Compose interop, and platform-isolated audio/sensor services.
 - [queuejw-space](../findings/queuejw-space.md) - `MainActivity`, `DreamUniverse`, `WindowInfoTracker` usage, `AndroidManifest.xml`, and `UniverseProgressNotifier` show an Android-only product shell with foldable posture handling, `DreamService` hosting, PLATLOGO launcher wiring, and Android 16 live progress notifications around an in-flight game session.
+- [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `android/build.gradle`, `LibGdxBackend`, and the shared module layout show a real Android host path around one engine core, including Android app packaging, asset/native preparation tasks, and a deliberate split between desktop ImGui tooling and Android runtime capabilities.
 
 ## Performance And Memory
 
@@ -362,6 +368,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `GameController`, `UserStorage`, `OrbitTrackerGame`, and the shared audio lifecycle hooks show pragmatic small-product performance choices: keep each mode self-contained, move heavier AI work off the main thread, and centralize route-driven audio/persistence state instead of duplicating product services per game.
 - [andstatus-game2048](../findings/andstatus-game2048.md) - `Board`, `PliesPageData`, `PresenterAsync`, and `History` show precomputed traversal links, a bounded in-memory page cache for long move histories, stale-result guards around background AI work, and async current-game persistence.
 - [rajashekarraju-hangman-compose](../findings/rajashekarraju-hangman-compose.md) - `GameViewModel`, `RoomGameSettingsRepository`, and the platform repositories show a practical small-product pattern: keep rules pure, move longer-lived timers and transitions into the VM, and mirror product settings through flows instead of recomputing them inside screens.
+- [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `EngineRuntime`, `CommandBuffer`, `GdxAssetService`, and the terrain/runtime-texture path show a sensible baseline strategy around fixed-step updates, deferred world mutation, cached model metadata/bounds/previews, and generated runtime terrain assets instead of repeated heavyweight reload work.
 
 ## Build, Release, And Testing
 
@@ -401,3 +408,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [queuejw-space](../findings/queuejw-space.md) - `app/build.gradle.kts`, `gradle/libs.versions.toml`, `gradle-wrapper.properties`, and the missing `src/test` / workflow surface show a compact modern Android build on AGP `8.13`, Kotlin `2.2.10`, SDK `36`, and Java `21`, but with no automated tests or CI and a hard local JVM floor of `17+`.
 - [benpollarduk-ktvn](../findings/benpollarduk-ktvn.md) - `ktvn/build.gradle.kts`, the release/docs workflows, and the broad `ktvn/src/test` tree show a niche JVM game library with explicit API mode, quality gates, publishing automation, and unusually dense runtime/persistence/text-engine tests, even though local `gradlew help` still fails in the lab because the configured SonarQube plugin path expects Java `11+`.
 - [johron-glare](../findings/johron-glare.md) - `build.gradle`, `.github/workflows/gradle.yml`, `generateConstants`, and the `buildEngine` plus main `jar` tasks show a small but disciplined JVM build that can configure cleanly in the lab and emits separate engine/editor artifacts, even though the checked-in verification surface is still mostly demo-oriented and upstream expects JDK `22`.
+- [dmytro-pashko-krender](../findings/dmytro-pashko-krender.md) - `gradle/gradle-daemon-jvm.properties`, the multi-module build scripts, and the focused `core` tests show a relatively healthy experimental-engine workflow: explicit toolchain expectations, working `gradlew help`, successful `:core:test --dry-run`, and real verification around runtime scenes, runtime UI, terrain pipeline, and scene serialization.

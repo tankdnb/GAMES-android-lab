@@ -40,6 +40,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [prism](projects/hyeons-lab-prism.md) - Kotlin Multiplatform 3D/WebGPU engine with subsystem-owned ticking, HDR/PBR rendering, progressive glTF texture upload, Compose-backed engine state, and direct Android Vulkan surface integration.
 - [K2D](projects/sgalluz-k2d.md) - desktop-first Compose Multiplatform 2D micro-engine with a pure timing core, runtime-layer Compose adapter, flat ECS, configurable input mapping, pluggable collision responses, and stronger-than-expected tests plus publication discipline.
 - [Solarnet](projects/martianzoo-solarnet.md) - Kotlin JVM rules-engine workspace with a `Pets` specification language, Dagger-assembled runtime scopes, canonical content packs, REPL tooling, and unusually deep parser, invariant, and full-game test coverage.
+- [KRender](projects/dmytro-pashko-krender.md) - Kotlin engine-and-toolset workspace with a backend-neutral runtime core, LibGDX backend, serialized runtime scenes, terrain/runtime pipelines, built-in editor scenes, and a real Android app module.
 
 ## rendering-demo
 
