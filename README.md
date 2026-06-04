@@ -14,14 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `60` real GitHub research batches are completed end-to-end.
-- `66` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-04`, `61` real GitHub research batches are completed end-to-end.
+- `67` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `58`
-  - `reference-only`: `8`
+  - `reference-only`: `9`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `aleksrutins/platinum` as a `reference-only` compact Kotlin/JVM engine comparison with a tiny ECS-style loop, Swing/AWT rendering, rollback-based collision, and a callback-driven tilemap loader.
+- The latest researched addition is `yaroslavzghoba/KotCore` as a `reference-only` Kotlin Multiplatform engine scaffold whose main current value is publication-first target and release setup rather than actual engine code.
 - The latest accepted addition is still `alexvanyo/composelife`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 

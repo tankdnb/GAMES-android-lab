@@ -3,14 +3,15 @@
 ## Active
 
 - Choose the root repository license for the already-public GitHub repository.
-- Continue the refreshed exact-license shortlist from `research/registry/CANDIDATE_QUEUE.md`; the next queued candidate is `yaroslavzghoba/KotCore`.
+- Continue the refreshed exact-license shortlist from `research/registry/CANDIDATE_QUEUE.md`; the next queued candidate is `tottelofstrom/NFC-DOOM`.
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
 
 ## Next Recommended
 
-- Run the next batch on `yaroslavzghoba/KotCore` if no interrupted work appears first.
+- Run the next batch on `tottelofstrom/NFC-DOOM` if no interrupted work appears first.
+- If `yaroslavzghoba/KotCore` needs a future follow-up, revisit it only after real engine files appear, or rerun Gradle discovery in a JDK `21` environment and isolate the KMP publishing scaffold rather than treating the current tree as a real engine baseline.
 - If `aleksrutins/platinum` needs a future follow-up, rerun Gradle discovery in a JDK `21` environment, or isolate the tiny ECS loop, the `Scene` versus `baseEntities` wiring gap, the rollback collision path, or the tilemap callback loader instead of reopening the whole repository broadly.
 - If `alexvanyo/composelife` needs a future follow-up, rerun Gradle discovery or targeted Android tasks in a JDK `21` plus Android SDK-ready environment, or isolate the HashLife or naive algorithm seam, the AGSL/SKSL/OpenGL rendering family, the custom navigation plus Metro DI shell, the WorkManager-backed pattern sync path, or the Wear watchface stack instead of reopening the whole monorepo broadly.
 - If `rogal01/tower-defense-android` needs a future follow-up, rerun Android tasks in a JDK-backed SDK-ready environment, or isolate the shared runtime boundary, randomized path generation, procedural audio pipeline, or JSON save export/import seam instead of reopening the whole repository broadly.

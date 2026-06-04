@@ -74,6 +74,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-AA` | `rogal01/tower-defense-android` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-03` | Fresh MIT Android tower-defense candidate with low public signal but direct platform relevance; promoted from reserve because the compact explicit-license shortlist is otherwise exhausted | `done` | `carry-over explicit-license shortlist execution + exact repository view verification` |
 | `BATCH-2026-06-04-AB` | `alexvanyo/composelife` | `android-game` | `2` | `2` | `3` | `3` | `253` | `2026-06-03` | Apache-2.0 Android Compose Game of Life app and watchface with strong public signal, fresh maintenance, and likely reusable rendering, state, and wearable-product patterns | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `BATCH-2026-06-04-AC` | `aleksrutins/platinum` | `engine-framework` | `3` | `1` | `3` | `3` | `5` | `2026-05-31` | Fresh MIT engine candidate with clearer runtime-architecture intent than most low-signal alternatives and better balance of freshness and expected engine yield than the tiny one-day prototype options | `done` | `carry-over exact-license shortlist execution + exact repository view verification` |
+| `BATCH-2026-06-04-AD` | `yaroslavzghoba/KotCore` | `engine-framework` | `3` | `0` | `3` | `2` | `0` | `2026-05-30` | Fresh Apache-2.0 KMP grid-engine candidate with direct Android or Compose relevance and a small enough surface to confirm quickly whether it is a reusable micro-engine or only a thin scaffold | `done` | `carry-over exact-license shortlist execution + exact repository view verification` |
 
 ## Backlog Candidates
 
@@ -85,7 +86,6 @@ Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AB`. The shortlist b
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `yaroslavzghoba/KotCore` | `engine-framework` | `3` | `0` | `3` | `2` | `0` | `2026-05-30` | Fresh Apache-2.0 KMP grid-engine candidate with direct Android or Compose relevance, but lower current signal and expected subsystem depth than the finished `platinum` pass | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `tottelofstrom/NFC-DOOM` | `android-game` | `2` | `0` | `3` | `3` | `0` | `2026-06-03` | Fresh MIT Android Compose raycaster with unusual technical value around software-3D and NFC-cartridge constraints, kept as a high-novelty wildcard behind the stronger signal leader | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 
 ## Status Legend
