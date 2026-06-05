@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-04`, `67` real GitHub research batches are completed end-to-end.
-- `73` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-05`, `68` real GitHub research batches are completed end-to-end.
+- `74` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `63`
+  - `accepted`: `64`
   - `reference-only`: `10`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `mshdabiola/Naijaludo` as an `accepted` Android-first Kotlin Multiplatform board-game product whose strongest reusable value is the shared Ludo rules engine, save/resume seam, heuristic AI, and stronger-than-usual CI/screenshot/baseline workflow.
-- The latest accepted addition is `mshdabiola/Naijaludo`.
+- The latest researched addition is `AndreasHefti/flyko-lib` as an `accepted` engine-framework reference whose strongest reusable value is the lifecycle-driven shared core, view/render-target pipeline, contact system, and Tiled-loading seam, despite unfinished non-JVM backends.
+- The latest accepted addition is `AndreasHefti/flyko-lib`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

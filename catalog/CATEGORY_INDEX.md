@@ -58,6 +58,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Materia](projects/codeyousef-materia.md) - Kotlin Multiplatform 3D engine stack with a scene-first hierarchy, explicit GPU abstraction modules, clone-on-read glTF asset reuse, WGSL shader tooling, Android host paths across wgpu and Filament, and serious validation/benchmark discipline despite an in-progress renderer transition.
 - [Kool](projects/kool-engine-kool.md) - substantial Kotlin Multiplatform 3D engine with desktop Vulkan / OpenGL / `wgpu4k`, browser WebGPU / WebGL, checked-in Android GLES support, Compose-style in-engine UI, editor modules, async physics stepping, and a pragmatic Android-enable build workflow.
 - [PlanetEngine](projects/saar25-planetengine.md) - Java/Kotlin LWJGL/OpenGL engine workspace with annotation-driven renderer prototypes, per-pass node groups, strongly typed window/input wrappers, and a retained GUI toolkit, useful mainly as a desktop/OpenGL architecture reference rather than a direct Android runtime.
+- [flyko-lib](projects/andreashefti-flyko-lib.md) - Kotlin Multiplatform 2D engine library with a lifecycle-driven shared core, pooled entity-components, render-target views, contact scanning, Tiled-world helpers, and a real desktop backend, useful as an indirect Android architecture reference despite its unfinished non-JVM backends.
 
 ## rendering-demo
 

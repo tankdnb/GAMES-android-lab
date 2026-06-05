@@ -81,6 +81,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-AH` | `Juanoff/roulette-android-app` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-05-28` | Fresh MIT Android Compose game shell with likely reusable spin animation, touch interaction, and MVVM product-flow patterns now that the stronger engine candidate is cleared | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `BATCH-2026-06-04-AI` | `icela/FriceEngine` | `engine-framework` | `2` | `2` | `0` | `2` | `349` | `2019-12-28` | Older but still high-signal AGPL engine reference worth preserving as a fallback architecture pass if the fresher shortlist leaders disappoint | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `BATCH-2026-06-04-AJ` | `mshdabiola/Naijaludo` | `android-game` | `3` | `1` | `2` | `3` | `15` | `2025-10-27` | Direct Android Kotlin multiplayer board-game product with explicit GPL-3.0 licensing, better public signal than the fresh zero-star engine candidates, and likely useful gameplay/product-shell research value | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
+| `BATCH-2026-06-05-A` | `AndreasHefti/flyko-lib` | `engine-framework` | `2` | `1` | `0` | `2` | `11` | `2023-06-09` | Carry-over exact-license engine candidate with Apache-2.0 licensing, multiplatform 2D scope, and likely reusable rendering/runtime abstractions now that the stronger Android-first shortlist leader was completed | `done` | `carry-over exact-license shortlist execution` |
 
 ## Backlog Candidates
 
@@ -96,7 +97,6 @@ Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AJ`. The shortlist b
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `AndreasHefti/flyko-lib` | `engine-framework` | `2` | `1` | `0` | `2` | `11` | `2023-06-09` | Apache-2.0 multiplatform 2D engine/API candidate with cleaner reuse terms than the GPL desktop-engine alternatives and likely useful rendering/runtime abstractions if the shortlist needs a framework-heavy follow-up | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `robmat/arrows_game` | `android-game` | `3` | `1` | `3` | `2` | `9` | `2026-03-05` | Fresh GPL-3.0 Android puzzle game with direct platform relevance and a compact likely-manageable codebase for another gameplay-focused pass | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `qorrnsmj/smf` | `engine-framework` | `2` | `0` | `3` | `2` | `0` | `2026-05-31` | Very fresh MIT low-level LWJGL/OpenGL engine wildcard with low signal but a potentially compact render-core surface if the stronger Android candidates dry up | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 

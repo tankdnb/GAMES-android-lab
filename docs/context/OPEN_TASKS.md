@@ -9,7 +9,8 @@
 
 ## Next Recommended
 
-- Start the next batch from the currently verified backlog in `research/registry/CANDIDATE_QUEUE.md`: `AndreasHefti/flyko-lib`, then `robmat/arrows_game`.
+- Start the next batch from the currently verified backlog in `research/registry/CANDIDATE_QUEUE.md`: `robmat/arrows_game`, then `qorrnsmj/smf`.
+- If `AndreasHefti/flyko-lib` needs a future follow-up, revisit it only in an environment with writable Gradle and Konan homes and keep the scope narrow: shared runtime lifecycle, the view/render-target pipeline, the contact system, or the Tiled-loading seam.
 - After the current shortlist is exhausted, refresh it again instead of carrying a stale backlog forward.
 - If `mshdabiola/Naijaludo` needs a future follow-up, revisit it only in a JDK `17+` or `21` plus Android SDK-ready environment and keep the scope narrow: the shared board-game core, the save/resume seam, the multiplayer DI mismatch, or the screenshot/baseline workflow.
 - If `icela/FriceEngine` needs a future follow-up, keep it narrow: revisit only the shared Swing/JavaFX drawer seam, the buffered layer-mutation pattern, the tiny timer/event scheduler, or the resource-helper stack instead of reopening the whole repository broadly.
