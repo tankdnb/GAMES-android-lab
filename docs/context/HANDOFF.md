@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The sixty-ninth real research batch is now completed and documented end-to-end.
-- The lab now has 75 researched repositories recorded:
+- The seventieth real research batch is now completed and documented end-to-end.
+- The lab now has 76 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -84,6 +84,7 @@
   - `mshdabiola/Naijaludo` - `accepted`
   - `AndreasHefti/flyko-lib` - `accepted`
   - `robmat/arrows_game` - `accepted`
+  - `qorrnsmj/smf` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -91,17 +92,17 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The active exact-license short backlog now continues with `qorrnsmj/smf`.
+- The active exact-license short backlog is now empty and needs a fresh exact-license refresh before the next batch.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
 
-- Completed `BATCH-2026-06-05-B` as an Android puzzle-game pass for `robmat/arrows_game`.
-- Added durable `arrows_game` findings for solvability-aware puzzle generation, deterministic line-of-sight validation, two-snapshot restart/resume persistence, Appyx feature routing, and expressive Compose `Canvas` board rendering.
-- Verified the current build caveat for this batch: the wrapper bootstraps cleanly after redirecting `GRADLE_USER_HOME` into the workspace, but `gradlew help --no-daemon` still fails in the lab because the current machine remains on Java `8` while the checked-in AGP `9.1.0` build needs JVM `17+`.
-- Accepted `robmat/arrows_game` into the main catalog as a strong direct-Android puzzle reference with a better-than-average modular/tested shell for its size.
-- Refreshed the public and internal snapshot counts again so the repository now consistently reports `69` completed batches, `75` researched repositories, and a `65 accepted / 10 reference-only` split.
-- Kept the exact-license shortlist moving with only `qorrnsmj/smf` still queued after the completed `arrows_game` batch.
+- Completed `BATCH-2026-06-05-C` as a low-level engine pass for `qorrnsmj/smf`.
+- Added durable `SMF` findings for a fixed-step accumulator loop, compact `Scene` plus `MasterRenderer` split, source-pooled OpenAL service ownership, simple broad-phase-aware collision handling, and the mixed engine-plus-testbed shape of the checked-in gameplay layer.
+- Verified a distinct build caveat and recovery path for this batch: the wrapper initially failed only because it tried to lock under the blocked global `C:\Users\Username\.gradle`, but both `gradlew.bat --version` and `gradlew.bat help --no-daemon` succeeded once `GRADLE_USER_HOME` was redirected into `research/cache/`.
+- Preserved `qorrnsmj/smf` as `reference-only` rather than `accepted` because it remains desktop-only, openly tutorial-derived, untested, and mixed with demo/test-level logic despite containing real reusable engine code.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `70` completed batches, `76` researched repositories, and a `65 accepted / 11 reference-only` split.
+- Exhausted the current exact-license shortlist; the next batch must begin with a fresh shortlist refresh instead of carrying forward an empty queue.
 - Completed `BATCH-2026-06-04-AG` as an engine-framework pass for `Saar25/PlanetEngine`.
 - Added durable `PlanetEngine` findings for annotation-driven renderer prototypes, typed forward or deferred or shadow node groups, a retained GUI/input layer, LWJGL/OpenGL wrapper classes, and a readable Maven module split.
 - Verified the current build caveat for this batch: the checked-in reactor targets Java `11`, but the lab cannot validate it because Maven is unavailable locally; also confirmed that repo-level freshness is inflated by activity on `origin/dev` while default `master` ends at a `2022-10-28` commit.

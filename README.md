@@ -14,14 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-05`, `69` real GitHub research batches are completed end-to-end.
-- `75` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-05`, `70` real GitHub research batches are completed end-to-end.
+- `76` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `65`
-  - `reference-only`: `10`
+  - `reference-only`: `11`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `robmat/arrows_game` as an `accepted` Android puzzle reference whose strongest reusable value is the solvability-aware generator/validator split, Compose board renderer, and two-snapshot save/resume shell.
+- The latest researched addition is `qorrnsmj/smf` as a `reference-only` desktop engine comparison sample whose strongest reusable value is the fixed-step loop, scene-plus-render-pass split, audio source pool, and simple collision ownership.
 - The latest accepted addition is `robmat/arrows_game`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
