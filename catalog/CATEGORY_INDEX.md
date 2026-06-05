@@ -35,6 +35,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [TriPeaks](projects/mimoguz-tripeaks-gdx.md) - compact libGDX solitaire product with a pure layout-graph rules core, pooled card and animation views, JSON-in-preferences persistence with legacy migration, and a practical Android plus desktop packaging split.
 - [Roulette Android App](projects/juanoff-roulette-android-app.md) - compact Android Compose roulette shell with custom Canvas wheel rendering, resumable finite spin animation state, idle-only sector-count configuration, and a clean single-screen MVVM product flow.
 - [Naijaludo](projects/mshdabiola-naijaludo.md) - Android-first Kotlin Multiplatform Ludo product with a shared board-game rules engine, Compose feature shell, persistent save/meta state, heuristic AI, and stronger-than-usual screenshot/baseline-profile workflow discipline, despite a currently inconsistent multiplayer binding on Android.
+- [Arrows Game](projects/robmat-arrows-game.md) - Android puzzle game with solvability-aware procedural generation, modular feature boundaries, Room-backed restart/resume state, expressive Compose `Canvas` board rendering, and a stronger-than-average Android test/build surface for its size.
 
 ## engine-framework
 

@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The sixty-eighth real research batch is now completed and documented end-to-end.
-- The lab now has 74 researched repositories recorded:
+- The sixty-ninth real research batch is now completed and documented end-to-end.
+- The lab now has 75 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -83,6 +83,7 @@
   - `icela/FriceEngine` - `reference-only`
   - `mshdabiola/Naijaludo` - `accepted`
   - `AndreasHefti/flyko-lib` - `accepted`
+  - `robmat/arrows_game` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -90,17 +91,17 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The active exact-license short backlog now continues with `robmat/arrows_game` and `qorrnsmj/smf`.
+- The active exact-license short backlog now continues with `qorrnsmj/smf`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
 
-- Completed `BATCH-2026-06-05-A` as an engine-framework pass for `AndreasHefti/flyko-lib`.
-- Added durable `flyko-lib` findings for the lifecycle-driven engine core, keyed and pooled ECS-style ownership, render-target view pipeline, bitmask-aware contact scanning, and Tiled-world loading seam.
-- Verified the current build caveat for this batch: the wrapper bootstraps and `gradlew --version` works after redirecting `GRADLE_USER_HOME`, but `gradlew help --no-daemon` still fails in the lab because old Kotlin/Native tooling tries to unpack under the blocked global Konan home path.
-- Accepted `flyko-lib` into the main catalog, but recorded the main architectural limit clearly: Android is still unimplemented and the checked-in JS/native backends are mostly `TODO()` stubs.
-- Refreshed the public and internal snapshot counts again so the repository now consistently reports `68` completed batches, `74` researched repositories, and a `64 accepted / 10 reference-only` split.
-- Kept the refreshed exact-license shortlist moving with `robmat/arrows_game` and `qorrnsmj/smf` still queued behind the completed `flyko-lib` batch.
+- Completed `BATCH-2026-06-05-B` as an Android puzzle-game pass for `robmat/arrows_game`.
+- Added durable `arrows_game` findings for solvability-aware puzzle generation, deterministic line-of-sight validation, two-snapshot restart/resume persistence, Appyx feature routing, and expressive Compose `Canvas` board rendering.
+- Verified the current build caveat for this batch: the wrapper bootstraps cleanly after redirecting `GRADLE_USER_HOME` into the workspace, but `gradlew help --no-daemon` still fails in the lab because the current machine remains on Java `8` while the checked-in AGP `9.1.0` build needs JVM `17+`.
+- Accepted `robmat/arrows_game` into the main catalog as a strong direct-Android puzzle reference with a better-than-average modular/tested shell for its size.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `69` completed batches, `75` researched repositories, and a `65 accepted / 10 reference-only` split.
+- Kept the exact-license shortlist moving with only `qorrnsmj/smf` still queued after the completed `arrows_game` batch.
 - Completed `BATCH-2026-06-04-AG` as an engine-framework pass for `Saar25/PlanetEngine`.
 - Added durable `PlanetEngine` findings for annotation-driven renderer prototypes, typed forward or deferred or shadow node groups, a retained GUI/input layer, LWJGL/OpenGL wrapper classes, and a readable Maven module split.
 - Verified the current build caveat for this batch: the checked-in reactor targets Java `11`, but the lab cannot validate it because Maven is unavailable locally; also confirmed that repo-level freshness is inflated by activity on `origin/dev` while default `master` ends at a `2022-10-28` commit.
@@ -415,12 +416,12 @@
 - Added durable `Tower Defense Android` findings for a shared Kotlin runtime, randomized authored path layouts, procedural Canvas rendering, procedural SFX generation, and JSON save export/import inside a broad native product shell.
 - Classified `rogal01/tower-defense-android` as `accepted` because its rough hygiene is outweighed by direct Android relevance and several reusable runtime, rendering, progression, and product-shell patterns.
 - Recorded that `gradlew help --no-daemon` succeeds locally via daemon-JDK provisioning, while `:app:assembleDebug --dry-run --no-daemon` stops at the missing Android SDK boundary.
-- The exact-license short backlog was refreshed again and is now back to two queued candidates: `robmat/arrows_game` and `qorrnsmj/smf`.
+- The exact-license short backlog now has one queued candidate left: `qorrnsmj/smf`.
 - Cleaned the transient `rogal01/tower-defense-android` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 68 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 69 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.

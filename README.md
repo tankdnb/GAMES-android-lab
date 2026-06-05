@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-05`, `68` real GitHub research batches are completed end-to-end.
-- `74` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-05`, `69` real GitHub research batches are completed end-to-end.
+- `75` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `64`
+  - `accepted`: `65`
   - `reference-only`: `10`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `AndreasHefti/flyko-lib` as an `accepted` engine-framework reference whose strongest reusable value is the lifecycle-driven shared core, view/render-target pipeline, contact system, and Tiled-loading seam, despite unfinished non-JVM backends.
-- The latest accepted addition is `AndreasHefti/flyko-lib`.
+- The latest researched addition is `robmat/arrows_game` as an `accepted` Android puzzle reference whose strongest reusable value is the solvability-aware generator/validator split, Compose board renderer, and two-snapshot save/resume shell.
+- The latest accepted addition is `robmat/arrows_game`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

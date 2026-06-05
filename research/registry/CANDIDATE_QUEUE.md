@@ -97,7 +97,7 @@ Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AJ`. The shortlist b
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `robmat/arrows_game` | `android-game` | `3` | `1` | `3` | `2` | `9` | `2026-03-05` | Fresh GPL-3.0 Android puzzle game with direct platform relevance and a compact likely-manageable codebase for another gameplay-focused pass | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
+| `BATCH-2026-06-05-B` | `robmat/arrows_game` | `android-game` | `3` | `1` | `3` | `2` | `9` | `2026-03-05` | Fresh GPL-3.0 Android puzzle game with direct platform relevance and a compact likely-manageable codebase for another gameplay-focused pass | `done` | `carry-over exact-license shortlist execution` |
 | `qorrnsmj/smf` | `engine-framework` | `2` | `0` | `3` | `2` | `0` | `2026-05-31` | Very fresh MIT low-level LWJGL/OpenGL engine wildcard with low signal but a potentially compact render-core surface if the stronger Android candidates dry up | `queued` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 
 ## Status Legend
