@@ -87,6 +87,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - `GameEngine`, `GameRoom`, `OnlineGameRepository`, and `GameViewModel` show a strong Android-relevant product architecture where pure shared rules, authoritative multiplayer room ownership, reconnect-aware sessions, and Compose shell state stay explicitly separated.
 - [johnlavender474-megaman-maverick](../findings/johnlavender474-megaman-maverick.md) - `GameEngine`, `MegamanMaverickGame`, and `MegaLevelScreen` show a sizeable LibGDX action-platformer that keeps engine lifecycle, system assembly, room flow, screen ownership, and gameplay-specific rules separated more cleanly than its fan-game presentation initially suggests.
 - [soyuz-dev-kotlingameengine](../findings/soyuz-dev-kotlingameengine.md) - `RuntimeEngine`, `RuntimeScene`, and `DefaultGameEntity` show a compact accumulator-based loop, explicit scene lifecycle ownership, and a callback-driven entity model that keeps a small engine readable without adopting a heavier ECS.
+- [inaide-game-2048](../findings/inaide-game-2048.md) - `GameViewModel`, `move`, `slideRow`, and `checkGameOver` show a very compact Android puzzle shell where the core 2048 rules remain readable even though they are still embedded directly in the activity-side app code.
 
 ## Rendering And Graphics
 
@@ -148,6 +149,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [amigoconglomeration918-linkgame](../findings/amigoconglomeration918-linkgame.md) - `GameBoard` and `ScoreBar` show a neat Android puzzle-rendering pattern where the board includes a padded outer ring for off-board link paths, hint states pulse visually, and the last seconds of the timer escalate through animated HUD styling.
 - [johnlavender474-megaman-maverick](../findings/johnlavender474-megaman-maverick.md) - `TiledMapLevelRenderer`, sectioned drawable queues, background ordering, and the LibGDX batch or shape split show practical 2D action-game rendering ownership without tying all draw logic to one screen monolith.
 - [soyuz-dev-kotlingameengine](../findings/soyuz-dev-kotlingameengine.md) - `Shader`, `Mesh`, `Camera`, `Painter`, and `SolidColor` show a clean low-level OpenGL rendering seam where entities own appearance but explicit shader/camera/mesh objects still control the pipeline.
+- [inaide-game-2048](../findings/inaide-game-2048.md) - `Tile` shows a minimal Compose rendering pattern for casual puzzle boards: animated tile color, scale, and value changes without a custom drawing engine.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GameView` and `EntityRenderer` show a custom `SurfaceView`/Canvas renderer with cached path and terrain geometry, preallocated paints, and fully code-drawn enemies, towers, bosses, and HUD layers instead of sprite assets.
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `AGSLNonInteractableCells`, `SKSLNonInteractableCells`, `GameOfLifeShape`, and `GameOfLifeRenderer` show one rendering idea carried across Android AGSL, desktop SKSL, and Wear OpenGL ES instead of re-implementing the cell visual per host.
 - [aleksrutins-platinum](../findings/aleksrutins-platinum.md) - `RenderSystem2D`, `Sprite2D`, and `Camera2D` show a tiny Swing/AWT 2D renderer where drawing is just another system pass and camera motion is implemented by mutating per-transform offsets.
@@ -213,6 +215,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 ## Input And Controls
 
 - [soyuz-dev-kotlingameengine](../findings/soyuz-dev-kotlingameengine.md) - `Input`, `KeyListener`, and `MouseListener` show a tiny singleton input facade that is useful as a compact desktop-host pattern even though it would need adaptation before Android reuse.
+- [inaide-game-2048](../findings/inaide-game-2048.md) - `GameBoard` uses `detectDragGestures` with accumulated offsets and a movement threshold to translate raw swipes directly into grid-game moves.
 
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - the tap-to-next-number loop, combo-sensitive timing, and clean separation between Compose gestures and pure engine decisions make this a useful reference for compact Android puzzle input design.
 - [korge](../findings/korlibs-korge.md) - input and lifecycle hooks are centralized through `Stage` and `GameWindow`, which is useful for Android host integration.
@@ -384,6 +387,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Persistence And Data
 
+- [inaide-game-2048](../findings/inaide-game-2048.md) - `GameViewModel` persists only the high score through `SharedPreferences`, which is simple but useful as a smallest-possible Android casual-game persistence seam.
+
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - `SaveFileSerializer` demonstrates compact explicit binary save/load logic.
 - [ktx](../findings/libktx-ktx.md) - `AssetStorage` exposes coroutine-first asset loading with progress and dependency tracking.
 - [littlektframework-littlekt](../findings/littlektframework-littlekt.md) - `AssetProvider` separates async loading from post-load preparation and prevents duplicate in-flight loads.
@@ -489,6 +494,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mimoguz-tripeaks-gdx](../findings/mimoguz-tripeaks-gdx.md) - root `build.gradle`, `lwjgl3/build.gradle`, `fastlane/metadata/android/`, and the README store badges show a practical small-product pipeline where shared assets are enumerated automatically, desktop builds are packaged through `construo`, and Android store metadata stays versioned with the codebase.
 
 ## Android Platform Integration
+
+- [inaide-game-2048](../findings/inaide-game-2048.md) - `MainActivity`, `GameScreen`, and the single `app` module show a very direct Android Compose casual-game shell with adaptive board sizing and a restart overlay, but also illustrate the limits of keeping all logic in one entry file.
 
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `AdManagerImpl`, `ProfileRepository`, and the activity shell show practical small-game Android seams for rewarded revive flow, interstitial pacing, permission prompts, daily login handling, and persisted profile/settings state.
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - separate `wear` and `auto` modules plus cloud-save wiring show unusually deep Android adaptation.
@@ -656,3 +663,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - the KMP module split, shared/server test surface, and successful `gradlew.bat --version` run show a real Android/KMP product workflow, while local `gradlew.bat help --no-daemon` still stops in the lab because only a Java 8 JRE without compiler tools is available.
 - [johnlavender474-megaman-maverick](../findings/johnlavender474-megaman-maverick.md) - the `engine` plus `core` Gradle split, roughly `900` Kotlin source files, about `50` test files, and the visible Java `17+` floor on the `lwjgl3` packaging path show a larger-than-average hobby game repo with real automated verification despite its niche fan-game scope.
 - [soyuz-dev-kotlingameengine](../findings/soyuz-dev-kotlingameengine.md) - the single-module Gradle Kotlin DSL build, Foojay toolchain resolver, declared JVM toolchain `21`, and focused physics/collision test surface show a compact but genuine engine workflow even though local `gradlew help` in the lab still stops at the Java `17+` floor.
+- [inaide-game-2048](../findings/inaide-game-2048.md) - the single Android app module, modern AGP/Kotlin versions, near-empty test surface, and missing `gradle-wrapper.jar` show a repo that is easy to read statically but not actually reproducible through its checked-in wrapper.

@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The seventy-seventh real research batch is now completed and documented end-to-end.
-- The lab now has 83 researched repositories recorded:
+- The seventy-eighth real research batch is now completed and documented end-to-end.
+- The lab now has 84 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -92,6 +92,7 @@
   - `AjayChandran11/Literature` - `accepted`
   - `JohnLavender474/Megaman-Maverick` - `accepted`
   - `soyuz-dev/KotlinGameEngine` - `accepted`
+  - `inaidE/game-2048` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -99,7 +100,7 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The current shortlist now continues with `inaidE/game-2048`.
+- The short backlog is currently exhausted and should be refreshed before the next new batch.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
@@ -138,6 +139,11 @@
 - Verified the current build caveat for this batch: `gradlew.bat --version` works, but `gradlew.bat help --no-daemon` fails because the lab machine still exposes Java `8` while the project expects Java `17+` and declares toolchain `21`.
 - Promoted `soyuz-dev/KotlinGameEngine` to `accepted` because its small-engine runtime and physics architecture are materially reusable even though the checked-in host is desktop-only.
 - Refreshed the public and internal snapshot counts again so the repository now consistently reports `77` completed batches, `83` researched repositories, and a `71 accepted / 12 reference-only` split.
+- Completed `BATCH-2026-06-12-H` for `inaidE/game-2048`.
+- Added durable `game-2048` findings for compact row-merge logic, swipe threshold handling, animated tile presentation, and a tiny high-score persistence shell.
+- Verified the current build caveat for this batch: both wrapper commands fail immediately because `gradle/wrapper/gradle-wrapper.jar` is missing from the checked-in repository, so the wrapper is incomplete.
+- Kept `inaidE/game-2048` as `reference-only` because the whole app is concentrated in one activity file, the test surface is almost absent, and the project is too small and monolithic to count as a stronger main catalog reference.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `78` completed batches, `84` researched repositories, and a `71 accepted / 13 reference-only` split.
 - Completed `BATCH-2026-06-05-C` as a low-level engine pass for `qorrnsmj/smf`.
 - Added durable `SMF` findings for a fixed-step accumulator loop, compact `Scene` plus `MasterRenderer` split, source-pooled OpenAL service ownership, simple broad-phase-aware collision handling, and the mixed engine-plus-testbed shape of the checked-in gameplay layer.
 - Verified a distinct build caveat and recovery path for this batch: the wrapper initially failed only because it tried to lock under the blocked global `C:\Users\Username\.gradle`, but both `gradlew.bat --version` and `gradlew.bat help --no-daemon` succeeded once `GRADLE_USER_HOME` was redirected into `research/cache/`.
@@ -532,7 +538,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current shortlist in `research/registry/CANDIDATE_QUEUE.md`; the current visible leader is `inaidE/game-2048`.
+- Refresh `research/registry/CANDIDATE_QUEUE.md` before the next batch; the previous short backlog has now been fully consumed.
 - Once that shortlist is exhausted, refresh it again instead of carrying an empty or stale queue forward.
 - If a future follow-up is needed for `icela/FriceEngine`, keep it narrow: isolate the shared Swing/JavaFX drawer seam, the buffered layer mutation model, the small event/timer helpers, or the resource-cache utilities instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Saar25/PlanetEngine`, decide first whether the target should be default `master` or the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input layer instead of reopening the whole repository blindly.

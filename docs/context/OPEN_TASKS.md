@@ -6,15 +6,15 @@
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
-- Continue from the current shortlist headed by `inaidE/game-2048`; refresh it once we want to restore the backlog to up to four strong candidates.
+- The short backlog is now exhausted; refresh it before starting the next new batch.
 
 ## Next Recommended
 
-- Execute the next batch from the current shortlist before doing another broad refresh, unless we explicitly want to refill the queue back to four candidates first.
+- Refresh the shortlist before the next batch and keep it capped at up to four strong explicit-license candidates.
 - If `qorrnsmj/smf` needs a future follow-up, keep it narrow: revisit only the fixed-step loop, the `Scene` plus `MasterRenderer` split, the audio source-pool service, or the simple collision ownership rules instead of reopening the whole repository broadly.
 - If `robmat/arrows_game` needs a future follow-up, revisit it only in a JDK `17+` plus Android SDK-ready environment and keep the scope narrow: the solvability checker, shaped-board generator, Compose board renderer, or restart/resume persistence shell.
 - If `AndreasHefti/flyko-lib` needs a future follow-up, revisit it only in an environment with writable Gradle and Konan homes and keep the scope narrow: shared runtime lifecycle, the view/render-target pipeline, the contact system, or the Tiled-loading seam.
-- After the current shortlist is exhausted, refresh it again instead of carrying a stale backlog forward.
+- Keep avoiding stale carry-over queues; rebuild the shortlist once it drops to zero viable queued candidates.
 - If `mshdabiola/Naijaludo` needs a future follow-up, revisit it only in a JDK `17+` or `21` plus Android SDK-ready environment and keep the scope narrow: the shared board-game core, the save/resume seam, the multiplayer DI mismatch, or the screenshot/baseline workflow.
 - If `icela/FriceEngine` needs a future follow-up, keep it narrow: revisit only the shared Swing/JavaFX drawer seam, the buffered layer-mutation pattern, the tiny timer/event scheduler, or the resource-helper stack instead of reopening the whole repository broadly.
 - If `Saar25/PlanetEngine` needs a future follow-up, decide up front whether to stay on the stale default `master` branch or intentionally inspect the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input system instead of reopening the whole repository broadly.

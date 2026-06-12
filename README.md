@@ -14,14 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-12`, `77` real GitHub research batches are completed end-to-end.
-- `83` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-12`, `78` real GitHub research batches are completed end-to-end.
+- `84` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `71`
-  - `reference-only`: `12`
+  - `reference-only`: `13`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `soyuz-dev/KotlinGameEngine` as an `accepted` compact Kotlin/LWJGL engine reference whose strongest reusable value is its fixed-step runtime, callback-driven entities, readable SAT/collision code, staged physics pipeline, and low-level tests.
+- The latest researched addition is `inaidE/game-2048` as a `reference-only` Android Compose 2048 sample whose main reusable value is its compact swipe handling, row-merge logic, tile animation, and high-score shell.
 - The latest accepted addition is `soyuz-dev/KotlinGameEngine`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
