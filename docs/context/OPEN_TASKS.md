@@ -6,11 +6,11 @@
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
-- Continue from the current shortlist headed by `JohnLavender474/Megaman-Maverick`, `soyuz-dev/KotlinGameEngine`, and `inaidE/game-2048`.
+- Continue from the current shortlist headed by `soyuz-dev/KotlinGameEngine` and `inaidE/game-2048`; refresh it once we want to restore the backlog to up to four strong candidates.
 
 ## Next Recommended
 
-- Execute the next batch from the current shortlist before doing another broad refresh.
+- Execute the next batch from the current shortlist before doing another broad refresh, unless we explicitly want to refill the queue back to four candidates first.
 - If `qorrnsmj/smf` needs a future follow-up, keep it narrow: revisit only the fixed-step loop, the `Scene` plus `MasterRenderer` split, the audio source-pool service, or the simple collision ownership rules instead of reopening the whole repository broadly.
 - If `robmat/arrows_game` needs a future follow-up, revisit it only in a JDK `17+` plus Android SDK-ready environment and keep the scope narrow: the solvability checker, shaped-board generator, Compose board renderer, or restart/resume persistence shell.
 - If `AndreasHefti/flyko-lib` needs a future follow-up, revisit it only in an environment with writable Gradle and Konan homes and keep the scope narrow: shared runtime lifecycle, the view/render-target pipeline, the contact system, or the Tiled-loading seam.

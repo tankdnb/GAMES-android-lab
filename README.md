@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-12`, `75` real GitHub research batches are completed end-to-end.
-- `81` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-12`, `76` real GitHub research batches are completed end-to-end.
+- `82` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `69`
+  - `accepted`: `70`
   - `reference-only`: `12`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `AjayChandran11/Literature` as an `accepted` Kotlin Multiplatform card-game product whose strongest reusable value is its pure shared rules engine, fair event-driven bot inference, authoritative room management, and reconnect-aware multiplayer session handling.
-- The latest accepted addition is `AjayChandran11/Literature`.
+- The latest researched addition is `JohnLavender474/Megaman-Maverick` as an `accepted` Kotlin LibGDX fan-game codebase whose strongest reusable value is its custom engine/core split, fixed-step world simulation, gameplay-layer collision rules, room-aware action-platformer flow, and stronger-than-usual engine test surface.
+- The latest accepted addition is `JohnLavender474/Megaman-Maverick`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
