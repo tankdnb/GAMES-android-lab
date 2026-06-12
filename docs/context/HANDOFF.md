@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The seventieth real research batch is now completed and documented end-to-end.
-- The lab now has 76 researched repositories recorded:
+- The seventy-first real research batch is now completed and documented end-to-end.
+- The lab now has 77 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -85,6 +85,7 @@
   - `AndreasHefti/flyko-lib` - `accepted`
   - `robmat/arrows_game` - `accepted`
   - `qorrnsmj/smf` - `reference-only`
+  - `jrenner/kotlin-voxel` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -92,11 +93,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The active exact-license short backlog is now empty and needs a fresh exact-license refresh before the next batch.
+- The active exact-license short backlog has been refreshed and currently holds `The-JDdev/Heroes-Arena`, `DominicDolan/Mechanica`, and `xarlord/number-tap`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
 
+- Completed `BATCH-2026-06-12-A` as a voxel-engine pass for `jrenner/kotlin-voxel`.
+- Added durable `kotlin-voxel` findings for background frustum/range-based chunk discovery, nearest-first main-thread chunk realization, hidden-face mesh baking, debug HUD instrumentation, and meaningful chunk/world regression tests.
+- Verified an unusually healthy lightweight build surface for this older repo generation: `gradlew.bat --version`, `gradlew.bat help --no-daemon`, and `gradlew.bat test --dry-run --no-daemon` all succeeded once `GRADLE_USER_HOME` was redirected into `research/cache/`.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `71` completed batches, `77` researched repositories, and a `66 accepted / 11 reference-only` split.
+- Rebuilt the exact-license shortlist so the next run can continue immediately from `The-JDdev/Heroes-Arena`, `DominicDolan/Mechanica`, or `xarlord/number-tap` instead of starting from an empty queue.
 - Completed `BATCH-2026-06-05-C` as a low-level engine pass for `qorrnsmj/smf`.
 - Added durable `SMF` findings for a fixed-step accumulator loop, compact `Scene` plus `MasterRenderer` split, source-pooled OpenAL service ownership, simple broad-phase-aware collision handling, and the mixed engine-plus-testbed shape of the checked-in gameplay layer.
 - Verified a distinct build caveat and recovery path for this batch: the wrapper initially failed only because it tried to lock under the blocked global `C:\Users\Username\.gradle`, but both `gradlew.bat --version` and `gradlew.bat help --no-daemon` succeeded once `GRADLE_USER_HOME` was redirected into `research/cache/`.

@@ -82,6 +82,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-04-AI` | `icela/FriceEngine` | `engine-framework` | `2` | `2` | `0` | `2` | `349` | `2019-12-28` | Older but still high-signal AGPL engine reference worth preserving as a fallback architecture pass if the fresher shortlist leaders disappoint | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `BATCH-2026-06-04-AJ` | `mshdabiola/Naijaludo` | `android-game` | `3` | `1` | `2` | `3` | `15` | `2025-10-27` | Direct Android Kotlin multiplayer board-game product with explicit GPL-3.0 licensing, better public signal than the fresh zero-star engine candidates, and likely useful gameplay/product-shell research value | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `BATCH-2026-06-05-A` | `AndreasHefti/flyko-lib` | `engine-framework` | `2` | `1` | `0` | `2` | `11` | `2023-06-09` | Carry-over exact-license engine candidate with Apache-2.0 licensing, multiplatform 2D scope, and likely reusable rendering/runtime abstractions now that the stronger Android-first shortlist leader was completed | `done` | `carry-over exact-license shortlist execution` |
+| `BATCH-2026-06-12-A` | `jrenner/kotlin-voxel` | `engine-framework` | `2` | `2` | `1` | `3` | `80` | `2025-11-21` | Apache-2.0 Kotlin voxel engine with stronger public signal than the fresh zero-star alternatives and likely reusable chunk/render/runtime patterns for future Android-adjacent engine work | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 
 ## Backlog Candidates
 
@@ -95,9 +96,13 @@ Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AF`. The shortlist b
 
 Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AJ`. The shortlist below keeps only candidates that passed exact repository-level `licenseInfo` verification and are not already listed in `research/registry/RESEARCHED_REPOS.md`.
 
+Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-A`. The shortlist below keeps only candidates that passed exact repository-level `licenseInfo` verification and are not already listed in `research/registry/RESEARCHED_REPOS.md`.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `none` | `-` | `-` | `-` | `-` | `-` | `-` | `-` | Exact-license short backlog is currently exhausted and must be refreshed before the next batch. | `-` | `-` |
+| `The-JDdev/Heroes-Arena` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-11` | Very fresh MIT Android MOBA-style game shell with direct platform relevance and likely useful large-product gameplay/runtime structure if it proves to be more than a scaffold. | `queued` | `topic:game-engine updated search + exact repository view verification` |
+| `DominicDolan/Mechanica` | `engine-framework` | `2` | `0` | `3` | `2` | `0` | `2026-02-26` | MIT 2D OpenGL engine with a manageable footprint and clearer runtime focus than the noisier search results, useful as a compact engine-architecture reserve. | `queued` | `topic:game-engine stars/updated search + exact repository view verification` |
+| `xarlord/number-tap` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-12` | Fresh MIT Android hyper-casual puzzle game with direct Compose-free product-shell relevance and likely compact input/animation/state-flow value. | `queued` | `android game text search + exact repository view verification` |
 
 ## Status Legend
 

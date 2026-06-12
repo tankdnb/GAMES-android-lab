@@ -6,11 +6,13 @@
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
-- Refresh the short backlog before opening the next research batch; the previous exact-license shortlist is now exhausted.
+- Work through the refreshed short backlog before doing another broad GitHub search.
 
 ## Next Recommended
 
-- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new compact exact-license shortlist before starting the next batch.
+- Continue from the current compact shortlist in `research/registry/CANDIDATE_QUEUE.md`:
+  `The-JDdev/Heroes-Arena`, `DominicDolan/Mechanica`, `xarlord/number-tap`
+- If that shortlist is exhausted, refresh `research/registry/CANDIDATE_QUEUE.md` again with another compact exact-license pass before starting the following batch.
 - If `qorrnsmj/smf` needs a future follow-up, keep it narrow: revisit only the fixed-step loop, the `Scene` plus `MasterRenderer` split, the audio source-pool service, or the simple collision ownership rules instead of reopening the whole repository broadly.
 - If `robmat/arrows_game` needs a future follow-up, revisit it only in a JDK `17+` plus Android SDK-ready environment and keep the scope narrow: the solvability checker, shaped-board generator, Compose board renderer, or restart/resume persistence shell.
 - If `AndreasHefti/flyko-lib` needs a future follow-up, revisit it only in an environment with writable Gradle and Konan homes and keep the scope narrow: shared runtime lifecycle, the view/render-target pipeline, the contact system, or the Tiled-loading seam.
