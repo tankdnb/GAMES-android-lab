@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The seventy-fourth real research batch is now completed and documented end-to-end.
-- The lab now has 80 researched repositories recorded:
+- The seventy-fifth real research batch is now completed and documented end-to-end.
+- The lab now has 81 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -89,6 +89,7 @@
   - `The-JDdev/Heroes-Arena` - `reference-only`
   - `DominicDolan/Mechanica` - `accepted`
   - `xarlord/number-tap` - `accepted`
+  - `AjayChandran11/Literature` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -96,7 +97,7 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The active shortlist is now exhausted and must be refreshed before the next batch.
+- The current shortlist now continues with `JohnLavender474/Megaman-Maverick`, `soyuz-dev/KotlinGameEngine`, and `inaidE/game-2048`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
@@ -121,7 +122,11 @@
 - Verified the current build caveat for this batch: the Gradle wrapper and module structure look healthy, but both `gradlew.bat help --no-daemon` and `:app:testDebugUnitTest --dry-run` stop in the lab because the machine exposes only a Java runtime without a JDK compiler.
 - Promoted `xarlord/number-tap` to `accepted` because its gameplay core is cleanly separated from the Android shell and the repository preserves reusable Android product patterns beyond a toy puzzle sample.
 - Refreshed the public and internal snapshot counts again so the repository now consistently reports `74` completed batches, `80` researched repositories, and a `68 accepted / 12 reference-only` split.
-- Exhausted the current short backlog again; the next research run must begin with a shortlist refresh before selecting a new candidate.
+- Refreshed the shortlist and completed `BATCH-2026-06-12-E` for `AjayChandran11/Literature`.
+- Added durable `Literature` findings for a pure shared card-game rules engine, event-history-driven bot inference, authoritative Ktor room ownership, reconnect-aware Compose multiplayer session handling, and filtered per-player protocol state.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works, but `gradlew.bat help --no-daemon` stops in the lab because the machine exposes only a Java 8 JRE without a JDK compiler.
+- Promoted `AjayChandran11/Literature` to `accepted` because its Android-relevant shared-core and multiplayer architecture is materially reusable despite zero current public signal.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `75` completed batches, `81` researched repositories, and a `69 accepted / 12 reference-only` split.
 - Completed `BATCH-2026-06-05-C` as a low-level engine pass for `qorrnsmj/smf`.
 - Added durable `SMF` findings for a fixed-step accumulator loop, compact `Scene` plus `MasterRenderer` split, source-pooled OpenAL service ownership, simple broad-phase-aware collision handling, and the mixed engine-plus-testbed shape of the checked-in gameplay layer.
 - Verified a distinct build caveat and recovery path for this batch: the wrapper initially failed only because it tried to lock under the blocked global `C:\Users\Username\.gradle`, but both `gradlew.bat --version` and `gradlew.bat help --no-daemon` succeeded once `GRADLE_USER_HOME` was redirected into `research/cache/`.
@@ -447,7 +452,7 @@
 
 ## Known Risks
 
-- The workflow has now been validated across 69 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 75 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -516,7 +521,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Refresh the exact-license shortlist in `research/registry/CANDIDATE_QUEUE.md` before the next batch; the current shortlist is exhausted.
+- Continue from the current shortlist in `research/registry/CANDIDATE_QUEUE.md`; the current leaders are `JohnLavender474/Megaman-Maverick`, `soyuz-dev/KotlinGameEngine`, and `inaidE/game-2048`.
 - Once that shortlist is exhausted, refresh it again instead of carrying an empty or stale queue forward.
 - If a future follow-up is needed for `icela/FriceEngine`, keep it narrow: isolate the shared Swing/JavaFX drawer seam, the buffered layer mutation model, the small event/timer helpers, or the resource-cache utilities instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Saar25/PlanetEngine`, decide first whether the target should be default `master` or the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input layer instead of reopening the whole repository blindly.

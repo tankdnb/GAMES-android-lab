@@ -37,6 +37,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Naijaludo](projects/mshdabiola-naijaludo.md) - Android-first Kotlin Multiplatform Ludo product with a shared board-game rules engine, Compose feature shell, persistent save/meta state, heuristic AI, and stronger-than-usual screenshot/baseline-profile workflow discipline, despite a currently inconsistent multiplayer binding on Android.
 - [Arrows Game](projects/robmat-arrows-game.md) - Android puzzle game with solvability-aware procedural generation, modular feature boundaries, Room-backed restart/resume state, expressive Compose `Canvas` board rendering, and a stronger-than-average Android test/build surface for its size.
 - [number-tap](projects/xarlord-number-tap.md) - Android hyper-casual number puzzle with a pure `GameEngine`, typed difficulty progression, retention/profile state, procedural audio generation, rewarded revive flow, and a broader test surface than its zero-star public signal suggests.
+- [Literature](projects/ajaychandran11-literature.md) - Kotlin Multiplatform card-game product with a shared rules engine, event-inference bots, an authoritative Ktor room server, reconnect-aware Compose client state, and direct Android relevance despite its zero-star public signal.
 
 ## engine-framework
 

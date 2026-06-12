@@ -84,6 +84,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [jrenner-kotlin-voxel](../findings/jrenner-kotlin-voxel.md) - `Main`, `World`, and `WorldUpdater` show a compact voxel-engine shell where a background frustum/range worker discovers chunks and a nearest-first main-thread queue realizes them safely.
 - [the-jddev-heroes-arena](../findings/the-jddev-heroes-arena.md) - `GameLoop`, `GameView`, `GameEngine`, and `GameActivity` show a direct Android `SurfaceView` runtime where one monolithic gameplay owner, a small frame thread, and activity-hosted game start flow keep the shell readable even though it is still early-stage.
 - [dominicdolan-mechanica](../findings/dominicdolan-mechanica.md) - `GameSetup`, `MultiUpdateCalculator`, and `SceneManager` show a compact engine runtime with centralized scene ownership, fixed-step multi-update timing, delayed scene switches, and deliberate pause or frame-step handling.
+- [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - `GameEngine`, `GameRoom`, `OnlineGameRepository`, and `GameViewModel` show a strong Android-relevant product architecture where pure shared rules, authoritative multiplayer room ownership, reconnect-aware sessions, and Compose shell state stay explicitly separated.
 
 ## Rendering And Graphics
 
@@ -202,6 +203,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [mshdabiola-naijaludo](../findings/mshdabiola-naijaludo.md) - `LudoGame`, `Board`, and `RandomComputerPlayer` show a reusable race-board rules core with staged turn flow, board-coordinate normalization, and compact heuristic AI for kill-prioritization and move scoring.
 - [the-jddev-heroes-arena](../findings/the-jddev-heroes-arena.md) - `GameEngine.startGame(...)`, `update(...)`, `Hero.kt`, `Skill.kt`, and `Item.kt` show a direct Android gameplay shell with authored hero/item data, timed minion waves, simple lane combat, and enough real systems to study even though the whole MOBA framing is still shallow.
 - [robmat-arrows-game](../findings/robmat-arrows-game.md) - `GameGenerator.kt`, `SolvabilityChecker.kt`, and `GameEngine.kt` show a strong small-game pattern where procedural content is validated through a deterministic solvability pass before the Android shell treats it as a playable level.
+- [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - `GameEngine`, `MoveValidator`, `ClaimEvaluator`, and the half-suit state flow show a reusable team card-game core where ask/claim legality, scoring, and early-end rules stay pure and testable.
 
 ## Input And Controls
 
@@ -260,6 +262,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [robmat-arrows-game](../findings/robmat-arrows-game.md) - `InputHandler.kt` and `GameEngine.kt` show a clean tap-to-grid transform, head-biased interaction hotspot, and unobstructed-target prioritization pattern for dense puzzle boards.
 - [jrenner-kotlin-voxel](../findings/jrenner-kotlin-voxel.md) - `GameInput` combines a custom key-command processor with libGDX's first-person camera controller through an `InputMultiplexer`, keeping debug/runtime controls readable and centralized.
 - [the-jddev-heroes-arena](../findings/the-jddev-heroes-arena.md) - `GameView.onTouchEvent(...)` and `GameEngine.movePlayer(...)` show a simple but reusable Android touch split where joystick-style movement owns the left side of the screen and skill buttons live as right-side hit targets.
+- [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - `GameBoardScreen`, `GameViewModel`, and the local/online repositories show a clean Compose-first control seam where turn actions, overlays, and tutorial state stay separate from the shared rules engine.
 
 ## UI, HUD, And Menus
 
@@ -312,6 +315,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [juanoff-roulette-android-app](../findings/juanoff-roulette-android-app.md) - `RouletteScreen`, `SelectedSectorCard`, and the portrait or landscape layouts show a compact Compose casual-game shell with one wheel surface, one result card, and one CTA reorganized per orientation instead of splitting the feature across several screens.
 - [the-jddev-heroes-arena](../findings/the-jddev-heroes-arena.md) - `MainActivity`, `HeroSelectActivity`, `ProfileActivity`, `RankActivity`, `ShopActivity`, and `SettingsActivity` show a broader Android game-product shell than the tiny runtime would suggest, with separate activities for menu, hero browsing, profile, rank, shop, and settings flows.
 - [dominicdolan-mechanica](../findings/dominicdolan-mechanica.md) - `UIUtils.kt` shows an explicit bridge from UI render descriptions into engine draw calls, which is a useful reminder to keep UI abstractions and low-level draw ownership separate even in a very small engine.
+- [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - `GameBoardScreen`, `WaitingRoomScreen`, and the shared Compose shell show a fuller-than-usual small-game product UI with adaptive layout, turn-pressure banners, reactions, tutorials, and lobby/game separation.
 
 ## Physics And Collision
 
@@ -369,6 +373,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [simonschubert-braincup](../findings/simonschubert-braincup.md) - `MiniChessGame`, `ChessAi`, and `ScenarioGenerator` show a compact custom tactics subsystem with weighted scenario generation, alpha-beta search, difficulty-to-reward mapping, and real tests around legality and mate/stalemate behavior.
 - [yamin8000-dooz](../findings/yamin8000-dooz.md) - `SimpleGameAi` is a useful lightweight example of heuristic board-game AI where hard mode uses explicit win/block/fork priorities and medium mode mixes hard and random play for a softer casual-game curve.
 - [queuejw-space](../findings/queuejw-space.md) - `Autopilot` is a strong tiny-AI reference: it computes target-relative velocity, smooth braking distance, and timed strategy transitions across `CHASING`, `APPROACHING`, `LANDING`, `LANDED`, and `LAUNCHING`.
+- [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - `BotStrategy` and `CardTracker` show a better-than-usual fair-play small-game AI where decisions are derived from public event history, impossible-card elimination, and difficulty-tuned uncertainty instead of hidden omniscience.
 
 ## Persistence And Data
 
@@ -412,6 +417,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [tottelofstrom-nfc-doom](../findings/tottelofstrom-nfc-doom.md) - `CartridgeCodec` and `GameLevel` show a strong pattern for tiny external game content: CRC-validated binary cartridges are decoded once, then forked into phone-owned mutable runtime state instead of being mutated in place.
 - [mshdabiola-naijaludo](../findings/mshdabiola-naijaludo.md) - `StoreImpl`, `CurrentState`, `GameViewModel`, and `LogLudoData` show a pragmatic persistent-state seam where save slots, settings, cosmetics, and meta-game achievement progress stay centralized instead of leaking across feature code.
 - [robmat-arrows-game](../findings/robmat-arrows-game.md) - `AppDatabase.kt`, `UserPreferencesRepository.kt`, and `LevelManager.kt` show a useful restart/resume pattern where both initial and current puzzle snapshots are stored alongside player settings and lives.
+- [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - `PlayerGameView`, `OnlineGameRepository`, and `SessionStore` show a strong shared-state seam where authoritative hidden data stays off the wire while reconnect tokens, room state, and event replay stay explicit.
 
 ## Networking And Multiplayer
 
@@ -426,6 +432,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [roomsmith-games-neomud](../findings/roomsmith-games-neomud.md) - `ClientMessage`, `ServerMessage`, `WebSocketClient`, `ReconnectCoordinator`, `PlatformApiClient`, and `SessionManager` show a stronger shared-contract multiplayer stack where live gameplay WebSockets, HTTP product APIs, reconnect state, duplicate-login handling, and rate-limited sessions stay intentionally separated.
 - [mshdabiola-naijaludo](../findings/mshdabiola-naijaludo.md) - `IP2pManager`, `GameViewModel`, `DataModule.android.kt`, and the two competing `P2pManager` implementations show both a compact small-game multiplayer command seam and a valuable warning about stale DI bindings hiding behind a cleaner interface.
 - [the-jddev-heroes-arena](../findings/the-jddev-heroes-arena.md) - `NetworkManager` is valuable mostly as a cautionary seam: it proves the intended login, matchmaking, leaderboard, and profile flows are still stubbed out and should not be mistaken for a real online runtime.
+- [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - `GameRoom`, `ClientMessage`, `ServerMessage`, and `OnlineGameRepository` show a compact but real multiplayer stack with authoritative rooms, reconnect tokens, websocket session recovery, event replay, and bot replacement for disconnected players.
 
 ## Tooling And Content Pipeline
 
@@ -637,3 +644,4 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [qorrnsmj-smf](../findings/qorrnsmj-smf.md) - `build.gradle.kts`, `gradle-wrapper.properties`, and the successful redirected-home discovery runs show a narrow but still working desktop Gradle surface whose real lab caveat is blocked global Gradle-home locking rather than a broken project build, while the missing test tree and rough repository hygiene still keep it in `reference-only`.
 - [the-jddev-heroes-arena](../findings/the-jddev-heroes-arena.md) - `build.gradle`, `app/build.gradle`, `gradle-wrapper.properties`, and the missing `gradlew.bat` show a very small direct-Android build surface whose main lab caveat is not Java-version drift yet, but the absent Windows wrapper launcher combined with zero visible tests or CI verification.
 - [dominicdolan-mechanica](../findings/dominicdolan-mechanica.md) - the multi-module Gradle build, visible `mechanica/src/test` tree, and partial wrapper validation show a real engine workflow, but also expose concrete reproducibility friction: Java toolchain `22`, required external `lwjgl_natives`, `mavenLocal()`, and a checked-in local jar.
+- [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - the KMP module split, shared/server test surface, and successful `gradlew.bat --version` run show a real Android/KMP product workflow, while local `gradlew.bat help --no-daemon` still stops in the lab because only a Java 8 JRE without compiler tools is available.

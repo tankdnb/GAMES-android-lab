@@ -100,9 +100,14 @@ Refreshed on `2026-06-04` before starting `BATCH-2026-06-04-AJ`. The shortlist b
 
 Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-A`. The shortlist below keeps only candidates that passed exact repository-level `licenseInfo` verification and are not already listed in `research/registry/RESEARCHED_REPOS.md`.
 
+Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-E`. The shortlist below keeps only candidates that passed exact repository-level license verification, are not already listed in `research/registry/RESEARCHED_REPOS.md`, and still look like real Kotlin game or engine repositories after README and metadata screening.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `none` | `TBD` | `TBD` | `TBD` | `TBD` | `TBD` | `TBD` | `TBD` | Refresh the shortlist before the next batch. Keep it compact and prefer exact repository-level license verification. | `queued` | `next shortlist refresh required` |
+| `AjayChandran11/Literature` | `android-game` | `3` | `0` | `3` | `3` | `0` | `2026-06-12` | Fresh MIT Kotlin Multiplatform card game with shared rules engine, bot AI, Android client, and realtime multiplayer server; strongest current shortlist balance of freshness and architecture yield. | `done` | `updated Kotlin game/game-engine shortlist + exact repo verification` |
+| `JohnLavender474/Megaman-Maverick` | `android-game` | `2` | `1` | `3` | `3` | `9` | `2026-06-11` | Fresh MIT LibGDX Kotlin fan game with a large gameplay codebase and custom engine surface; strong gameplay and runtime yield if the active leader disappoints. | `queued` | `updated Kotlin game/game-engine shortlist + exact repo verification` |
+| `soyuz-dev/KotlinGameEngine` | `engine-framework` | `3` | `0` | `3` | `3` | `1` | `2026-06-12` | Very fresh LGPL Kotlin LWJGL engine with explicit fixed-timestep runtime, SAT collision, CCD, and physics focus; strongest current compact engine candidate. | `queued` | `updated Kotlin game/game-engine shortlist + exact repo verification` |
+| `inaidE/game-2048` | `android-game` | `3` | `0` | `3` | `1` | `0` | `2026-06-12` | Very fresh MIT Compose Android 2048 clone with direct platform relevance and a small enough footprint for a quick validation pass if a lighter batch is needed. | `queued` | `updated Kotlin game/game-engine shortlist + exact repo verification` |
 
 ## Status Legend
 
