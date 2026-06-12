@@ -6,7 +6,7 @@
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
-- Continue from the current shortlist headed by `soyuz-dev/KotlinGameEngine` and `inaidE/game-2048`; refresh it once we want to restore the backlog to up to four strong candidates.
+- Continue from the current shortlist headed by `inaidE/game-2048`; refresh it once we want to restore the backlog to up to four strong candidates.
 
 ## Next Recommended
 

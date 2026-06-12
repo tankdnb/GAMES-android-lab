@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-12`, `76` real GitHub research batches are completed end-to-end.
-- `82` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-12`, `77` real GitHub research batches are completed end-to-end.
+- `83` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `70`
+  - `accepted`: `71`
   - `reference-only`: `12`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `JohnLavender474/Megaman-Maverick` as an `accepted` Kotlin LibGDX fan-game codebase whose strongest reusable value is its custom engine/core split, fixed-step world simulation, gameplay-layer collision rules, room-aware action-platformer flow, and stronger-than-usual engine test surface.
-- The latest accepted addition is `JohnLavender474/Megaman-Maverick`.
+- The latest researched addition is `soyuz-dev/KotlinGameEngine` as an `accepted` compact Kotlin/LWJGL engine reference whose strongest reusable value is its fixed-step runtime, callback-driven entities, readable SAT/collision code, staged physics pipeline, and low-level tests.
+- The latest accepted addition is `soyuz-dev/KotlinGameEngine`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
