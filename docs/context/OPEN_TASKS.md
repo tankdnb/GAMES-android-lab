@@ -11,7 +11,7 @@
 ## Next Recommended
 
 - Continue from the current compact shortlist in `research/registry/CANDIDATE_QUEUE.md`:
-  `DominicDolan/Mechanica`, `xarlord/number-tap`
+  `xarlord/number-tap`
 - If that shortlist is exhausted, refresh `research/registry/CANDIDATE_QUEUE.md` again with another compact exact-license pass before starting the following batch.
 - If `qorrnsmj/smf` needs a future follow-up, keep it narrow: revisit only the fixed-step loop, the `Scene` plus `MasterRenderer` split, the audio source-pool service, or the simple collision ownership rules instead of reopening the whole repository broadly.
 - If `robmat/arrows_game` needs a future follow-up, revisit it only in a JDK `17+` plus Android SDK-ready environment and keep the scope narrow: the solvability checker, shaped-board generator, Compose board renderer, or restart/resume persistence shell.

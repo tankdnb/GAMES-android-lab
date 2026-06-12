@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The seventy-second real research batch is now completed and documented end-to-end.
-- The lab now has 78 researched repositories recorded:
+- The seventy-third real research batch is now completed and documented end-to-end.
+- The lab now has 79 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -87,6 +87,7 @@
   - `qorrnsmj/smf` - `reference-only`
   - `jrenner/kotlin-voxel` - `accepted`
   - `The-JDdev/Heroes-Arena` - `reference-only`
+  - `DominicDolan/Mechanica` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -94,7 +95,7 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The active exact-license short backlog currently holds `DominicDolan/Mechanica` and `xarlord/number-tap`.
+- The active exact-license short backlog currently holds `xarlord/number-tap`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
@@ -109,6 +110,11 @@
 - Recorded a distinct build caveat for this batch: the repository checks in `gradlew` but not `gradlew.bat`, so the lab could not run its normal lightweight wrapper-based Gradle discovery on Windows.
 - Preserved `The-JDdev/Heroes-Arena` as `reference-only` rather than `accepted` because the checked-in runtime remains monolithic and shallow, no tests were found, and several advertised product features are still stubs or structure-only code.
 - Refreshed the public and internal snapshot counts again so the repository now consistently reports `72` completed batches, `78` researched repositories, and a `66 accepted / 12 reference-only` split.
+- Completed `BATCH-2026-06-12-C` as a compact engine-architecture pass for `DominicDolan/Mechanica`.
+- Added durable `Mechanica` findings for a centralized scene manager, fixed-step multi-update delta calculation, GLFW host/runtime ownership, shader-backed path rendering, a UI-to-drawer bridge, and a small lifecycle-focused test surface.
+- Verified a distinct build caveat for this batch: `gradlew.bat --version` works after redirecting `GRADLE_USER_HOME`, but `gradlew.bat help --no-daemon` fails because `desktop-application/build.gradle.kts` hard-requires the external Gradle property `lwjgl_natives`; also recorded README drift versus the actual Java toolchain `22`.
+- Promoted `DominicDolan/Mechanica` to `accepted` because the checked-in architecture is materially reusable even though the repository remains desktop-only and rough around reproducibility.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `73` completed batches, `79` researched repositories, and a `67 accepted / 12 reference-only` split.
 - Completed `BATCH-2026-06-05-C` as a low-level engine pass for `qorrnsmj/smf`.
 - Added durable `SMF` findings for a fixed-step accumulator loop, compact `Scene` plus `MasterRenderer` split, source-pooled OpenAL service ownership, simple broad-phase-aware collision handling, and the mixed engine-plus-testbed shape of the checked-in gameplay layer.
 - Verified a distinct build caveat and recovery path for this batch: the wrapper initially failed only because it tried to lock under the blocked global `C:\Users\Username\.gradle`, but both `gradlew.bat --version` and `gradlew.bat help --no-daemon` succeeded once `GRADLE_USER_HOME` was redirected into `research/cache/`.
@@ -503,7 +509,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current exact-license shortlist in `research/registry/CANDIDATE_QUEUE.md`, which now keeps `DominicDolan/Mechanica` and `xarlord/number-tap`.
+- Continue from the current exact-license shortlist in `research/registry/CANDIDATE_QUEUE.md`, which now keeps `xarlord/number-tap`.
 - Once that shortlist is exhausted, refresh it again instead of carrying an empty or stale queue forward.
 - If a future follow-up is needed for `icela/FriceEngine`, keep it narrow: isolate the shared Swing/JavaFX drawer seam, the buffered layer mutation model, the small event/timer helpers, or the resource-cache utilities instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Saar25/PlanetEngine`, decide first whether the target should be default `master` or the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input layer instead of reopening the whole repository blindly.

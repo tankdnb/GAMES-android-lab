@@ -61,6 +61,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [PlanetEngine](projects/saar25-planetengine.md) - Java/Kotlin LWJGL/OpenGL engine workspace with annotation-driven renderer prototypes, per-pass node groups, strongly typed window/input wrappers, and a retained GUI toolkit, useful mainly as a desktop/OpenGL architecture reference rather than a direct Android runtime.
 - [flyko-lib](projects/andreashefti-flyko-lib.md) - Kotlin Multiplatform 2D engine library with a lifecycle-driven shared core, pooled entity-components, render-target views, contact scanning, Tiled-world helpers, and a real desktop backend, useful as an indirect Android architecture reference despite its unfinished non-JVM backends.
 - [kotlin-voxel](projects/jrenner-kotlin-voxel.md) - compact Kotlin/libGDX voxel engine with a background chunk-discovery worker, nearest-first chunk realization queue, hidden-face mesh baking, direct GLSL chunk rendering, and a stronger-than-expected chunk/grid test surface, useful as a desktop reference for terrain/voxel subsystems rather than as a direct Android runtime.
+- [Mechanica](projects/dominicdolan-mechanica.md) - compact Kotlin/LWJGL 2D engine with a scene manager, fixed-step delta calculator, explicit GLFW host/runtime split, shader-backed path rendering, UI adapter seams, and a small but real lifecycle test surface.
 
 ## rendering-demo
 
