@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The seventy-first real research batch is now completed and documented end-to-end.
-- The lab now has 77 researched repositories recorded:
+- The seventy-second real research batch is now completed and documented end-to-end.
+- The lab now has 78 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -86,6 +86,7 @@
   - `robmat/arrows_game` - `accepted`
   - `qorrnsmj/smf` - `reference-only`
   - `jrenner/kotlin-voxel` - `accepted`
+  - `The-JDdev/Heroes-Arena` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -93,7 +94,7 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The active exact-license short backlog has been refreshed and currently holds `The-JDdev/Heroes-Arena`, `DominicDolan/Mechanica`, and `xarlord/number-tap`.
+- The active exact-license short backlog currently holds `DominicDolan/Mechanica` and `xarlord/number-tap`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
@@ -103,6 +104,11 @@
 - Verified an unusually healthy lightweight build surface for this older repo generation: `gradlew.bat --version`, `gradlew.bat help --no-daemon`, and `gradlew.bat test --dry-run --no-daemon` all succeeded once `GRADLE_USER_HOME` was redirected into `research/cache/`.
 - Refreshed the public and internal snapshot counts again so the repository now consistently reports `71` completed batches, `77` researched repositories, and a `66 accepted / 11 reference-only` split.
 - Rebuilt the exact-license shortlist so the next run can continue immediately from `The-JDdev/Heroes-Arena`, `DominicDolan/Mechanica`, or `xarlord/number-tap` instead of starting from an empty queue.
+- Completed `BATCH-2026-06-12-B` as a direct Android custom-loop pass for `The-JDdev/Heroes-Arena`.
+- Added durable `Heroes Arena` findings for a thread-based `SurfaceView` loop, compact `Canvas` battlefield rendering, touch-region joystick plus skill controls, menu-to-game activity shell composition, and the explicit gap between README claims and the still-stubbed online/audio seams.
+- Recorded a distinct build caveat for this batch: the repository checks in `gradlew` but not `gradlew.bat`, so the lab could not run its normal lightweight wrapper-based Gradle discovery on Windows.
+- Preserved `The-JDdev/Heroes-Arena` as `reference-only` rather than `accepted` because the checked-in runtime remains monolithic and shallow, no tests were found, and several advertised product features are still stubs or structure-only code.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `72` completed batches, `78` researched repositories, and a `66 accepted / 12 reference-only` split.
 - Completed `BATCH-2026-06-05-C` as a low-level engine pass for `qorrnsmj/smf`.
 - Added durable `SMF` findings for a fixed-step accumulator loop, compact `Scene` plus `MasterRenderer` split, source-pooled OpenAL service ownership, simple broad-phase-aware collision handling, and the mixed engine-plus-testbed shape of the checked-in gameplay layer.
 - Verified a distinct build caveat and recovery path for this batch: the wrapper initially failed only because it tried to lock under the blocked global `C:\Users\Username\.gradle`, but both `gradlew.bat --version` and `gradlew.bat help --no-daemon` succeeded once `GRADLE_USER_HOME` was redirected into `research/cache/`.
@@ -488,6 +494,7 @@
 - `Amigoconglomeration918/LinkGame` is a useful direct Android casual-game reference, but it has zero public signal, only template tests, rough dependency and README hygiene, a bundled zip artifact committed inside `src/main/java`, and local build validation in this lab still stops at the missing JDK/compiler surface.
 - `rogal01/tower-defense-android` is a useful direct Android tower-defense reference, but it still has zero public signal, no visible tests or CI, extremely large monolithic runtime or render files, only partial multiplatform follow-through, and rough repository hygiene including an empty checked-in `GameEngine.kt` file under the Android source tree.
 - `icela/FriceEngine` is a historically useful JVM engine comparison, but it is stale, desktop-only, AGPL-3.0 licensed, build-broken through a dead Bintray-era dependency path, and includes verified runtime issues like broken button-removal bookkeeping.
+- `The-JDdev/Heroes-Arena` is a useful cautionary reminder that very fresh Android game repositories can expose direct product-shell patterns while still overstating their actual runtime depth in README text.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - `yaroslavzghoba/KotCore` currently has more publishing scaffolding than runtime substance, so it should not be treated as evidence of real Compose Canvas or Android engine maturity until actual loop, grid, input, or rendering code appears.
@@ -496,7 +503,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Refresh `research/registry/CANDIDATE_QUEUE.md` with a new exact-license shortlist before opening the next batch.
+- Continue from the current exact-license shortlist in `research/registry/CANDIDATE_QUEUE.md`, which now keeps `DominicDolan/Mechanica` and `xarlord/number-tap`.
 - Once that shortlist is exhausted, refresh it again instead of carrying an empty or stale queue forward.
 - If a future follow-up is needed for `icela/FriceEngine`, keep it narrow: isolate the shared Swing/JavaFX drawer seam, the buffered layer mutation model, the small event/timer helpers, or the resource-cache utilities instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Saar25/PlanetEngine`, decide first whether the target should be default `master` or the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input layer instead of reopening the whole repository blindly.
