@@ -88,6 +88,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [johnlavender474-megaman-maverick](../findings/johnlavender474-megaman-maverick.md) - `GameEngine`, `MegamanMaverickGame`, and `MegaLevelScreen` show a sizeable LibGDX action-platformer that keeps engine lifecycle, system assembly, room flow, screen ownership, and gameplay-specific rules separated more cleanly than its fan-game presentation initially suggests.
 - [soyuz-dev-kotlingameengine](../findings/soyuz-dev-kotlingameengine.md) - `RuntimeEngine`, `RuntimeScene`, and `DefaultGameEntity` show a compact accumulator-based loop, explicit scene lifecycle ownership, and a callback-driven entity model that keeps a small engine readable without adopting a heavier ECS.
 - [inaide-game-2048](../findings/inaide-game-2048.md) - `GameViewModel`, `move`, `slideRow`, and `checkGameOver` show a very compact Android puzzle shell where the core 2048 rules remain readable even though they are still embedded directly in the activity-side app code.
+- [ellisonchan-composebird](../findings/ellisonchan-composebird.md) - `MainActivity` and `GameViewModel` show a tiny Compose-native game loop where a `LaunchedEffect` tick dispatcher and one central action handler are enough to run a full casual game shell without introducing a separate rendering thread.
 
 ## Rendering And Graphics
 
@@ -150,6 +151,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [johnlavender474-megaman-maverick](../findings/johnlavender474-megaman-maverick.md) - `TiledMapLevelRenderer`, sectioned drawable queues, background ordering, and the LibGDX batch or shape split show practical 2D action-game rendering ownership without tying all draw logic to one screen monolith.
 - [soyuz-dev-kotlingameengine](../findings/soyuz-dev-kotlingameengine.md) - `Shader`, `Mesh`, `Camera`, `Painter`, and `SolidColor` show a clean low-level OpenGL rendering seam where entities own appearance but explicit shader/camera/mesh objects still control the pipeline.
 - [inaide-game-2048](../findings/inaide-game-2048.md) - `Tile` shows a minimal Compose rendering pattern for casual puzzle boards: animated tile color, scale, and value changes without a custom drawing engine.
+- [ellisonchan-composebird](../findings/ellisonchan-composebird.md) - `Bird`, `Pipe`, `PipeCouple`, and `NearForeground` show a simple Compose image-rendering stack that moves gameplay pieces through offsets and rotation instead of a custom canvas or `SurfaceView`.
 - [rogal01-tower-defense-android](../findings/rogal01-tower-defense-android.md) - `GameView` and `EntityRenderer` show a custom `SurfaceView`/Canvas renderer with cached path and terrain geometry, preallocated paints, and fully code-drawn enemies, towers, bosses, and HUD layers instead of sprite assets.
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `AGSLNonInteractableCells`, `SKSLNonInteractableCells`, `GameOfLifeShape`, and `GameOfLifeRenderer` show one rendering idea carried across Android AGSL, desktop SKSL, and Wear OpenGL ES instead of re-implementing the cell visual per host.
 - [aleksrutins-platinum](../findings/aleksrutins-platinum.md) - `RenderSystem2D`, `Sprite2D`, and `Camera2D` show a tiny Swing/AWT 2D renderer where drawing is just another system pass and camera motion is implemented by mutating per-transform offsets.
@@ -216,6 +218,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 - [soyuz-dev-kotlingameengine](../findings/soyuz-dev-kotlingameengine.md) - `Input`, `KeyListener`, and `MouseListener` show a tiny singleton input facade that is useful as a compact desktop-host pattern even though it would need adaptation before Android reuse.
 - [inaide-game-2048](../findings/inaide-game-2048.md) - `GameBoard` uses `detectDragGestures` with accumulated offsets and a movement threshold to translate raw swipes directly into grid-game moves.
+- [ellisonchan-composebird](../findings/ellisonchan-composebird.md) - `GameScreen` uses `pointerInteropFilter` to map full-screen touch-down events directly into start or flap actions, which is a useful tiny-game pattern when gesture complexity is low.
 
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - the tap-to-next-number loop, combo-sensitive timing, and clean separation between Compose gestures and pure engine decisions make this a useful reference for compact Android puzzle input design.
 - [korge](../findings/korlibs-korge.md) - input and lifecycle hooks are centralized through `Stage` and `GameWindow`, which is useful for Android host integration.
@@ -496,6 +499,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 ## Android Platform Integration
 
 - [inaide-game-2048](../findings/inaide-game-2048.md) - `MainActivity`, `GameScreen`, and the single `app` module show a very direct Android Compose casual-game shell with adaptive board sizing and a restart overlay, but also illustrate the limits of keeping all logic in one entry file.
+- [ellisonchan-composebird](../findings/ellisonchan-composebird.md) - `MainActivity`, `GameScreen`, `ScoreBoard`, and `SplashScreenController` show a compact Android game shell with edge-to-edge setup, a Compose-only playfield, overlay-driven game-over UI, and custom Android 12 splash exit choreography.
 
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `AdManagerImpl`, `ProfileRepository`, and the activity shell show practical small-game Android seams for rewarded revive flow, interstitial pacing, permission prompts, daily login handling, and persisted profile/settings state.
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - separate `wear` and `auto` modules plus cloud-save wiring show unusually deep Android adaptation.
@@ -591,6 +595,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 ## Build, Release, And Testing
 
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `app/build.gradle.kts`, Kover thresholds, and the `GameEngineTest` or `GameFlowIntegrationTest` or `ProfileRepositoryTest` surface show stronger-than-expected verification discipline for a zero-star Android casual game, even though local Gradle tasks still stop in the lab without a JDK compiler.
+- [ellisonchan-composebird](../findings/ellisonchan-composebird.md) - the single Android app module, checked-in wrapper, AGP `8.1.1`, stale `jcenter()` repository, mixed-era Compose test dependency, and template-only tests show a repo that still configures structurally but is best treated as a lightweight static reference rather than a well-verified Android baseline.
 - [godot-kotlin-jvm](../findings/utopia-rise-godot-kotlin-jvm.md) - the Gradle plugin, tooling model builder, harness tests, and Android dex task show a mature integration/build surface.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - the split Maven module layout keeps core runtime, IO, and sample applications separated for publication and maintenance.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `commonTest` coverage over board rules and coordinate mapping makes this sample stronger than a typical toy repository.

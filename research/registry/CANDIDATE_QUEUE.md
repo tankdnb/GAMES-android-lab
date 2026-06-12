@@ -102,12 +102,14 @@ Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-A`. The shortlist be
 
 Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-E`. The shortlist below keeps only candidates that passed exact repository-level license verification, are not already listed in `research/registry/RESEARCHED_REPOS.md`, and still look like real Kotlin game or engine repositories after README and metadata screening.
 
+Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-I`. The shortlist below keeps only candidates that passed exact repository-level license verification, are not already listed in `research/registry/RESEARCHED_REPOS.md`, and still look like real Kotlin game or engine repositories after README and metadata screening.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `AjayChandran11/Literature` | `android-game` | `3` | `0` | `3` | `3` | `0` | `2026-06-12` | Fresh MIT Kotlin Multiplatform card game with shared rules engine, bot AI, Android client, and realtime multiplayer server; strongest current shortlist balance of freshness and architecture yield. | `done` | `updated Kotlin game/game-engine shortlist + exact repo verification` |
-| `JohnLavender474/Megaman-Maverick` | `gameplay-systems` | `2` | `1` | `3` | `3` | `9` | `2026-06-11` | Fresh MIT LibGDX Kotlin fan game with a large gameplay codebase and custom engine surface; strong gameplay and runtime yield even without a checked-in Android target. | `done` | `updated Kotlin game/game-engine shortlist + exact repo verification` |
-| `soyuz-dev/KotlinGameEngine` | `engine-framework` | `3` | `0` | `3` | `3` | `1` | `2026-06-12` | Very fresh LGPL Kotlin LWJGL engine with explicit fixed-timestep runtime, SAT collision, CCD, and physics focus; strongest current compact engine candidate. | `done` | `updated Kotlin game/game-engine shortlist + exact repo verification` |
-| `inaidE/game-2048` | `android-game` | `3` | `0` | `3` | `1` | `0` | `2026-06-12` | Very fresh MIT Compose Android 2048 clone with direct platform relevance and a small enough footprint for a quick validation pass if a lighter batch is needed. | `done` | `updated Kotlin game/game-engine shortlist + exact repo verification` |
+| `ellisonchan/ComposeBird` | `android-game` | `3` | `2` | `1` | `2` | `254` | `2023-11-16` | Popular MIT Jetpack Compose Flappy Bird sample with direct Android relevance and a likely reusable loop, input, and Compose animation shell. | `done` | `compose/game refresh + exact repo verification + README screening` |
+| `MohamedRejeb/Card-Game-Animation` | `android-game` | `2` | `2` | `1` | `2` | `164` | `2024-01-08` | Apache-2.0 Compose card-game sample with richer-than-usual animation and pointer-input surface that may yield reusable interaction patterns. | `queued` | `compose/game refresh + exact repo verification + README screening` |
+| `mukeshsolanki/snake-game-android` | `android-game` | `3` | `1` | `1` | `2` | `81` | `2023-08-11` | MIT Android Compose snake game with clearer direct gameplay-shell value than the remaining older fallback candidates. | `queued` | `compose/game refresh + exact repo verification + README screening` |
+| `AxieFeat/Arc` | `engine-framework` | `2` | `0` | `2` | `3` | `1` | `2026-03-26` | Fresh MIT modular Kotlin engine with OpenGL, Vulkan, and extension modules; useful as the compact engine-side counterweight to the Compose-game shortlist. | `queued` | `compose/game refresh + exact repo verification + README screening` |
 
 ## Status Legend
 
