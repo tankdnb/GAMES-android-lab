@@ -6,6 +6,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Engine Architecture And Core Loop
 
+- [xarlord-number-tap](../findings/xarlord-number-tap.md) - `GameEngine`, `GameState`, and `DifficultyConfig` show a small Android game that keeps gameplay rules, timer tuning, and progression in a pure state-update core instead of entangling them with Compose.
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - game flow is isolated in `GameController`, with minefield creation split into pure Kotlin and native-backed generators.
 - [korge](../findings/korlibs-korge.md) - `SceneContainer` and `Stage` show a reusable scene-graph runtime with transitions, history, and dependency injection.
 - [godot-kotlin-jvm](../findings/utopia-rise-godot-kotlin-jvm.md) - `Bootstrap` and the native bridge show a full Kotlin-to-engine startup and registration chain.
@@ -204,6 +205,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Input And Controls
 
+- [xarlord-number-tap](../findings/xarlord-number-tap.md) - the tap-to-next-number loop, combo-sensitive timing, and clean separation between Compose gestures and pure engine decisions make this a useful reference for compact Android puzzle input design.
 - [korge](../findings/korlibs-korge.md) - input and lifecycle hooks are centralized through `Stage` and `GameWindow`, which is useful for Android host integration.
 - [littlektframework-littlekt](../findings/littlektframework-littlekt.md) - `InputMapController` unifies keyboard, pointer, and gamepad input into custom game signals.
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `PointerInputManagerImpl` normalizes embedded viewport coordinates and dispatches drag/zoom/pointer callbacks.
@@ -261,6 +263,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## UI, HUD, And Menus
 
+- [xarlord-number-tap](../findings/xarlord-number-tap.md) - `MainActivity` shows a real Compose-only Android game shell with menu, settings, gameplay, and game-over flows, while also serving as a caution about letting one activity absorb too much orchestration logic.
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - the LibGDX stage and actor layering demonstrate a custom in-game board UI inside a standard Android app shell.
 - [ktx](../findings/libktx-ktx.md) - the Scene2D DSL is a strong pattern for reducing UI boilerplate in Kotlin game UIs.
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - `DebugMenuManager` treats debug overlays as a first-class manager instead of gameplay-specific debug code.
@@ -340,6 +343,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Audio
 
+- [xarlord-number-tap](../findings/xarlord-number-tap.md) - `SoundManager` is a compact reference for procedurally generated Android game audio: synthesized WAV temp assets for `SoundPool`, combo pitch changes, and lightweight `AudioTrack` background music.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `SoundMachine` and `JukeBox` keep sound effects and looping background music as separate small services.
 - [minigdx-tiny](../findings/minigdx-tiny.md) - `SoundManager`, `VirtualSoundBoard`, and `MusicGenerator` keep synthesis, loop-friendly music generation, and RMS-aware multi-track mixing inside the engine instead of delegating everything to external assets.
 - [curioustorvald-terrarum](../findings/curioustorvald-terrarum.md) - `SpatialAudioMixer` and `App.audioMixer` show explicit surround-mix matrices, panning-law helpers, and a dedicated high-priority audio thread with live mixer reload support.
@@ -472,6 +476,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Android Platform Integration
 
+- [xarlord-number-tap](../findings/xarlord-number-tap.md) - `AdManagerImpl`, `ProfileRepository`, and the activity shell show practical small-game Android seams for rewarded revive flow, interstitial pacing, permission prompts, daily login handling, and persisted profile/settings state.
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - separate `wear` and `auto` modules plus cloud-save wiring show unusually deep Android adaptation.
 - [korge](../findings/korlibs-korge.md) - `KorgeAndroidView` and `AndroidGameWindowNoActivity` show host-view embedding without forcing a full activity-owned runtime.
 - [godot-kotlin-jvm](../findings/utopia-rise-godot-kotlin-jvm.md) - Android export support includes explicit main-dex generation and plugin wiring.
@@ -562,6 +567,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Build, Release, And Testing
 
+- [xarlord-number-tap](../findings/xarlord-number-tap.md) - `app/build.gradle.kts`, Kover thresholds, and the `GameEngineTest` or `GameFlowIntegrationTest` or `ProfileRepositoryTest` surface show stronger-than-expected verification discipline for a zero-star Android casual game, even though local Gradle tasks still stop in the lab without a JDK compiler.
 - [godot-kotlin-jvm](../findings/utopia-rise-godot-kotlin-jvm.md) - the Gradle plugin, tooling model builder, harness tests, and Android dex task show a mature integration/build surface.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - the split Maven module layout keeps core runtime, IO, and sample applications separated for publication and maintenance.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `commonTest` coverage over board rules and coordinate mapping makes this sample stronger than a typical toy repository.

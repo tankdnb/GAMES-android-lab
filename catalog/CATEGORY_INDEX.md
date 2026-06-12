@@ -36,6 +36,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Roulette Android App](projects/juanoff-roulette-android-app.md) - compact Android Compose roulette shell with custom Canvas wheel rendering, resumable finite spin animation state, idle-only sector-count configuration, and a clean single-screen MVVM product flow.
 - [Naijaludo](projects/mshdabiola-naijaludo.md) - Android-first Kotlin Multiplatform Ludo product with a shared board-game rules engine, Compose feature shell, persistent save/meta state, heuristic AI, and stronger-than-usual screenshot/baseline-profile workflow discipline, despite a currently inconsistent multiplayer binding on Android.
 - [Arrows Game](projects/robmat-arrows-game.md) - Android puzzle game with solvability-aware procedural generation, modular feature boundaries, Room-backed restart/resume state, expressive Compose `Canvas` board rendering, and a stronger-than-average Android test/build surface for its size.
+- [number-tap](projects/xarlord-number-tap.md) - Android hyper-casual number puzzle with a pure `GameEngine`, typed difficulty progression, retention/profile state, procedural audio generation, rewarded revive flow, and a broader test surface than its zero-star public signal suggests.
 
 ## engine-framework
 

@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-12`, `73` real GitHub research batches are completed end-to-end.
-- `79` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-12`, `74` real GitHub research batches are completed end-to-end.
+- `80` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `67`
+  - `accepted`: `68`
   - `reference-only`: `12`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `DominicDolan/Mechanica` as an `accepted` compact desktop-first Kotlin engine whose strongest reusable value is its scene manager, fixed-step delta policy, rendering host split, and shader-backed path drawing.
-- The latest accepted addition is `DominicDolan/Mechanica`.
+- The latest researched addition is `xarlord/number-tap` as an `accepted` Android puzzle game whose strongest reusable value is its pure gameplay engine, typed difficulty progression, retention layer, procedural audio, and test discipline.
+- The latest accepted addition is `xarlord/number-tap`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

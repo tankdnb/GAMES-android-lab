@@ -102,7 +102,7 @@ Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-A`. The shortlist be
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `xarlord/number-tap` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-12` | Fresh MIT Android hyper-casual puzzle game with direct Compose-free product-shell relevance and likely compact input/animation/state-flow value. | `queued` | `android game text search + exact repository view verification` |
+| `none` | `TBD` | `TBD` | `TBD` | `TBD` | `TBD` | `TBD` | `TBD` | Refresh the shortlist before the next batch. Keep it compact and prefer exact repository-level license verification. | `queued` | `next shortlist refresh required` |
 
 ## Status Legend
 
