@@ -108,12 +108,14 @@ Updated on `2026-06-15` after completing `BATCH-2026-06-15-B`. `mukeshsolanki/sn
 
 Refreshed on `2026-06-15` before starting `BATCH-2026-06-15-C`. The shortlist below keeps only candidates with explicit repository-level license metadata, that are not already listed in `research/registry/RESEARCHED_REPOS.md`, and that still look like real Kotlin game or engine repositories after README and metadata screening.
 
+Updated on `2026-06-15` after completing `BATCH-2026-06-15-F`. The compact shortlist is now exhausted and must be refreshed before the next batch.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
 | `beat-feet/beat-feet` | `android-game` | `3` | `2` | `3` | `3` | `81` | `2026-06-13` | Direct Android rhythm-platformer with stronger current public signal than the low-star alternatives and unusually promising procedural music-to-level-generation value. | `done` | `topic:game updated/stars search + exact repo verification + README screening` |
 | `Zernikalos/Zernikalos` | `engine-framework` | `3` | `1` | `3` | `3` | `2` | `2026-06-10` | Fresh Kotlin Multiplatform 3D engine with explicit Android target, scene graph, asset pipeline, and cross-platform backend claims that make it a strong engine-side follow-up to recent desktop-first passes. | `done` | `\"game engine\" updated search + exact repo verification + README screening` |
 | `amirroid/mafiauto` | `gameplay-systems` | `2` | `1` | `3` | `2` | `13` | `2026-06-14` | Android Mafia rules assistant with explicit game-engine framing, role automation, phase handling, and direct product-shell value for turn-flow and state-machine research. | `done` | `topic:game updated search + exact repo verification + README screening` |
-| `HighviewOne/PopItBubble` | `android-game` | `2` | `0` | `3` | `2` | `0` | `2026-06-12` | Direct Android custom-view sensory game with explicit Canvas rendering, generated audio, haptics, tests, and CI; useful as a compact native-shell contrast to the larger game candidates. | `queued` | `\"android game\" updated search + exact repo verification + README screening` |
+| `HighviewOne/PopItBubble` | `android-game` | `2` | `0` | `3` | `2` | `0` | `2026-06-12` | Direct Android custom-view sensory game with explicit Canvas rendering, generated audio, haptics, tests, and CI; useful as a compact native-shell contrast to the larger game candidates. | `done` | `\"android game\" updated search + exact repo verification + README screening` |
 
 ## Status Legend
 

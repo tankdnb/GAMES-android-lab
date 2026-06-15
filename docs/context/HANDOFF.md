@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eighty-fourth real research batch is now completed and documented end-to-end.
-- The lab now has 90 researched repositories recorded:
+- The eighty-fifth real research batch is now completed and documented end-to-end.
+- The lab now has 91 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -98,6 +98,7 @@
   - `beat-feet/beat-feet` - `accepted`
   - `Zernikalos/Zernikalos` - `accepted`
   - `amirroid/mafiauto` - `accepted`
+  - `HighviewOne/PopItBubble` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -105,10 +106,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The compact shortlist now continues with `HighviewOne/PopItBubble` behind the newly completed `amirroid/mafiauto` batch.
+- The previous compact shortlist has now been fully consumed and the next run must refresh it before selecting another repository.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-06-15-F` for `HighviewOne/PopItBubble`.
+- Added durable `PopItBubble` findings for a one-view Canvas playfield, cached radial-gradient bubble rendering, multi-pointer drag-to-pop input, runtime-generated `SoundPool` effects, and a lightweight challenge/settings shell around the gameplay surface.
+- Verified the current build caveat for this batch: the repository checks in `gradlew` but not `gradlew.bat`, so the normal Windows wrapper-based Gradle discovery path cannot run in this lab even though upstream Linux CI is configured.
+- Promoted `HighviewOne/PopItBubble` to `accepted` because the checked-in repository preserves a direct Android-native micro-game architecture with real rendering, input, audio, persistence, tests, and CI rather than only a toy UI mock.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `85` completed batches, `91` researched repositories, and a `76 accepted / 15 reference-only` split.
 
 - Completed `BATCH-2026-06-15-E` for `amirroid/mafiauto`.
 - Added durable `Mafiauto` findings for a shared Mafia rules engine, explicit phase-state ownership, delayed role resolution, domain/repository wrapping over gameplay core, and feature-local Compose orchestration.

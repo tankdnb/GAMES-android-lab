@@ -38,6 +38,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Arrows Game](projects/robmat-arrows-game.md) - Android puzzle game with solvability-aware procedural generation, modular feature boundaries, Room-backed restart/resume state, expressive Compose `Canvas` board rendering, and a stronger-than-average Android test/build surface for its size.
 - [number-tap](projects/xarlord-number-tap.md) - Android hyper-casual number puzzle with a pure `GameEngine`, typed difficulty progression, retention/profile state, procedural audio generation, rewarded revive flow, and a broader test surface than its zero-star public signal suggests.
 - [Literature](projects/ajaychandran11-literature.md) - Kotlin Multiplatform card-game product with a shared rules engine, event-inference bots, an authoritative Ktor room server, reconnect-aware Compose client state, and direct Android relevance despite its zero-star public signal.
+- [PopItBubble](projects/highviewone-popitbubble.md) - compact Android sensory/fidget game with a custom `Canvas` `View`, cached 3D bubble gradients, multi-pointer drag-to-pop input, generated `SoundPool` effects, lightweight challenge persistence, and a better-than-average tiny-game test/CI surface.
 
 ## engine-framework
 
