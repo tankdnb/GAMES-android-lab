@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eighty-fifth real research batch is now completed and documented end-to-end.
-- The lab now has 91 researched repositories recorded:
+- The eighty-sixth real research batch is now completed and documented end-to-end.
+- The lab now has 92 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -99,6 +99,7 @@
   - `Zernikalos/Zernikalos` - `accepted`
   - `amirroid/mafiauto` - `accepted`
   - `HighviewOne/PopItBubble` - `accepted`
+  - `nekzabirov/IGaming-Game-Engine` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -106,10 +107,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The previous compact shortlist has now been fully consumed and the next run must refresh it before selecting another repository.
+- The shortlist was refreshed before `BATCH-2026-06-15-G`; the remaining queued candidates are `masafykun/GamesHubAndroid`, `HighviewOne/KnowIt`, and `sridharprasath94/Letterly-Android`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-06-15-G` for `nekzabirov/IGaming-Game-Engine`.
+- Added durable `IGaming-Game-Engine` findings for a hexagonal/CQRS Kotlin game backend, session-open race avoidance, authoritative spin orchestration, real-versus-bonus wallet split rules, adapter-registry integration, and committed-event side effects.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works, but `gradlew.bat help --no-daemon` fails in the lab because Gradle requires Java `17+` while the machine still exposes Java `8`; fuller validation would also need private GitHub Packages access.
+- Promoted `nekzabirov/IGaming-Game-Engine` to `accepted` because it preserves strong reusable game-domain architecture despite indirect Android relevance and no client runtime.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `86` completed batches, `92` researched repositories, and a `77 accepted / 15 reference-only` split.
 
 - Completed `BATCH-2026-06-15-F` for `HighviewOne/PopItBubble`.
 - Added durable `PopItBubble` findings for a one-view Canvas playfield, cached radial-gradient bubble rendering, multi-pointer drag-to-pop input, runtime-generated `SoundPool` effects, and a lightweight challenge/settings shell around the gameplay surface.
@@ -581,7 +588,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Refresh `research/registry/CANDIDATE_QUEUE.md` before the next batch; the previous short backlog has now been fully consumed.
+- Continue from the current queued shortlist before doing another broad refresh: `masafykun/GamesHubAndroid`, `HighviewOne/KnowIt`, then `sridharprasath94/Letterly-Android`.
 - Once that shortlist is exhausted, refresh it again instead of carrying an empty or stale queue forward.
 - If a future follow-up is needed for `icela/FriceEngine`, keep it narrow: isolate the shared Swing/JavaFX drawer seam, the buffered layer mutation model, the small event/timer helpers, or the resource-cache utilities instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Saar25/PlanetEngine`, decide first whether the target should be default `master` or the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input layer instead of reopening the whole repository blindly.

@@ -81,6 +81,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [PltCmd](projects/baret-pltcmd.md) - Kotlin/JVM tactics simulation with radio-only order flow, terrain-aware radio and vision propagation, structured military-unit blueprints, deterministic world generation, and a stronger-than-expected tested module split.
 - [Megaman Maverick](projects/johnlavender474-megaman-maverick.md) - Kotlin LibGDX action-platformer with a reusable engine/core split, queue-based entity lifecycle, fixed-step world simulation, room-aware boss or checkpoint flow, controller remapping, and a stronger-than-usual engine test surface, even though the checked-in host is desktop-only and the fan-game assets are not generally reusable.
 - [Mafiauto](projects/amirroid-mafiauto.md) - Kotlin Multiplatform Mafia game assistant with a shared rules engine, explicit phase-state ownership, delayed role-resolution flow, feature-by-feature Compose orchestration, and direct Android product-shell relevance.
+- [IGaming Game Engine](projects/nekzabirov-igaming-game-engine.md) - Kotlin iGaming backend with a hexagonal/CQRS game-domain core, authoritative session and spin lifecycle handling, provider adapter registry, wallet-backed real/bonus balance rules, and useful Android-adjacent live-service architecture patterns despite having no client runtime.
 
 ## tooling-pipeline
 
