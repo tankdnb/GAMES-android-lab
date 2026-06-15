@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-15`, `83` real GitHub research batches are completed end-to-end.
-- `89` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-15`, `84` real GitHub research batches are completed end-to-end.
+- `90` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `74`
+  - `accepted`: `75`
   - `reference-only`: `15`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `Zernikalos/Zernikalos` as an `accepted` multiplatform engine reference whose main reusable value is its Android-first host integration, unified context split, explicit init/disposal architecture, and serialized scene pipeline.
-- The latest accepted addition is `Zernikalos/Zernikalos`.
+- The latest researched addition is `amirroid/mafiauto` as an `accepted` gameplay-systems reference whose main reusable value is its shared Mafia rules engine, explicit phase-state ownership, delayed role resolution, and direct Android product-shell integration.
+- The latest accepted addition is `amirroid/mafiauto`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

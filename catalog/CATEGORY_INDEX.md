@@ -79,6 +79,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Forty-Five](projects/blueuserred-forty-five.md) - wild-west libGDX deckbuilder with timeline-sequenced combat, ONJ-driven screens/content, weighted encounter data, seeded node-map generation, explicit resource borrowing, and a distinctive revolver-slot battle model.
 - [PltCmd](projects/baret-pltcmd.md) - Kotlin/JVM tactics simulation with radio-only order flow, terrain-aware radio and vision propagation, structured military-unit blueprints, deterministic world generation, and a stronger-than-expected tested module split.
 - [Megaman Maverick](projects/johnlavender474-megaman-maverick.md) - Kotlin LibGDX action-platformer with a reusable engine/core split, queue-based entity lifecycle, fixed-step world simulation, room-aware boss or checkpoint flow, controller remapping, and a stronger-than-usual engine test surface, even though the checked-in host is desktop-only and the fan-game assets are not generally reusable.
+- [Mafiauto](projects/amirroid-mafiauto.md) - Kotlin Multiplatform Mafia game assistant with a shared rules engine, explicit phase-state ownership, delayed role-resolution flow, feature-by-feature Compose orchestration, and direct Android product-shell relevance.
 
 ## tooling-pipeline
 
