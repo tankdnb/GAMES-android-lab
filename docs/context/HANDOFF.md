@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eighty-first real research batch is now completed and documented end-to-end.
-- The lab now has 87 researched repositories recorded:
+- The eighty-second real research batch is now completed and documented end-to-end.
+- The lab now has 88 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -95,6 +95,7 @@
   - `inaidE/game-2048` - `reference-only`
   - `MohamedRejeb/Card-Game-Animation` - `reference-only`
   - `AxieFeat/Arc` - `accepted`
+  - `beat-feet/beat-feet` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -102,10 +103,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The short backlog is now exhausted again; `mukeshsolanki/snake-game-android` should remain dropped because the repository is archived, and the shortlist should be refreshed before the next batch.
+- The shortlist is active again with `Zernikalos/Zernikalos`, `amirroid/mafiauto`, and `HighviewOne/PopItBubble` queued behind the newly completed `beat-feet/beat-feet` batch.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-06-15-C` for `beat-feet/beat-feet`.
+- Added durable `Beat Feet` findings for an Android libGDX rhythm-platformer shell, an MP3-to-JSON preprocessing pipeline, feature-driven obstacle generation, visual theming split in `ObstacleBuilder`, and cacheable custom-song ingestion.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works, but `gradlew.bat help --no-daemon` fails in the lab because AGP `7.4.2` now needs Java `11+` while the machine still exposes Java `8`.
+- Promoted `beat-feet/beat-feet` to `accepted` because it preserves both a direct Android gameplay runtime and a reusable audio-to-content pipeline that is unusually valuable for future mobile game experiments.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `82` completed batches, `88` researched repositories, and a `73 accepted / 15 reference-only` split.
 
 - Completed `BATCH-2026-06-15-B` for `AxieFeat/Arc`.
 - Added durable `Arc` findings for a backend-neutral `Application` plus `RenderSystem` surface, shared scene timing ownership, modular backend or extension splits, and compact voxel-demo references such as block raycast stepping and hover AABB rendering.

@@ -104,14 +104,16 @@ Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-E`. The shortlist be
 
 Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-I`. The shortlist below keeps only candidates that passed exact repository-level license verification, are not already listed in `research/registry/RESEARCHED_REPOS.md`, and still look like real Kotlin game or engine repositories after README and metadata screening.
 
-Updated on `2026-06-15` after completing `BATCH-2026-06-15-B`. `mukeshsolanki/snake-game-android` remains dropped because the repository is archived on GitHub, and the short backlog is exhausted again after clearing `AxieFeat/Arc`, so the next run should refresh the shortlist.
+Updated on `2026-06-15` after completing `BATCH-2026-06-15-B`. `mukeshsolanki/snake-game-android` remains dropped because the repository is archived on GitHub.
+
+Refreshed on `2026-06-15` before starting `BATCH-2026-06-15-C`. The shortlist below keeps only candidates with explicit repository-level license metadata, that are not already listed in `research/registry/RESEARCHED_REPOS.md`, and that still look like real Kotlin game or engine repositories after README and metadata screening.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `ellisonchan/ComposeBird` | `android-game` | `3` | `2` | `1` | `2` | `254` | `2023-11-16` | Popular MIT Jetpack Compose Flappy Bird sample with direct Android relevance and a likely reusable loop, input, and Compose animation shell. | `done` | `compose/game refresh + exact repo verification + README screening` |
-| `MohamedRejeb/Card-Game-Animation` | `android-game` | `2` | `2` | `1` | `2` | `164` | `2024-01-08` | Apache-2.0 Compose card-game sample with richer-than-usual animation and pointer-input surface that may yield reusable interaction patterns. | `done` | `compose/game refresh + exact repo verification + README screening` |
-| `mukeshsolanki/snake-game-android` | `android-game` | `3` | `1` | `1` | `2` | `81` | `2023-08-11` | MIT Android Compose snake game with clearer direct gameplay-shell value than the remaining older fallback candidates, but the repository is now archived and should not remain in the active shortlist. | `dropped` | `compose/game refresh + exact repo verification + README screening` |
-| `AxieFeat/Arc` | `engine-framework` | `2` | `0` | `2` | `3` | `1` | `2026-03-26` | Fresh MIT modular Kotlin engine with OpenGL, Vulkan, and extension modules; useful as the compact engine-side counterweight to the Compose-game shortlist. | `done` | `compose/game refresh + exact repo verification + README screening` |
+| `beat-feet/beat-feet` | `android-game` | `3` | `2` | `3` | `3` | `81` | `2026-06-13` | Direct Android rhythm-platformer with stronger current public signal than the low-star alternatives and unusually promising procedural music-to-level-generation value. | `done` | `topic:game updated/stars search + exact repo verification + README screening` |
+| `Zernikalos/Zernikalos` | `engine-framework` | `3` | `1` | `3` | `3` | `2` | `2026-06-10` | Fresh Kotlin Multiplatform 3D engine with explicit Android target, scene graph, asset pipeline, and cross-platform backend claims that make it a strong engine-side follow-up to recent desktop-first passes. | `queued` | `\"game engine\" updated search + exact repo verification + README screening` |
+| `amirroid/mafiauto` | `gameplay-systems` | `2` | `1` | `3` | `2` | `13` | `2026-06-14` | Android Mafia rules assistant with explicit game-engine framing, role automation, phase handling, and direct product-shell value for turn-flow and state-machine research. | `queued` | `topic:game updated search + exact repo verification + README screening` |
+| `HighviewOne/PopItBubble` | `android-game` | `2` | `0` | `3` | `2` | `0` | `2026-06-12` | Direct Android custom-view sensory game with explicit Canvas rendering, generated audio, haptics, tests, and CI; useful as a compact native-shell contrast to the larger game candidates. | `queued` | `\"android game\" updated search + exact repo verification + README screening` |
 
 ## Status Legend
 

@@ -93,6 +93,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Rendering And Graphics
 
+- [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `ObstacleBuilder`, the scrolling camera logic, and the HUD/screen overlays show a compact libGDX rendering stack where abstract obstacle geometry is themed into layered city props and combined with scene overlays instead of being drawn directly.
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - `MinefieldStage` and `AreaActor` show a LibGDX surface embedded into an Android game with custom cell composition.
 - [korge](../findings/korlibs-korge.md) - `GameWindow` and Android-specific window implementations show how KorGE abstracts platform rendering surfaces.
 - [littlektframework-littlekt](../findings/littlektframework-littlekt.md) - WebGPU backend setup and `MutableTextureAtlas` show a clean render boundary plus runtime atlas generation.
@@ -168,6 +169,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Gameplay Systems
 
+- [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `PlatformGameScreen.generateObstacles(...)`, `LevelData`, and the low/mid/high feature bands show a strong audio-driven content-generation pattern where song features are transformed into merged obstacle geometry before visual dressing.
+
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - no-guess generation, solver-backed validation, and board sizing logic are directly reusable gameplay-system patterns.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - the minigame registry and compact per-game state holders are useful for multi-mode or multi-game products.
 - [unciv](../findings/yairm210-unciv.md) - `GameStarter`, `GameInfo.nextTurn`, and the built-in simulation harness show a full-scale turn-based gameplay pipeline with generation, save-state restoration, and multi-actor turn processing.
@@ -219,6 +222,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Input And Controls
 
+- [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `PlatformGameScreen`, the `InputMultiplexer`, and the HUD/gameplay split show a practical libGDX pattern for combining gameplay controls, overlay interaction, and custom-song UI flows inside one Android-oriented screen.
 - [soyuz-dev-kotlingameengine](../findings/soyuz-dev-kotlingameengine.md) - `Input`, `KeyListener`, and `MouseListener` show a tiny singleton input facade that is useful as a compact desktop-host pattern even though it would need adaptation before Android reuse.
 - [axiefeat-arc](../findings/axiefeat-arc.md) - `GlfwInputEngine`, `InputEngine`, and the demo binds show a clear pattern where concrete window callbacks and key-chord handling stay in an input extension layer instead of leaking into the core engine contracts.
 - [inaide-game-2048](../findings/inaide-game-2048.md) - `GameBoard` uses `detectDragGestures` with accumulated offsets and a movement threshold to translate raw swipes directly into grid-game moves.
@@ -364,6 +368,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [icela-friceengine](../findings/icela-friceengine.md) - `Objects.kt`, `FriceGame.dealWithObjects(...)`, and `QuadTree.kt` show a tiny collision/runtime stack built from AABB overlap, optional off-screen auto-GC, and an unused quadtree direction that never graduates into the main loop.
 
 ## Audio
+
+- [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `FFT.kt`, `AudioAnalysis.kt`, `AudioIO.kt`, and `song-extract` preserve the full MP3-to-feature pipeline: PCM decoding, FFT windows, smoothed peak extraction, cached JSON level data, and runtime playback synchronized to generated geometry.
 
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `SoundManager` is a compact reference for procedurally generated Android game audio: synthesized WAV temp assets for `SoundPool`, combo pitch changes, and lightweight `AudioTrack` background music.
 - [candy-crush-clone](../findings/tobsef-candy-crush-clone.md) - `SoundMachine` and `JukeBox` keep sound effects and looping background music as separate small services.
@@ -600,6 +606,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Build, Release, And Testing
 
+- [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - the multi-module Gradle build, dedicated `song-extract` preprocessing task, Android plus desktop targets, and `I18nTests`/`GdxTestRunner` give this repo a stronger workflow story than a typical small libGDX sample even though local `gradlew help` in the lab currently fails at the Java `11+` floor.
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `app/build.gradle.kts`, Kover thresholds, and the `GameEngineTest` or `GameFlowIntegrationTest` or `ProfileRepositoryTest` surface show stronger-than-expected verification discipline for a zero-star Android casual game, even though local Gradle tasks still stop in the lab without a JDK compiler.
 - [ellisonchan-composebird](../findings/ellisonchan-composebird.md) - the single Android app module, checked-in wrapper, AGP `8.1.1`, stale `jcenter()` repository, mixed-era Compose test dependency, and template-only tests show a repo that still configures structurally but is best treated as a lightweight static reference rather than a well-verified Android baseline.
 - [mohamedrejeb-card-game-animation](../findings/mohamedrejeb-card-game-animation.md) - the single Android app module, complete Gradle wrapper, AGP `8.2.0-alpha06`, and template-only tests show a repository that is structurally reproducible but still closer to an interaction demo than to a well-verified Android gameplay baseline; local `gradlew help` in the lab currently fails only because no JDK compiler is available.
