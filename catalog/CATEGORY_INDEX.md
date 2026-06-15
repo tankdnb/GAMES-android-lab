@@ -44,6 +44,8 @@ Use this file to group accepted catalog entries by their normalized categories.
 
 ## engine-framework
 
+- [titanium](projects/digorydoo-titanium.md) - substantial Kotlin/JVM 3D engine-and-game workspace with a host-owned LWJGL runtime, staged scene loading, readable custom collision/rigid-body logic, and first-class asset-import tooling, useful as a strong architecture reference even though the checked-in target is desktop-only.
+
 - [KorGE](projects/korlibs-korge.md) - Kotlin multiplatform engine with scene routing, Android host-view embedding, and frame-aware coroutine scheduling.
 - [LittleKt](projects/littlektframework-littlekt.md) - WebGPU-first Kotlin framework with a callback-driven runtime context, async asset preparation, and signal-based input mapping.
 - [Kubriko](projects/pandulapeter-kubriko.md) - Compose Multiplatform engine with manager/plugin architecture, viewport-aware pointer handling, and modular physics/debug tooling.

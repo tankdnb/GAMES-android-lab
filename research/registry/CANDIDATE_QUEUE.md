@@ -85,6 +85,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-12-A` | `jrenner/kotlin-voxel` | `engine-framework` | `2` | `2` | `1` | `3` | `80` | `2025-11-21` | Apache-2.0 Kotlin voxel engine with stronger public signal than the fresh zero-star alternatives and likely reusable chunk/render/runtime patterns for future Android-adjacent engine work | `done` | `exact-license shortlist refresh + exact repository view verification + candidate comparison` |
 | `BATCH-2026-06-12-B` | `The-JDdev/Heroes-Arena` | `android-game` | `3` | `0` | `3` | `2` | `0` | `2026-06-11` | Very fresh MIT Android MOBA-style game shell with direct platform relevance and likely useful large-product gameplay/runtime structure if it proves to be more than a scaffold | `done` | `carry-over exact-license shortlist execution` |
 | `BATCH-2026-06-12-C` | `DominicDolan/Mechanica` | `engine-framework` | `2` | `0` | `3` | `2` | `0` | `2026-02-26` | MIT 2D OpenGL engine with a manageable footprint and clearer runtime focus than the noisier search results, useful as a compact engine-architecture reserve. | `done` | `topic:game-engine stars/updated search + exact repository view verification` |
+| `BATCH-2026-06-15-K` | `digorydoo/titanium` | `engine-framework` | `3` | `0` | `3` | `3` | `1` | `2026-06-14` | Fresh GPL-3.0 Kotlin/LWJGL engine with a large split between engine, game, bootstrap, and asset-import tooling; selected as the strongest new architecture-first candidate after the previous shortlist was exhausted. | `done` | `refreshed exact-license shortlist + README screening + exact repo verification` |
 
 ## Backlog Candidates
 
@@ -108,16 +109,15 @@ Updated on `2026-06-15` after completing `BATCH-2026-06-15-B`. `mukeshsolanki/sn
 
 Refreshed on `2026-06-15` before starting `BATCH-2026-06-15-C`. The shortlist below keeps only candidates with explicit repository-level license metadata, that are not already listed in `research/registry/RESEARCHED_REPOS.md`, and that still look like real Kotlin game or engine repositories after README and metadata screening.
 
-Updated on `2026-06-15` after completing `BATCH-2026-06-15-F`. The compact shortlist is now exhausted and must be refreshed before the next batch.
+Updated on `2026-06-15` after completing `BATCH-2026-06-15-F`. The compact shortlist from the previous refresh was eventually exhausted.
 
-Refreshed on `2026-06-15` before starting `BATCH-2026-06-15-G`. The shortlist below keeps only candidates with explicit repository-level license metadata, that are not already listed in `research/registry/RESEARCHED_REPOS.md`, and that still look like real Kotlin game or engine repositories after metadata screening.
+Refreshed on `2026-06-15` after completing `BATCH-2026-06-15-J`. The shortlist below keeps only new candidates with explicit repository-level license metadata, that are not already listed in `research/registry/RESEARCHED_REPOS.md`, and that still look like real Kotlin game or engine repositories after metadata and README screening.
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `nekzabirov/IGaming-Game-Engine` | `gameplay-systems` | `2` | `1` | `3` | `3` | `7` | `2026-06-15` | Fresh Apache-2.0 Kotlin/Ktor casino-game engine with stronger current architecture yield than the Android micro-game tail and useful rules, lifecycle, and backend game-flow patterns despite indirect Android relevance. | `done` | `gh search repos --language Kotlin --archived=false \"game engine\" --sort updated + exact repo verification` |
-| `masafykun/GamesHubAndroid` | `android-game` | `2` | `0` | `3` | `2` | `0` | `2026-06-14` | Fresh MIT Android mini-game bundle in Kotlin/Compose; useful if it preserves shared shell, mode routing, or reusable small-game patterns instead of only many shallow screens. | `done` | `gh search repos --language Kotlin --topic android-game --sort updated + exact repo verification` |
-| `HighviewOne/KnowIt` | `android-game` | `2` | `0` | `3` | `2` | `0` | `2026-06-12` | Fresh MIT Android trivia game from the same author as `PopItBubble`, promising as a compact comparison reference for Compose game-shell, scoring, and product-flow patterns. | `done` | `gh search repos --language Kotlin --topic android-game --sort updated + exact repo verification` |
-| `sridharprasath94/Letterly-Android` | `android-game` | `2` | `1` | `3` | `2` | `1` | `2026-06-12` | Fresh MIT Android Wordle-style puzzle candidate with direct platform relevance and likely reusable board/state/input patterns if the implementation is more than a simple screen demo. | `done` | `gh search repos --language Kotlin --topic android-game --sort updated + exact repo verification` |
+| `Koishi-Satori/KStg` | `engine-framework` | `2` | `0` | `1` | `2` | `4` | `2023-10-07` | Apache-2.0 bullet-hell engine with explicit bootstrap, object-pool, and script-driven runtime seams; kept as a niche gameplay-engine wildcard despite older activity. | `queued` | `refreshed exact-license shortlist + README screening + exact repo verification` |
+| `KAMRAN16-byte/Captain-Treasure-Android-Game` | `android-game` | `2` | `0` | `2` | `1` | `0` | `2026-06-04` | MIT Android Compose micro-game with direct platform relevance and a small enough footprint to quickly validate whether it contains reusable state, event, and product-shell patterns beyond a single screen. | `queued` | `refreshed exact-license shortlist + README screening + exact repo verification` |
+| `amirisback/piano-tiles-clone` | `android-game` | `2` | `1` | `1` | `2` | `27` | `2023-04-09` | Apache-2.0 Android rhythm-clone candidate with better public signal than the zero-star tail and likely reusable input, scrolling, or score-loop patterns if the code is more than a thin derivative shell. | `queued` | `refreshed exact-license shortlist + README screening + exact repo verification` |
 
 ## Status Legend
 

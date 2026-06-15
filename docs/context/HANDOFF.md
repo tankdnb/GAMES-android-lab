@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eighty-ninth real research batch is now completed and documented end-to-end.
-- The lab now has 95 researched repositories recorded:
+- The ninetieth real research batch is now completed and documented end-to-end.
+- The lab now has 96 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -103,6 +103,7 @@
   - `masafykun/GamesHubAndroid` - `reference-only`
   - `HighviewOne/KnowIt` - `accepted`
   - `sridharprasath94/Letterly-Android` - `accepted`
+  - `digorydoo/titanium` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -110,10 +111,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The shortlist was refreshed before `BATCH-2026-06-15-G` and is now fully consumed; the next run must refresh it before selecting another candidate.
+- The shortlist was refreshed again after `BATCH-2026-06-15-J`; `Koishi-Satori/KStg`, `KAMRAN16-byte/Captain-Treasure-Android-Game`, and `amirisback/piano-tiles-clone` remain queued after the latest completed batch.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-06-15-K` for `digorydoo/titanium`.
+- Added durable `titanium` findings for its explicit engine/game/host/tool module split, host-owned GLFW loop, staged scene loading, custom collision or rigid-body pipeline, and checked-in asset-import tooling.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works locally, but `gradlew.bat help --no-daemon -Pflavour=development` fails in the lab because Gradle now requires Java `17+` while the machine still exposes Java `8`; fuller reproduction also needs external assets plus sibling `kutils`.
+- Promoted `digorydoo/titanium` to `accepted` because the checked-in repository preserves unusually strong Kotlin engine architecture and tooling depth even though the visible runtime is desktop-only.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `90` completed batches, `96` researched repositories, and a `80 accepted / 16 reference-only` split.
 
 - Completed `BATCH-2026-06-15-J` for `sridharprasath94/Letterly-Android`.
 - Added durable `Letterly-Android` findings for a use-case-driven guess flow, tested Wordle-style duplicate-letter evaluation, Room-backed dictionary handling, mode-scoped save state, and a modern fragment-based Android shell.
