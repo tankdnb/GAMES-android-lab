@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-15`, `87` real GitHub research batches are completed end-to-end.
-- `93` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-15`, `88` real GitHub research batches are completed end-to-end.
+- `94` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `77`
+  - `accepted`: `78`
   - `reference-only`: `16`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `masafykun/GamesHubAndroid` as a `reference-only` Android Compose mini-game bundle whose main reusable value is its many-mini-game app shell, in-memory registry, and compact self-contained micro-game examples rather than a strong shared gameplay core.
-- The latest accepted addition is `nekzabirov/IGaming-Game-Engine`.
+- The latest researched addition is `HighviewOne/KnowIt` as an `accepted` Android Compose trivia product whose main reusable value is its one-`ViewModel` session state, mixed answer-mode scoring flow, and lightweight persistence shell.
+- The latest accepted addition is `HighviewOne/KnowIt`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
