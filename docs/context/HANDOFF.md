@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eighty-second real research batch is now completed and documented end-to-end.
-- The lab now has 88 researched repositories recorded:
+- The eighty-third real research batch is now completed and documented end-to-end.
+- The lab now has 89 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -96,6 +96,7 @@
   - `MohamedRejeb/Card-Game-Animation` - `reference-only`
   - `AxieFeat/Arc` - `accepted`
   - `beat-feet/beat-feet` - `accepted`
+  - `Zernikalos/Zernikalos` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -103,10 +104,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The shortlist is active again with `Zernikalos/Zernikalos`, `amirroid/mafiauto`, and `HighviewOne/PopItBubble` queued behind the newly completed `beat-feet/beat-feet` batch.
+- The compact shortlist now continues with `amirroid/mafiauto` and `HighviewOne/PopItBubble` behind the newly completed `Zernikalos/Zernikalos` batch.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-06-15-D` for `Zernikalos/Zernikalos`.
+- Added durable `Zernikalos` findings for a direct Android `GLSurfaceView` host path, a unified `ZContext` split, callback-driven initialization state handling, scene-graph serialization, backend-specific rendering actuals, and explicit lifecycle/disposal architecture.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works, but `gradlew.bat help --no-daemon` fails in the lab because Gradle `9.4.1` now requires Java `17+` while the machine still exposes Java `8`.
+- Promoted `Zernikalos/Zernikalos` to `accepted` because the checked-in repository already preserves a real multiplatform engine architecture with direct Android relevance rather than only roadmap-level target claims.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `83` completed batches, `89` researched repositories, and a `74 accepted / 15 reference-only` split.
 
 - Completed `BATCH-2026-06-15-C` for `beat-feet/beat-feet`.
 - Added durable `Beat Feet` findings for an Android libGDX rhythm-platformer shell, an MP3-to-JSON preprocessing pipeline, feature-driven obstacle generation, visual theming split in `ObstacleBuilder`, and cacheable custom-song ingestion.

@@ -6,6 +6,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Engine Architecture And Core Loop
 
+- [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - `ZernikalosBase`, `ZContext`, `ZSurfaceViewEventHandlerImpl`, and `ZSceneStateHandler` show one of the cleaner current multiplatform engine shells in the lab: shared engine coordination over platform-specific surfaces, callback-driven init phases, and explicit frame/update routing.
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `GameEngine`, `GameState`, and `DifficultyConfig` show a small Android game that keeps gameplay rules, timer tuning, and progression in a pure state-update core instead of entangling them with Compose.
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - game flow is isolated in `GameController`, with minefield creation split into pure Kotlin and native-backed generators.
 - [korge](../findings/korlibs-korge.md) - `SceneContainer` and `Stage` show a reusable scene-graph runtime with transitions, history, and dependency injection.
@@ -93,6 +94,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Rendering And Graphics
 
+- [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - `ZScene`, `ZViewport`, `ZModel`, and the backend-specific `ZRenderer`/component-renderer actuals show a scene-graph-driven 3D rendering stack where viewport ownership, shader generation, mesh/material setup, and backend execution are deliberately separated.
 - [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `ObstacleBuilder`, the scrolling camera logic, and the HUD/screen overlays show a compact libGDX rendering stack where abstract obstacle geometry is themed into layered city props and combined with scene overlays instead of being drawn directly.
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - `MinefieldStage` and `AreaActor` show a LibGDX surface embedded into an Android game with custom cell composition.
 - [korge](../findings/korlibs-korge.md) - `GameWindow` and Android-specific window implementations show how KorGE abstracts platform rendering surfaces.
@@ -222,6 +224,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Input And Controls
 
+- [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - `ZContext.eventQueue`, `ZInputState`, `ZAndroidSurfaceView`, and `AndroidTouchEventConverter` show a strong mobile-friendly pattern where native input is queued from the platform surface and processed synchronously during the frame update phase.
 - [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `PlatformGameScreen`, the `InputMultiplexer`, and the HUD/gameplay split show a practical libGDX pattern for combining gameplay controls, overlay interaction, and custom-song UI flows inside one Android-oriented screen.
 - [soyuz-dev-kotlingameengine](../findings/soyuz-dev-kotlingameengine.md) - `Input`, `KeyListener`, and `MouseListener` show a tiny singleton input facade that is useful as a compact desktop-host pattern even though it would need adaptation before Android reuse.
 - [axiefeat-arc](../findings/axiefeat-arc.md) - `GlfwInputEngine`, `InputEngine`, and the demo binds show a clear pattern where concrete window callbacks and key-chord handling stay in an input extension layer instead of leaking into the core engine contracts.
@@ -509,6 +512,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Android Platform Integration
 
+- [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - `androidMain` `Zernikalos`, `ZAndroidSurfaceView`, `ZernikalosView`, and `AndroidNativeRenderer` show a direct Android engine-host seam built around `GLSurfaceView`, EGL context preservation, touch conversion, and native-callback forwarding into the shared engine lifecycle.
 - [inaide-game-2048](../findings/inaide-game-2048.md) - `MainActivity`, `GameScreen`, and the single `app` module show a very direct Android Compose casual-game shell with adaptive board sizing and a restart overlay, but also illustrate the limits of keeping all logic in one entry file.
 - [ellisonchan-composebird](../findings/ellisonchan-composebird.md) - `MainActivity`, `GameScreen`, `ScoreBoard`, and `SplashScreenController` show a compact Android game shell with edge-to-edge setup, a Compose-only playfield, overlay-driven game-over UI, and custom Android 12 splash exit choreography.
 
@@ -606,6 +610,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Build, Release, And Testing
 
+- [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - the repo combines a modern KMP engine build surface, custom `buildLogic`, GitHub Packages publishing, generated version files, architecture docs, and a meaningful `commonTest` set around math, animation, lenses, and disposal lifecycle, even though local Gradle discovery in the lab stops at the Java `17+` floor.
 - [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - the multi-module Gradle build, dedicated `song-extract` preprocessing task, Android plus desktop targets, and `I18nTests`/`GdxTestRunner` give this repo a stronger workflow story than a typical small libGDX sample even though local `gradlew help` in the lab currently fails at the Java `11+` floor.
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `app/build.gradle.kts`, Kover thresholds, and the `GameEngineTest` or `GameFlowIntegrationTest` or `ProfileRepositoryTest` surface show stronger-than-expected verification discipline for a zero-star Android casual game, even though local Gradle tasks still stop in the lab without a JDK compiler.
 - [ellisonchan-composebird](../findings/ellisonchan-composebird.md) - the single Android app module, checked-in wrapper, AGP `8.1.1`, stale `jcenter()` repository, mixed-era Compose test dependency, and template-only tests show a repo that still configures structurally but is best treated as a lightweight static reference rather than a well-verified Android baseline.

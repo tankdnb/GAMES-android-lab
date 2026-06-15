@@ -66,6 +66,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Mechanica](projects/dominicdolan-mechanica.md) - compact Kotlin/LWJGL 2D engine with a scene manager, fixed-step delta calculator, explicit GLFW host/runtime split, shader-backed path rendering, UI adapter seams, and a small but real lifecycle test surface.
 - [KotlinGameEngine](projects/soyuz-dev-kotlingameengine.md) - compact Kotlin/LWJGL 2D engine with a fixed-step runtime, callback-driven entities, SAT plus closest-point collision logic, staged CCD/impulse/joint physics, and a useful low-level test surface despite its desktop-only host shell.
 - [Arc](projects/axiefeat-arc.md) - modular Kotlin engine workspace with a backend-neutral core API, shared scene timing layer, OpenGL or OpenGLES or Vulkan backend split, extension-first subsystem registration, and a compact voxel-style demo stack that is desktop-first today but still useful as an Android-adjacent architecture reference.
+- [Zernikalos](projects/zernikalos-zernikalos.md) - Kotlin-first multiplatform 3D engine with direct Android `GLSurfaceView` integration, shared scene/runtime context, scene-graph serialization, backend-specific OpenGL/Metal/WebGPU actuals, and unusually explicit initialization/disposal architecture.
 
 ## rendering-demo
 

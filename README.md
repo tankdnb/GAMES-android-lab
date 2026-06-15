@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-15`, `82` real GitHub research batches are completed end-to-end.
-- `88` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-15`, `83` real GitHub research batches are completed end-to-end.
+- `89` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `73`
+  - `accepted`: `74`
   - `reference-only`: `15`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `beat-feet/beat-feet` as an `accepted` Android rhythm-platformer reference whose main reusable value is its MP3-to-level preprocessing pipeline, procedural obstacle generation, and custom-song ingestion flow.
-- The latest accepted addition is `beat-feet/beat-feet`.
+- The latest researched addition is `Zernikalos/Zernikalos` as an `accepted` multiplatform engine reference whose main reusable value is its Android-first host integration, unified context split, explicit init/disposal architecture, and serialized scene pipeline.
+- The latest accepted addition is `Zernikalos/Zernikalos`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
