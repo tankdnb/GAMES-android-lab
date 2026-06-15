@@ -10,7 +10,7 @@
 
 ## Next Recommended
 
-- Next batch should either take the remaining viable shortlist candidate `AxieFeat/Arc` or refresh the shortlist first; `mukeshsolanki/snake-game-android` is now archived and should stay dropped.
+- `AxieFeat/Arc` is now cleared; the next batch should refresh the shortlist before selecting another candidate.
 - If `qorrnsmj/smf` needs a future follow-up, keep it narrow: revisit only the fixed-step loop, the `Scene` plus `MasterRenderer` split, the audio source-pool service, or the simple collision ownership rules instead of reopening the whole repository broadly.
 - If `robmat/arrows_game` needs a future follow-up, revisit it only in a JDK `17+` plus Android SDK-ready environment and keep the scope narrow: the solvability checker, shaped-board generator, Compose board renderer, or restart/resume persistence shell.
 - If `AndreasHefti/flyko-lib` needs a future follow-up, revisit it only in an environment with writable Gradle and Konan homes and keep the scope narrow: shared runtime lifecycle, the view/render-target pipeline, the contact system, or the Tiled-loading seam.

@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eightieth real research batch is now completed and documented end-to-end.
-- The lab now has 86 researched repositories recorded:
+- The eighty-first real research batch is now completed and documented end-to-end.
+- The lab now has 87 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -94,6 +94,7 @@
   - `soyuz-dev/KotlinGameEngine` - `accepted`
   - `inaidE/game-2048` - `reference-only`
   - `MohamedRejeb/Card-Game-Animation` - `reference-only`
+  - `AxieFeat/Arc` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -101,10 +102,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The short backlog now effectively contains only `AxieFeat/Arc`; `mukeshsolanki/snake-game-android` should remain dropped because the repository is archived, and the shortlist should be refreshed again soon.
+- The short backlog is now exhausted again; `mukeshsolanki/snake-game-android` should remain dropped because the repository is archived, and the shortlist should be refreshed before the next batch.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-06-15-B` for `AxieFeat/Arc`.
+- Added durable `Arc` findings for a backend-neutral `Application` plus `RenderSystem` surface, shared scene timing ownership, modular backend or extension splits, and compact voxel-demo references such as block raycast stepping and hover AABB rendering.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works, but `gradlew.bat help --no-daemon` fails in the lab because the machine still exposes only Java `8` without a JDK compiler while the repository expects Java `21`.
+- Promoted `AxieFeat/Arc` to `accepted` because the checked-in architecture is materially reusable even though Android relevance is indirect, the visible host stack is desktop-first, and the Vulkan backend is still incomplete.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `81` completed batches, `87` researched repositories, and a `72 accepted / 15 reference-only` split.
 
 - Completed `BATCH-2026-06-15-A` for `MohamedRejeb/Card-Game-Animation`.
 - Added durable `Card-Game-Animation` findings for layered per-card Compose transforms, drag-to-target drop motion based on measured offsets, and the split between one-card drag gestures and whole-hand spread control.
