@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The eighty-eighth real research batch is now completed and documented end-to-end.
-- The lab now has 94 researched repositories recorded:
+- The eighty-ninth real research batch is now completed and documented end-to-end.
+- The lab now has 95 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -102,6 +102,7 @@
   - `nekzabirov/IGaming-Game-Engine` - `accepted`
   - `masafykun/GamesHubAndroid` - `reference-only`
   - `HighviewOne/KnowIt` - `accepted`
+  - `sridharprasath94/Letterly-Android` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -109,10 +110,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The shortlist was refreshed before `BATCH-2026-06-15-G`; the remaining queued candidate is `sridharprasath94/Letterly-Android`.
+- The shortlist was refreshed before `BATCH-2026-06-15-G` and is now fully consumed; the next run must refresh it before selecting another candidate.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-06-15-J` for `sridharprasath94/Letterly-Android`.
+- Added durable `Letterly-Android` findings for a use-case-driven guess flow, tested Wordle-style duplicate-letter evaluation, Room-backed dictionary handling, mode-scoped save state, and a modern fragment-based Android shell.
+- Verified the current build caveat for this batch: `gradlew.bat help --no-daemon` succeeds locally, while unit-test dry-run stops only because the lab has no Android SDK configured.
+- Promoted `sridharprasath94/Letterly-Android` to `accepted` because the checked-in repository preserves real domain boundaries and tested puzzle logic rather than only a thin Wordle-style UI clone.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `89` completed batches, `95` researched repositories, and a `79 accepted / 16 reference-only` split.
 
 - Completed `BATCH-2026-06-15-I` for `HighviewOne/KnowIt`.
 - Added durable `KnowIt` findings for a one-`ViewModel` Compose session shell, mixed multiple-choice and type-in answer handling, streak scoring, DataStore-backed best-score persistence, and focused JVM gameplay-state tests.
@@ -602,8 +609,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue from the current queued shortlist before doing another broad refresh: `sridharprasath94/Letterly-Android`.
-- Once that shortlist is exhausted, refresh it again instead of carrying an empty or stale queue forward.
+- Refresh the shortlist before the next batch instead of carrying an empty or stale queue forward.
 - If a future follow-up is needed for `icela/FriceEngine`, keep it narrow: isolate the shared Swing/JavaFX drawer seam, the buffered layer mutation model, the small event/timer helpers, or the resource-cache utilities instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Saar25/PlanetEngine`, decide first whether the target should be default `master` or the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input layer instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `mimoguz/tripeaks-gdx`, rerun Android or desktop tasks in a JDK `17+` plus Android SDK-ready environment, or isolate the layout-graph rules core, the JSON persistence plus migration seam, or the viewport and blurred-render split instead of reopening the whole repository blindly.

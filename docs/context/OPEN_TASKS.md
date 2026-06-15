@@ -6,12 +6,11 @@
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
-- Keep the refreshed shortlist compact and consume it before doing another broad discovery pass.
+- The current shortlist is exhausted; refresh it before the next research batch.
 
 ## Next Recommended
 
-- Continue the current shortlist in order unless repository state changes: `sridharprasath94/Letterly-Android`.
-- Build a new shortlist of up to four explicit-license Kotlin game/game-engine repositories only after the current compact queue is exhausted.
+- Build a new shortlist of up to four explicit-license Kotlin game/game-engine repositories before the next batch.
 - If `qorrnsmj/smf` needs a future follow-up, keep it narrow: revisit only the fixed-step loop, the `Scene` plus `MasterRenderer` split, the audio source-pool service, or the simple collision ownership rules instead of reopening the whole repository broadly.
 - If `robmat/arrows_game` needs a future follow-up, revisit it only in a JDK `17+` plus Android SDK-ready environment and keep the scope narrow: the solvability checker, shaped-board generator, Compose board renderer, or restart/resume persistence shell.
 - If `AndreasHefti/flyko-lib` needs a future follow-up, revisit it only in an environment with writable Gradle and Konan homes and keep the scope narrow: shared runtime lifecycle, the view/render-target pipeline, the contact system, or the Tiled-loading seam.

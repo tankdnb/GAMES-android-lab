@@ -40,6 +40,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Literature](projects/ajaychandran11-literature.md) - Kotlin Multiplatform card-game product with a shared rules engine, event-inference bots, an authoritative Ktor room server, reconnect-aware Compose client state, and direct Android relevance despite its zero-star public signal.
 - [PopItBubble](projects/highviewone-popitbubble.md) - compact Android sensory/fidget game with a custom `Canvas` `View`, cached 3D bubble gradients, multi-pointer drag-to-pop input, generated `SoundPool` effects, lightweight challenge persistence, and a better-than-average tiny-game test/CI surface.
 - [KnowIt](projects/highviewone-knowit.md) - compact Android trivia game with a Compose-only shell, one `StateFlow`-backed session `ViewModel`, mixed multiple-choice and type-in answer handling, streak scoring, DataStore-backed best-score persistence, and focused gameplay-state tests.
+- [Letterly Android](projects/sridharprasath94-letterly-android.md) - Android Wordle-style puzzle product with explicit `data`/`domain`/`presentation` layering, a use-case-driven guess flow, tested duplicate-letter evaluation, mode-scoped save state, Room dictionary handling, and a modern fragment-based shell.
 
 ## engine-framework
 

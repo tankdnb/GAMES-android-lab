@@ -14,15 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-15`, `88` real GitHub research batches are completed end-to-end.
-- `94` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-15`, `89` real GitHub research batches are completed end-to-end.
+- `95` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `78`
+  - `accepted`: `79`
   - `reference-only`: `16`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `HighviewOne/KnowIt` as an `accepted` Android Compose trivia product whose main reusable value is its one-`ViewModel` session state, mixed answer-mode scoring flow, and lightweight persistence shell.
-- The latest accepted addition is `HighviewOne/KnowIt`.
+- The latest researched addition is `sridharprasath94/Letterly-Android` as an `accepted` Android word-puzzle product whose main reusable value is its use-case-driven guess flow, tested Wordle-style evaluation, Room dictionary handling, and mode-scoped save state.
+- The latest accepted addition is `sridharprasath94/Letterly-Android`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
