@@ -10,7 +10,7 @@
 
 ## Next Recommended
 
-- Continue the current shortlist in order unless repository state changes: `masafykun/GamesHubAndroid`, `HighviewOne/KnowIt`, then `sridharprasath94/Letterly-Android`.
+- Continue the current shortlist in order unless repository state changes: `HighviewOne/KnowIt`, then `sridharprasath94/Letterly-Android`.
 - Build a new shortlist of up to four explicit-license Kotlin game/game-engine repositories only after the current compact queue is exhausted.
 - If `qorrnsmj/smf` needs a future follow-up, keep it narrow: revisit only the fixed-step loop, the `Scene` plus `MasterRenderer` split, the audio source-pool service, or the simple collision ownership rules instead of reopening the whole repository broadly.
 - If `robmat/arrows_game` needs a future follow-up, revisit it only in a JDK `17+` plus Android SDK-ready environment and keep the scope narrow: the solvability checker, shaped-board generator, Compose board renderer, or restart/resume persistence shell.
