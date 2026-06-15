@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The seventy-ninth real research batch is now completed and documented end-to-end.
-- The lab now has 85 researched repositories recorded:
+- The eightieth real research batch is now completed and documented end-to-end.
+- The lab now has 86 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -93,6 +93,7 @@
   - `JohnLavender474/Megaman-Maverick` - `accepted`
   - `soyuz-dev/KotlinGameEngine` - `accepted`
   - `inaidE/game-2048` - `reference-only`
+  - `MohamedRejeb/Card-Game-Animation` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -100,16 +101,17 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The short backlog has been refreshed and now contains `MohamedRejeb/Card-Game-Animation`, `mukeshsolanki/snake-game-android`, and `AxieFeat/Arc` behind the completed `ComposeBird` pass.
+- The short backlog now effectively contains only `AxieFeat/Arc`; `mukeshsolanki/snake-game-android` should remain dropped because the repository is archived, and the shortlist should be refreshed again soon.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
 
-- Refreshed the exact-license shortlist and completed `BATCH-2026-06-12-I` for `ellisonchan/ComposeBird`.
-- Added durable `ComposeBird` findings for a coroutine-driven `LaunchedEffect` tick loop, `GameViewModel`-centered action dispatch, direct Compose touch-to-flap input, offset-based scenery recycling, and custom splash-screen exit choreography.
-- Verified the current build caveat for this batch: `gradlew.bat --version` works after redirecting `GRADLE_USER_HOME`, but `gradlew.bat help --no-daemon` fails in the lab because AGP `8.1.1` resolves as a Java `11` plugin while the machine still exposes Java `8`.
-- Kept `ellisonchan/ComposeBird` as `reference-only` because collision and some state transitions remain UI-coupled, the best score is not persisted, and the visible test surface is still template-only.
-- Refreshed the public and internal snapshot counts again so the repository now consistently reports `79` completed batches, `85` researched repositories, and a `71 accepted / 14 reference-only` split.
+- Completed `BATCH-2026-06-15-A` for `MohamedRejeb/Card-Game-Animation`.
+- Added durable `Card-Game-Animation` findings for layered per-card Compose transforms, drag-to-target drop motion based on measured offsets, and the split between one-card drag gestures and whole-hand spread control.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works after redirecting `GRADLE_USER_HOME`, but `gradlew.bat help --no-daemon` fails in the lab because the machine still exposes only a Java `8` runtime without JDK compiler tools.
+- Kept `MohamedRejeb/Card-Game-Animation` as `reference-only` because it is primarily an interaction prototype, has template-only tests, and does not expose a broader reusable gameplay-core architecture.
+- Dropped `mukeshsolanki/snake-game-android` from the active shortlist after re-verification showed the repository is archived on GitHub.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `80` completed batches, `86` researched repositories, and a `71 accepted / 15 reference-only` split.
 
 - Completed `BATCH-2026-06-12-A` as a voxel-engine pass for `jrenner/kotlin-voxel`.
 - Added durable `kotlin-voxel` findings for background frustum/range-based chunk discovery, nearest-first main-thread chunk realization, hidden-face mesh baking, debug HUD instrumentation, and meaningful chunk/world regression tests.

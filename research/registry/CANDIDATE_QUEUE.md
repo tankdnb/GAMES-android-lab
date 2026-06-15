@@ -104,11 +104,13 @@ Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-E`. The shortlist be
 
 Refreshed on `2026-06-12` before starting `BATCH-2026-06-12-I`. The shortlist below keeps only candidates that passed exact repository-level license verification, are not already listed in `research/registry/RESEARCHED_REPOS.md`, and still look like real Kotlin game or engine repositories after README and metadata screening.
 
+Updated on `2026-06-15` after completing `BATCH-2026-06-15-A`. `mukeshsolanki/snake-game-android` was dropped from the active shortlist because the repository is now archived on GitHub, so the next run should either take `AxieFeat/Arc` or refresh the shortlist.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
 | `ellisonchan/ComposeBird` | `android-game` | `3` | `2` | `1` | `2` | `254` | `2023-11-16` | Popular MIT Jetpack Compose Flappy Bird sample with direct Android relevance and a likely reusable loop, input, and Compose animation shell. | `done` | `compose/game refresh + exact repo verification + README screening` |
-| `MohamedRejeb/Card-Game-Animation` | `android-game` | `2` | `2` | `1` | `2` | `164` | `2024-01-08` | Apache-2.0 Compose card-game sample with richer-than-usual animation and pointer-input surface that may yield reusable interaction patterns. | `queued` | `compose/game refresh + exact repo verification + README screening` |
-| `mukeshsolanki/snake-game-android` | `android-game` | `3` | `1` | `1` | `2` | `81` | `2023-08-11` | MIT Android Compose snake game with clearer direct gameplay-shell value than the remaining older fallback candidates. | `queued` | `compose/game refresh + exact repo verification + README screening` |
+| `MohamedRejeb/Card-Game-Animation` | `android-game` | `2` | `2` | `1` | `2` | `164` | `2024-01-08` | Apache-2.0 Compose card-game sample with richer-than-usual animation and pointer-input surface that may yield reusable interaction patterns. | `done` | `compose/game refresh + exact repo verification + README screening` |
+| `mukeshsolanki/snake-game-android` | `android-game` | `3` | `1` | `1` | `2` | `81` | `2023-08-11` | MIT Android Compose snake game with clearer direct gameplay-shell value than the remaining older fallback candidates, but the repository is now archived and should not remain in the active shortlist. | `dropped` | `compose/game refresh + exact repo verification + README screening` |
 | `AxieFeat/Arc` | `engine-framework` | `2` | `0` | `2` | `3` | `1` | `2026-03-26` | Fresh MIT modular Kotlin engine with OpenGL, Vulkan, and extension modules; useful as the compact engine-side counterweight to the Compose-game shortlist. | `queued` | `compose/game refresh + exact repo verification + README screening` |
 
 ## Status Legend

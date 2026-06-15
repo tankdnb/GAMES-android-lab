@@ -14,14 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-12`, `79` real GitHub research batches are completed end-to-end.
-- `85` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-06-15`, `80` real GitHub research batches are completed end-to-end.
+- `86` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `71`
-  - `reference-only`: `14`
+  - `reference-only`: `15`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `ellisonchan/ComposeBird` as a `reference-only` Android Compose Flappy Bird sample whose main reusable value is its coroutine-driven tick loop, direct tap handling, offset-based scenery recycling, and custom splash-screen animation.
+- The latest researched addition is `MohamedRejeb/Card-Game-Animation` as a `reference-only` Android Compose card-interaction sample whose main reusable value is its layered card transforms, drag-to-target drop animation, and split hand-spread versus card-drag gestures.
 - The latest accepted addition is `soyuz-dev/KotlinGameEngine`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
