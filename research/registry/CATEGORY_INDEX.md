@@ -184,6 +184,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Gameplay Systems
 
+- [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `MainActivity.kt` implements a tiny risk/reward loop where direction buttons randomly grant treasure or cause storm damage, with a repair action that trades treasure for HP.
+
 - [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `PlatformGameScreen.generateObstacles(...)`, `LevelData`, and the low/mid/high feature bands show a strong audio-driven content-generation pattern where song features are transformed into merged obstacle geometry before visual dressing.
 
 - [antimine-android](../findings/lucasnlm-antimine-android.md) - no-guess generation, solver-backed validation, and board sizing logic are directly reusable gameplay-system patterns.
@@ -237,6 +239,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [johnlavender474-megaman-maverick](../findings/johnlavender474-megaman-maverick.md) - `MegaLevelScreen`, `CameraManagerForRooms`, `PlayerSpawnEventHandler`, `BossSpawnEventHandler`, and the Tiled layer builders show strong action-platformer flow patterns around room transitions, boss intros, checkpoints, and map-authored events.
 
 ## Input And Controls
+
+- [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `Captain_Treasure()` uses a simple cardinal button grid plus repair/reset actions, making it useful as a tiny Compose input baseline and as a caution against direct UI-owned mutation in larger games.
 
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `InputAccessor.kt`, `InputManager.kt`, and `InputManagerImpl.kt` show a practical unified keyboard/gamepad access layer with synthesized joystick vectors, mode switching on first active device input, and engine-side action accessors instead of raw GLFW checks spread through gameplay code.
 - [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `KeyBinds.kt`, `KeyBindEvent.kt`, `ReplayPlayer.kt`, and the sample `Test.kt` show a small global key-state model with object-bound events, generic binds, forced key states, and replay input barriers.
@@ -313,6 +317,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [highviewone-popitbubble](../findings/highviewone-popitbubble.md) - `MainActivity`, `SettingsActivity`, and the menu/challenge bar flow show a tidy tiny-game Android shell with timer UI, reset flow, theme/grid switches, and settings separated from the playfield view.
 
 ## UI, HUD, And Menus
+
+- [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - the one-screen Compose UI displays treasure, HP, direction, event, and game-over state directly from `remember` state holders with no navigation or view-model layer.
 
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `MainActivity` shows a real Compose-only Android game shell with menu, settings, gameplay, and game-over flows, while also serving as a caution about letting one activity absorb too much orchestration logic.
 - [masafykun-gameshubandroid](../findings/masafykun-gameshubandroid.md) - `GamesHubApp.kt` and `GameDetailScreen.kt` show a Compose-first Android catalog shell with featured sections, in-memory search, and per-game routing that is useful for demo-hub or multi-mini-game product shells even though the implementation is still heavily hardcoded.
@@ -544,6 +550,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Android Platform Integration
 
+- [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `MainActivity`, `AndroidManifest.xml`, and `app/build.gradle.kts` show a minimal direct Android Compose app on SDK `35`, with no persistence, lifecycle, audio, haptic, or service integrations beyond the launcher activity.
+
 - [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - `androidMain` `Zernikalos`, `ZAndroidSurfaceView`, `ZernikalosView`, and `AndroidNativeRenderer` show a direct Android engine-host seam built around `GLSurfaceView`, EGL context preservation, touch conversion, and native-callback forwarding into the shared engine lifecycle.
 - [inaide-game-2048](../findings/inaide-game-2048.md) - `MainActivity`, `GameScreen`, and the single `app` module show a very direct Android Compose casual-game shell with adaptive board sizing and a restart overlay, but also illustrate the limits of keeping all logic in one entry file.
 - [ellisonchan-composebird](../findings/ellisonchan-composebird.md) - `MainActivity`, `GameScreen`, `ScoreBoard`, and `SplashScreenController` show a compact Android game shell with edge-to-edge setup, a Compose-only playfield, overlay-driven game-over UI, and custom Android 12 splash exit choreography.
@@ -642,6 +650,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `HashLifeAlgorithm`, `TemporalGameOfLifeState`, and the AGSL or SKSL or OpenGL cell renderers show a practical simulation-performance posture built around memoized macro-cell evolution, no-extra-buffer ticking, and GPU-shaped cell visuals instead of per-cell UI drawing.
 
 ## Build, Release, And Testing
+
+- [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `gradlew.bat --version` works with Gradle `8.2`, but `gradlew.bat help --no-daemon` fails locally because AGP `8.2.0-rc01` requires Java `11+` while the lab exposes Java `8`; only template tests were found.
 
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `settings.gradle.kts`, `build.gradle.kts`, `gradle/libs.versions.toml`, `tool-import-asset`, and the `23`-file engine test surface show a serious Kotlin engine workflow with staged code generation, first-class asset tooling, and meaningful low-level tests, even though local Gradle discovery in the lab still stops at the Java `17+` floor and fuller runtime reproduction needs external assets plus sibling `kutils`.
 - [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `build.gradle.kts`, `settings.gradle.kts`, `gradle-wrapper.properties`, and the `CrashHandler` subproject show an older but locally reproducible JVM build surface: `gradlew.bat --version`, `gradlew.bat help --no-daemon`, and `gradlew.bat test --dry-run --no-daemon` all succeeded under Java `8`, though much of `src/test` is sample/demo code rather than strong regression coverage.

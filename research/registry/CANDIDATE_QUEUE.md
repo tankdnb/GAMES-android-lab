@@ -87,6 +87,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-12-C` | `DominicDolan/Mechanica` | `engine-framework` | `2` | `0` | `3` | `2` | `0` | `2026-02-26` | MIT 2D OpenGL engine with a manageable footprint and clearer runtime focus than the noisier search results, useful as a compact engine-architecture reserve. | `done` | `topic:game-engine stars/updated search + exact repository view verification` |
 | `BATCH-2026-06-15-K` | `digorydoo/titanium` | `engine-framework` | `3` | `0` | `3` | `3` | `1` | `2026-06-14` | Fresh GPL-3.0 Kotlin/LWJGL engine with a large split between engine, game, bootstrap, and asset-import tooling; selected as the strongest new architecture-first candidate after the previous shortlist was exhausted. | `done` | `refreshed exact-license shortlist + README screening + exact repo verification` |
 | `BATCH-2026-07-10-A` | `Koishi-Satori/KStg` | `engine-framework` | `2` | `0` | `1` | `2` | `4` | `2023-10-07` | Apache-2.0 bullet-hell engine with explicit bootstrap, object-pool, script-driven runtime seams, and useful subchunk collision ideas; selected as the strongest remaining queued engine wildcard. | `done` | `carry-over exact-license shortlist execution + exact repo verification` |
+| `BATCH-2026-07-10-B` | `KAMRAN16-byte/Captain-Treasure-Android-Game` | `android-game` | `2` | `0` | `2` | `1` | `0` | `2026-06-04` | MIT Android Compose micro-game with direct platform relevance and a small enough footprint to validate quickly as a reference-only baseline. | `done` | `carry-over exact-license shortlist execution + exact repo verification` |
 
 ## Backlog Candidates
 
@@ -116,7 +117,6 @@ Refreshed on `2026-06-15` after completing `BATCH-2026-06-15-J`. The shortlist b
 
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `KAMRAN16-byte/Captain-Treasure-Android-Game` | `android-game` | `2` | `0` | `2` | `1` | `0` | `2026-06-04` | MIT Android Compose micro-game with direct platform relevance and a small enough footprint to quickly validate whether it contains reusable state, event, and product-shell patterns beyond a single screen. | `queued` | `refreshed exact-license shortlist + README screening + exact repo verification` |
 | `amirisback/piano-tiles-clone` | `android-game` | `2` | `1` | `1` | `2` | `27` | `2023-04-09` | Apache-2.0 Android rhythm-clone candidate with better public signal than the zero-star tail and likely reusable input, scrolling, or score-loop patterns if the code is more than a thin derivative shell. | `queued` | `refreshed exact-license shortlist + README screening + exact repo verification` |
 
 ## Status Legend

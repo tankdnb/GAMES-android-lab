@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The ninety-first real research batch is now completed and documented end-to-end.
-- The lab now has 97 researched repositories recorded:
+- The ninety-second real research batch is now completed and documented end-to-end.
+- The lab now has 98 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -105,6 +105,7 @@
   - `sridharprasath94/Letterly-Android` - `accepted`
   - `digorydoo/titanium` - `accepted`
   - `Koishi-Satori/KStg` - `reference-only`
+  - `KAMRAN16-byte/Captain-Treasure-Android-Game` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -112,10 +113,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The shortlist was refreshed again after `BATCH-2026-06-15-J`; `KAMRAN16-byte/Captain-Treasure-Android-Game` and `amirisback/piano-tiles-clone` remain queued after the latest completed batch.
+- The shortlist was refreshed again after `BATCH-2026-06-15-J`; `amirisback/piano-tiles-clone` remains queued after the latest completed batch.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-07-10-B` for `KAMRAN16-byte/Captain-Treasure-Android-Game`.
+- Added durable `Captain Treasure Android Game` findings for its minimal Compose shell, button-driven direction/event loop, treasure and HP state, repair/reset flow, and template-only verification surface.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works locally with Gradle `8.2`, but `gradlew.bat help --no-daemon` fails because AGP `8.2.0-rc01` needs Java `11+` while the lab exposes Java `8`.
+- Classified `KAMRAN16-byte/Captain-Treasure-Android-Game` as `reference-only` because it is a direct Android Compose micro-game but all meaningful logic is concentrated in one file, state is UI-owned, randomness is not injectable, and only template tests are present.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `92` completed batches, `98` researched repositories, and a `80 accepted / 18 reference-only` split.
 
 - Completed `BATCH-2026-07-10-A` for `Koishi-Satori/KStg`.
 - Added durable `KStg` findings for its fluent bootstrapper, scheduled engine systems, object pools, Java2D buffered renderer, script-loaded textures/audio, subchunk bullet-collision filtering, replay recorder, plugin jar loader, and desktop crash-handler pattern.
@@ -623,8 +630,9 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue the remaining queued shortlist from `KAMRAN16-byte/Captain-Treasure-Android-Game` and `amirisback/piano-tiles-clone` before refreshing again.
+- Continue the remaining queued shortlist from `amirisback/piano-tiles-clone` before refreshing again.
 - If a future follow-up is needed for `Koishi-Satori/KStg`, keep it narrow around subchunk bullet-collision filtering, resource scripts, replay recording, or Java2D-to-Android adaptation rather than reopening the whole desktop/Swing runtime blindly.
+- If a future follow-up is needed for `KAMRAN16-byte/Captain-Treasure-Android-Game`, keep it narrow around a minimal Compose micro-game teaching sample or one-file state-management cautionary example rather than reopening it for architecture research.
 - If a future follow-up is needed for `icela/FriceEngine`, keep it narrow: isolate the shared Swing/JavaFX drawer seam, the buffered layer mutation model, the small event/timer helpers, or the resource-cache utilities instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `Saar25/PlanetEngine`, decide first whether the target should be default `master` or the fresher `dev` branch, then rerun Maven tasks in a Java `11+` environment with Maven installed, or isolate the annotation-driven renderer helpers, the deferred pass stack, or the retained GUI/input layer instead of reopening the whole repository blindly.
 - If a future follow-up is needed for `mimoguz/tripeaks-gdx`, rerun Android or desktop tasks in a JDK `17+` plus Android SDK-ready environment, or isolate the layout-graph rules core, the JSON persistence plus migration seam, or the viewport and blurred-render split instead of reopening the whole repository blindly.
