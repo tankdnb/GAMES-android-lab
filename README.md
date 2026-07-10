@@ -14,14 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-06-15`, `90` real GitHub research batches are completed end-to-end.
-- `96` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-07-10`, `91` real GitHub research batches are completed end-to-end.
+- `97` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `80`
-  - `reference-only`: `16`
+  - `reference-only`: `17`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `digorydoo/titanium` as an `accepted` Kotlin/JVM engine workspace whose main reusable value is its strict engine/game/host/tool split, staged scene loading, custom collision pipeline, and first-class asset-import tooling.
+- The latest researched addition is `Koishi-Satori/KStg` as a `reference-only` desktop JVM/Kotlin STG engine whose main reusable value is its fluent bootstrapper, scheduled engine systems, script-loaded assets, subchunk bullet-collision filtering, replay recorder, and plugin-loader seams.
 - The latest accepted addition is `digorydoo/titanium`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 

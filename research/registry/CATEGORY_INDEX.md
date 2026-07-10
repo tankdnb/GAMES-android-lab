@@ -7,6 +7,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 ## Engine Architecture And Core Loop
 
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `App.kt`, `AppImpl.kt`, `Main.kt`, `SceneLoader.kt`, and `ActiveSceneContent.kt` show a strong engine/game/host/tool split with a host-owned GLFW loop, staged scene loading, layered active-scene ownership, and explicit separation between pure engine code and platform GL glue.
+- [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `Bootstrapper.kt`, `Threads.kt`, `GameLoop.kt`, `GenericSystem.kt`, and `ObjectPool.kt` show a compact STG engine shell with fluent startup wiring, scheduled logic/render/info/audio tasks, state-driven update order, and split pools for loading, UI, player, objects, and bullets.
 
 - [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - `ZernikalosBase`, `ZContext`, `ZSurfaceViewEventHandlerImpl`, and `ZSceneStateHandler` show one of the cleaner current multiplatform engine shells in the lab: shared engine coordination over platform-specific surfaces, callback-driven init phases, and explicit frame/update routing.
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `GameEngine`, `GameState`, and `DifficultyConfig` show a small Android game that keeps gameplay rules, timer tuning, and progression in a pure state-update core instead of entangling them with Compose.
@@ -103,6 +104,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 ## Rendering And Graphics
 
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `Main.kt`, `ActiveSceneContent.kt`, and the checked-in module split show a desktop OpenGL render host with distinct shadow and regular passes, layered brick/gel/UI rendering, and a deliberate boundary where only the runtime shell depends directly on LWJGL or OpenGL.
+- [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `Renderer.kt`, `Graphics.kt`, `Texture.kt`, and `GFXLoader.kt` show Java2D/Swing buffer rendering with optional `VolatileImage` use, cached texture transforms/convolutions, and script-driven sprite-sheet slicing; useful as a desktop comparison, not as copy-ready Android rendering code.
 
 - [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - `ZScene`, `ZViewport`, `ZModel`, and the backend-specific `ZRenderer`/component-renderer actuals show a scene-graph-driven 3D rendering stack where viewport ownership, shader generation, mesh/material setup, and backend execution are deliberately separated.
 - [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `ObstacleBuilder`, the scrolling camera logic, and the HUD/screen overlays show a compact libGDX rendering stack where abstract obstacle geometry is themed into layered city props and combined with scene overlays instead of being drawn directly.
@@ -237,6 +239,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 ## Input And Controls
 
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `InputAccessor.kt`, `InputManager.kt`, and `InputManagerImpl.kt` show a practical unified keyboard/gamepad access layer with synthesized joystick vectors, mode switching on first active device input, and engine-side action accessors instead of raw GLFW checks spread through gameplay code.
+- [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `KeyBinds.kt`, `KeyBindEvent.kt`, `ReplayPlayer.kt`, and the sample `Test.kt` show a small global key-state model with object-bound events, generic binds, forced key states, and replay input barriers.
 
 - [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - `ZContext.eventQueue`, `ZInputState`, `ZAndroidSurfaceView`, and `AndroidTouchEventConverter` show a strong mobile-friendly pattern where native input is queued from the platform surface and processed synchronously during the frame update phase.
 - [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `PlatformGameScreen`, the `InputMultiplexer`, and the HUD/gameplay split show a practical libGDX pattern for combining gameplay controls, overlay interaction, and custom-song UI flows inside one Android-oriented screen.
@@ -366,6 +369,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 ## Physics And Collision
 
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `CollisionManager.kt`, `CollisionHandler.kt`, `docs/physics.txt`, and the shape-pair tests show a more mature custom collision stack than most hobby engines: primary plus secondary separation passes, vicinity caching, guarded recovery paths, checked-in collision math notes, and real low-level verification.
+- [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `CollideSystem.kt`, `Polygons.kt`, `SubChunks.kt`, and `AbstractBullet.kt` show circle/rectangle/convex-polygon collision entry points plus a subchunk mesh for reducing player-vs-bullet checks, while also exposing correctness caveats such as an apparently inverted circle-circle condition.
 
 - [pandulapeter-kubriko](../findings/pandulapeter-kubriko.md) - separate collision and physics managers show a compact plugin-friendly simulation shape.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `PhysicsWorld` centralizes world stepping, collision handlers, sensors, and body lifecycle.
@@ -492,6 +496,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Tooling And Content Pipeline
 
+- [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `GFXLoader.kt`, `AudioLoader.kt`, `ReplayRecorder.kt`, `KStgEngineMain.kt`, and `PluginClassLoader.kt` show a compact content/tooling surface: resource scripts, deferred texture references, compressed replay recording, and plugin jar discovery.
 - [korge](../findings/korlibs-korge.md) - the reload agent is a concrete hot-reload tooling pattern for game iteration.
 - [ktx](../findings/libktx-ktx.md) - async asset loading is a reusable asset-pipeline foundation.
 - [godot-kotlin-jvm](../findings/utopia-rise-godot-kotlin-jvm.md) - registration-file generation and the Gradle plugin are strong examples of engine-binding tooling.
@@ -639,6 +644,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 ## Build, Release, And Testing
 
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `settings.gradle.kts`, `build.gradle.kts`, `gradle/libs.versions.toml`, `tool-import-asset`, and the `23`-file engine test surface show a serious Kotlin engine workflow with staged code generation, first-class asset tooling, and meaningful low-level tests, even though local Gradle discovery in the lab still stops at the Java `17+` floor and fuller runtime reproduction needs external assets plus sibling `kutils`.
+- [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `build.gradle.kts`, `settings.gradle.kts`, `gradle-wrapper.properties`, and the `CrashHandler` subproject show an older but locally reproducible JVM build surface: `gradlew.bat --version`, `gradlew.bat help --no-daemon`, and `gradlew.bat test --dry-run --no-daemon` all succeeded under Java `8`, though much of `src/test` is sample/demo code rather than strong regression coverage.
 
 - [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - the repo combines a modern KMP engine build surface, custom `buildLogic`, GitHub Packages publishing, generated version files, architecture docs, and a meaningful `commonTest` set around math, animation, lenses, and disposal lifecycle, even though local Gradle discovery in the lab stops at the Java `17+` floor.
 - [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - the multi-module Gradle build, dedicated `song-extract` preprocessing task, Android plus desktop targets, and `I18nTests`/`GdxTestRunner` give this repo a stronger workflow story than a typical small libGDX sample even though local `gradlew help` in the lab currently fails at the Java `11+` floor.
