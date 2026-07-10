@@ -23,4 +23,4 @@
 ## Follow-Up
 
 - Do not reopen broadly unless a minimal Compose micro-game teaching/cautionary sample is needed.
-- Continue with the remaining queued candidate `amirisback/piano-tiles-clone` before refreshing the shortlist.
+- Historical note: `amirisback/piano-tiles-clone` was still queued at the end of this session; it was later completed in `BATCH-2026-07-11-A`.

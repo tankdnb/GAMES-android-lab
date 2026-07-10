@@ -88,6 +88,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-06-15-K` | `digorydoo/titanium` | `engine-framework` | `3` | `0` | `3` | `3` | `1` | `2026-06-14` | Fresh GPL-3.0 Kotlin/LWJGL engine with a large split between engine, game, bootstrap, and asset-import tooling; selected as the strongest new architecture-first candidate after the previous shortlist was exhausted. | `done` | `refreshed exact-license shortlist + README screening + exact repo verification` |
 | `BATCH-2026-07-10-A` | `Koishi-Satori/KStg` | `engine-framework` | `2` | `0` | `1` | `2` | `4` | `2023-10-07` | Apache-2.0 bullet-hell engine with explicit bootstrap, object-pool, script-driven runtime seams, and useful subchunk collision ideas; selected as the strongest remaining queued engine wildcard. | `done` | `carry-over exact-license shortlist execution + exact repo verification` |
 | `BATCH-2026-07-10-B` | `KAMRAN16-byte/Captain-Treasure-Android-Game` | `android-game` | `2` | `0` | `2` | `1` | `0` | `2026-06-04` | MIT Android Compose micro-game with direct platform relevance and a small enough footprint to validate quickly as a reference-only baseline. | `done` | `carry-over exact-license shortlist execution + exact repo verification` |
+| `BATCH-2026-07-11-A` | `amirisback/piano-tiles-clone` | `android-game` | `2` | `1` | `1` | `2` | `27` | `2023-04-09` | Apache-2.0 Android rhythm-clone aggregator with comparative value across several small Piano Tiles implementations and direct Android input/render/audio examples. | `done` | `carry-over exact-license shortlist execution + exact repo verification` |
 
 ## Backlog Candidates
 
@@ -115,9 +116,10 @@ Updated on `2026-06-15` after completing `BATCH-2026-06-15-F`. The compact short
 
 Refreshed on `2026-06-15` after completing `BATCH-2026-06-15-J`. The shortlist below keeps only new candidates with explicit repository-level license metadata, that are not already listed in `research/registry/RESEARCHED_REPOS.md`, and that still look like real Kotlin game or engine repositories after metadata and README screening.
 
+Updated on `2026-07-11` after completing `BATCH-2026-07-11-A`. The compact shortlist is now exhausted; refresh it before selecting the next repository.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `amirisback/piano-tiles-clone` | `android-game` | `2` | `1` | `1` | `2` | `27` | `2023-04-09` | Apache-2.0 Android rhythm-clone candidate with better public signal than the zero-star tail and likely reusable input, scrolling, or score-loop patterns if the code is more than a thin derivative shell. | `queued` | `refreshed exact-license shortlist + README screening + exact repo verification` |
 
 ## Status Legend
 

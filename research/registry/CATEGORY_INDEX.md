@@ -6,6 +6,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Engine Architecture And Core Loop
 
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - `jghjianghan`'s `GameEngine`, `TileOrchestrator`, `TileDrawer`, and mode-specific engine classes show a useful small-game split for classic, arcade, raining, and tilt Piano Tiles variants, while the other modules provide cautionary raw-thread and timer-loop contrasts.
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `App.kt`, `AppImpl.kt`, `Main.kt`, `SceneLoader.kt`, and `ActiveSceneContent.kt` show a strong engine/game/host/tool split with a host-owned GLFW loop, staged scene loading, layered active-scene ownership, and explicit separation between pure engine code and platform GL glue.
 - [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `Bootstrapper.kt`, `Threads.kt`, `GameLoop.kt`, `GenericSystem.kt`, and `ObjectPool.kt` show a compact STG engine shell with fluent startup wiring, scheduled logic/render/info/audio tasks, state-driven update order, and split pools for loading, UI, player, objects, and bullets.
 
@@ -103,6 +104,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Rendering And Graphics
 
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the six modules compare three Android rendering tactics for the same rhythm loop: `SurfaceView` canvas rendering, mutable bitmap `Canvas` displayed through `ImageView`, and direct `ImageView` tile spawning.
+
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `Main.kt`, `ActiveSceneContent.kt`, and the checked-in module split show a desktop OpenGL render host with distinct shadow and regular passes, layered brick/gel/UI rendering, and a deliberate boundary where only the runtime shell depends directly on LWJGL or OpenGL.
 - [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `Renderer.kt`, `Graphics.kt`, `Texture.kt`, and `GFXLoader.kt` show Java2D/Swing buffer rendering with optional `VolatileImage` use, cached texture transforms/convolutions, and script-driven sprite-sheet slicing; useful as a desktop comparison, not as copy-ready Android rendering code.
 
@@ -184,6 +187,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Gameplay Systems
 
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the clone collection is useful for comparing lane-based tile spawning, no-immediate-repeat lane selection, bonus tiles, classic/arcade/raining modes, and miss/wrong-lane fail handling across several small Android implementations.
+
 - [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `MainActivity.kt` implements a tiny risk/reward loop where direction buttons randomly grant treasure or cause storm damage, with a repair action that trades treasure for HP.
 
 - [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `PlatformGameScreen.generateObstacles(...)`, `LevelData`, and the low/mid/high feature bands show a strong audio-driven content-generation pattern where song features are transformed into merged obstacle geometry before visual dressing.
@@ -239,6 +244,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [johnlavender474-megaman-maverick](../findings/johnlavender474-megaman-maverick.md) - `MegaLevelScreen`, `CameraManagerForRooms`, `PlayerSpawnEventHandler`, `BossSpawnEventHandler`, and the Tiled layer builders show strong action-platformer flow patterns around room transitions, boss intros, checkpoints, and map-authored events.
 
 ## Input And Controls
+
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the modules show touch-lane hit testing, wrong-lane fail feedback, and a distinctive accelerometer-driven tilt variant where a player circle collides with falling notes.
 
 - [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `Captain_Treasure()` uses a simple cardinal button grid plus repair/reset actions, making it useful as a tiny Compose input baseline and as a caution against direct UI-owned mutation in larger games.
 
@@ -317,6 +324,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [highviewone-popitbubble](../findings/highviewone-popitbubble.md) - `MainActivity`, `SettingsActivity`, and the menu/challenge bar flow show a tidy tiny-game Android shell with timer UI, reset flow, theme/grid switches, and settings separated from the playfield view.
 
 ## UI, HUD, And Menus
+
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the project compares several fragment/activity shells around the same game idea, including pause/result/high-score screens, mode selection, and `ImageView` layout-size gating before canvas creation.
 
 - [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - the one-screen Compose UI displays treasure, HP, direction, event, and game-over state directly from `remember` state holders with no navigation or view-model layer.
 
@@ -405,6 +414,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Audio
 
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the modules provide small `SoundPool` and `MediaPlayer` examples for tile/fail/note feedback, with lifecycle cleanup caveats that should be fixed before reuse.
+
 - [beat-feet-beat-feet](../findings/beat-feet-beat-feet.md) - `FFT.kt`, `AudioAnalysis.kt`, `AudioIO.kt`, and `song-extract` preserve the full MP3-to-feature pipeline: PCM decoding, FFT windows, smoothed peak extraction, cached JSON level data, and runtime playback synchronized to generated geometry.
 
 - [xarlord-number-tap](../findings/xarlord-number-tap.md) - `SoundManager` is a compact reference for procedurally generated Android game audio: synthesized WAV temp assets for `SoundPool`, combo pitch changes, and lightweight `AudioTrack` background music.
@@ -436,6 +447,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [ajaychandran11-literature](../findings/ajaychandran11-literature.md) - `BotStrategy` and `CardTracker` show a better-than-usual fair-play small-game AI where decisions are derived from public event history, impossible-card elimination, and difficulty-tuned uncertainty instead of hidden omniscience.
 
 ## Persistence And Data
+
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the modules compare simple high-score/settings storage through `SharedPreferences`, string sets, and SQLite, including a useful caution around raw query concatenation and cursor lifecycle handling.
 
 - [inaide-game-2048](../findings/inaide-game-2048.md) - `GameViewModel` persists only the high score through `SharedPreferences`, which is simple but useful as a smallest-possible Android casual-game persistence seam.
 
@@ -550,6 +563,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Android Platform Integration
 
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the repository is a direct Android app-module collection showing fragments, activities, `SurfaceView`, `ImageView`, sensors, vibration, and audio APIs in small rhythm-game contexts.
+
 - [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `MainActivity`, `AndroidManifest.xml`, and `app/build.gradle.kts` show a minimal direct Android Compose app on SDK `35`, with no persistence, lifecycle, audio, haptic, or service integrations beyond the launcher activity.
 
 - [zernikalos-zernikalos](../findings/zernikalos-zernikalos.md) - `androidMain` `Zernikalos`, `ZAndroidSurfaceView`, `ZernikalosView`, and `AndroidNativeRenderer` show a direct Android engine-host seam built around `GLSurfaceView`, EGL context preservation, touch conversion, and native-callback forwarding into the shared engine lifecycle.
@@ -608,6 +623,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Performance And Memory
 
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the clone implementations expose practical tradeoffs around `CopyOnWriteArrayList` snapshots, mutable `Rect` movement, bitmap redraws, direct view spawning, and unstructured thread/timer loops.
+
 - [korge](../findings/korlibs-korge.md) - `GameWindowCoroutineDispatcher` budgets queued tasks per frame to protect frame time.
 - [ktx](../findings/libktx-ktx.md) - render-thread dispatchers and background asset loading are directly useful for thread-aware Android game code.
 - [littlektframework-littlekt](../findings/littlektframework-littlekt.md) - `LwjglContext` explicitly works with available frame time and deferred main-dispatcher work.
@@ -650,6 +667,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `HashLifeAlgorithm`, `TemporalGameOfLifeState`, and the AGSL or SKSL or OpenGL cell renderers show a practical simulation-performance posture built around memoized macro-cell evolution, no-extra-buffer ticking, and GPU-shaped cell visuals instead of per-cell UI drawing.
 
 ## Build, Release, And Testing
+
+- [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the Gradle `7.5` / AGP `7.4.2` multi-module Android build starts enough for wrapper discovery, but `gradlew help` fails locally because the lab exposes no JDK tools; no tests were found and the only visible workflow is a Detekt SARIF scan.
 
 - [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `gradlew.bat --version` works with Gradle `8.2`, but `gradlew.bat help --no-daemon` fails locally because AGP `8.2.0-rc01` requires Java `11+` while the lab exposes Java `8`; only template tests were found.
 

@@ -6,11 +6,12 @@
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
-- Continue the refreshed shortlist from `research/registry/CANDIDATE_QUEUE.md`; the current remaining queued candidate is `amirisback/piano-tiles-clone`.
+- The compact shortlist in `research/registry/CANDIDATE_QUEUE.md` is exhausted after `BATCH-2026-07-11-A`; refresh it before selecting the next repository.
 
 ## Next Recommended
 
-- Execute the remaining queued candidate before refreshing the shortlist again.
+- Refresh the shortlist with no more than 4 new explicit-license Kotlin game/game-engine candidates before starting the next batch.
+- If `amirisback/piano-tiles-clone` needs a future follow-up, keep it narrow around `jghjianghan` mode orchestration, tilt input, or the rendering comparison between `SurfaceView`, bitmap-backed `ImageView`, and direct `ImageView` tile spawning.
 - If `KAMRAN16-byte/Captain-Treasure-Android-Game` needs a future follow-up, keep it narrow around the minimal Compose micro-game loop or one-file state-management cautionary baseline rather than reopening it broadly.
 - If `Koishi-Satori/KStg` needs a future follow-up, keep it narrow around subchunk bullet-collision filtering, resource scripts, replay recording, or Java2D-to-Android adaptation rather than treating the desktop/Swing runtime as a main Android engine baseline.
 - If `qorrnsmj/smf` needs a future follow-up, keep it narrow: revisit only the fixed-step loop, the `Scene` plus `MasterRenderer` split, the audio source-pool service, or the simple collision ownership rules instead of reopening the whole repository broadly.

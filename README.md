@@ -14,14 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-07-10`, `92` real GitHub research batches are completed end-to-end.
-- `98` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-07-11`, `93` real GitHub research batches are completed end-to-end.
+- `99` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `80`
-  - `reference-only`: `18`
+  - `reference-only`: `19`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `KAMRAN16-byte/Captain-Treasure-Android-Game` as a `reference-only` Android Compose micro-game whose main value is a tiny button-driven random-event loop and a cautionary one-file Compose state baseline.
+- The latest researched addition is `amirisback/piano-tiles-clone` as a `reference-only` Android Piano Tiles clone aggregator whose main value is comparison across `SurfaceView`, bitmap-backed `ImageView`, direct `ImageView` spawning, tap-lane, tilt, audio, and high-score approaches.
 - The latest accepted addition is `digorydoo/titanium`.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 

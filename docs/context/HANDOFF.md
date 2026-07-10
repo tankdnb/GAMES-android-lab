@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The ninety-second real research batch is now completed and documented end-to-end.
-- The lab now has 98 researched repositories recorded:
+- The ninety-third real research batch is now completed and documented end-to-end.
+- The lab now has 99 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -106,6 +106,7 @@
   - `digorydoo/titanium` - `accepted`
   - `Koishi-Satori/KStg` - `reference-only`
   - `KAMRAN16-byte/Captain-Treasure-Android-Game` - `reference-only`
+  - `amirisback/piano-tiles-clone` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -113,10 +114,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The shortlist was refreshed again after `BATCH-2026-06-15-J`; `amirisback/piano-tiles-clone` remains queued after the latest completed batch.
+- The compact shortlist is exhausted after `BATCH-2026-07-11-A`; refresh it before selecting the next repository.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-07-11-A` for `amirisback/piano-tiles-clone`.
+- Added durable `Piano Tiles Clone` findings for its six Android app modules, including `SurfaceView`, bitmap-backed `ImageView`, direct `ImageView` tile spawning, lane/touch handling, accelerometer tilt mode, `SoundPool`/`MediaPlayer` feedback, and high-score persistence comparisons.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works locally with Gradle `7.5`, but `gradlew.bat help --no-daemon` fails because the lab Java environment exposes runtime tools without the JDK tools needed for Kotlin compilation.
+- Classified `amirisback/piano-tiles-clone` as `reference-only` because it is an Android clone aggregator with useful comparative patterns, but it overlaps with previously researched `atillaturkmen/piano-tiles`, has no tests, and relies heavily on raw `Thread` / `Timer` loops.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `93` completed batches, `99` researched repositories, and a `80 accepted / 19 reference-only` split.
 
 - Completed `BATCH-2026-07-10-B` for `KAMRAN16-byte/Captain-Treasure-Android-Game`.
 - Added durable `Captain Treasure Android Game` findings for its minimal Compose shell, button-driven direction/event loop, treasure and HP state, repair/reset flow, and template-only verification surface.
@@ -630,7 +637,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue the remaining queued shortlist from `amirisback/piano-tiles-clone` before refreshing again.
+- Refresh the compact shortlist before starting the next repository; the previous queue is now exhausted.
+- If a future follow-up is needed for `amirisback/piano-tiles-clone`, keep it narrow around the `jghjianghan` mode orchestrators, the accelerometer tilt variant, or the rendering comparison between `SurfaceView`, bitmap-backed `ImageView`, and direct `ImageView` spawning rather than reopening all six modules broadly.
 - If a future follow-up is needed for `Koishi-Satori/KStg`, keep it narrow around subchunk bullet-collision filtering, resource scripts, replay recording, or Java2D-to-Android adaptation rather than reopening the whole desktop/Swing runtime blindly.
 - If a future follow-up is needed for `KAMRAN16-byte/Captain-Treasure-Android-Game`, keep it narrow around a minimal Compose micro-game teaching sample or one-file state-management cautionary example rather than reopening it for architecture research.
 - If a future follow-up is needed for `icela/FriceEngine`, keep it narrow: isolate the shared Swing/JavaFX drawer seam, the buffered layer mutation model, the small event/timer helpers, or the resource-cache utilities instead of reopening the whole repository blindly.
