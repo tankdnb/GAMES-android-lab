@@ -6,11 +6,12 @@
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
-- The compact shortlist in `research/registry/CANDIDATE_QUEUE.md` still has queued candidates after `BATCH-2026-07-12-B`: `neumannhans326-crypto/license-plate-game` and `ritwikshanker/WordImpostor`.
+- The compact shortlist in `research/registry/CANDIDATE_QUEUE.md` still has one queued candidate after `BATCH-2026-07-13-A`: `neumannhans326-crypto/license-plate-game`.
 
 ## Next Recommended
 
-- Continue with the strongest remaining queued explicit-license Kotlin game candidate before refreshing the shortlist again.
+- Continue with `neumannhans326-crypto/license-plate-game` before refreshing the shortlist again.
+- If `ritwikshanker/WordImpostor` needs a future follow-up, keep it narrow around `GameViewModel` phase-transition tests, tie behavior, timer expiry, win conditions, or cleaning README/source encoding issues rather than reopening the whole Compose UI broadly.
 - If `gzzrrg/Sudoku` needs a future follow-up, keep it narrow around unit-testing `SudokuGenerator` / `SudokuValidator`, repository API-to-local fallback behavior, or `GameViewModel` autosave/undo/redo persistence rather than reopening the whole Compose UI broadly.
 - If `joffrey-bion/seven-wonders` needs a future follow-up, keep it narrow around resource-payment option search, synchronized prepared-turn execution, protocol-level bot automation, or Android Compose adaptation of the shared state model.
 - If `amirisback/piano-tiles-clone` needs a future follow-up, keep it narrow around `jghjianghan` mode orchestration, tilt input, or the rendering comparison between `SurfaceView`, bitmap-backed `ImageView`, and direct `ImageView` tile spawning.

@@ -4,6 +4,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 
 ## android-game
 
+- [Word Impostor](projects/ritwikshanker-wordimpostor.md) - direct Android Compose pass-the-phone social-deduction game with sealed phase state, private role reveals, clue and voting rounds, DataStore settings, and pure review-gate policy.
 - [Sudoku](projects/gzzrrg-sudoku.md) - direct Android Compose Sudoku game with unique-solution local generation, dosuku API fallback, Room autosave, DataStore settings/statistics, undo/redo over values and notes, hints, and adaptive board controls.
 - [Antimine - Minesweeper](projects/lucasnlm-antimine-android.md) - Android puzzle game with LibGDX rendering, no-guess generation fallback, and deep multi-form-factor support.
 - [Super Retro Mega Wars](projects/retrowars-retrowars.md) - Android multiplayer minigame collection with a shared game shell, declarative soft controls, and explicit LAN/public server support.

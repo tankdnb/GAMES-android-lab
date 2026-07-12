@@ -125,7 +125,7 @@ Refreshed on `2026-07-12` before starting `BATCH-2026-07-12-A`. The shortlist be
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
 | `neumannhans326-crypto/license-plate-game` | `android-game` | `2` | `0` | `3` | `2` | `3` | `2026-07-10` | MIT Android car-trip license-plate spotting game with Compose, Room-backed offline data, local multiplayer scoreboard, and unusual real-world scoring content. | `queued` | `2026-07-12 exact-license shortlist refresh + README screening + exact repo verification` |
-| `ritwikshanker/WordImpostor` | `android-game` | `3` | `0` | `3` | `2` | `1` | `2026-07-12` | MIT direct Android social-deduction party game with Compose, StateFlow, DataStore settings, pass-the-phone role reveal, timers, voting rules, and a compact phase-state surface. | `queued` | `2026-07-12 exact-license shortlist refresh + README screening + exact repo verification` |
+| `ritwikshanker/WordImpostor` | `android-game` | `3` | `0` | `3` | `2` | `1` | `2026-07-12` | MIT direct Android social-deduction party game with Compose, StateFlow, DataStore settings, pass-the-phone role reveal, timers, voting rules, and a compact phase-state surface. | `done` | `BATCH-2026-07-13-A + 2026-07-12 exact-license shortlist refresh + README screening + exact repo verification` |
 
 ## Status Legend
 

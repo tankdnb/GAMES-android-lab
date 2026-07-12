@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The ninety-fifth real research batch is now completed and documented end-to-end.
-- The lab now has 101 researched repositories recorded:
+- The ninety-sixth real research batch is now completed and documented end-to-end.
+- The lab now has 102 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -109,6 +109,7 @@
   - `amirisback/piano-tiles-clone` - `reference-only`
   - `joffrey-bion/seven-wonders` - `accepted`
   - `gzzrrg/Sudoku` - `accepted`
+  - `ritwikshanker/WordImpostor` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -116,10 +117,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The refreshed compact shortlist now has queued candidates after `BATCH-2026-07-12-B`: `neumannhans326-crypto/license-plate-game` and `ritwikshanker/WordImpostor`.
+- The refreshed compact shortlist now has one queued candidate after `BATCH-2026-07-13-A`: `neumannhans326-crypto/license-plate-game`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-07-13-A` for `ritwikshanker/WordImpostor`.
+- Added durable `Word Impostor` findings for its direct Android Compose party-game shell, sealed `GamePhase` state model, pass-the-phone private role reveal UX, clue and voting rounds, DataStore settings, and pure in-app-review gate.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works locally with Gradle `9.6.1`, but `gradlew.bat help --no-daemon` fails because the lab Java environment exposes Java `8` while Gradle now requires Java `17+`.
+- Promoted `ritwikshanker/WordImpostor` to `accepted` because it preserves reusable direct-Android local party-game patterns despite README/source mojibake in the Windows terminal and missing `GameViewModel` phase-machine tests.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `96` completed batches, `102` researched repositories, and a `83 accepted / 19 reference-only` split.
 
 - Completed `BATCH-2026-07-12-B` for `gzzrrg/Sudoku`.
 - Added durable `Sudoku` findings for its direct Android Compose puzzle shell, unique-solution local generator, dosuku API fallback, Room autosave, DataStore settings/statistics, undo/redo over values and notes, hints, cumulative errors, and adaptive board controls.
@@ -582,7 +589,7 @@
 
 ## Known Risks
 
-- The workflow has now been validated across 95 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 96 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -651,7 +658,7 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Refresh the compact shortlist before starting the next repository; the previous queue is now exhausted.
+- Continue with the remaining queued explicit-license Kotlin game candidate `neumannhans326-crypto/license-plate-game`; refresh the compact shortlist only after the queue is exhausted.
 - If a future follow-up is needed for `amirisback/piano-tiles-clone`, keep it narrow around the `jghjianghan` mode orchestrators, the accelerometer tilt variant, or the rendering comparison between `SurfaceView`, bitmap-backed `ImageView`, and direct `ImageView` spawning rather than reopening all six modules broadly.
 - If a future follow-up is needed for `Koishi-Satori/KStg`, keep it narrow around subchunk bullet-collision filtering, resource scripts, replay recording, or Java2D-to-Android adaptation rather than reopening the whole desktop/Swing runtime blindly.
 - If a future follow-up is needed for `KAMRAN16-byte/Captain-Treasure-Android-Game`, keep it narrow around a minimal Compose micro-game teaching sample or one-file state-management cautionary example rather than reopening it for architecture research.
