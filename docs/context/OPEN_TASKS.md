@@ -6,11 +6,12 @@
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
-- The compact shortlist in `research/registry/CANDIDATE_QUEUE.md` is exhausted after `BATCH-2026-07-11-A`; refresh it before selecting the next repository.
+- The compact shortlist in `research/registry/CANDIDATE_QUEUE.md` still has queued candidates after `BATCH-2026-07-12-A`: `gzzrrg/Sudoku`, `neumannhans326-crypto/license-plate-game`, and `ritwikshanker/WordImpostor`.
 
 ## Next Recommended
 
-- Refresh the shortlist with no more than 4 new explicit-license Kotlin game/game-engine candidates before starting the next batch.
+- Continue with the strongest queued explicit-license Kotlin game candidate before refreshing the shortlist again.
+- If `joffrey-bion/seven-wonders` needs a future follow-up, keep it narrow around resource-payment option search, synchronized prepared-turn execution, protocol-level bot automation, or Android Compose adaptation of the shared state model.
 - If `amirisback/piano-tiles-clone` needs a future follow-up, keep it narrow around `jghjianghan` mode orchestration, tilt input, or the rendering comparison between `SurfaceView`, bitmap-backed `ImageView`, and direct `ImageView` tile spawning.
 - If `KAMRAN16-byte/Captain-Treasure-Android-Game` needs a future follow-up, keep it narrow around the minimal Compose micro-game loop or one-file state-management cautionary baseline rather than reopening it broadly.
 - If `Koishi-Satori/KStg` needs a future follow-up, keep it narrow around subchunk bullet-collision filtering, resource scripts, replay recording, or Java2D-to-Android adaptation rather than treating the desktop/Swing runtime as a main Android engine baseline.

@@ -6,6 +6,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Engine Architecture And Core Loop
 
+- [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `Game`, `PlayerContext`, and `GameDefinition` show an authoritative board-game state machine that deals hands by age, waits for prepared moves, resolves all placements before effects, rotates hands, handles special follow-up turns, and loads cards/wonders from JSON-backed definitions.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - `jghjianghan`'s `GameEngine`, `TileOrchestrator`, `TileDrawer`, and mode-specific engine classes show a useful small-game split for classic, arcade, raining, and tilt Piano Tiles variants, while the other modules provide cautionary raw-thread and timer-loop contrasts.
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `App.kt`, `AppImpl.kt`, `Main.kt`, `SceneLoader.kt`, and `ActiveSceneContent.kt` show a strong engine/game/host/tool split with a host-owned GLFW loop, staged scene loading, layered active-scene ownership, and explicit separation between pure engine code and platform GL glue.
 - [koishi-satori-kstg](../findings/koishi-satori-kstg.md) - `Bootstrapper.kt`, `Threads.kt`, `GameLoop.kt`, `GenericSystem.kt`, and `ObjectPool.kt` show a compact STG engine shell with fluent startup wiring, scheduled logic/render/info/audio tasks, state-driven update order, and split pools for loading, UI, player, objects, and bullets.
@@ -187,6 +188,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Gameplay Systems
 
+- [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `Cards`, `Requirements`, `TransactionOptionsCalculator`, `Science`, `Table`, and `ScoreBoard` show reusable rule-heavy board-game techniques: UI-ready playability, neighbour-trade option search, science joker maximization, military conflict resolution, and tied-rank scoring.
+
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the clone collection is useful for comparing lane-based tile spawning, no-immediate-repeat lane selection, bonus tiles, classic/arcade/raining modes, and miss/wrong-lane fail handling across several small Android implementations.
 
 - [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `MainActivity.kt` implements a tiny risk/reward loop where direction buttons randomly grant treasure or cause storm damage, with a repair action that trades treasure for HP.
@@ -325,6 +328,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## UI, HUD, And Menus
 
+- [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `GameState`, `Reducers`, `GameScene`, `Hand`, and `PreparedMove` show a multiplayer board-game UI where typed server events drive reducer-style state, cards expose server/rules-derived affordability, transaction choices are selected only when needed, and prepared moves are visible before final turn resolution.
+
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the project compares several fragment/activity shells around the same game idea, including pause/result/high-score screens, mode selection, and `ImageView` layout-size gating before canvas creation.
 
 - [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - the one-screen Compose UI displays treasure, HP, direction, event, and game-over state directly from `remember` state holders with no navigation or view-model layer.
@@ -438,6 +443,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## AI And Behavior
 
+- [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `SevenWondersBot` shows protocol-level bot automation that joins games, watches typed turn events, prepares legal random moves, handles special actions, and disconnects through the same KMP client API as human players.
 - [ktx](../findings/libktx-ktx.md) - the behavior-tree DSL shows a clean Kotlin wrapper for AI task composition.
 - [unciv](../findings/yairm210-unciv.md) - `WorkerAutomation`, `ConstructionAutomation`, and `BarbarianAutomation` show staged scoring-based automation with road planning, tile simulation, and explicit fallback ladders.
 - [egoal-darkest-pixel-dungeon](../findings/egoal-darkest-pixel-dungeon.md) - `Actor`, `Mob`, and `Database` show a time-based scheduler plus serializable mob AI modes and data-backed resistances, abilities, and loot tables.
@@ -499,6 +505,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Networking And Multiplayer
 
+- [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `SevenWondersClient`, `GameController`, `LobbyController`, and `WebSocketConfig` show a typed Kotlin STOMP/WebSocket stack with shared serializable events/actions, user queues, lobby ownership, synchronized turn execution, readiness gates, bot injection, and heartbeat-enabled broker configuration.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - client/server rooms, versioned DTOs, and public-server discovery are all first-class parts of the product shell.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `NetService` exposes reusable typed TCP/UDP helpers and download tasks as engine services.
 - [unciv](../findings/yairm210-unciv.md) - `Multiplayer`, `MultiplayerServer`, `ChatWebSocket`, and `ApiV2` show a hybrid local-preview plus remote-authority multiplayer stack with throttled refresh and reconnecting WebSockets.
@@ -667,6 +674,8 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 - [alexvanyo-composelife](../findings/alexvanyo-composelife.md) - `HashLifeAlgorithm`, `TemporalGameOfLifeState`, and the AGSL or SKSL or OpenGL cell renderers show a practical simulation-performance posture built around memoized macro-cell evolution, no-extra-buffer ticking, and GPU-shaped cell visuals instead of per-cell UI drawing.
 
 ## Build, Release, And Testing
+
+- [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - The Gradle KMP/JVM/JS module split, JDK `21` CI, Docker/Kubernetes deployment workflows, `GameTest`, `TransactionOptionsCalculatorTest`, and `LobbyTest` show serious workflow discipline for a web/server board game, while local lab discovery currently stops because Gradle `9.6.1` requires Java `17+` and the lab exposes Java `8`.
 
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the Gradle `7.5` / AGP `7.4.2` multi-module Android build starts enough for wrapper discovery, but `gradlew help` fails locally because the lab exposes no JDK tools; no tests were found and the only visible workflow is a Detekt SARIF scan.
 

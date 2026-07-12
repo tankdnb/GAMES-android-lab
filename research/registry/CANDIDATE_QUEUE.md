@@ -89,6 +89,7 @@ Hard limit: no more than 4 new repositories at a time.
 | `BATCH-2026-07-10-A` | `Koishi-Satori/KStg` | `engine-framework` | `2` | `0` | `1` | `2` | `4` | `2023-10-07` | Apache-2.0 bullet-hell engine with explicit bootstrap, object-pool, script-driven runtime seams, and useful subchunk collision ideas; selected as the strongest remaining queued engine wildcard. | `done` | `carry-over exact-license shortlist execution + exact repo verification` |
 | `BATCH-2026-07-10-B` | `KAMRAN16-byte/Captain-Treasure-Android-Game` | `android-game` | `2` | `0` | `2` | `1` | `0` | `2026-06-04` | MIT Android Compose micro-game with direct platform relevance and a small enough footprint to validate quickly as a reference-only baseline. | `done` | `carry-over exact-license shortlist execution + exact repo verification` |
 | `BATCH-2026-07-11-A` | `amirisback/piano-tiles-clone` | `android-game` | `2` | `1` | `1` | `2` | `27` | `2023-04-09` | Apache-2.0 Android rhythm-clone aggregator with comparative value across several small Piano Tiles implementations and direct Android input/render/audio examples. | `done` | `carry-over exact-license shortlist execution + exact repo verification` |
+| `BATCH-2026-07-12-A` | `joffrey-bion/seven-wonders` | `gameplay-systems` | `2` | `2` | `3` | `3` | `77` | `2026-07-09` | MIT digital 7 Wonders board-game implementation with substantial Kotlin code, active maintenance, online multiplayer/server surface, bot support, and stronger expected rules/networking yield than the low-signal Android-only tail. | `done` | `2026-07-12 exact-license shortlist refresh + README screening + exact repo verification` |
 
 ## Backlog Candidates
 
@@ -118,8 +119,13 @@ Refreshed on `2026-06-15` after completing `BATCH-2026-06-15-J`. The shortlist b
 
 Updated on `2026-07-11` after completing `BATCH-2026-07-11-A`. The compact shortlist is now exhausted; refresh it before selecting the next repository.
 
+Refreshed on `2026-07-12` before starting `BATCH-2026-07-12-A`. The shortlist below keeps only new candidates with explicit repository-level license metadata, that are not already listed in `research/registry/RESEARCHED_REPOS.md`, and that still look like real Kotlin game repositories after metadata and README screening.
+
 | Repository | Type | Fit | Popularity | Activity | Yield | Stars | Last Pushed | Why Keep In Backlog | Status | Source |
 |---|---|---|---|---|---|---|---|---|---|---|
+| `gzzrrg/Sudoku` | `android-game` | `3` | `0` | `3` | `3` | `1` | `2026-07-02` | MIT direct Android Sudoku app with Compose, MVVM, Room/DataStore/Retrofit, local generator fallback, save/statistics features, and likely reusable puzzle-state architecture despite very low public signal. | `queued` | `2026-07-12 exact-license shortlist refresh + README screening + exact repo verification` |
+| `neumannhans326-crypto/license-plate-game` | `android-game` | `2` | `0` | `3` | `2` | `3` | `2026-07-10` | MIT Android car-trip license-plate spotting game with Compose, Room-backed offline data, local multiplayer scoreboard, and unusual real-world scoring content. | `queued` | `2026-07-12 exact-license shortlist refresh + README screening + exact repo verification` |
+| `ritwikshanker/WordImpostor` | `android-game` | `3` | `0` | `3` | `2` | `1` | `2026-07-12` | MIT direct Android social-deduction party game with Compose, StateFlow, DataStore settings, pass-the-phone role reveal, timers, voting rules, and a compact phase-state surface. | `queued` | `2026-07-12 exact-license shortlist refresh + README screening + exact repo verification` |
 
 ## Status Legend
 

@@ -86,6 +86,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 - [Megaman Maverick](projects/johnlavender474-megaman-maverick.md) - Kotlin LibGDX action-platformer with a reusable engine/core split, queue-based entity lifecycle, fixed-step world simulation, room-aware boss or checkpoint flow, controller remapping, and a stronger-than-usual engine test surface, even though the checked-in host is desktop-only and the fan-game assets are not generally reusable.
 - [Mafiauto](projects/amirroid-mafiauto.md) - Kotlin Multiplatform Mafia game assistant with a shared rules engine, explicit phase-state ownership, delayed role-resolution flow, feature-by-feature Compose orchestration, and direct Android product-shell relevance.
 - [IGaming Game Engine](projects/nekzabirov-igaming-game-engine.md) - Kotlin iGaming backend with a hexagonal/CQRS game-domain core, authoritative session and spin lifecycle handling, provider adapter registry, wallet-backed real/bonus balance rules, and useful Android-adjacent live-service architecture patterns despite having no client runtime.
+- [Seven Wonders Online](projects/joffrey-bion-seven-wonders.md) - Kotlin-heavy online board-game implementation with an authoritative turn state machine, resource-payment option search, typed shared STOMP protocol, synchronized prepared moves, bot autoplayers, and useful Android-adjacent multiplayer board-game architecture despite having no Android module.
 
 ## tooling-pipeline
 

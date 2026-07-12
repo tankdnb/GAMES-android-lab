@@ -14,15 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-07-11`, `93` real GitHub research batches are completed end-to-end.
-- `99` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-07-12`, `94` real GitHub research batches are completed end-to-end.
+- `100` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `80`
+  - `accepted`: `81`
   - `reference-only`: `19`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched addition is `amirisback/piano-tiles-clone` as a `reference-only` Android Piano Tiles clone aggregator whose main value is comparison across `SurfaceView`, bitmap-backed `ImageView`, direct `ImageView` spawning, tap-lane, tilt, audio, and high-score approaches.
-- The latest accepted addition is `digorydoo/titanium`.
+- The latest researched and accepted addition is `joffrey-bion/seven-wonders`, an MIT Kotlin-heavy online board-game implementation whose main value is authoritative turn flow, resource-payment option search, typed STOMP/WebSocket protocol, bot automation, and rule/server tests.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
