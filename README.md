@@ -14,14 +14,14 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-07-12`, `94` real GitHub research batches are completed end-to-end.
-- `100` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-07-12`, `95` real GitHub research batches are completed end-to-end.
+- `101` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
-  - `accepted`: `81`
+  - `accepted`: `82`
   - `reference-only`: `19`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched and accepted addition is `joffrey-bion/seven-wonders`, an MIT Kotlin-heavy online board-game implementation whose main value is authoritative turn flow, resource-payment option search, typed STOMP/WebSocket protocol, bot automation, and rule/server tests.
+- The latest researched and accepted addition is `gzzrrg/Sudoku`, an MIT direct Android Compose Sudoku app whose main value is unique-solution local generation, API-to-local puzzle fallback, Room autosave, undo/redo over values and notes, hints, cumulative errors, and adaptive board controls.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog

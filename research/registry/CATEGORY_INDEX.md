@@ -6,6 +6,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Engine Architecture And Core Loop
 
+- [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `GameViewModel`, `GameUiState`, and `AppContainer` show a compact Android puzzle-game shell where one lifecycle-aware owner manages board arrays, timer, hints, errors, undo/redo, and autosave while exposing sealed UI states to Compose.
 - [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `Game`, `PlayerContext`, and `GameDefinition` show an authoritative board-game state machine that deals hands by age, waits for prepared moves, resolves all placements before effects, rotates hands, handles special follow-up turns, and loads cards/wonders from JSON-backed definitions.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - `jghjianghan`'s `GameEngine`, `TileOrchestrator`, `TileDrawer`, and mode-specific engine classes show a useful small-game split for classic, arcade, raining, and tilt Piano Tiles variants, while the other modules provide cautionary raw-thread and timer-loop contrasts.
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `App.kt`, `AppImpl.kt`, `Main.kt`, `SceneLoader.kt`, and `ActiveSceneContent.kt` show a strong engine/game/host/tool split with a host-owned GLFW loop, staged scene loading, layered active-scene ownership, and explicit separation between pure engine code and platform GL glue.
@@ -105,6 +106,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Rendering And Graphics
 
+- [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `SudokuBoard`, `SudokuCell`, and `NotesGrid` render a Compose 9x9 puzzle board with `drawWithContent` grid overlays, thick 3x3 box separators, state-derived highlights, and candidate-note mini-grids.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the six modules compare three Android rendering tactics for the same rhythm loop: `SurfaceView` canvas rendering, mutable bitmap `Canvas` displayed through `ImageView`, and direct `ImageView` tile spawning.
 
 - [digorydoo-titanium](../findings/digorydoo-titanium.md) - `Main.kt`, `ActiveSceneContent.kt`, and the checked-in module split show a desktop OpenGL render host with distinct shadow and regular passes, layered brick/gel/UI rendering, and a deliberate boundary where only the runtime shell depends directly on LWJGL or OpenGL.
@@ -188,6 +190,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Gameplay Systems
 
+- [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `SudokuGenerator`, `SudokuValidator`, and `GameViewModel` preserve reusable Sudoku systems: randomized backtracking, unique-solution checking, conflict detection, candidate notes, limited hints, cumulative mistake counting, and completion/failure rules.
 - [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `Cards`, `Requirements`, `TransactionOptionsCalculator`, `Science`, `Table`, and `ScoreBoard` show reusable rule-heavy board-game techniques: UI-ready playability, neighbour-trade option search, science joker maximization, military conflict resolution, and tied-rank scoring.
 
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the clone collection is useful for comparing lane-based tile spawning, no-immediate-repeat lane selection, bonus tiles, classic/arcade/raining modes, and miss/wrong-lane fail handling across several small Android implementations.
@@ -248,6 +251,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Input And Controls
 
+- [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `SudokuBoard`, `NumberPad`, and `GameToolBar` split board-cell selection, number input, erase, undo, redo, notes, and hint controls into reusable Compose controls with compact and wide layout variants.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the modules show touch-lane hit testing, wrong-lane fail feedback, and a distinctive accelerometer-driven tilt variant where a player circle collides with falling notes.
 
 - [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `Captain_Treasure()` uses a simple cardinal button grid plus repair/reset actions, making it useful as a tiny Compose input baseline and as a caution against direct UI-owned mutation in larger games.
@@ -328,6 +332,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## UI, HUD, And Menus
 
+- [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `GameScreen`, `ActiveGameLayout`, `StatusBar`, and `NavGraph` show a Compose game UI that switches at `600.dp` between portrait and side-panel board layouts while keeping status, timer, settings, pause, and route ownership explicit.
 - [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `GameState`, `Reducers`, `GameScene`, `Hand`, and `PreparedMove` show a multiplayer board-game UI where typed server events drive reducer-style state, cards expose server/rules-derived affordability, transaction choices are selected only when needed, and prepared moves are visible before final turn resolution.
 
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the project compares several fragment/activity shells around the same game idea, including pause/result/high-score screens, mode selection, and `ImageView` layout-size gating before canvas creation.
@@ -454,6 +459,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Persistence And Data
 
+- [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `GameSession`, `GameRecord`, `GameSessionDao`, `GameRecordDao`, `SettingsDataStore`, and `SudokuRepository` show a useful split between active-session Room snapshots, completed-game history, DataStore preferences/statistics, and JSON helpers for board/notes/history persistence.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the modules compare simple high-score/settings storage through `SharedPreferences`, string sets, and SQLite, including a useful caution around raw query concatenation and cursor lifecycle handling.
 
 - [inaide-game-2048](../findings/inaide-game-2048.md) - `GameViewModel` persists only the high score through `SharedPreferences`, which is simple but useful as a smallest-possible Android casual-game persistence seam.
@@ -505,6 +511,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Networking And Multiplayer
 
+- [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `SudokuApiService`, `AppContainer`, and `SudokuRepository.fetchPuzzle()` show a small Retrofit content-fetch seam that tries the dosuku API first and automatically degrades to a local generator when the API is unavailable.
 - [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `SevenWondersClient`, `GameController`, `LobbyController`, and `WebSocketConfig` show a typed Kotlin STOMP/WebSocket stack with shared serializable events/actions, user queues, lobby ownership, synchronized turn execution, readiness gates, bot injection, and heartbeat-enabled broker configuration.
 - [retrowars-retrowars](../findings/retrowars-retrowars.md) - client/server rooms, versioned DTOs, and public-server discovery are all first-class parts of the product shell.
 - [almasb-fxgl](../findings/almasb-fxgl.md) - `NetService` exposes reusable typed TCP/UDP helpers and download tasks as engine services.
@@ -570,6 +577,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Android Platform Integration
 
+- [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `app/build.gradle.kts`, `AndroidManifest.xml`, `MainActivity`, and `SudokuApplication` show a direct Android Compose app with Room, DataStore, Retrofit, Navigation Compose, Material 3 theming, and a narrow `INTERNET` permission surface, while also exposing the caveat of `minSdk = 36`.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the repository is a direct Android app-module collection showing fragments, activities, `SurfaceView`, `ImageView`, sensors, vibration, and audio APIs in small rhythm-game contexts.
 
 - [kamran16-byte-captain-treasure-android-game](../findings/kamran16-byte-captain-treasure-android-game.md) - `MainActivity`, `AndroidManifest.xml`, and `app/build.gradle.kts` show a minimal direct Android Compose app on SDK `35`, with no persistence, lifecycle, audio, haptic, or service integrations beyond the launcher activity.
@@ -675,6 +683,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Build, Release, And Testing
 
+- [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - Gradle `9.4.1`, AGP `9.2.1`, Kotlin `2.2.10`, Compose BOM `2026.02.01`, Room, DataStore, Retrofit, and KSP show a very modern Android stack; local lab discovery reaches `gradlew.bat --version` but `help` fails because Java `17+` is required while the lab exposes Java `8`, and only template tests are checked in.
 - [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - The Gradle KMP/JVM/JS module split, JDK `21` CI, Docker/Kubernetes deployment workflows, `GameTest`, `TransactionOptionsCalculatorTest`, and `LobbyTest` show serious workflow discipline for a web/server board game, while local lab discovery currently stops because Gradle `9.6.1` requires Java `17+` and the lab exposes Java `8`.
 
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the Gradle `7.5` / AGP `7.4.2` multi-module Android build starts enough for wrapper discovery, but `gradlew help` fails locally because the lab exposes no JDK tools; no tests were found and the only visible workflow is a Detekt SARIF scan.

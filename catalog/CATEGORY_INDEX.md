@@ -4,6 +4,7 @@ Use this file to group accepted catalog entries by their normalized categories.
 
 ## android-game
 
+- [Sudoku](projects/gzzrrg-sudoku.md) - direct Android Compose Sudoku game with unique-solution local generation, dosuku API fallback, Room autosave, DataStore settings/statistics, undo/redo over values and notes, hints, and adaptive board controls.
 - [Antimine - Minesweeper](projects/lucasnlm-antimine-android.md) - Android puzzle game with LibGDX rendering, no-guess generation fallback, and deep multi-form-factor support.
 - [Super Retro Mega Wars](projects/retrowars-retrowars.md) - Android multiplayer minigame collection with a shared game shell, declarative soft controls, and explicit LAN/public server support.
 - [Unciv](projects/yairm210-unciv.md) - large-scale Android/Desktop 4X strategy game with threaded turn resolution, ruleset-driven modding, integrated multiplayer, and explicit Android platform glue.

@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The ninety-fourth real research batch is now completed and documented end-to-end.
-- The lab now has 100 researched repositories recorded:
+- The ninety-fifth real research batch is now completed and documented end-to-end.
+- The lab now has 101 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -108,6 +108,7 @@
   - `KAMRAN16-byte/Captain-Treasure-Android-Game` - `reference-only`
   - `amirisback/piano-tiles-clone` - `reference-only`
   - `joffrey-bion/seven-wonders` - `accepted`
+  - `gzzrrg/Sudoku` - `accepted`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -115,10 +116,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The refreshed compact shortlist now has queued candidates after `BATCH-2026-07-12-A`: `gzzrrg/Sudoku`, `neumannhans326-crypto/license-plate-game`, and `ritwikshanker/WordImpostor`.
+- The refreshed compact shortlist now has queued candidates after `BATCH-2026-07-12-B`: `neumannhans326-crypto/license-plate-game` and `ritwikshanker/WordImpostor`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-07-12-B` for `gzzrrg/Sudoku`.
+- Added durable `Sudoku` findings for its direct Android Compose puzzle shell, unique-solution local generator, dosuku API fallback, Room autosave, DataStore settings/statistics, undo/redo over values and notes, hints, cumulative errors, and adaptive board controls.
+- Verified the current build caveat for this batch: `gradlew.bat --version` works locally with Gradle `9.4.1`, but `gradlew.bat help --no-daemon` fails because the lab Java environment exposes Java `8` while Gradle now requires Java `17+`.
+- Promoted `gzzrrg/Sudoku` to `accepted` because it preserves reusable direct-Android puzzle-state architecture despite only template tests and an overly restrictive `minSdk = 36`.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `95` completed batches, `101` researched repositories, and a `82 accepted / 19 reference-only` split.
 
 - Completed `BATCH-2026-07-12-A` for `joffrey-bion/seven-wonders`.
 - Added durable `Seven Wonders Online` findings for its Kotlin board-game rules engine, resource-payment option search, shared KMP protocol/client, Spring STOMP/WebSocket server, Kotlin/JS React UI state, bot automation, and meaningful rule/server tests.
@@ -575,7 +582,7 @@
 
 ## Known Risks
 
-- The workflow has now been validated across 94 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 95 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
