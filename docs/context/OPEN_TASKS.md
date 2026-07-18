@@ -6,11 +6,12 @@
 - Keep following the publication rule: after each completed research batch, prepare the durable outputs and push them to GitHub.
 - A minute-based heartbeat automation `games-android-lab-research` is active for this thread; monitor whether the cadence remains useful or should be paused/slowed.
 - Keep preferring repositories with explicit license metadata when refreshing the shortlist.
-- The compact shortlist in `research/registry/CANDIDATE_QUEUE.md` still has one queued candidate after `BATCH-2026-07-13-A`: `neumannhans326-crypto/license-plate-game`.
+- The compact shortlist in `research/registry/CANDIDATE_QUEUE.md` is exhausted after `BATCH-2026-07-18-A`.
 
 ## Next Recommended
 
-- Continue with `neumannhans326-crypto/license-plate-game` before refreshing the shortlist again.
+- Refresh a compact shortlist of no more than 4 explicit-license Kotlin game or game-engine repositories before starting the next research batch.
+- If `neumannhans326-crypto/license-plate-game` needs a future follow-up, first verify a build in a Java `17+` Android environment or upstream wrapper, then isolate scoring, duplicate detection, and CSV-to-Room seed loading for tests rather than reopening the whole Compose UI broadly.
 - If `ritwikshanker/WordImpostor` needs a future follow-up, keep it narrow around `GameViewModel` phase-transition tests, tie behavior, timer expiry, win conditions, or cleaning README/source encoding issues rather than reopening the whole Compose UI broadly.
 - If `gzzrrg/Sudoku` needs a future follow-up, keep it narrow around unit-testing `SudokuGenerator` / `SudokuValidator`, repository API-to-local fallback behavior, or `GameViewModel` autosave/undo/redo persistence rather than reopening the whole Compose UI broadly.
 - If `joffrey-bion/seven-wonders` needs a future follow-up, keep it narrow around resource-payment option search, synchronized prepared-turn execution, protocol-level bot automation, or Android Compose adaptation of the shared state model.

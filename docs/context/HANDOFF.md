@@ -7,8 +7,8 @@
 - Project policy now requires documenting each meaningful work session and making a local commit after each completed work unit.
 - A dedicated research workflow now exists under `research/`, including a batch rule, queue, researched registry, category index, findings templates, and cleanup script.
 - The workflow now also includes normalized catalog categories, batch notes, and a dedicated code-analysis guide for evaluating cloned repositories.
-- The ninety-sixth real research batch is now completed and documented end-to-end.
-- The lab now has 102 researched repositories recorded:
+- The ninety-seventh real research batch is now completed and documented end-to-end.
+- The lab now has 103 researched repositories recorded:
   - `lucasnlm/antimine-android` - `accepted`
   - `korlibs/korge` - `accepted`
   - `libktx/ktx` - `accepted`
@@ -110,6 +110,7 @@
   - `joffrey-bion/seven-wonders` - `accepted`
   - `gzzrrg/Sudoku` - `accepted`
   - `ritwikshanker/WordImpostor` - `accepted`
+  - `neumannhans326-crypto/license-plate-game` - `reference-only`
 - Public-facing root documentation has been tightened for GitHub publication.
 - The repository direction is now explicitly framed as a referenceable library of game-development ideas.
 - Local default branch is now `main`.
@@ -117,10 +118,16 @@
 - `origin` is configured and `main` is already pushed.
 - `research/worktrees/` has been cleaned after documentation and currently contains only `.gitkeep`.
 - A thread heartbeat automation named `GAMES-android-lab research` with id `games-android-lab-research` is now active on a 1-minute cadence for continuing research runs in this thread.
-- The refreshed compact shortlist now has one queued candidate after `BATCH-2026-07-13-A`: `neumannhans326-crypto/license-plate-game`.
+- The refreshed compact shortlist is now exhausted after `BATCH-2026-07-18-A`.
 - The folder is now initialized as a local git repository.
 
 ## Latest Meaningful Changes
+
+- Completed `BATCH-2026-07-18-A` for `neumannhans326-crypto/license-plate-game`.
+- Added durable `License Plate Game` findings for its direct Android car-trip spotting concept, offline CSV-to-Room seed data, rarity-based plate scoring, duplicate feedback, local player scoreboard, and constrained plate-prefix keyboard.
+- Verified the current build caveat for this batch: the checked-in repository has no `gradlew`, no `gradlew.bat`, no `gradle/wrapper/gradle-wrapper.jar`, and the lab has no system `gradle`, so Gradle build discovery could not be run locally.
+- Classified `neumannhans326-crypto/license-plate-game` as `reference-only` because it preserves a useful dataset-backed Android game idea but has no visible tests, no reproducible wrapper-based build path, source/README mojibake in the Windows terminal, and likely static compile/import issues.
+- Refreshed the public and internal snapshot counts again so the repository now consistently reports `97` completed batches, `103` researched repositories, and a `83 accepted / 20 reference-only` split.
 
 - Completed `BATCH-2026-07-13-A` for `ritwikshanker/WordImpostor`.
 - Added durable `Word Impostor` findings for its direct Android Compose party-game shell, sealed `GamePhase` state model, pass-the-phone private role reveal UX, clue and voting rounds, DataStore settings, and pure in-app-review gate.
@@ -584,12 +591,11 @@
 - Added durable `Tower Defense Android` findings for a shared Kotlin runtime, randomized authored path layouts, procedural Canvas rendering, procedural SFX generation, and JSON save export/import inside a broad native product shell.
 - Classified `rogal01/tower-defense-android` as `accepted` because its rough hygiene is outweighed by direct Android relevance and several reusable runtime, rendering, progression, and product-shell patterns.
 - Recorded that `gradlew help --no-daemon` succeeds locally via daemon-JDK provisioning, while `:app:assembleDebug --dry-run --no-daemon` stops at the missing Android SDK boundary.
-- The exact-license short backlog now has one queued candidate left: `qorrnsmj/smf`.
 - Cleaned the transient `rogal01/tower-defense-android` clone from `research/worktrees/` after documenting the batch and revalidated that the directory again contains only `.gitkeep`.
 
 ## Known Risks
 
-- The workflow has now been validated across 96 completed batches, but the scoring rubric and category usage may still need minor tuning.
+- The workflow has now been validated across 97 completed batches, but the scoring rubric and category usage may still need minor tuning.
 - Build validation remains selective; several lightweight `gradlew help` discovery attempts have timed out, 2 additional discovery attempts failed because the environment lacked a full JDK/compiler, one later discovery attempt failed because the current environment is still on Java `8` while the inspected KorGE toolchain now requires Java `21+`, later Android batches also failed because the inspected Android Gradle Plugin stacks now require Java `11+`, and runtime execution is still intentionally uncommon.
 - `korlibs/korge` has repository license metadata reported as `Other`, so direct reuse should be reviewed carefully.
 - `utopia-rise/godot-kotlin-jvm` was kept as `reference-only` because its Android transfer value is indirect.
@@ -650,6 +656,7 @@
 - `rogal01/tower-defense-android` is a useful direct Android tower-defense reference, but it still has zero public signal, no visible tests or CI, extremely large monolithic runtime or render files, only partial multiplatform follow-through, and rough repository hygiene including an empty checked-in `GameEngine.kt` file under the Android source tree.
 - `icela/FriceEngine` is a historically useful JVM engine comparison, but it is stale, desktop-only, AGPL-3.0 licensed, build-broken through a dead Bintray-era dependency path, and includes verified runtime issues like broken button-removal bookkeeping.
 - `The-JDdev/Heroes-Arena` is a useful cautionary reminder that very fresh Android game repositories can expose direct product-shell patterns while still overstating their actual runtime depth in README text.
+- `neumannhans326-crypto/license-plate-game` is a useful direct Android concept reference, but it should not be treated as a production baseline until an upstream wrapper/build is verified, source encoding is cleaned, likely Compose/Room compile issues are fixed, and scoring plus CSV parsing receive tests.
 - The active 1-minute heartbeat is intentionally aggressive; if it starts producing more churn than value, it should be paused or retuned to a slower cadence instead of leaving it to spam trivial passes.
 - Root repository license has not been selected yet, so the public repository is still published without an explicit reuse license.
 - `yaroslavzghoba/KotCore` currently has more publishing scaffolding than runtime substance, so it should not be treated as evidence of real Compose Canvas or Android engine maturity until actual loop, grid, input, or rendering code appears.
@@ -658,7 +665,8 @@
 ## Recommended Next Steps
 
 - Choose the root repository license so public reuse terms are explicit.
-- Continue with the remaining queued explicit-license Kotlin game candidate `neumannhans326-crypto/license-plate-game`; refresh the compact shortlist only after the queue is exhausted.
+- Refresh a compact shortlist of no more than 4 explicit-license Kotlin game or game-engine repositories before selecting the next batch candidate.
+- If a future follow-up is needed for `neumannhans326-crypto/license-plate-game`, first verify a build in a Java `17+` Android environment or upstream wrapper, then isolate rarity scoring, duplicate detection, and CSV-to-Room seed loading for tests rather than reopening the whole Compose UI broadly.
 - If a future follow-up is needed for `amirisback/piano-tiles-clone`, keep it narrow around the `jghjianghan` mode orchestrators, the accelerometer tilt variant, or the rendering comparison between `SurfaceView`, bitmap-backed `ImageView`, and direct `ImageView` spawning rather than reopening all six modules broadly.
 - If a future follow-up is needed for `Koishi-Satori/KStg`, keep it narrow around subchunk bullet-collision filtering, resource scripts, replay recording, or Java2D-to-Android adaptation rather than reopening the whole desktop/Swing runtime blindly.
 - If a future follow-up is needed for `KAMRAN16-byte/Captain-Treasure-Android-Game`, keep it narrow around a minimal Compose micro-game teaching sample or one-file state-management cautionary example rather than reopening it for architecture research.

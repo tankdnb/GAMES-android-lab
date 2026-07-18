@@ -6,6 +6,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Engine Architecture And Core Loop
 
+- [neumannhans326-crypto-license-plate-game](../findings/neumannhans326-crypto-license-plate-game.md) - `MainActivity`, `MainViewModel`, `KennzeichenApplication`, and `AppDatabase` show a tiny non-real-time Android game shell where user input drives lookup, result feedback, and score mutation; useful as a simple product-loop sketch, but the duplicated database construction path should be cleaned before reuse.
 - [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `GameViewModel`, `GameUiState`, and `AppContainer` show a compact Android puzzle-game shell where one lifecycle-aware owner manages board arrays, timer, hints, errors, undo/redo, and autosave while exposing sealed UI states to Compose.
 - [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `Game`, `PlayerContext`, and `GameDefinition` show an authoritative board-game state machine that deals hands by age, waits for prepared moves, resolves all placements before effects, rotates hands, handles special follow-up turns, and loads cards/wonders from JSON-backed definitions.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - `jghjianghan`'s `GameEngine`, `TileOrchestrator`, `TileDrawer`, and mode-specific engine classes show a useful small-game split for classic, arcade, raining, and tilt Piano Tiles variants, while the other modules provide cautionary raw-thread and timer-loop contrasts.
@@ -190,6 +191,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Gameplay Systems
 
+- [neumannhans326-crypto-license-plate-game](../findings/neumannhans326-crypto-license-plate-game.md) - `MainViewModel.onKennzeichenInput()`, `KennzeichenRepository.calculatePunkte()`, and `ScannedRepository.isScanned()` show a real-world collection loop with normalized plate input, duplicate-as-feedback handling, rarity-based points, a 100-point special case, scan history, and per-player score updates.
 - [ritwikshanker-wordimpostor](../findings/ritwikshanker-wordimpostor.md) - `GameViewModel`, `GamePhase`, and `RoundHistory` show a compact social-deduction rules loop with randomized impostors, civilian-first clue start, active-player clue rotation, vote tallying, tie behaviors, elimination history, and simple civilian/impostor win checks.
 - [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `SudokuGenerator`, `SudokuValidator`, and `GameViewModel` preserve reusable Sudoku systems: randomized backtracking, unique-solution checking, conflict detection, candidate notes, limited hints, cumulative mistake counting, and completion/failure rules.
 - [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `Cards`, `Requirements`, `TransactionOptionsCalculator`, `Science`, `Table`, and `ScoreBoard` show reusable rule-heavy board-game techniques: UI-ready playability, neighbour-trade option search, science joker maximization, military conflict resolution, and tied-rank scoring.
@@ -252,6 +254,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Input And Controls
 
+- [neumannhans326-crypto-license-plate-game](../findings/neumannhans326-crypto-license-plate-game.md) - `KennzeichenInputScreen`, `Keyboard`, `KeyboardButton`, and `PlayerSetupViewModel` show a constrained in-app keyboard for license-plate prefixes plus capped one-device player setup, useful for child-friendly or context-specific mobile game input despite visible encoding and compile-risk caveats.
 - [ritwikshanker-wordimpostor](../findings/ritwikshanker-wordimpostor.md) - `SetupScreen`, `RoleRevealScreen`, `ClueRoundScreen`, and `VotingScreen` show pass-the-phone privacy, one-word clue filtering, dynamic player setup, separate voter/target selection, and settings-controlled self-voting.
 - [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `SudokuBoard`, `NumberPad`, and `GameToolBar` split board-cell selection, number input, erase, undo, redo, notes, and hint controls into reusable Compose controls with compact and wide layout variants.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the modules show touch-lane hit testing, wrong-lane fail feedback, and a distinctive accelerometer-driven tilt variant where a player circle collides with falling notes.
@@ -334,6 +337,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## UI, HUD, And Menus
 
+- [neumannhans326-crypto-license-plate-game](../findings/neumannhans326-crypto-license-plate-game.md) - `PlayerSetupScreen`, `PlayerSelectionScreen`, `KennzeichenInputScreen`, and `ScanResultDialog` show a small Compose product shell for a family car-trip game: setup, standby scoreboard, domain keyboard, success/duplicate/not-found feedback, and an external Wikipedia action.
 - [ritwikshanker-wordimpostor](../findings/ritwikshanker-wordimpostor.md) - `MainActivity`, typed `Screen` routes, and the phase screens show a small Compose party-game shell where Navigation Compose reacts to `GamePhase` transitions and reveal/end screens use simple Material 3 animation beats.
 - [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `GameScreen`, `ActiveGameLayout`, `StatusBar`, and `NavGraph` show a Compose game UI that switches at `600.dp` between portrait and side-panel board layouts while keeping status, timer, settings, pause, and route ownership explicit.
 - [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - `GameState`, `Reducers`, `GameScene`, `Hand`, and `PreparedMove` show a multiplayer board-game UI where typed server events drive reducer-style state, cards expose server/rules-derived affordability, transaction choices are selected only when needed, and prepared moves are visible before final turn resolution.
@@ -462,6 +466,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Persistence And Data
 
+- [neumannhans326-crypto-license-plate-game](../findings/neumannhans326-crypto-license-plate-game.md) - `DataLoader`, `kennzeichen.csv`, `AppDatabase`, the Room entities, and the DAOs show an offline seed-data pattern for collection games: load semicolon-delimited assets into Room, store player scores separately, and keep scan history for duplicate detection, but parsing currently drops bad rows silently.
 - [ritwikshanker-wordimpostor](../findings/ritwikshanker-wordimpostor.md) - `SettingsRepository`, `WordRepository`, and `ReviewGate` show a lightweight party-game data layer with DataStore settings, embedded difficulty word pools, review counters, and pure review-prompt policy separated from Play Core calls.
 - [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `GameSession`, `GameRecord`, `GameSessionDao`, `GameRecordDao`, `SettingsDataStore`, and `SudokuRepository` show a useful split between active-session Room snapshots, completed-game history, DataStore preferences/statistics, and JSON helpers for board/notes/history persistence.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the modules compare simple high-score/settings storage through `SharedPreferences`, string sets, and SQLite, including a useful caution around raw query concatenation and cursor lifecycle handling.
@@ -581,6 +586,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Android Platform Integration
 
+- [neumannhans326-crypto-license-plate-game](../findings/neumannhans326-crypto-license-plate-game.md) - `AndroidManifest.xml` and `MainActivity` show a direct Android Compose app with `Application`-level Room setup, a single launcher activity, `enableEdgeToEdge()`, Activity `viewModels`, lifecycle coroutines, and external browser handoff for Wikipedia links.
 - [ritwikshanker-wordimpostor](../findings/ritwikshanker-wordimpostor.md) - `MainActivity`, `WordImpostorTheme`, and `ReviewController` show a direct Android Compose app with edge-to-edge handling, DataStore-backed theme selection, Navigation Compose, and Google Play In-App Review integration at game-end moments.
 - [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - `app/build.gradle.kts`, `AndroidManifest.xml`, `MainActivity`, and `SudokuApplication` show a direct Android Compose app with Room, DataStore, Retrofit, Navigation Compose, Material 3 theming, and a narrow `INTERNET` permission surface, while also exposing the caveat of `minSdk = 36`.
 - [amirisback-piano-tiles-clone](../findings/amirisback-piano-tiles-clone.md) - the repository is a direct Android app-module collection showing fragments, activities, `SurfaceView`, `ImageView`, sensors, vibration, and audio APIs in small rhythm-game contexts.
@@ -688,6 +694,7 @@ This is not the accepted-project catalog. For accepted project cards grouped by 
 
 ## Build, Release, And Testing
 
+- [neumannhans326-crypto-license-plate-game](../findings/neumannhans326-crypto-license-plate-game.md) - `app/build.gradle.kts` shows a small AGP `8.4.0` / Kotlin `1.9.22` / Compose / Room / Java `17` Android stack, but no wrapper, CI, or tests were found; local discovery could not run because neither `gradlew.bat` nor system `gradle` is available, and static review exposes likely compile/import issues.
 - [ritwikshanker-wordimpostor](../findings/ritwikshanker-wordimpostor.md) - Gradle `9.6.1`, AGP `9.2.1`, Kotlin `2.2.10`, Compose BOM `2025.06.01`, DataStore, Navigation Compose, and Play Review show a current small Android stack; local lab discovery reaches `gradlew.bat --version` but `help` fails because Java `17+` is required while the lab exposes Java `8`, and only word-bank/review-gate tests go beyond templates.
 - [gzzrrg-sudoku](../findings/gzzrrg-sudoku.md) - Gradle `9.4.1`, AGP `9.2.1`, Kotlin `2.2.10`, Compose BOM `2026.02.01`, Room, DataStore, Retrofit, and KSP show a very modern Android stack; local lab discovery reaches `gradlew.bat --version` but `help` fails because Java `17+` is required while the lab exposes Java `8`, and only template tests are checked in.
 - [joffrey-bion-seven-wonders](../findings/joffrey-bion-seven-wonders.md) - The Gradle KMP/JVM/JS module split, JDK `21` CI, Docker/Kubernetes deployment workflows, `GameTest`, `TransactionOptionsCalculatorTest`, and `LobbyTest` show serious workflow discipline for a web/server board game, while local lab discovery currently stops because Gradle `9.6.1` requires Java `17+` and the lab exposes Java `8`.

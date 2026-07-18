@@ -14,14 +14,15 @@ The repository is not just a bookmark list. Its goal is to build a reusable, ref
 ## Current Status
 
 - Research workflow is implemented and documented.
-- As of `2026-07-13`, `96` real GitHub research batches are completed end-to-end.
-- `102` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
+- As of `2026-07-18`, `97` real GitHub research batches are completed end-to-end.
+- `103` researched repositories are recorded in `research/registry/RESEARCHED_REPOS.md`.
 - Current registry split:
   - `accepted`: `83`
-  - `reference-only`: `19`
+  - `reference-only`: `20`
   - `partial`: `0`
   - `rejected`: `0`
-- The latest researched and accepted addition is `ritwikshanker/WordImpostor`, an MIT direct Android Compose social-deduction party game whose main value is a sealed phase-state flow, private pass-the-phone role reveals, clue/voting rounds, DataStore settings, and pure review-gate policy.
+- The latest researched addition is `neumannhans326-crypto/license-plate-game`, an MIT direct Android Compose car-trip spotting game kept as `reference-only` for offline Room/CSV seed data, rarity-based scoring, duplicate feedback, and a local player scoreboard.
+- The latest accepted addition remains `ritwikshanker/WordImpostor`, an MIT direct Android Compose social-deduction party game whose main value is a sealed phase-state flow, private pass-the-phone role reveals, clue/voting rounds, DataStore settings, and pure review-gate policy.
 - Use `research/registry/RESEARCHED_REPOS.md` and `catalog/index.md` as the live public indexes.
 
 ## What Goes Into The Catalog
